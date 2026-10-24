@@ -94,6 +94,6 @@ backend/.venv/Scripts/python.exe -m unittest discover -s backend/tests -q
 agents/.venv/Scripts/python.exe -m unittest discover -s agents/tests -q
 ```
 
-Latest owner-reported checkpoint: 45 frontend tests and 62 owner-reported backend tests pass; use current test output for subsequent changes. Tests cover immutable bindings, stale-summary refusal, evidence links, task completion uncertainty, pre-outreach/contact separation, credit reservations and backend execution safety. These verification commands do not authorize provider/model execution.
+Latest owner-reported checkpoint: 45 frontend tests and 63 owner-reported backend tests pass; use current test output for subsequent changes. Tests cover immutable bindings, stale-summary refusal, evidence links, task completion uncertainty, pre-outreach/contact separation, credit reservations and backend execution safety. These verification commands do not authorize provider/model execution.
 
 
