@@ -9,4 +9,5 @@ import './brief.css';
 import './mandate-review.css';
 import './research-work.css';
 import './conversation.css';
+import './scouting-run.css';
 createRoot(document.getElementById('root')!).render(<React.StrictMode><App/></React.StrictMode>);
