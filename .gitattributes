@@ -1,0 +1,5 @@
+# These sources are pinned by SHA-256 over their exact bytes.
+# Preserve line endings and UTF-8 BOMs across Windows/Linux checkouts.
+planning/** -text
+config/** -text
+frontend/src/reference/** -text
