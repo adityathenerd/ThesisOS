@@ -1,0 +1,7 @@
+import {Loader2,Clock3} from 'lucide-react';
+import {caseFollowThroughActive,followThroughLabel} from './scouting-run';
+import type {CaseFollowThrough} from './scouting-run';
+export default function FollowThroughCaseStatus({value}:{value:CaseFollowThrough}){
+ const {stage,candidate}=value,active=caseFollowThroughActive(value),attempts=stage.attempts.filter(a=>a.request?.case_id===candidate.case_id);
+ return <section className="case-follow-through" aria-label="Case enrichment progress"><div className="row"><span>{active?<Loader2 className="spin" size={14}/>:<Clock3 size={14}/>}</span><strong>{followThroughLabel(value)}</strong><small>Post-intake follow-through</small></div><p>{candidate.completion_scope??(active?'Bounded source research continues after the first assessment. The current saved conclusion is not the end of this investigation.':'This bounded stage has reached its reported outcome; remaining research questions stay explicit.')}</p>{candidate.reason&&<p>{candidate.reason}</p>}{attempts.length>0&&<details><summary>{attempts.length} case-specific attempt records</summary>{attempts.map(a=><p key={a.intent}>{a.kind} · {a.status.replaceAll('_',' ')} · {String(a.request?.question??a.intent)}</p>)}</details>}<small>Stage deadline {new Date(stage.deadline).toLocaleTimeString('en-IN',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit'})} IST · {stage.max_concurrent} worker · up to {stage.limits.public_urls_per_case} public URLs per case</small></section>;
+}

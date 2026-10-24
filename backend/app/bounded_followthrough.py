@@ -1,5 +1,6 @@
 """Finite post-intake source attempts, batched facts, one reassessment per delta."""
 import copy,hashlib,json
+import httpx
 from datetime import datetime,timezone
 from pathlib import Path
 from types import SimpleNamespace
@@ -27,10 +28,12 @@ class FollowThroughStage(ScoutingLoop):
             stage=self.start_stage(parent_id,StartFollowThrough(execute_live=True,idempotency_key=parent_id+':bounded-followthrough'),case_ids=[case_id],submit=False)
         else:
             stage=stages[0]
+            if stage['status'] in ['failed','stopped','interrupted']:raise LoopStopped('bounded_followthrough_stopped_no_new_paid_intake')
             if any(c['case_id']==case_id for c in stage['candidates']):return
             candidate=copy.deepcopy(next(c for c in parent['candidates'] if c.get('case_id')==case_id));candidate.update(stage='queued',intake_assessment_id=candidate.get('assessment_id'),source_attempts=[])
             self.store.change(stage['id'],lambda p:(p['candidates'].append(candidate),p.update(status='queued')))
         self._run_stage(stage['id'])
+        if self.store.get(stage['id'])['status'] in ['failed','stopped','interrupted']:raise LoopStopped('bounded_followthrough_stopped_no_new_paid_intake')
     def start_stage(self,parent_id,request,*,case_ids=None,submit=True):
         if not request.execute_live:raise ServiceError('live_execution_required','Explicit bounded follow-through execution is required',409)
         parent=RunStore(self.state).get(parent_id)
@@ -123,8 +126,7 @@ class FollowThroughStage(ScoutingLoop):
                 self.store.reserve(id,'public',task,{'case_id':case_id,'origin_assessment_id':row['id'],'question':point['question'],'url':url},seconds=20)
                 source=None;error=None
                 try:source=self._source(id,SimpleNamespace(key=candidate['key'],canonical_domain=candidate['domain']),url)
-                except (ValueError,OSError,Exception) as exc:
-                    if isinstance(exc,LoopStopped):raise
+                except (ValueError,OSError,httpx.HTTPError) as exc:
                     error=type(exc).__name__+': '+str(exc)[:150]
                 ids=[]
                 prior_digests={r.get('sha256') for r in packet.get('source_fetch_receipts',[])}

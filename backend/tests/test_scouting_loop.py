@@ -22,6 +22,11 @@ class ScoutingLoopTests(unittest.TestCase):
         self.loop=ScoutingLoop(self.state,Settings(crustdata_api_key='SCRIPTED_NOT_A_REAL_KEY'));self.loop.pool.shutdown();self.loop.pool=DetachedPool();self.store=self.loop.store
     def tearDown(self):self.loop.close();self.temp.cleanup()
     def start(self,**kw):return self.loop.start(StartScoutingRun(execute_live=True,idempotency_key='SCRIPTED_LOOP_TEST',**kw))
+    def test_sanitized_actual_provider_arrays_preserve_three_exact_role_titles(self):
+        fixture=json.loads((APP_ROOT/'backend/tests/fixtures/company-people-indexed-shape.json').read_text())
+        result={c['crustdata_company_id']:company_linked_current_roles(c,c['crustdata_company_id']) for c in fixture['companies']}
+        self.assertEqual([p['title'] for p in result[62472395]],['Chief Executive Officer','Chief Technology Officer'])
+        self.assertEqual([p['title'] for p in result[9761863]],['Co-founder']);self.assertEqual(result[19962715],[]);self.assertEqual(result[118869596],[])
     def test_caps_and_duration_cannot_expand(self):
         for key,value in [('duration_minutes',31),('max_new_cases',5),('max_provider_requests',21),('max_credits',51),('max_model_assessments',5)]:
             with self.assertRaises(ValidationError):StartScoutingRun(execute_live=True,idempotency_key='test',**{key:value})

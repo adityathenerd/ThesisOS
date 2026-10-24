@@ -1,0 +1,253 @@
+{
+  "audit_at": "2026-10-24T11:20:25.402879+00:00",
+  "mode": "read_only_saved_records_no_execution",
+  "stage_id": "followthrough_0d5886dd331940b2a6adba1d8e8a6bc1",
+  "cases": [
+    {
+      "domain": "docufindr.ai",
+      "case_id": "case_90f11d41d99741d0aaeb0b6fd44085eb",
+      "stage": "complete",
+      "assessment_id": "assessment_47eab03360c641c6937689724ae58a1e",
+      "origin_assessment_id": "assessment_23a98897505d45d68a177e565b1967f3",
+      "checks": {
+        "model_input_matches_current_result": true,
+        "prior_ref_matches_original": true,
+        "graph_matches_current": true,
+        "decision_matches_current": true,
+        "decision_action_matches_brief": true,
+        "accepted_material_delta": true
+      },
+      "ref": {
+        "case_id": "case_90f11d41d99741d0aaeb0b6fd44085eb",
+        "case_version": 2,
+        "thesis_version": 1,
+        "policy_version": 1,
+        "evidence_hash": "fc5ef1c1240dfd112ba26e0295f54b5b3ab61d527a63bb7798f2b864bfbbce57"
+      },
+      "research_posture": "pursue",
+      "next_action": "Human researcher: ask Venkatachalam D. to identify the builder and authorize one de-identified failed-check-to-corrected-output replay, including human review and live connector scope.",
+      "decisive_doubt": {
+        "text": "Does a named builder control a functioning validation workflow, and which advertised integrations are live rather than planned?",
+        "evidence_ids": [
+          "evidence_916298b2212e481da0b833a3394085bb",
+          "evidence_2a0584f1c1ad4e2491aba1dd4f796f84"
+        ]
+      },
+      "future_trigger": null,
+      "operational_limitations": [
+        "No permitted execution capabilities or remaining calls are supplied; the useful human/private-access handoff is not executed.",
+        "The directed intake and team pages have already been fetched; repeating them would not resolve the artifact gap.",
+        "This remains a reference comparison, not an accepted qualification or rejection."
+      ],
+      "graph_open_questions": [
+        {
+          "id": "question:case_90f11d41d99741d0aaeb0b6fd44085eb:intro",
+          "target_node_ids": [
+            "company_a6ff037b17db4a4c85f116c94b5db087"
+          ],
+          "target_edge_ids": [],
+          "criterion_ids": [
+            "C2",
+            "C4"
+          ],
+          "question": "Which named builder can demonstrate the described work, contribution and next substantive milestone?",
+          "decision_consequence": "Carry unresolved private proof into human research; do not certify product operation or qualify."
+        }
+      ]
+    },
+    {
+      "domain": "biosciencia.com",
+      "case_id": "case_2fae93f438224f6a83f575a199bbccaf",
+      "stage": "complete",
+      "assessment_id": "assessment_8d0e66cb636a43478d3fe1793f15119b",
+      "origin_assessment_id": "assessment_a3ab7a339230447a8b56b278a15bd49f",
+      "checks": {
+        "model_input_matches_current_result": true,
+        "prior_ref_matches_original": true,
+        "graph_matches_current": true,
+        "decision_matches_current": true,
+        "decision_action_matches_brief": true,
+        "accepted_material_delta": true
+      },
+      "ref": {
+        "case_id": "case_2fae93f438224f6a83f575a199bbccaf",
+        "case_version": 2,
+        "thesis_version": 1,
+        "policy_version": 1,
+        "evidence_hash": "f3dcd7d43fcc5b82f27fd016e0ebc9c774fe84e9e2c8cb66aeb7835c17b46410"
+      },
+      "research_posture": "pursue",
+      "next_action": "Inspect the listed BPE datasheet and manual for application and measured capability; if specifications only, seek an authorized application or batch report and verify its technical owner's contribution.",
+      "decisive_doubt": {
+        "text": "Does the reagent have attributable, reproducible capability in a defined research workflow? The inspected index and manufacturing claims do not answer that question.",
+        "evidence_ids": [
+          "evidence_bafe29c5e62d436c8e19c8c1bf0b306c",
+          "evidence_eadd1043df9f4198a7063551cfa85da3"
+        ]
+      },
+      "future_trigger": null,
+      "operational_limitations": [
+        "No permitted research capabilities or remaining calls are supplied; the specific document inspection remains useful but execution is paused.",
+        "The recorded index and About Us fetches succeeded and should not be repeated as unresolved discovery.",
+        "Source currentness is unknown; historical document versions do not establish current stage or availability."
+      ],
+      "graph_open_questions": [
+        {
+          "id": "question:case_2fae93f438224f6a83f575a199bbccaf:intro",
+          "target_node_ids": [
+            "company_15aecb4403544f0a99cc7d4edca26494"
+          ],
+          "target_edge_ids": [],
+          "criterion_ids": [
+            "C2",
+            "C4"
+          ],
+          "question": "Which named builder can demonstrate the described work, contribution and next substantive milestone?",
+          "decision_consequence": "Carry unresolved private proof into human research; do not certify product operation or qualify."
+        }
+      ]
+    },
+    {
+      "domain": "labwren.com",
+      "case_id": "case_72e97cdf215449f99c4bb2330b6dafd2",
+      "stage": "complete",
+      "assessment_id": "assessment_0071257e1539423b87e3d9264fdcca76",
+      "origin_assessment_id": "assessment_964f5d23bddc451a8aaf7f586eed924e",
+      "checks": {
+        "model_input_matches_current_result": true,
+        "prior_ref_matches_original": true,
+        "graph_matches_current": true,
+        "decision_matches_current": true,
+        "decision_action_matches_brief": true,
+        "accepted_material_delta": true
+      },
+      "ref": {
+        "case_id": "case_72e97cdf215449f99c4bb2330b6dafd2",
+        "case_version": 2,
+        "thesis_version": 1,
+        "policy_version": 1,
+        "evidence_hash": "267f59350224bd4b610051716e86d061c494a2b2ea19371de492f6d14442015f"
+      },
+      "research_posture": "pursue",
+      "next_action": "Ask the listed operator for an authorized contribution or implementation record identifying the author and maintainer of the inspected BCA engine and validation checks; reassess attribution and product-gate readiness on receipt.",
+      "decisive_doubt": {
+        "text": "Who authored and maintains the inspected calculation and validation logic? Correct outputs from one synthetic starter do not settle founder contribution or broader generation reliability.",
+        "evidence_ids": [
+          "evidence_7dd59d116e844bb3acee2679fceb6c33",
+          "evidence_c4fe029f5fe248739959c192bfaf55b6",
+          "evidence_f4cf8068289846eca3391cd53dba91ed"
+        ]
+      },
+      "future_trigger": null,
+      "operational_limitations": [
+        "No capabilities or remaining calls are supplied. The attribution follow-up is a human research proposal, not an authorized or executed task.",
+        "The recorded starter inspection is complete; repeating it would not resolve the remaining attribution question."
+      ],
+      "graph_open_questions": [
+        {
+          "id": "question:case_72e97cdf215449f99c4bb2330b6dafd2:intro",
+          "target_node_ids": [
+            "company_1969586da03a4df2af651939b6f500a1"
+          ],
+          "target_edge_ids": [],
+          "criterion_ids": [
+            "C2",
+            "C4"
+          ],
+          "question": "Which named builder can demonstrate the described work, contribution and next substantive milestone?",
+          "decision_consequence": "Carry unresolved private proof into human research; do not certify product operation or qualify."
+        },
+        {
+          "id": "question:missing-team",
+          "target_node_ids": [
+            "company_1969586da03a4df2af651939b6f500a1"
+          ],
+          "target_edge_ids": [],
+          "criterion_ids": [
+            "C2"
+          ],
+          "question": "Who are the relevant founders/operators, and what sources establish their actual roles and attributable work?",
+          "decision_consequence": "Team evidence is unavailable, not adverse; obtain it if it could change the next research action."
+        }
+      ]
+    },
+    {
+      "domain": "emergentdx.com",
+      "case_id": "case_b91e7727d41b4c59b35039224c779be4",
+      "stage": "complete",
+      "assessment_id": "assessment_b19aa5fde0bd4abc88de50015727c1fe",
+      "origin_assessment_id": "assessment_95430540914a4a57b68b3a8ac8038955",
+      "checks": {
+        "model_input_matches_current_result": true,
+        "prior_ref_matches_original": true,
+        "graph_matches_current": true,
+        "decision_matches_current": true,
+        "decision_action_matches_brief": true,
+        "accepted_material_delta": true
+      },
+      "ref": {
+        "case_id": "case_b91e7727d41b4c59b35039224c779be4",
+        "case_version": 2,
+        "thesis_version": 1,
+        "policy_version": 1,
+        "evidence_hash": "2e9190e20066f90ba86516e4d1526480364d5cc511e3c74b1322d0988f50d76a"
+      },
+      "research_posture": "monitor",
+      "next_action": "Monitor for a verified operator's authorized worked example; then have a human researcher verify its authorship, rights and cross-laboratory reuse before artifact inspection.",
+      "decisive_doubt": {
+        "text": "Does a company-controlled repeatable product or assay capability exist beyond the advertised bespoke consulting?",
+        "evidence_ids": [
+          "evidence_6b2d6564451040bda490951cd07590d0"
+        ]
+      },
+      "future_trigger": "A verified operating owner provides an authorized reusable-core example or explicitly confirms exclusively bespoke delivery; a human researcher owns the resulting scope check.",
+      "operational_limitations": [
+        "No permitted research capabilities or calls remain.",
+        "Private-artifact inspection requires authorized access; no such access or inspection is established."
+      ],
+      "graph_open_questions": [
+        {
+          "id": "question:case_b91e7727d41b4c59b35039224c779be4:intro",
+          "target_node_ids": [
+            "company_13af9fd4c6f849929a76cb1c2096ec3a"
+          ],
+          "target_edge_ids": [],
+          "criterion_ids": [
+            "C2",
+            "C4"
+          ],
+          "question": "Which named builder can demonstrate the described work, contribution and next substantive milestone?",
+          "decision_consequence": "Carry unresolved private proof into human research; do not certify product operation or qualify."
+        },
+        {
+          "id": "question:missing-team",
+          "target_node_ids": [
+            "company_13af9fd4c6f849929a76cb1c2096ec3a"
+          ],
+          "target_edge_ids": [],
+          "criterion_ids": [
+            "C2"
+          ],
+          "question": "Who are the relevant founders/operators, and what sources establish their actual roles and attributable work?",
+          "decision_consequence": "Team evidence is unavailable, not adverse; obtain it if it could change the next research action."
+        }
+      ]
+    }
+  ],
+  "status": "completed",
+  "deadline": "2026-10-24T11:23:21.796199Z",
+  "current_operation": null,
+  "stop_reason": "bounded_followthrough_complete_human_questions_remain",
+  "interpretation_limits": [
+    "Completion means this bounded child stage, not resolved pursue work or human qualification.",
+    "Graph open questions may remain generic; saved current decision/brief has precise next action.",
+    "LabWren starter scope is observed functionality and three arithmetic checks, not authorship/custom-input/laboratory validation."
+  ],
+  "finished_at": "2026-10-24T11:19:09.263292Z",
+  "attempt_summary": {
+    "provider": 0,
+    "model": 4,
+    "public": 7
+  },
+  "labwren_closure_review": "PASS: completed starter inspection acknowledged; remaining authorship/maintenance/contribution and broader generation reliability distinct; no repeat-starter action."
+}

@@ -1,3 +1,67 @@
+# Backend handoff — LIVE PIPELINE + PRE-OUTREACH CALIBRATION, 24 October 2026
+
+Latest human steering supersedes the historical freeze/NEXT notes below: pre-outreach calibration is now active as a separate derived layer, and a durable bounded scout loop plus actual post-intake follow-through are authorized and implemented. Root owns all Git staging/commits/push to the private adityathenerd/ThesisOS repository. Backend made no Git mutations.
+
+## Current stage: actual post-intake follow-through
+
+Parent `scout_run_109d8a6bf7e84ea2a5e555fccc23784b` is terminal **stopped / new_case_cap_reached**. Child `followthrough_0d5886dd331940b2a6adba1d8e8a6bc1` completed at **16:49:09 IST**, before the original deadline, for all four saved cases under a DISTINCT cumulative allowance: <=8Crustdata requests/20credits/4newmodels, <=2public URL attempts per case, one shared worker, original absolute deadline **16:53:21 IST**. No new discovery or outreach. Final currentness, source/graph closure and history-preservation proof: `backend/work/scouting-runs/followthrough_0d5886dd331940b2a6adba1d8e8a6bc1/final-verification.json` and `final-stage.json`. All four are version2, with17new observations and4genuine fresh prompt0.3 reassessments. Child usage:0newCrustdata requests/0credits;8public page attempts total (6backend +2root browser). Child model usage:62,654input/13,522outputtokens;185.085s summed latency. Three workflows are human_research_required; Emergent is monitor with a specific reusable-core/operator-artifact trigger. No forced pursuit/qualification.
+
+The child uses actual same-company `employer_company_id[]` and `employee_title` from already-paid raw responses (DocuFindr2current role leads, Biosciencia1); the first-pass mapper had missed these actual field names. Original first-pass inputs/results remain immutable. Corrected roles are NEW accepted facts in the child, with the ORIGINAL provider timestamp and response group, before one genuine rebuilt-context reassessment. Future source intake now uses the corrected actual-array mapper and a sanitized actual-response regression fixture. CEO/CTO are not silently relabeled founders or proof of implementation.
+
+Current source directions are bound to each original assessment/input in `planning/agents/current-four-child-research-plan.json`: DocuFindr documented DME workflow +about; Biosciencia Fluodyn documentation +about; Emergent services/reusable core +about; LabWren actual root BCA template inspection. Each first-party URL must have been linked in the captured homepage. Public descriptions remain attributed documentation, not hands-on demonstrations. No material delta means no new paid assessment. Accepted facts and actual attempt summaries are batched BEFORE one fresh model; unresolved current questions become a human handoff.
+
+Root's actual LabWren receipt is staged in `backend/work/scouting-runs/{parent}/external-followthrough/labwren.com.json`. It consumes BOTH public page visits and has exact case/domain +AX/screenshot hashes. Root observed7standards/40sample outputs and independently checked3inversions/range flags. This is a narrow built-in starter observation, not custom-tool generation, customer deployment, all-sample/laboratory validation, founder attribution or rights proof. The child reuses it and makes no duplicate LabWren public fetch.
+
+Future `bounded_followthrough=true` intake runs synchronously queue/execute this finite child step after each first assessment through the SAME worker and SAME shared child allowance, before proceeding to another intake. A stopped/failed child blocks further paid intake and is not silently restarted. Original first-pass and child budgets/receipts stay separate.
+
+
+### Current post-follow-through records
+
+| Company | Current assessment | Current graph | People / nodes | Workflow |
+|---|---|---|---|---|
+| DocuFindr | assessment_47eab03360c641c6937689724ae58a1e | research-graph:b61aa35284268437f4996399 | 2 / 18 | human_research_required |
+| Biosciencia | assessment_8d0e66cb636a43478d3fe1793f15119b | research-graph:95e2ab3724097529303658ed | 1 / 16 | human_research_required |
+| LabWren | assessment_0071257e1539423b87e3d9264fdcca76 | research-graph:b1cedadef45dada62dc9137d | 0 / 18 | human_research_required |
+| Emergent Diagnostics | assessment_b19aa5fde0bd4abc88de50015727c1fe | research-graph:0d3e48724f423bf50a673cb8 | 0 / 14 | monitor |
+
+Every original row across17pre-calibration tables was verified present and byte-identical; only new rows/current new-case versions were appended or advanced. The original parent paid-attempt ledger, candidate records, deadline and terminal reason remain exactly unchanged. Original4v1semantic inputs/results and graph snapshots are preserved. Original54.03-credit enrichment ledger and closed scope hashes remain unchanged. No in-flight matcher remains. Final controlled restart loaded the verified future stop/error guard; runtime ready PID33200,0interrupted/recovered jobs, no active execution. No further calls are scheduled.
+
+## Durable run and actual first-pass result
+
+The 30-minute MAXIMUM run began16:23:21IST with deadline16:53:21. It stopped16:32:29 at its4new-case cap; it did NOT run uninterrupted for30minutes. **8actual Crustdata requests /10.4credits**, independently reconciled with free official usage events; **4genuine prompt0.3 models**,41,069input/11,279output tokens,181.387s summed latency.80provider-returned search records,79valid records,1quarantined missing-name/domain record.79retained unique candidate rows:27prior-identity duplicates,4completed first-pass cases,2unresolved public fetches,45not processed due bound,1missing domain. No authoritative YC/CRM novelty universe was loaded.
+
+| First-pass company | Case |
+|---|---|
+| DocuFindr | case_90f11d41d99741d0aaeb0b6fd44085eb |
+| Biosciencia | case_2fae93f438224f6a83f575a199bbccaf |
+| Emergent Diagnostics | case_b91e7727d41b4c59b35039224c779be4 |
+| LabWren | case_72e97cdf215449f99c4bb2330b6dafd2 |
+
+The original parser stopped after H/R HTTP200 responses because one R record had an empty name. Failure snapshot and original failed discovery record are preserved. Root explicitly authorized cached continuation: SAME parent/mandate/deadline/cumulative ledger, H/R exact raw requests reused without HTTP/rebilling, invalid rank20/provider62168793 quarantined with reason, D/T were the only unattempted search calls. Cached facts keep original received_at and receipt/hash lineage. No automatic paid retries, model retries or fallback.
+
+Proof: `backend/work/scouting-runs/{parent}/final-run.json`, `final-provider-usage.json`, raw receipts, model receipts and pre-continuation failure snapshot; root independent reports in its outputs. Versioned runnable plan: `config/continuous-scout-plan.json`; no ignored raw-capture dependency for fresh discovery.
+
+## Separate pre-outreach review, saved nine cases
+
+All9 source-bound pure reviews are persisted/current:8outreach_candidate, Cadexresearch_first for specific current-operator/offer-continuity uncertainty, not missing validation alone. This distribution comes from the pinned source-authored guidance and rule validation, not a quota. All routes remain not_established; FindNuclei conversation merit is positive while person remains unknown. Canonical v0.3, all9actual models/facts/graphs, formal Section9 readiness and qualification approval remain unchanged. Provenance explicitly says human-authorized stage calibration using existing evidence, not a new model result.
+
+Active registry: `config/pre-outreach-review.json`; overlay SHA8decb2846efa18e776c987a8e07ee872a742bb7e9568c72fe108f6eda4816f85; guidance SHA7c772f52ca6da64a8f736f2d5d58f490cc842d8034bca58838c08fdcfee8534f (rawBOM bytes). `backend/publish_pre_outreach.py` is idempotent, pure mapper + atomic immutable publication. It checks full backend snapshot, current saved assessment, case/evidence/person closure and overlay/guidance/base-reference pins. Changed facts/assessment/source files make a saved projection stale; GET never fabricates a review. Cadex's null question is faithfully adapted from its own source blocker text +itsown IDs, recorded in adapter_notes. Proof `backend/work/pre-outreach/published-reviews.json`.
+
+## Exact APIs and execution boundaries
+
+- GET `/api/v1/scouting-runs` -> `{items:Run[]}`; POST same accepts explicit execute_live, idempotency_key, duration_minutes<=30, caps<=4cases/20requests/50credits/4firstmodels and bounded_followthrough flag. Exact repeat key returns same run; conflicting key/body rejects. One active scouting loop globally; no overlap with a live child.
+- GET `/api/v1/scouting-runs/{id}`; POST `/{id}/stop` cooperatively blocks further operations; in-flight bounded requests can finish. Deadline checked before each paid/source/model operation. Responses saved before parsing; unknown billing keeps conservative reservation. Restart marks unfinished work interrupted with no automatic resume.
+- POST `/api/v1/scouting-runs/{id}/resume-cached`: explicit exceptional pre-model local-normalization recovery only, successful cached raw responses, unchanged original deadline/caps, prior failure preserved, exact request matching, no automatic network retry. Original oversized response bound is checked BEFORE filtering invalid records; another active run blocks continuation atomically. Source plan/reference pins cannot change silently.
+- GET `/api/v1/scouting-runs/{id}/follow-through` -> `{items:Stage[]}`; POST same `{execute_live:true,idempotency_key}` starts a distinct bounded child once. Backend already started the authorized current stage; do not duplicate it.
+- GET `/api/v1/follow-through-stages/{id}`; POST `/{id}/stop`. Stage uses the run DTO +parent_run_id/stage_kind; cases queued/directed_research/reassessing/complete/human_handoff_no_material_delta. Public attempt records are actual; root external Lab packet counts request.public_page_attempts=2, not one page.
+- GET `/api/v1/cases/{id}/pre-outreach-review`: envelope ready/stale/unavailable, exact pure PreOutreachReview, sources, stale_reasons. No HTTP write endpoint can change a review, old assessment or qualification.
+
+Runtime status, saved case/brief/graph/follow-up APIs remain unchanged. SQLite schema4 gains additive pre_outreach_reviews, scouting_runs and scouting_followthrough_stages; no destructive migration. **64backend tests pass**, including actual provider field-array shapes, batched child-source intake, verified external-tool receipt reuse, immutable stage calibration and bounded execution/recovery guards. Root/agents/frontend own their independent checks. No secrets or authorization headers were saved in receipts.
+
+---
+
+Preserved historical milestones below describe earlier scopes. Their freeze/NEXT statements, old test counts and initial no-runner boundary are superseded only by the explicit latest human authorizations above.
+
 # Backend handoff — EXISTING NINE ENRICHMENT AND FOLLOW-THROUGH COMPLETE
 
 **Freeze boundary / NEXT:** Human steering identifies looser needs-evidence calibration for pre-outreach scouting as the next iteration, to begin only after this version is ready. It is **not implemented or activated**. Preserve this version's thresholds, all nine actual assessments and human research handoffs. This note authorizes no new source/provider/model calls or readiness changes.

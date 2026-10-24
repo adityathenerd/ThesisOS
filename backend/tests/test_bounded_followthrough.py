@@ -5,7 +5,7 @@ from unittest.mock import patch
 import unittest
 from backend.tests import test_agent_review_graph as fixtures
 from backend.app.bounded_followthrough import FollowThroughStage,StartFollowThrough
-from backend.app.scouting_loop import RunStore
+from backend.app.scouting_loop import RunStore,LoopStopped
 from backend.app.settings import APP_ROOT,Settings
 from backend.app.research_graph import saved_research_graph
 
@@ -34,6 +34,10 @@ class BoundedFollowThroughTests(unittest.TestCase):
         self.assertEqual(len(calls),2);self.assertEqual(len(seen),1);self.assertEqual(len(seen[0].research_context['people']),1);self.assertEqual(seen[0].case.version,self.context.case.version+1)
         current=self.worker.store.get(self.stage['id']);self.assertEqual(current['usage']['provider_requests'],0);self.assertEqual(len(current['attempts']),2)
         with self.state.connection() as db:self.assertEqual(db.execute('SELECT COUNT(*) FROM semantic_assessments WHERE case_id=?',(self.context.case.id,)).fetchone()[0],1)
+    def test_stopped_child_blocks_further_paid_intake_without_restart(self):
+        self.worker.store.change(self.stage['id'],lambda p:p.update(status='failed',stop_reason='SCRIPTED provider/model failure'))
+        with self.assertRaises(LoopStopped):self.worker.process_intake_case(self.parent,self.context.case.id)
+        self.assertEqual(self.worker.store.get(self.stage['id'])['status'],'failed')
     def test_external_actual_tool_packet_consumes_two_pages_without_duplicate_fetch(self):
         folder=self.folder/'external-followthrough';folder.mkdir();proof=folder/'SCRIPTED.txt';proof.write_text('SCRIPTED observed tool output fixture')
         packet={'case_id':self.context.case.id,'domain':self.candidate['domain'],'new_public_page_visits':2,'source_url':'https://'+self.candidate['domain']+'/tool','observed_at':'2026-10-24T11:00:00Z','observations':['SCRIPTED bounded tool observation, not product validation'],'limitations':['SCRIPTED software test fixture'],'proof_files':{'accessibility':str(proof)},'proof_sha256':{'accessibility':hashlib.sha256(proof.read_bytes()).hexdigest()}}

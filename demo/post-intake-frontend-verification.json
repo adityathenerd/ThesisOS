@@ -1,0 +1,87 @@
+{
+  "at": "2026-10-24T11:22:03.541Z",
+  "parent": "scout_run_109d8a6bf7e84ea2a5e555fccc23784b",
+  "status": "completed",
+  "stage_id": "followthrough_0d5886dd331940b2a6adba1d8e8a6bc1",
+  "deadline": "2026-10-24T11:23:21.796199Z",
+  "limits": {
+    "max_provider_requests": 8,
+    "max_credits": 20,
+    "max_model_assessments": 4,
+    "max_new_cases": 0,
+    "public_urls_per_case": 2
+  },
+  "usage": {
+    "providerAttempts": 0,
+    "modelAttempts": 4,
+    "confirmedCredits": 0,
+    "reservedCredits": 0,
+    "unknownReceipts": 0,
+    "newCases": 0,
+    "completeCases": 4,
+    "casesInScope": 4
+  },
+  "publicPageAttempts": 8,
+  "cases": [
+    {
+      "id": "case_90f11d41d99741d0aaeb0b6fd44085eb",
+      "company": "DocuFindr",
+      "case_version": 2,
+      "label": "Human handoff",
+      "assessment_id": "assessment_47eab03360c641c6937689724ae58a1e",
+      "assessment_current": true,
+      "work_state": "human_research_required",
+      "brief_status": "available",
+      "brief_assessment": "assessment_47eab03360c641c6937689724ae58a1e",
+      "graph_id": "research-graph:b61aa35284268437f4996399",
+      "graph_case_version": 2,
+      "attempt_records": 3,
+      "qualification_accepted": false
+    },
+    {
+      "id": "case_2fae93f438224f6a83f575a199bbccaf",
+      "company": "Biosciencia",
+      "case_version": 2,
+      "label": "Human handoff",
+      "assessment_id": "assessment_8d0e66cb636a43478d3fe1793f15119b",
+      "assessment_current": true,
+      "work_state": "human_research_required",
+      "brief_status": "available",
+      "brief_assessment": "assessment_8d0e66cb636a43478d3fe1793f15119b",
+      "graph_id": "research-graph:95e2ab3724097529303658ed",
+      "graph_case_version": 2,
+      "attempt_records": 3,
+      "qualification_accepted": false
+    },
+    {
+      "id": "case_72e97cdf215449f99c4bb2330b6dafd2",
+      "company": "LabWren",
+      "case_version": 2,
+      "label": "Human handoff",
+      "assessment_id": "assessment_0071257e1539423b87e3d9264fdcca76",
+      "assessment_current": true,
+      "work_state": "human_research_required",
+      "brief_status": "available",
+      "brief_assessment": "assessment_0071257e1539423b87e3d9264fdcca76",
+      "graph_id": "research-graph:b1cedadef45dada62dc9137d",
+      "graph_case_version": 2,
+      "attempt_records": 2,
+      "qualification_accepted": false
+    },
+    {
+      "id": "case_b91e7727d41b4c59b35039224c779be4",
+      "company": "Emergent Diagnostics",
+      "case_version": 2,
+      "label": "Monitor",
+      "assessment_id": "assessment_b19aa5fde0bd4abc88de50015727c1fe",
+      "assessment_current": true,
+      "work_state": "monitor",
+      "brief_status": "available",
+      "brief_assessment": "assessment_b19aa5fde0bd4abc88de50015727c1fe",
+      "graph_id": "research-graph:0d3e48724f423bf50a673cb8",
+      "graph_case_version": 2,
+      "attempt_records": 3,
+      "qualification_accepted": false
+    }
+  ]
+}
