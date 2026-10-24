@@ -1,5 +1,23 @@
 # Investment-thesis handoff — sector comparison mandate v0.3
 
+## Latest continuous-build authorization: query guide supplied, no execution here
+
+The human now authorized the bounded continuous-loop build/run (reported scope: 30min, four new cases, 20 Crustdata requests, 50 credits, four model calls). `planning/investment-thesis/continuous-discovery-quality-guardrails.md` supplies short H/R/D/T task/user/mechanism hypotheses, concrete product/program clarification, exact-identity dedupe, no forced distribution, no new fund restrictions, and honest pursue/attempt/reassess/human-stop behavior. Control/backend own actual capabilities, cumulative limits, activation and run status; this chat made no new calls or Git/runtime changes and does not claim a run started.
+
+The final nine-case overlay/guidance below is already complete and unchanged at its pinned hashes. Agent owner confirmed a pure mapper and backend is adapting the chosen source shape; no second reshape or paid calibration call is needed. Keep original strict v0.3 assessments/readiness intact and distinguish pre-intro merit from contactability. Do not copy the eight/one historical category outcome or case-name map into the new-case loop.
+
+## ACTIVE HUMAN AUTHORIZATION: additive PRE-OUTREACH calibration v0.1 ready
+
+The prior NEXT-only freeze boundary is superseded ONLY for this additive stage calibration: the human confirmed the version ready and authorized loosening pre-outreach expectations. Preserve original v0.3, all genuine v3 assessments/C4 findings, strict formal partner review, existing human handoffs and qualification. No fresh source/provider/model calls, new discovery or continuous run occurred here.
+
+Exact artifacts: `planning/investment-thesis/pre-outreach-overlay-v0.1.md` (policy semantics), `pre-outreach-nine-case-triage.json` (nine source/version-bound interpretations), `pre-outreach-nine-case-triage.md` (human-readable map). Overlay raw-file SHA256: 8decb2846efa18e776c987a8e07ee872a742bb7e9568c72fe108f6eda4816f85. Guidance JSON raw-file SHA256: 7c772f52ca6da64a8f736f2d5d58f490cc842d8034bca58838c08fdcfee8534f. Do not edit these pinned artifacts silently after intake.
+
+Minimum pre-intro basis: resolved exact company/project identity and scope; concrete source-described product/program/problem; credible source-supported reason for a useful conversation. Private demo, exact current contribution, rights/access and clinical/scientific validation normally become call questions, not universal intro gates. Categories: outreach_candidate / research_first / monitor / outside_scope. Conversation merit is separate from named relevant-person status and deliverable contact-route status. No category quotas, scores, new restrictions, automatic qualification or sending.
+
+Guidance JSON per-case seam: case_id, case_version, assessment_ref, input_ref (including exact evidence_hash), category, rationale{text,evidence_ids}, minimum_basis{identity_scope,concrete_product_program_problem,useful_conversation_reason}, call_questions[{text,evidence_ids}] (max2), contrary_facts, bound_risks, decisive_blocker, person_actionability (bound people/roles), contact_actionability, source_snapshot path/hash. All referenced IDs were checked against the exact saved context. Eight cases have introductory merit; Cadex provisional research_first is tied to current operator/offer continuity concerns, NOT missing validation alone. Find Nuclei's absent named person/route is a contact-preparation gap, not automatic negative merit. Other existing strict states remain unchanged.
+
+Working rules were sent to root/agent/backend owners before detailed mapping; final paths/hashes follow directly. This is human-authorized editorial stage-calibration guidance, never represented as nine fresh model outputs. Backend owns persistence and active integration. No thirty-minute continuous scout was started or claimed.
+
 ## FREEZE BOUNDARY — pre-outreach calibration is NEXT, not active
 
 Latest direct human steering, relayed by control: needs-evidence requirements should eventually be calibrated more loosely for pre-outreach scouting rather than a final investment/deal engine, **but wait until this version is ready**. Preserve the current enrichment version's thresholds, all actual assessments/readiness states, and all nine human handoffs through final freeze. No relaxation, new eligibility mapping, source/model/provider call, reassessment or readiness change is authorized by this note. Future calibration is a separate next-version decision; it must not be inferred from or applied retroactively to the frozen outputs. Current scoped thesis/review work is complete; no further work is required now.
