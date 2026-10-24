@@ -5,7 +5,7 @@ from unittest.mock import patch
 from backend.app.assessments import load_reference_material
 from backend.app.research_graph import saved_research_graph
 from pydantic import ValidationError
-from backend.app.scouting_loop import ScoutingLoop,RunStore,StartScoutingRun,PaidTransport,LoopStopped
+from backend.app.scouting_loop import ScoutingLoop,RunStore,StartScoutingRun,ResumeScoutingRun,PaidTransport,LoopStopped
 from backend.app.settings import APP_ROOT,Settings
 from backend.app.state import StateService
 from backend.app.errors import ServiceError
@@ -58,6 +58,18 @@ class ScoutingLoopTests(unittest.TestCase):
         self.assertEqual(len(calls),1);self.assertEqual(self.store.get(r['id'])['attempts'][0]['http_status'],401)
     def test_restart_marks_interrupted_without_dispatch(self):
         r=self.start();self.loop.recover();self.assertEqual(self.store.get(r['id'])['status'],'interrupted');self.assertEqual(len(self.loop.pool.calls),1)
+    def test_quarantine_malformed_record_and_explicit_cached_continuation_without_paid_retry(self):
+        r=self.start();calls=[]
+        def handle(request):
+            calls.append(request)
+            return httpx.Response(200,headers={'x-credits-used':'.6'},json={'companies':[{'crustdata_company_id':991,'basic_info':{'name':'SCRIPTED VALID','primary_domain':'valid.example'}},{'crustdata_company_id':992,'basic_info':{'name':'','primary_domain':''}}]})
+        body={'limit':20,'fields':['basic_info.name','basic_info.primary_domain','basic_info.description'],'search':{'query':'SCRIPTED TEST','mode':'hybrid'}}
+        with httpx.Client(transport=PaidTransport(self.store,r['id'],'search:0',600000,httpx.MockTransport(handle))) as client:p=client.post('https://api.crustdata.com/company/search',json=body).json()
+        self.assertEqual(len(p['companies']),1);report=self.store.get(r['id'])['normalization_reports']['search:0'];self.assertEqual(report['original_returned_count'],2);self.assertEqual(report['rejected_records'][0]['provider_company_id'],992)
+        deadline=r['deadline'];self.store.change(r['id'],lambda p:p.update(status='failed',stop_reason='SCRIPTED local normalization failure'))
+        resumed=self.loop.resume_cached(r['id'],ResumeScoutingRun(continuation_key='explicit-test',reuse_cached_attempts=True));self.assertEqual(resumed['deadline'],deadline)
+        with httpx.Client(transport=PaidTransport(self.store,r['id'],'search:0',600000,httpx.MockTransport(handle))) as client:again=client.post('https://api.crustdata.com/company/search',json=body).json()
+        self.assertEqual(again,p);self.assertEqual(len(calls),1);self.assertEqual(len(self.store.get(r['id'])['attempts']),1);self.assertEqual(self.store.get(r['id'])['continuations'][0]['prior_status'],'failed')
     def test_full_source_intake_two_company_linked_people_and_grouped_graph(self):
         self.state.reference_material=load_reference_material(APP_ROOT,APP_ROOT/'config/reference-source.json')
         r=self.start();calls=[];graphs=[]

@@ -32,6 +32,11 @@ class StartScoutingRun(BaseModel):
     max_credits:StrictInt=Field(default=50,ge=1,le=50)
     max_model_assessments:StrictInt=Field(default=4,ge=1,le=4)
 
+class ResumeScoutingRun(BaseModel):
+    model_config=ConfigDict(extra='forbid')
+    continuation_key:str=Field(min_length=1,max_length=120)
+    reuse_cached_attempts:bool
+
 
 class LoopStopped(Exception):pass
 class CandidateDeferred(Exception):pass
@@ -86,7 +91,17 @@ class PaidTransport(httpx.BaseTransport):
     def __init__(self,store,run_id,intent,quote,inner=None):self.store,self.run_id,self.intent,self.quote=store,run_id,intent,quote;self.inner=inner or httpx.HTTPTransport(retries=0)
     def handle_request(self,request):
         if str(request.url.host)!='api.crustdata.com' or request.url.path not in ['/company/search','/company/enrich']:raise LoopStopped('unapproved_provider_route')
-        body=json.loads(request.content);self.store.reserve(self.run_id,'provider',self.intent,{'route':request.url.path,'body':body},self.quote)
+        body=json.loads(request.content)
+        prior=next((a for a in self.store.get(self.run_id)['attempts'] if a['intent']==self.intent),None)
+        if prior:
+            self.store.check(self.run_id,25)
+            if not self.store.get(self.run_id).get('continuations'):raise LoopStopped('intent_already_attempted_explicit_cached_continuation_required')
+            if prior['request']!={'route':request.url.path,'body':body} or prior['status']!='received' or prior.get('http_status')!=200 or not prior.get('raw_path'):raise LoopStopped('attempt_is_not_exact_reusable_cached_success')
+            cached=json.loads((APP_ROOT/prior['raw_path']).read_text(encoding='utf-8'))
+            if cached['request']!=body:raise LoopStopped('cached_receipt_request_mismatch')
+            response=httpx.Response(200,headers={'x-credits-used':cached['credits_used'] or '', 'x-request-id':cached.get('request_id') or ''},text=cached['response_text'],request=request)
+            return self.normalize_search(request,response,body)
+        self.store.reserve(self.run_id,'provider',self.intent,{'route':request.url.path,'body':body},self.quote)
         folder=APP_ROOT/'backend/work/scouting-runs'/self.run_id;folder.mkdir(parents=True,exist_ok=True);path=folder/(hashlib.sha256(self.intent.encode()).hexdigest()[:20]+'.response.json')
         try:
             response=self.inner.handle_request(request);response.read()
@@ -97,11 +112,28 @@ class PaidTransport(httpx.BaseTransport):
             if response.status_code!=200:raise LoopStopped('provider_http_'+str(response.status_code)+'_no_retry')
             if actual is None:raise LoopStopped('provider_usage_unknown_reservation_retained')
             if actual>self.quote:raise LoopStopped('provider_usage_exceeded_quote_stop_for_review')
-            return response
+            return self.normalize_search(request,response,body)
         except httpx.HTTPError as exc:
             self.store.settle(self.run_id,self.intent,status='transport_failed',error_kind=type(exc).__name__)
             raise LoopStopped('provider_transport_failure_no_retry') from exc
     def close(self):self.inner.close()
+    def normalize_search(self,request,response,body):
+        if request.url.path!='/company/search':return response
+        try:payload=response.json()
+        except ValueError:return response
+        if not isinstance(payload,dict) or not isinstance(payload.get('companies'),list):return response
+        from .providers import CrustdataSearchProvider
+        from .settings import Settings
+        accepted=[];rejected=[];ranks={}
+        for index,record in enumerate(payload['companies'],1):
+            parser=CrustdataSearchProvider(Settings(),httpx.MockTransport(lambda r,rec=record:httpx.Response(200,json={'companies':[rec]})))
+            try:
+                candidates=parser.execute_request(body);accepted.append(record)
+                for c in candidates:ranks[c.key]=index
+            except ServiceError as exc:rejected.append({'original_rank':index,'provider_company_id':record.get('crustdata_company_id') if isinstance(record,dict) else None,'reason':parser.last_diagnostic.get('normalization_error',exc.code),'meaning':'Invalid identity fields; quarantined for review, not negative company evidence.'})
+        report={'intent':self.intent,'original_returned_count':len(payload['companies']),'valid_count':len(accepted),'rejected_records':rejected,'accepted_original_ranks':ranks,'basis':'Each original record validated offline through the actual strict parser; raw paid response preserved. No provider retry.'}
+        self.store.change(self.run_id,lambda p:p.setdefault('normalization_reports',{}).update({self.intent:report}))
+        return httpx.Response(response.status_code,headers={'x-credits-used':response.headers.get('x-credits-used',''),'x-request-id':response.headers.get('x-request-id','')},json={**payload,'companies':accepted},request=request)
 
 
 class PublicText(HTMLParser):
@@ -150,6 +182,19 @@ class ScoutingLoop:
         def stop(p):
             if p['status'] in ['queued','running','stopping']:p.update(stop_requested=True,status='stopping',stop_reason='human_stop_requested')
         return self.store.change(id,stop)
+    def resume_cached(self,id,request):
+        if not request.reuse_cached_attempts:raise ServiceError('invalid_transition','Continuation must reuse exact cached successful responses',409)
+        p=self.store.get(id)
+        if any(c.get('continuation_key')==request.continuation_key for c in p.get('continuations',[])):return p
+        if p['status']!='failed' or p['usage']['model_attempts'] or p['usage']['new_cases'] or not p['attempts'] or any(a['kind']!='provider' or a['status']!='received' or a.get('http_status')!=200 for a in p['attempts']):raise ServiceError('invalid_transition','Only a pre-model local normalization failure with saved successful raw responses can use this explicit continuation',409)
+        if datetime.fromisoformat(p['deadline'].replace('Z','+00:00'))<=datetime.now(timezone.utc)+timedelta(seconds=170):raise ServiceError('deadline_expired','Original deadline has insufficient time; continuation cannot extend it',409)
+        folder=APP_ROOT/'backend/work/scouting-runs'/id;path=folder/'before-explicit-cached-continuation.json';path.write_text(json.dumps(p,indent=2))
+        def resume(row):
+            if row['status']!='failed':raise ServiceError('invalid_transition','Run changed before explicit continuation',409)
+            row.setdefault('continuations',[]).append({'continuation_key':request.continuation_key,'created_at':now(),'prior_status':row['status'],'prior_stop_reason':row['stop_reason'],'prior_snapshot_path':str(path.relative_to(APP_ROOT)),'authority':'Explicit control continuation after diagnosed local normalization failure; cached successful responses reused; original deadline and cumulative limits unchanged.'})
+            row.update(status='queued',stop_requested=False,stop_reason=None)
+            row.pop('finished_at',None)
+        self.store.change(id,resume);self.pool.submit(self._run,id);return self.store.get(id)
     def _candidate(self,id,key,**values):
         def change(p):
             c=next(c for c in p['candidates'] if c['key']==key);c.update(values)
@@ -249,8 +294,9 @@ class ScoutingLoop:
     def _run(self,id):
         task_id=None;reason='plan_exhausted';terminal='completed'
         try:
-            self.store.check(id,25);self.store.change(id,lambda p:p.update(status='running',started_at=now()))
-            mandate=self.state.create_mandate(CreateMandate(title='Bounded continuous scouting '+id[-8:],thesis_text='Human-authorized 30-minute maximum continuous health/bio scouting using the pinned v0.3 thesis. Maximum4new cases; research only, no qualification or outreach. Legacy target_count is a compatibility placeholder.',target_count=1,reference_status='user_supplied'))
+            self.store.check(id,25);self.store.change(id,lambda p:p.update(status='running',started_at=p.get('started_at') or now()))
+            existing=self.store.get(id)
+            mandate=self.state.mandate(existing['mandate_id']) if existing.get('mandate_id') else self.state.create_mandate(CreateMandate(title='Bounded continuous scouting '+id[-8:],thesis_text='Human-authorized 30-minute maximum continuous health/bio scouting using the pinned v0.3 thesis. Maximum4new cases; research only, no qualification or outreach. Legacy target_count is a compatibility placeholder.',target_count=1,reference_status='user_supplied'))
             task,_=self.state.enqueue_run(mandate.id);self.state.start_task(task.id);task_id=task.id
             self.store.change(id,lambda p:p.update(mandate_id=mandate.id,task_id=task_id))
             compiled=json.loads(PLAN_PATH.read_text());catalog=CompanyCatalog.model_validate_json((APP_ROOT/'config/provider-catalog/company-search.json').read_text())
@@ -267,15 +313,30 @@ class ScoutingLoop:
                 self.store.check(id,25)
                 branch=CompiledDiscovery.model_validate(old).branch.model_copy(update={'id':id+':branch:'+str(index),'mandate_id':mandate.id,'limit':20})
                 c=compile_discovery(branch,catalog,self.state.reference_material)
-                approval=DiscoveryApproval(id=id+':approval:'+str(index),mandate_id=mandate.id,branch_digest=c.branch_digest,request_digest=c.request_digest,catalog_digest=c.catalog_digest,scope='discovery_only',approved=True,reviewer='Explicit human continuous-scout run; reviewed four-track semantic plan reused with bounded20results, no new filters',lossy_filters_reviewed=False,max_calls=1,max_result_slots=20,max_quoted_microcredits=c.quoted_microcredits_ceiling)
+                continuation=len(existing.get('continuations',[]));approval=DiscoveryApproval(id=id+':approval:'+str(index)+':acceptance:'+str(continuation),mandate_id=mandate.id,branch_digest=c.branch_digest,request_digest=c.request_digest,catalog_digest=c.catalog_digest,scope='discovery_only',approved=True,reviewer='Explicit human continuous-scout run; reviewed four-track semantic plan reused with bounded20results, no new filters; existing successful raw request is reused on explicit normalization continuation',lossy_filters_reviewed=False,max_calls=1,max_result_slots=20,max_quoted_microcredits=c.quoted_microcredits_ceiling)
                 DiscoveryStore(self.state).register(c,approval,catalog)
                 folder=APP_ROOT/'backend/work/scouting-runs'/id;folder.mkdir(parents=True,exist_ok=True);selector=folder/(str(index)+'.selection.json');selector.write_text(json.dumps({'approval_id':approval.id,'attempt_key':'only-attempt'}))
                 provider=ApprovedCompanySearchProvider(replace(self.settings,provider_mode='live',crustdata_search_config=selector),self.state,transport=PaidTransport(self.store,id,'search:'+str(index),c.quoted_microcredits_ceiling))
-                candidates=provider.discover(mandate,20,task_id=task_id);queue=deque()
+                def actual_stamp(payload,intent='search:'+str(index),provider=provider):
+                    receipt=next(a for a in self.store.get(id)['attempts'] if a['intent']==intent)
+                    raw=json.loads((APP_ROOT/receipt['raw_path']).read_text(encoding='utf-8'))
+                    provider.raw.retrieval_timestamp_override=raw['received_at']
+                provider.raw.response_sink=actual_stamp
+                reused=any(a['intent']=='search:'+str(index) for a in self.store.get(id)['attempts'])
+                candidates=provider.discover(mandate,20,task_id=task_id)
+                receipt=next(a for a in self.store.get(id)['attempts'] if a['intent']=='search:'+str(index));raw=json.loads((APP_ROOT/receipt['raw_path']).read_text(encoding='utf-8'))
+                candidates=[replace(can,discovery_refs={**can.discovery_refs,'cached_response_reuse':reused,'actual_provider_received_at':raw['received_at'],'provider_request_id':receipt.get('request_id'),'raw_response_path':receipt['raw_path'],'raw_response_sha256':hashlib.sha256((APP_ROOT/receipt['raw_path']).read_bytes()).hexdigest()}) for can in candidates]
+                queue=deque()
                 for rank,candidate in enumerate(candidates,1):
                     duplicate='crustdata:'+str(candidate.provider_company_id) in known or candidate.canonical_domain in known
                     stage='duplicate_prior_identity' if duplicate else ('deferred_no_domain' if not candidate.canonical_domain else 'queued_for_public_research')
-                    self.store.change(id,lambda p,can=candidate,r=rank,st=stage:p['candidates'].append({'key':can.key,'company_name':can.company_name,'domain':can.canonical_domain,'track_hypothesis':branch.hypothesis.track,'rank':r,'stage':st,'discovery_refs':can.discovery_refs}))
+                    original_rank=self.store.get(id).get('normalization_reports',{}).get('search:'+str(index),{}).get('accepted_original_ranks',{}).get(candidate.key,rank)
+                    record={'key':candidate.key,'company_name':candidate.company_name,'domain':candidate.canonical_domain,'track_hypothesis':branch.hypothesis.track,'rank':original_rank,'stage':stage,'discovery_refs':candidate.discovery_refs}
+                    def save_candidate(p,record=record):
+                        old=next((x for x in p['candidates'] if x['key']==record['key']),None)
+                        if old is not None:old.update(record)
+                        else:p['candidates'].append(record)
+                    self.store.change(id,save_candidate)
                     if not duplicate:
                         known.add('crustdata:'+str(candidate.provider_company_id));known.add(candidate.canonical_domain)
                         if candidate.canonical_domain:queue.append(candidate)

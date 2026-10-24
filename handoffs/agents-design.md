@@ -1,5 +1,9 @@
 # Agents implementation and discovery handoff
 
+## Continuous runner focused review complete
+
+planning/agents/continuous-runner-review.md records the read-only review and exact integration defect/fix. Backend fixed inconsistent provider-response grouping IDs and per-observation retrieval timestamps, plus explicit domain-mismatch deferral. I independently ran the owner's full-source-intake/twopeople/groupedgraph test with MockTransport and a SCRIPTED model double: passes. This is mechanics proof, not real provider/model execution. Atomic caps/deadline/noautomaticpaidretry/stop/restart/raw-before-parse are present. No duplicate agentworker or Git/ownerfile mutation; backend/control own actual run, real results and final UI/Git proof. Pre-outreach mapper105tests and allninepureaudit remain green; no further implementation required by this review.
+
 ## Pre-outreach calibration newly authorized and implemented
 
 The human has NOW authorized the previously deferred calibration. agents/pre_outreach.py and threepre-outreachschemas are implemented;105tests pass. Exact seam/sourcepins/adapter/currentness rules: planning/agents/pre-outreach-integration.md. Pureaudit of existingnine passes exact case/evidence/assessment/sourceSHA bindings with original outputs unchanged: planning/agents/pre-outreach-existing-nine-audit.json. Actual guidance yields8outreach_candidate/1research_first without hardcoded quotas; Cadex currentoperatorstatus blocker, not validationgate. FindNuclei merits conversation with person/routeunknown. Backend owns persistence/activation/HTTP ready-stale-unavailable; frontend renders derived stage notqualification. No newcalls/promptupdates/strictgatechanges or Gitmutations here.

@@ -22,7 +22,7 @@ from .batch import BatchStore
 from .follow_up import research_follow_up,execute_research_intent
 from .models import ResearchExecutionInput
 from .pre_outreach import pre_outreach_review
-from .scouting_loop import ScoutingLoop,RunStore,StartScoutingRun
+from .scouting_loop import ScoutingLoop,RunStore,StartScoutingRun,ResumeScoutingRun
 
 
 def create_app(settings: Settings | None = None) -> FastAPI:
@@ -101,6 +101,10 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     @app.post('/api/v1/scouting-runs/{run_id}/stop')
     def stop_scouting_run(run_id:str):
         return app.state.scouting_loop.stop(run_id)
+
+    @app.post('/api/v1/scouting-runs/{run_id}/resume-cached')
+    def resume_cached_scouting_run(run_id:str,request:ResumeScoutingRun):
+        return app.state.scouting_loop.resume_cached(run_id,request)
 
     @app.get("/api/v1/config/status", response_model=ConfigStatus)
     def config_status():

@@ -1,0 +1,13 @@
+# Continuous runner: focused agent integration review
+
+24 October2026. Backend owns implementation/execution. Read-only review of backend/app/scouting_loop.py and its existing tests; no provider/model calls or owner code edits by this chat.
+
+Atomic run reservations check deadline/status/stop, duplicate intent, cumulative provider request/credit limits and model allowance before dispatch. Paid HTTP uses retries0; failed/unknown usage retains conservative reservation. Raw provider response is saved before JSON parsing. Process restart marks interrupted instead of silently resuming paid tasks. Single concurrency, new-case count, prompt0.3 freeze and human qualification boundaries are explicit.
+
+One concrete blocking defect was identified and reported before launch: provider metadata used an original_source_id inconsistent with ProviderResponseGroup, and each observation from the same enrich response had a different now() retrieval time. Backend fixed both: provider rows now defer grouping to the explicit response group and share the retained response's actual received_at. It also added explicit enrich-domain/search-domain mismatch deferral.
+
+Independently verified the owner's focused test backend.tests.test_scouting_loop.ScoutingLoopTests.test_full_source_intake_two_company_linked_people_and_grouped_graph: PASS. This exercises a mock provider, two explicitly company-linked people, accepted context, genuine graph mechanics, stored scripted brief and human-research outcome, one grouped enrich source and shared retrieval time. It uses a SCRIPTED model double, not a real model assessment or provider call. It is integration-mechanics proof only.
+
+Additional owner feedback: failed public source receipts should remain linked to deferred candidates (URL/status/raw path when available), not just a reason string; timeout after dispatch may have consumed model usage and must not be described as zero calls. A usable homepage/meta excerpt is source-authored text, not working-product or scientific validation. New cases need honest unavailable/pending calibrated stage if no source-bound interpretation exists; never apply the existing nine-case guidance to new identities.
+
+No second worker was introduced: reuse accepted context -> comparison_packet -> existing genuine0.3 subprocess -> atomic AgentAssessmentStore -> brief/graph. The live run, real usage/latency/failures, duration, saved cases and UI proof remain backend/control responsibilities. Finishing early on a real cap/finite plan must be reported honestly rather than padded to claim thirty minutes of work. No Git mutation here; root owns repository operations.
