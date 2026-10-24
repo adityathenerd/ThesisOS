@@ -1,0 +1,320 @@
+{
+  "schema_version": "0.1",
+  "kind": "bounded child-stage source plan, not executed research or new evidence",
+  "parent_run_id": "scout_run_109d8a6bf7e84ea2a5e555fccc23784b",
+  "deadline": "2026-10-24T11:23:21.796199Z",
+  "stage_caps": {
+    "provider_requests": 8,
+    "credits": 20,
+    "fresh_models": 4,
+    "public_url_attempts_per_case": 2,
+    "concurrent_workers": 1,
+    "automatic_retries": 0,
+    "new_discovery": false
+  },
+  "cases": [
+    {
+      "case_id": "case_90f11d41d99741d0aaeb0b6fd44085eb",
+      "domain": "docufindr.ai",
+      "origin_assessment_ref": "assessment_23a98897505d45d68a177e565b1967f3",
+      "origin_input_ref": {
+        "case_id": "case_90f11d41d99741d0aaeb0b6fd44085eb",
+        "case_version": 1,
+        "thesis_version": 1,
+        "policy_version": 1,
+        "evidence_hash": "849f183bd034a79da97d151b057bd54838c3f172260ecdf8ebc721b98fcb5eef"
+      },
+      "parent_model_next_action": "Human research handoff: request authorized access to one de-identified DME workflow walkthrough, with the named builder explaining document input, failed checks, correction, human review, and submission output. Verify that person's company role and contribution. A functioning attributable workflow would materially advance product-gate and founder assessment; a static illustration would leave both unresolved.",
+      "execution_input_ref": "MUST bind actual current CaseContext.ref at child task acceptance; never pretend parent assessment is current after a factual delta.",
+      "source_points": [
+        {
+          "id": "child-point:case_90f11d41d99741d0aaeb0b6fd44085eb:1",
+          "criterion_ids": [
+            "C4"
+          ],
+          "question": "What does the documented DME intake workflow show about input documents, failed checks, corrections, human review and submission output?",
+          "decision_consequence": "Inspect source-linked workflow detail; static description alone is not hands-on functionality.",
+          "what_to_obtain": "Inspect the exact previously linked public source: https://docufindr.ai/solutions/dme-intake-automation",
+          "evidence_ids": [
+            "evidence_903b363f1311431cbd264b8802fc5632"
+          ],
+          "investigation": {
+            "criterion_id": "C4",
+            "subject_kind": "company",
+            "subject_id": "company_a6ff037b17db4a4c85f116c94b5db087",
+            "action": "fetch_public_source",
+            "question": "What does the documented DME intake workflow show about input documents, failed checks, corrections, human review and submission output?",
+            "decision_consequence": "Inspect source-linked workflow detail; static description alone is not hands-on functionality.",
+            "query": "https://docufindr.ai/solutions/dme-intake-automation",
+            "max_calls": 1
+          },
+          "url_provenance": "Exact href present in the retained parent homepage HTML; not a fabricated path.",
+          "execution_owner": "backend child-stage worker"
+        },
+        {
+          "id": "child-point:case_90f11d41d99741d0aaeb0b6fd44085eb:2",
+          "criterion_ids": [
+            "C2"
+          ],
+          "question": "Who is explicitly named as building or owning the core workflow, beyond the indexed CEO/CTO roles?",
+          "decision_consequence": "Separate source-attributed contribution from role identity; absence remains unknown.",
+          "what_to_obtain": "Inspect the exact previously linked public source: https://docufindr.ai/about",
+          "evidence_ids": [
+            "evidence_903b363f1311431cbd264b8802fc5632"
+          ],
+          "investigation": {
+            "criterion_id": "C2",
+            "subject_kind": "company",
+            "subject_id": "company_a6ff037b17db4a4c85f116c94b5db087",
+            "action": "fetch_public_source",
+            "question": "Who is explicitly named as building or owning the core workflow, beyond the indexed CEO/CTO roles?",
+            "decision_consequence": "Separate source-attributed contribution from role identity; absence remains unknown.",
+            "query": "https://docufindr.ai/about",
+            "max_calls": 1
+          },
+          "url_provenance": "Exact href present in the retained parent homepage HTML; not a fabricated path.",
+          "execution_owner": "backend child-stage worker"
+        }
+      ],
+      "cached_roles_available": 2,
+      "limits": [
+        "At most2 public URL attempts across ALL owners for this case; no repeated unchanged homepage.",
+        "Role identity alone never resolves contribution/product question.",
+        "Batch accepted material source/cached-role facts before the single authorized fresh model for this case."
+      ]
+    },
+    {
+      "case_id": "case_2fae93f438224f6a83f575a199bbccaf",
+      "domain": "biosciencia.com",
+      "origin_assessment_ref": "assessment_a3ab7a339230447a8b56b278a15bd49f",
+      "origin_input_ref": {
+        "case_id": "case_2fae93f438224f6a83f575a199bbccaf",
+        "case_version": 1,
+        "thesis_version": 1,
+        "policy_version": 1,
+        "evidence_hash": "4852fd10cc5899b2a0f9972e457b5abd85b7510375330e0f3c48f68b2576244b"
+      },
+      "parent_model_next_action": "Human research point: locate a Fluodyn technical/application report and identify its technical owner. Inspect the intended workflow, methods, comparator, measured results and limitations, then verify the named builder's company role and contribution. This would distinguish a differentiated R-track reagent capability from ordinary supply and determine whether further partner-review preparation is warranted.",
+      "execution_input_ref": "MUST bind actual current CaseContext.ref at child task acceptance; never pretend parent assessment is current after a factual delta.",
+      "source_points": [
+        {
+          "id": "child-point:case_2fae93f438224f6a83f575a199bbccaf:1",
+          "criterion_ids": [
+            "C4"
+          ],
+          "question": "Is there an attributable Fluodyn technical/application report with intended workflow, methods, comparator and measured result?",
+          "decision_consequence": "Distinguish reusable measured research capability from a product listing; linked-but-unread reports remain uninspected.",
+          "what_to_obtain": "Inspect the exact previously linked public source: https://biosciencia.com/docu/",
+          "evidence_ids": [
+            "evidence_86181ab4e09745ca83ac8389e06a1efb"
+          ],
+          "investigation": {
+            "criterion_id": "C4",
+            "subject_kind": "company",
+            "subject_id": "company_15aecb4403544f0a99cc7d4edca26494",
+            "action": "fetch_public_source",
+            "question": "Is there an attributable Fluodyn technical/application report with intended workflow, methods, comparator and measured result?",
+            "decision_consequence": "Distinguish reusable measured research capability from a product listing; linked-but-unread reports remain uninspected.",
+            "query": "https://biosciencia.com/docu/",
+            "max_calls": 1
+          },
+          "url_provenance": "Exact href present in the retained parent homepage HTML; not a fabricated path.",
+          "execution_owner": "backend child-stage worker"
+        },
+        {
+          "id": "child-point:case_2fae93f438224f6a83f575a199bbccaf:2",
+          "criterion_ids": [
+            "C2"
+          ],
+          "question": "Does the company attribute technical creation or reagent-development work to the named cofounder or another builder?",
+          "decision_consequence": "Cached cofounder identity is not proof of technical ownership or execution.",
+          "what_to_obtain": "Inspect the exact previously linked public source: https://biosciencia.com/about-us/",
+          "evidence_ids": [
+            "evidence_86181ab4e09745ca83ac8389e06a1efb"
+          ],
+          "investigation": {
+            "criterion_id": "C2",
+            "subject_kind": "company",
+            "subject_id": "company_15aecb4403544f0a99cc7d4edca26494",
+            "action": "fetch_public_source",
+            "question": "Does the company attribute technical creation or reagent-development work to the named cofounder or another builder?",
+            "decision_consequence": "Cached cofounder identity is not proof of technical ownership or execution.",
+            "query": "https://biosciencia.com/about-us/",
+            "max_calls": 1
+          },
+          "url_provenance": "Exact href present in the retained parent homepage HTML; not a fabricated path.",
+          "execution_owner": "backend child-stage worker"
+        }
+      ],
+      "cached_roles_available": 1,
+      "limits": [
+        "At most2 public URL attempts across ALL owners for this case; no repeated unchanged homepage.",
+        "Role identity alone never resolves contribution/product question.",
+        "Batch accepted material source/cached-role facts before the single authorized fresh model for this case."
+      ]
+    },
+    {
+      "case_id": "case_72e97cdf215449f99c4bb2330b6dafd2",
+      "domain": "labwren.com",
+      "origin_assessment_ref": "assessment_964f5d23bddc451a8aaf7f586eed924e",
+      "origin_input_ref": {
+        "case_id": "case_72e97cdf215449f99c4bb2330b6dafd2",
+        "case_version": 1,
+        "thesis_version": 1,
+        "policy_version": 1,
+        "evidence_hash": "b91b16deccbfc4cd215bc373bdcd4a64ccc31c529ad65aec8fb6e2fad5e8d43a"
+      },
+      "parent_model_next_action": "Human research handoff: inspect the advertised BCA workspace with a known-answer input, check its calculations and out-of-range handling, and establish who authored the analysis and validation code. A functioning, attributable result would support reconsidering product-gate readiness; an unavailable artifact would leave it unresolved.",
+      "execution_input_ref": "MUST bind actual current CaseContext.ref at child task acceptance; never pretend parent assessment is current after a factual delta.",
+      "source_points": [
+        {
+          "id": "child-point:case_72e97cdf215449f99c4bb2330b6dafd2:1",
+          "criterion_ids": [
+            "C4"
+          ],
+          "question": "Can a known-answer BCA example be inspected in the actual advertised workspace, including out-of-range/error handling?",
+          "decision_consequence": "Root owns browser inspection; reuse its recorded actual results, not duplicate browsing or infer correctness from UI text.",
+          "what_to_obtain": "Inspect the exact previously linked public source: https://labwren.com/app/templates",
+          "evidence_ids": [
+            "evidence_7dd59d116e844bb3acee2679fceb6c33"
+          ],
+          "investigation": {
+            "criterion_id": "C4",
+            "subject_kind": "company",
+            "subject_id": "company_1969586da03a4df2af651939b6f500a1",
+            "action": "fetch_public_source",
+            "question": "Can a known-answer BCA example be inspected in the actual advertised workspace, including out-of-range/error handling?",
+            "decision_consequence": "Root owns browser inspection; reuse its recorded actual results, not duplicate browsing or infer correctness from UI text.",
+            "query": "https://labwren.com/app/templates",
+            "max_calls": 1
+          },
+          "url_provenance": "Exact href present in the retained parent homepage HTML; not a fabricated path.",
+          "execution_owner": "root actual browser proof; backend reuses",
+          "execution_status": "completed_limited_observed_scope",
+          "completion_receipt": "backend/work/scouting-runs/scout_run_109d8a6bf7e84ea2a5e555fccc23784b/external-followthrough/labwren.com.json",
+          "completion_scope": "Observed BCA starter with seven standards and40samples; three independent arithmetic inversions and range flags checked. Not custom-input, all-sample, scientific, deployment or authorship validation.",
+          "repeat_fetch_authorized": false
+        },
+        {
+          "id": "child-point:case_72e97cdf215449f99c4bb2330b6dafd2:2",
+          "criterion_ids": [
+            "C2"
+          ],
+          "question": "Who is explicitly responsible for the analysis and validation implementation?",
+          "decision_consequence": "Use only if root has not consumed both allowed public attempts; missing builder remains a human question.",
+          "what_to_obtain": "Human research point: source-attributed implementation ownership. Root's two actual page visits exhaust this case's public allowance; do not fetch /about in this child stage.",
+          "execution_status": "deferred_to_human_public_allowance_exhausted",
+          "repeat_fetch_authorized": false,
+          "evidence_ids": [
+            "evidence_7dd59d116e844bb3acee2679fceb6c33"
+          ],
+          "investigation": {
+            "criterion_id": "C2",
+            "subject_kind": "company",
+            "subject_id": "company_1969586da03a4df2af651939b6f500a1",
+            "action": "fetch_public_source",
+            "question": "Who is explicitly responsible for the analysis and validation implementation?",
+            "decision_consequence": "Use only if root has not consumed both allowed public attempts; missing builder remains a human question.",
+            "query": "https://labwren.com/about",
+            "max_calls": 1
+          },
+          "url_provenance": "Exact href present in the retained parent homepage HTML; not a fabricated path.",
+          "execution_owner": "backend child-stage worker"
+        }
+      ],
+      "cached_roles_available": 0,
+      "limits": [
+        "At most2 public URL attempts across ALL owners for this case; no repeated unchanged homepage.",
+        "Role identity alone never resolves contribution/product question.",
+        "Batch accepted material source/cached-role facts before the single authorized fresh model for this case."
+      ]
+    },
+    {
+      "case_id": "case_b91e7727d41b4c59b35039224c779be4",
+      "domain": "emergentdx.com",
+      "origin_assessment_ref": "assessment_95430540914a4a57b68b3a8ac8038955",
+      "origin_input_ref": {
+        "case_id": "case_b91e7727d41b4c59b35039224c779be4",
+        "case_version": 1,
+        "thesis_version": 1,
+        "policy_version": 1,
+        "evidence_hash": "50e76d904bd5315ea4b86ec91234190c8ffc59f30a49f194731bf2f443f9b2ab"
+      },
+      "parent_model_next_action": "Human research point: determine whether a named operating founder can provide an authorized, inspectable worked example of a company-controlled reusable tool or assay capability, identifying their contribution and what is reused across laboratories. A demonstrated core would justify further R-track comparison; confirmation of exclusively bespoke services would support an outside-target comparison.",
+      "execution_input_ref": "MUST bind actual current CaseContext.ref at child task acceptance; never pretend parent assessment is current after a factual delta.",
+      "source_points": [
+        {
+          "id": "child-point:case_b91e7727d41b4c59b35039224c779be4:1",
+          "criterion_ids": [
+            "C7"
+          ],
+          "question": "Does the services material identify a reusable company-controlled tool, assay capability or attributable worked example beyond bespoke consulting?",
+          "decision_consequence": "A specific reusable core could support further R-track comparison; no example found is not proof no core exists.",
+          "what_to_obtain": "Inspect the exact previously linked public source: https://www.emergentdx.com/our-services/",
+          "evidence_ids": [
+            "evidence_eb1c01c1f2574311937ffb79e8014a10"
+          ],
+          "investigation": {
+            "criterion_id": "C7",
+            "subject_kind": "company",
+            "subject_id": "company_13af9fd4c6f849929a76cb1c2096ec3a",
+            "action": "fetch_public_source",
+            "question": "Does the services material identify a reusable company-controlled tool, assay capability or attributable worked example beyond bespoke consulting?",
+            "decision_consequence": "A specific reusable core could support further R-track comparison; no example found is not proof no core exists.",
+            "query": "https://www.emergentdx.com/our-services/",
+            "max_calls": 1
+          },
+          "url_provenance": "Exact href present in the retained parent homepage HTML; not a fabricated path.",
+          "execution_owner": "backend child-stage worker"
+        },
+        {
+          "id": "child-point:case_b91e7727d41b4c59b35039224c779be4:2",
+          "criterion_ids": [
+            "C2"
+          ],
+          "question": "Which operating people and specific work are attributable to this exact company?",
+          "decision_consequence": "Establish a sourced operator/contribution without inferring founder from a name or title.",
+          "what_to_obtain": "Inspect the exact previously linked public source: https://www.emergentdx.com/about-us/",
+          "evidence_ids": [
+            "evidence_eb1c01c1f2574311937ffb79e8014a10"
+          ],
+          "investigation": {
+            "criterion_id": "C2",
+            "subject_kind": "company",
+            "subject_id": "company_13af9fd4c6f849929a76cb1c2096ec3a",
+            "action": "fetch_public_source",
+            "question": "Which operating people and specific work are attributable to this exact company?",
+            "decision_consequence": "Establish a sourced operator/contribution without inferring founder from a name or title.",
+            "query": "https://www.emergentdx.com/about-us/",
+            "max_calls": 1
+          },
+          "url_provenance": "Exact href present in the retained parent homepage HTML; not a fabricated path.",
+          "execution_owner": "backend child-stage worker"
+        }
+      ],
+      "cached_roles_available": 0,
+      "limits": [
+        "At most2 public URL attempts across ALL owners for this case; no repeated unchanged homepage.",
+        "Role identity alone never resolves contribution/product question.",
+        "Batch accepted material source/cached-role facts before the single authorized fresh model for this case."
+      ]
+    }
+  ],
+  "context_contract": {
+    "pre_attempt_capabilities": [
+      {
+        "action": "fetch_public_source",
+        "subject_kinds": [
+          "company",
+          "person"
+        ],
+        "purpose": "investigation"
+      }
+    ],
+    "pre_attempt_remaining_calls": "Actual net remaining per-case PUBLIC attempts, initially2, less root/backend attempts already reserved; providercredits tracked separately by backend.",
+    "fresh_model_input": "Accepted rebuilt CaseContext with prior_assessment,prior_ref,changed_evidence_ids and truthful attempt/question records; remaining_calls may be0 only after actual attempts/closure.",
+    "changed_context_rule": "plan_follow_through returns reassessment_required if old result ref differs factually. An explicitly authorized child research batch may execute its predeclared source plan before fresh reassessment, with task acceptance bound to current ref plus origin assessment; it is not a fresh semantic decision.",
+    "post_attempt_rule": "No material delta => no cosmetic model call. Fresh recommendation cannot mark unresolved questions completed; inaccessible/private/no-answer paths yield concrete human research points."
+  },
+  "source_model_provider_calls_by_agent": 0
+}

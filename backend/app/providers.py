@@ -153,7 +153,7 @@ class CrustdataSearchProvider:
                 raise ValueError("Invalid response envelope")
             if len(payload["companies"]) > body["limit"]:
                 raise ValueError("Response exceeds bounded result limit")
-            stamp = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+            stamp = getattr(self, 'retrieval_timestamp_override', None) or datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
             candidates = []
             for record in payload["companies"]:
                 basic = record["basic_info"]

@@ -31,6 +31,7 @@ class StartScoutingRun(BaseModel):
     max_provider_requests:StrictInt=Field(default=20,ge=1,le=20)
     max_credits:StrictInt=Field(default=50,ge=1,le=50)
     max_model_assessments:StrictInt=Field(default=4,ge=1,le=4)
+    bounded_followthrough:bool=True
 
 class ResumeScoutingRun(BaseModel):
     model_config=ConfigDict(extra='forbid')
@@ -45,23 +46,25 @@ PLAN_PATH=APP_ROOT/'config/continuous-scout-plan.json'
 
 
 class RunStore:
-    def __init__(self,state):self.state=state
+    def __init__(self,state,table='scouting_runs'):
+        if table not in ['scouting_runs','scouting_followthrough_stages']:raise ValueError('Unrecognized execution store')
+        self.state,self.table=state,table
     @staticmethod
     def projection(p):
         providers=[a for a in p['attempts'] if a['kind']=='provider'];models=[a for a in p['attempts'] if a['kind']=='model']
-        return {**p,'usage':{'provider_requests':len(providers),'known_actual_credits':round(sum(a.get('actual_microcredits') or 0 for a in providers)/1000000,6),'actual_credit_usage_complete':all(a.get('actual_microcredits') is not None for a in providers),'actual_or_reserved_credits':round(sum(a['actual_microcredits'] if a.get('actual_microcredits') is not None else a['quoted_microcredits'] for a in providers)/1000000,6),'model_attempts':len(models),'saved_assessments':sum(a['status']=='stored_genuine_result' for a in models),'new_cases':sum('case_id' in c for c in p['candidates']),'completed_cases':len(p['completed_case_ids'])}}
+        return {**p,'usage':{'provider_requests':len(providers),'known_actual_credits':round(sum(a.get('actual_microcredits') or 0 for a in providers)/1000000,6),'actual_credit_usage_complete':all(a.get('actual_microcredits') is not None for a in providers),'actual_or_reserved_credits':round(sum(a['actual_microcredits'] if a.get('actual_microcredits') is not None else a['quoted_microcredits'] for a in providers)/1000000,6),'model_attempts':len(models),'saved_assessments':sum(a['status']=='stored_genuine_result' for a in models),'new_cases':0 if p.get('stage_kind') else sum('case_id' in c for c in p['candidates']),'cases_in_scope':len(p['candidates']) if p.get('stage_kind') else None,'completed_cases':len(p['completed_case_ids'])}}
     def get(self,id):
-        with self.state.connection() as db:r=db.execute('SELECT payload FROM scouting_runs WHERE id=?',(id,)).fetchone()
+        with self.state.connection() as db:r=db.execute('SELECT payload FROM '+self.table+' WHERE id=?',(id,)).fetchone()
         if not r:raise ServiceError('not_found','Scouting run not found',404)
         return self.projection(json.loads(r[0]))
     def list(self):
-        with self.state.connection() as db:return [self.projection(json.loads(r[0])) for r in db.execute('SELECT payload FROM scouting_runs ORDER BY rowid DESC LIMIT 20')]
+        with self.state.connection() as db:return [self.projection(json.loads(r[0])) for r in db.execute('SELECT payload FROM '+self.table+' ORDER BY rowid DESC LIMIT 20')]
     def change(self,id,fn):
         with self.state.connection(write=True) as db:
-            r=db.execute('SELECT payload FROM scouting_runs WHERE id=?',(id,)).fetchone()
+            r=db.execute('SELECT payload FROM '+self.table+' WHERE id=?',(id,)).fetchone()
             if not r:raise ServiceError('not_found','Scouting run not found',404)
             p=json.loads(r[0]);fn(p);p['updated_at']=now()
-            db.execute('UPDATE scouting_runs SET status=?,payload=?,updated_at=? WHERE id=?',(p['status'],json.dumps(p),p['updated_at'],id))
+            db.execute('UPDATE '+self.table+' SET status=?,payload=?,updated_at=? WHERE id=?',(p['status'],json.dumps(p),p['updated_at'],id))
         return p
     def check(self,id,seconds=0):
         p=self.get(id)
@@ -122,6 +125,7 @@ class PaidTransport(httpx.BaseTransport):
         try:payload=response.json()
         except ValueError:return response
         if not isinstance(payload,dict) or not isinstance(payload.get('companies'),list):return response
+        if len(payload['companies'])>body['limit']:raise LoopStopped('original_provider_response_exceeded_bounded_limit')
         from .providers import CrustdataSearchProvider
         from .settings import Settings
         accepted=[];rejected=[];ranks={}
@@ -156,6 +160,23 @@ def public_url(url,domain):
     return url
 
 
+def company_linked_current_roles(data,company_id):
+    """Exact provider company IDs only; preserve titles, never infer founders."""
+    result=[];seen=set();people=data.get('people',{}) or {}
+    for entry in (people.get('founders',[])+people.get('cxos',[])):
+        pid=entry.get('crustdata_person_id');name=entry.get('basic_profile',{}).get('name')
+        if not pid or not name or pid in seen:continue
+        current=entry.get('experience',{}).get('employment_details',{}).get('current',[])
+        for employment in current:
+            ids=employment.get('employer_company_id',employment.get('employer_crustdata_company_id',[]))
+            ids=ids if isinstance(ids,list) else [ids]
+            if str(company_id) not in [str(value) for value in ids] or employment.get('employee_end_date') not in [None,'']:continue
+            title=employment.get('employee_title') or employment.get('title') or employment.get('job_title') or 'Indexed company-linked current role (title unspecified)'
+            result.append({'person_id':pid,'name':name,'title':title});seen.add(pid);break
+        if len(result)>=5:break
+    return result
+
+
 class ScoutingLoop:
     def __init__(self,state,settings):self.state,self.settings=state,settings;self.store=RunStore(state);self.pool=ThreadPoolExecutor(max_workers=1,thread_name_prefix='bounded-scout-loop')
     def recover(self):
@@ -175,6 +196,7 @@ class ScoutingLoop:
                 if p['start_request']!=payload:raise ServiceError('invalid_transition','Run key already binds a different exact request',409)
                 return self.store.projection(p)
             if db.execute("SELECT 1 FROM scouting_runs WHERE status IN ('queued','running','stopping')").fetchone():raise ServiceError('run_active','One scouting loop is already active',409)
+            if db.execute("SELECT 1 FROM scouting_followthrough_stages WHERE status IN ('queued','running','stopping')").fetchone():raise ServiceError('run_active','A bounded post-intake stage is already active',409)
             p={'id':id,'status':'queued','created_at':stamp,'updated_at':stamp,'deadline':(datetime.now(timezone.utc)+timedelta(minutes=request.duration_minutes)).isoformat().replace('+00:00','Z'),'start_request':payload,'limits':{k:payload[k] for k in ['max_new_cases','max_provider_requests','max_credits','max_model_assessments']},'max_concurrent':1,'attempts':[],'candidates':[],'completed_case_ids':[],'stop_requested':False,'current_operation':None,'stop_reason':None,'mandate_id':None,'task_id':None,'model_prompt_version':'0.3','automatic_retries':0,'qualification_accepted':False,'outreach_sent':False,'novelty_status':'unknown_no_authoritative_known_company_universe'}
             db.execute('INSERT INTO scouting_runs VALUES (?,?,?,?,?,?)',(id,request.idempotency_key,'queued',json.dumps(p),stamp,stamp))
         self.pool.submit(self._run,id);return self.store.projection(p)
@@ -188,21 +210,26 @@ class ScoutingLoop:
         if any(c.get('continuation_key')==request.continuation_key for c in p.get('continuations',[])):return p
         if p['status']!='failed' or p['usage']['model_attempts'] or p['usage']['new_cases'] or not p['attempts'] or any(a['kind']!='provider' or a['status']!='received' or a.get('http_status')!=200 for a in p['attempts']):raise ServiceError('invalid_transition','Only a pre-model local normalization failure with saved successful raw responses can use this explicit continuation',409)
         if datetime.fromisoformat(p['deadline'].replace('Z','+00:00'))<=datetime.now(timezone.utc)+timedelta(seconds=170):raise ServiceError('deadline_expired','Original deadline has insufficient time; continuation cannot extend it',409)
-        folder=APP_ROOT/'backend/work/scouting-runs'/id;path=folder/'before-explicit-cached-continuation.json';path.write_text(json.dumps(p,indent=2))
+        folder=APP_ROOT/'backend/work/scouting-runs'/id;folder.mkdir(parents=True,exist_ok=True);path=folder/('before-continuation-'+hashlib.sha256(request.continuation_key.encode()).hexdigest()[:24]+'.json')
         def resume(row):
             if row['status']!='failed':raise ServiceError('invalid_transition','Run changed before explicit continuation',409)
             row.setdefault('continuations',[]).append({'continuation_key':request.continuation_key,'created_at':now(),'prior_status':row['status'],'prior_stop_reason':row['stop_reason'],'prior_snapshot_path':str(path.relative_to(APP_ROOT)),'authority':'Explicit control continuation after diagnosed local normalization failure; cached successful responses reused; original deadline and cumulative limits unchanged.'})
             row.update(status='queued',stop_requested=False,stop_reason=None)
             row.pop('finished_at',None)
-        self.store.change(id,resume);self.pool.submit(self._run,id);return self.store.get(id)
+        with self.state.connection(write=True) as db:
+            if db.execute("SELECT 1 FROM scouting_runs WHERE id<>? AND status IN ('queued','running','stopping')",(id,)).fetchone():raise ServiceError('run_active','Another scouting loop is active; continuation cannot overlap',409)
+            path.write_text(json.dumps(p,indent=2))
+            row=json.loads(db.execute('SELECT payload FROM scouting_runs WHERE id=?',(id,)).fetchone()[0]);resume(row);row['updated_at']=now()
+            db.execute('UPDATE scouting_runs SET status=?,payload=?,updated_at=? WHERE id=?',(row['status'],json.dumps(row),row['updated_at'],id))
+        self.pool.submit(self._run,id);return self.store.get(id)
     def _candidate(self,id,key,**values):
         def change(p):
             c=next(c for c in p['candidates'] if c['key']==key);c.update(values)
         self.store.change(id,change)
-    def _source(self,id,candidate):
+    def _source(self,id,candidate,target_url=None):
         self.store.check(id,20);domain=candidate.canonical_domain
         if not domain:raise ValueError('No resolved public domain')
-        url='https://'+domain;folder=APP_ROOT/'backend/work/scouting-runs'/id;folder.mkdir(parents=True,exist_ok=True)
+        url=target_url or 'https://'+domain;folder=APP_ROOT/'backend/work/scouting-runs'/id;folder.mkdir(parents=True,exist_ok=True)
         self._candidate(id,candidate.key,source_attempt={'url':url,'attempted_at':now(),'status':'started'})
         with httpx.Client(timeout=httpx.Timeout(12,connect=4),trust_env=False,follow_redirects=False) as client:
             for _ in range(4):
@@ -251,13 +278,9 @@ class ScoutingLoop:
                     self._candidate(id,candidate.key,stage='deferred_identity_unresolved',reason='Exact-ID enrichment domain conflicts with search/homepage identity; no combined attribution or model call.',enrichment_receipt=provider_receipt['raw_path'])
                     raise CandidateDeferred('exact_id_domain_mismatch')
                 eid=add('indexed_company_enrichment','Provider exact-ID basic record: '+json.dumps({k:basic.get(k) for k in ['name','primary_domain','description','status']},ensure_ascii=False)[:5000],'https://api.crustdata.com/company/enrich',intent,stamp=provider_stamp,provider=True)
-                group_eids=[eid];seen=set()
-                for entry in (data.get('people',{}).get('founders',[])+data.get('people',{}).get('cxos',[])):
-                    pid=entry.get('crustdata_person_id');name=entry.get('basic_profile',{}).get('name')
-                    current=entry.get('experience',{}).get('employment_details',{}).get('current',[])
-                    linked=next((x for x in current if str(x.get('employer_crustdata_company_id'))==candidate.provider_company_id),None)
-                    if not pid or not name or not linked or pid in seen:continue
-                    seen.add(pid);person='person:crustdata:'+str(pid);title=linked.get('title') or linked.get('job_title') or 'Indexed company-linked current role (title unspecified)'
+                group_eids=[eid]
+                for lead in company_linked_current_roles(data,candidate.provider_company_id):
+                    pid=lead['person_id'];name=lead['name'];title=lead['title'];person='person:crustdata:'+str(pid)
                     peid=add('indexed_company_linked_role',name+' is indexed in an exact company-ID linked current employment record as '+title+'. Provider claim; dates and actual implementation remain unverified.','https://api.crustdata.com/company/enrich',intent,person,stamp=provider_stamp,provider=True)
                     people.append({'id':person,'name':name});roles.append({'id':'role:'+id+':'+str(pid),'person_id':person,'company_id':case.company_id,'role':title,'status':'supported','evidence_ids':[peid]});group_eids.append(peid)
                     if len(people)>=5:break
@@ -300,7 +323,9 @@ class ScoutingLoop:
             task,_=self.state.enqueue_run(mandate.id);self.state.start_task(task.id);task_id=task.id
             self.store.change(id,lambda p:p.update(mandate_id=mandate.id,task_id=task_id))
             compiled=json.loads(PLAN_PATH.read_text());catalog=CompanyCatalog.model_validate_json((APP_ROOT/'config/provider-catalog/company-search.json').read_text())
-            self.store.change(id,lambda p:p.update(plan_path='config/continuous-scout-plan.json',plan_sha256=hashlib.sha256(PLAN_PATH.read_bytes()).hexdigest(),reference_sha256=self.state.reference_material.document_sha256))
+            plan_hash=hashlib.sha256(PLAN_PATH.read_bytes()).hexdigest();reference_hash=self.state.reference_material.document_sha256
+            if existing.get('plan_sha256',plan_hash)!=plan_hash or existing.get('reference_sha256',reference_hash)!=reference_hash:raise LoopStopped('pinned_plan_or_reference_changed_before_continuation')
+            self.store.change(id,lambda p:p.update(plan_path='config/continuous-scout-plan.json',plan_sha256=plan_hash,reference_sha256=reference_hash))
             known=set()
             with self.state.connection() as db:
                 for r in db.execute('SELECT source_key,canonical_domain FROM companies'):
@@ -352,10 +377,12 @@ class ScoutingLoop:
                     candidate=queue.popleft();self._candidate(id,candidate.key,stage='fetching_public_source')
                     try:source=self._source(id,candidate)
                     except (ValueError,httpx.HTTPError,OSError) as exc:
-                        self._candidate(id,candidate.key,stage='deferred_public_source_unresolved',reason=str(exc)[:160]);continue
+                        prior=next(c for c in self.store.get(id)['candidates'] if c['key']==candidate.key).get('source_attempt',{})
+                        self._candidate(id,candidate.key,stage='deferred_public_source_unresolved',reason=str(exc)[:160],source_attempt={**prior,'outcome':'unresolved','finished_at':now()});continue
                     try:case_id=self._research(id,candidate,track,source,task_id)
                     except CandidateDeferred:continue
                     self._assess(id,candidate.key,case_id)
+                    if hasattr(self,'followthrough') and self.store.get(id)['start_request'].get('bounded_followthrough',True):self.followthrough.process_intake_case(id,case_id)
             reason='finite_reviewed_plan_exhausted_no_automatic_query_expansion'
         except LoopStopped as exc:reason=str(exc);terminal='stopped'
         except Exception as exc:reason='worker_error_'+type(exc).__name__+'_no_retry';terminal='failed'

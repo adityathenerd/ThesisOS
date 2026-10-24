@@ -5,7 +5,7 @@ from unittest.mock import patch
 from backend.app.assessments import load_reference_material
 from backend.app.research_graph import saved_research_graph
 from pydantic import ValidationError
-from backend.app.scouting_loop import ScoutingLoop,RunStore,StartScoutingRun,ResumeScoutingRun,PaidTransport,LoopStopped
+from backend.app.scouting_loop import ScoutingLoop,RunStore,StartScoutingRun,ResumeScoutingRun,PaidTransport,LoopStopped,company_linked_current_roles
 from backend.app.settings import APP_ROOT,Settings
 from backend.app.state import StateService
 from backend.app.errors import ServiceError
@@ -70,13 +70,25 @@ class ScoutingLoopTests(unittest.TestCase):
         resumed=self.loop.resume_cached(r['id'],ResumeScoutingRun(continuation_key='explicit-test',reuse_cached_attempts=True));self.assertEqual(resumed['deadline'],deadline)
         with httpx.Client(transport=PaidTransport(self.store,r['id'],'search:0',600000,httpx.MockTransport(handle))) as client:again=client.post('https://api.crustdata.com/company/search',json=body).json()
         self.assertEqual(again,p);self.assertEqual(len(calls),1);self.assertEqual(len(self.store.get(r['id'])['attempts']),1);self.assertEqual(self.store.get(r['id'])['continuations'][0]['prior_status'],'failed')
+    def test_original_oversized_response_rejected_before_quarantine_can_shrink_it(self):
+        r=self.start()
+        payload={'companies':[{'crustdata_company_id':1,'basic_info':{'name':'SCRIPTED','primary_domain':'test.example'}},{'crustdata_company_id':2,'basic_info':{'name':''}}]}
+        with httpx.Client(transport=PaidTransport(self.store,r['id'],'oversize',600000,httpx.MockTransport(lambda req:httpx.Response(200,headers={'x-credits-used':'.06'},json=payload)))) as client:
+            with self.assertRaisesRegex(LoopStopped,'original_provider_response_exceeded'):client.post('https://api.crustdata.com/company/search',json={'limit':1})
+        self.assertEqual(len(self.store.get(r['id'])['attempts']),1)
+    def test_explicit_continuation_cannot_overlap_another_active_run(self):
+        r=self.start();self.store.reserve(r['id'],'provider','one',{},600000);self.store.settle(r['id'],'one',status='received',http_status=200,actual_microcredits=600000)
+        self.store.change(r['id'],lambda p:p.update(status='failed',stop_reason='SCRIPTED failure'))
+        other=self.loop.start(StartScoutingRun(execute_live=True,idempotency_key='SECOND_SCRIPTED_RUN'))
+        with self.assertRaises(ServiceError):self.loop.resume_cached(r['id'],ResumeScoutingRun(continuation_key='explicit',reuse_cached_attempts=True))
+        self.assertEqual(self.store.get(r['id'])['status'],'failed');self.assertEqual(self.store.get(other['id'])['status'],'queued')
     def test_full_source_intake_two_company_linked_people_and_grouped_graph(self):
         self.state.reference_material=load_reference_material(APP_ROOT,APP_ROOT/'config/reference-source.json')
         r=self.start();calls=[];graphs=[]
         def handle(request):
             calls.append(request.url.path)
             if request.url.path=='/company/search':return httpx.Response(200,headers={'x-credits-used':'.03'},json={'companies':[{'crustdata_company_id':991,'basic_info':{'name':'SCRIPTED COMPANY','primary_domain':'scripted.example','description':'SCRIPTED TEST: microscopy workflow tool with an attributable source'}}]})
-            people=[{'crustdata_person_id':i,'basic_profile':{'name':'SCRIPTED PERSON '+str(i)},'experience':{'employment_details':{'current':[{'employer_crustdata_company_id':991,'title':'Indexed founder role SCRIPTED TEST'}]}}} for i in [1,2]]
+            people=[{'crustdata_person_id':i,'basic_profile':{'name':'SCRIPTED PERSON '+str(i)},'experience':{'employment_details':{'current':[{'employer_company_id':['OTHER_COMPANY'],'employee_title':'Unrelated employer title'},{'employer_company_id':['991'],'employee_title':'Indexed exact-company executive role SCRIPTED TEST','employee_end_date':None}]}}} for i in [1,2]]
             return httpx.Response(200,headers={'x-credits-used':'2'},json=[{'matches':[{'company_data':{'crustdata_company_id':991,'basic_info':{'name':'SCRIPTED COMPANY','primary_domain':'scripted.example','description':'SCRIPTED source description'},'people':{'founders':people,'cxos':people}}}]}])
         source={'url':'https://scripted.example','retrieved_at':'2026-10-24T10:00:00Z','http_status':200,'raw_path':'SCRIPTED_TEST_ONLY','sha256':'a'*64,'excerpt':'SCRIPTED SOFTWARE TEST public company product description, not a real company observation.'}
         def scripted_invoke(transport,packet):
@@ -93,5 +105,6 @@ class ScoutingLoopTests(unittest.TestCase):
         context=self.state.load_assessment_context(final['candidates'][0]['case_id']);self.assertEqual(len(context.research_context['people']),2)
         enrich=[e for e in context.evidence if e.source_url=='https://api.crustdata.com/company/enrich'];self.assertEqual(len(enrich),3);self.assertEqual(len({e.retrieved_at for e in enrich}),1)
         grouped=[s for s in graphs[0]['sources'] if s['source_url']=='https://api.crustdata.com/company/enrich'];self.assertEqual(len(grouped),1);self.assertEqual(len(grouped[0]['evidence_ids']),3)
+        self.assertTrue(all(r['role']=='Indexed exact-company executive role SCRIPTED TEST' for r in context.research_context['relationships']))
 
 if __name__=='__main__':unittest.main()

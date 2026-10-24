@@ -1,0 +1,106 @@
+{
+  "provenance": "Sanitized field-shape excerpt from actual authorized cached company enrich responses; no contacts, credentials or raw private fields. These role leads were not accepted into the first run assessments.",
+  "companies": [
+    {
+      "crustdata_company_id": 62472395,
+      "people": {
+        "founders": [
+          {
+            "crustdata_person_id": 1093502,
+            "basic_profile": {
+              "name": "Venkatachalam D."
+            },
+            "experience": {
+              "employment_details": {
+                "current": [
+                  {
+                    "employer_company_id": [
+                      "1493042"
+                    ],
+                    "employee_title": "Chief Executive Officer",
+                    "employee_end_date": null
+                  },
+                  {
+                    "employer_company_id": [
+                      "62472395"
+                    ],
+                    "employee_title": "Chief Executive Officer",
+                    "employee_end_date": null
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "crustdata_person_id": 1093503,
+            "basic_profile": {
+              "name": "Edrin Thomas"
+            },
+            "experience": {
+              "employment_details": {
+                "current": [
+                  {
+                    "employer_company_id": [
+                      "1493042"
+                    ],
+                    "employee_title": "Chief Technology Officer",
+                    "employee_end_date": null
+                  },
+                  {
+                    "employer_company_id": [
+                      "62472395"
+                    ],
+                    "employee_title": "Chief Technology Officer",
+                    "employee_end_date": null
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "cxos": []
+      }
+    },
+    {
+      "crustdata_company_id": 9761863,
+      "people": {
+        "founders": [
+          {
+            "crustdata_person_id": 185270424,
+            "basic_profile": {
+              "name": "Pierre STEPHANOFF"
+            },
+            "experience": {
+              "employment_details": {
+                "current": [
+                  {
+                    "employer_company_id": [
+                      "9761863"
+                    ],
+                    "employee_title": "Co-founder",
+                    "employee_end_date": null
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "cxos": []
+      }
+    },
+    {
+      "crustdata_company_id": 19962715,
+      "people": {
+        "founders": [],
+        "cxos": []
+      }
+    },
+    {
+      "crustdata_company_id": 118869596,
+      "people": {
+        "founders": [],
+        "cxos": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "bounded-followthrough-first-party-links-v1",
+  "authority": "Source-directed destinations selected from the saved homepage hrefs and genuine parent assessment questions by the thesis owner, 24 October 2026; links are leads until fetched.",
+  "targets": {
+    "docufindr.ai": [
+      "https://docufindr.ai/solutions/dme-intake-automation",
+      "https://docufindr.ai/about"
+    ],
+    "biosciencia.com": [
+      "https://biosciencia.com/docu/",
+      "https://biosciencia.com/about-us/"
+    ],
+    "emergentdx.com": [
+      "https://www.emergentdx.com/our-services/",
+      "https://www.emergentdx.com/about-us/"
+    ],
+    "labwren.com": [
+      "https://labwren.com/app/templates",
+      "https://labwren.com/about"
+    ]
+  }
+}

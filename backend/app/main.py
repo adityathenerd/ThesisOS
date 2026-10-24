@@ -23,6 +23,7 @@ from .follow_up import research_follow_up,execute_research_intent
 from .models import ResearchExecutionInput
 from .pre_outreach import pre_outreach_review
 from .scouting_loop import ScoutingLoop,RunStore,StartScoutingRun,ResumeScoutingRun
+from .bounded_followthrough import FollowThroughStage,StartFollowThrough
 
 
 def create_app(settings: Settings | None = None) -> FastAPI:
@@ -42,9 +43,14 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         app.state.runner = InProcessRunner(state, provider, assessments, settings.max_cases_per_run)
         app.state.scouting_loop=ScoutingLoop(state,settings)
         app.state.scouting_loop.recover()
+        app.state.followthrough=FollowThroughStage(state,settings,app.state.scouting_loop.pool)
+        app.state.followthrough.recover()
+        app.state.scouting_loop.followthrough=app.state.followthrough
         app.state.runtime_ready=True
         yield
         app.state.runtime_ready=False
+        for p in app.state.followthrough.store.list():
+            if p['status'] in ['queued','running']:app.state.followthrough.stop(p['id'])
         app.state.scouting_loop.close()
         app.state.runner.close()
 
@@ -105,6 +111,22 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     @app.post('/api/v1/scouting-runs/{run_id}/resume-cached')
     def resume_cached_scouting_run(run_id:str,request:ResumeScoutingRun):
         return app.state.scouting_loop.resume_cached(run_id,request)
+
+    @app.get('/api/v1/scouting-runs/{run_id}/follow-through')
+    def followthrough_for_run(run_id:str):
+        return app.state.followthrough.for_parent(run_id)
+
+    @app.post('/api/v1/scouting-runs/{run_id}/follow-through')
+    def start_followthrough(run_id:str,request:StartFollowThrough):
+        return app.state.followthrough.start_stage(run_id,request)
+
+    @app.get('/api/v1/follow-through-stages/{stage_id}')
+    def followthrough_stage(stage_id:str):
+        return app.state.followthrough.store.get(stage_id)
+
+    @app.post('/api/v1/follow-through-stages/{stage_id}/stop')
+    def stop_followthrough_stage(stage_id:str):
+        return app.state.followthrough.stop(stage_id)
 
     @app.get("/api/v1/config/status", response_model=ConfigStatus)
     def config_status():
