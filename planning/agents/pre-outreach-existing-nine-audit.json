@@ -1,0 +1,124 @@
+{
+  "audit_kind": "pure source-bound mapping, not activation or new model output",
+  "overlay_sha256": "8decb2846efa18e776c987a8e07ee872a742bb7e9568c72fe108f6eda4816f85",
+  "guidance_sha256": "7c772f52ca6da64a8f736f2d5d58f490cc842d8034bca58838c08fdcfee8534f",
+  "counts": {
+    "outreach_candidate": 8,
+    "research_first": 1,
+    "monitor": 0,
+    "outside_scope": 0
+  },
+  "cases": [
+    {
+      "domain": "replicate.health",
+      "category": "outreach_candidate",
+      "case_id": "case_2ad527916cc748269880081553bfdba8",
+      "assessment_ref": "assessment_ad6e7de7d13c4ca4acc86ca4292ba560",
+      "evidence_hash": "33186340be099a9de8e9743e472bbcb1d97f9a49f7466f0a97579c600e1d399f",
+      "person_status": "source_attributed_current",
+      "contact_route_status": "not_established",
+      "call_question_count": 2,
+      "strict_assessment_snapshot_unchanged": true,
+      "adapter_notes": []
+    },
+    {
+      "domain": "caremesh.com",
+      "category": "outreach_candidate",
+      "case_id": "case_d57d6d50977a4652b98272704449804d",
+      "assessment_ref": "assessment_ce07fba6dd3f4edbb7b8c5cdf27d2610",
+      "evidence_hash": "fd73dbf5ae0662cf63c0c17716952ff5a28f7b02225c84cbe26b464412715001",
+      "person_status": "historical_or_uncertain",
+      "contact_route_status": "not_established",
+      "call_question_count": 2,
+      "strict_assessment_snapshot_unchanged": true,
+      "adapter_notes": []
+    },
+    {
+      "domain": "swiftacare.com",
+      "category": "outreach_candidate",
+      "case_id": "case_723e3ade86f14d08be801ca16d68a54d",
+      "assessment_ref": "assessment_6d1eaf2915b547eaaeb99c7a5cfdba6a",
+      "evidence_hash": "a055d48b584cc5c8e21873a3773eef142925b8239c8d06f8debb27913bef2c9c",
+      "person_status": "historical_or_uncertain",
+      "contact_route_status": "not_established",
+      "call_question_count": 2,
+      "strict_assessment_snapshot_unchanged": true,
+      "adapter_notes": []
+    },
+    {
+      "domain": "therapyselect.de",
+      "category": "outreach_candidate",
+      "case_id": "case_93e02144618b4341acf31c75727f135d",
+      "assessment_ref": "assessment_51db1909fc7b470baa360ecebd2c46cd",
+      "evidence_hash": "463f81999dca8cc72d8547bf618d49c28478abd819b0f668fe7a7971a60f61d2",
+      "person_status": "historical_or_uncertain",
+      "contact_route_status": "not_established",
+      "call_question_count": 2,
+      "strict_assessment_snapshot_unchanged": true,
+      "adapter_notes": []
+    },
+    {
+      "domain": "neotargets.com",
+      "category": "outreach_candidate",
+      "case_id": "case_bde3999e8d1f4aa79568e3599b714a5d",
+      "assessment_ref": "assessment_733dc789af334c3384174cf2a3ebe2e3",
+      "evidence_hash": "2536782e50bb8207d3412311588d723cee19748cddfa81d1ae3d2e48f6e35c21",
+      "person_status": "historical_or_uncertain",
+      "contact_route_status": "not_established",
+      "call_question_count": 2,
+      "strict_assessment_snapshot_unchanged": true,
+      "adapter_notes": []
+    },
+    {
+      "domain": "aphoticbio.com",
+      "category": "outreach_candidate",
+      "case_id": "case_5a0be0c7b23d4f3da9b1edfa8629e09b",
+      "assessment_ref": "assessment_ed611a1c2bd740bcb6b52908a1683e20",
+      "evidence_hash": "8a4f08adacb8fd05717348c0edd863bf342568a734c80731f7e4d67d25cefeb4",
+      "person_status": "historical_or_uncertain",
+      "contact_route_status": "not_established",
+      "call_question_count": 2,
+      "strict_assessment_snapshot_unchanged": true,
+      "adapter_notes": []
+    },
+    {
+      "domain": "slidescope.science",
+      "category": "outreach_candidate",
+      "case_id": "case_982bf92d162a476fa1c6f367e0a102da",
+      "assessment_ref": "assessment_479d68527e674574a559292f994c9fd0",
+      "evidence_hash": "70f08cae086a08b6ff1c6861a6dfeb4b9e9ac6356d39c7e898ce2297ce0985a6",
+      "person_status": "source_attributed_current",
+      "contact_route_status": "not_established",
+      "call_question_count": 2,
+      "strict_assessment_snapshot_unchanged": true,
+      "adapter_notes": []
+    },
+    {
+      "domain": "find-nuclei.com",
+      "category": "outreach_candidate",
+      "case_id": "case_324df432ed8c49ffa64f141f1356e994",
+      "assessment_ref": "assessment_68b0cda777114daebc53ba8dfabb70e9",
+      "evidence_hash": "67922d0025d39f1c00eabbbf66a9452ed2cdf317dfffba1523095a3a9ef5b3c8",
+      "person_status": "unknown",
+      "contact_route_status": "not_established",
+      "call_question_count": 2,
+      "strict_assessment_snapshot_unchanged": true,
+      "adapter_notes": []
+    },
+    {
+      "domain": "cadexgenomics.com",
+      "category": "research_first",
+      "case_id": "case_62ab29c28e8c49d5b5b15d88bdc4e5d3",
+      "assessment_ref": "assessment_c7ec60a3c1cc45edaf7ab89272c2a25a",
+      "evidence_hash": "bd0172a2566bea0a9a8517424e92d869ec5c27f95cb57566068710e9c7a02353",
+      "person_status": "historical_or_uncertain",
+      "contact_route_status": "not_established",
+      "call_question_count": 1,
+      "strict_assessment_snapshot_unchanged": true,
+      "adapter_notes": [
+        "Null question faithfully adapted from the same pinned entry decisive_blocker text/evidence; source file unchanged."
+      ]
+    }
+  ],
+  "model_provider_discovery_calls": 0
+}

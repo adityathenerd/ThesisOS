@@ -1,0 +1,330 @@
+{
+  "plan_path": "planning/agents/nine-case-discovery-plan.json",
+  "plan_id": "nine-case-product-program-v1",
+  "plan_version": "1.0",
+  "plan_sha256": "577df71be41394c8a8deb0c67dc6cab9d5d5223dfaed85fa345628e98d030bb7",
+  "prompt_version_required": "0.3",
+  "branches": [
+    {
+      "branch": {
+        "id": "batch-H-product-workflows-v1",
+        "mandate_id": "mandate_51a7af5e3dcf4d20a002eee760b49779",
+        "reference_path": "planning/investment-thesis/scouting-mandate.md",
+        "reference_version": "0.3",
+        "reference_sha256": "2d01a3b2a91b25aa5c4285aefcfffc5f84246833dbfe54aa66778ba96c0e6ce4",
+        "action": "crustdata.company.search",
+        "hypothesis": {
+          "id": "batch-H-product-workflows-v1:hypothesis",
+          "criterion_ids": [
+            "C1",
+            "C3",
+            "C4",
+            "C7"
+          ],
+          "track": "H",
+          "route": "company_first",
+          "hypothesis": "Replace the single workflow-services phrasing with several explicit product use cases and inspectable product hints. Thesis sections 2, 3 H and 6 H.",
+          "problem_terms": [
+            "clinical documentation"
+          ],
+          "user_or_buyer_terms": [
+            "healthcare providers"
+          ],
+          "artifact_or_milestone_terms": [
+            "named software product",
+            "product documentation or demo",
+            "attributable deployment"
+          ],
+          "semantic_checks": [
+            "Verify product/program identity and actual artifact before expensive assessment.",
+            "Attribute founder/team accomplishments from sources; keep gaps unknown.",
+            "Known YC is not novel; operational allowance does not decide merit."
+          ],
+          "recall_risks": [
+            "Publicly documented products can dominate results over less visible builders",
+            "The ranker may return services firms or established companies; inspect, do not infer fit",
+            "This query samples H and is not exhaustive"
+          ]
+        },
+        "ranked": {
+          "criterion_ids": [
+            "C1",
+            "C3",
+            "C4",
+            "C7"
+          ],
+          "query": "Emerging companies developing reusable software products for clinical documentation, prior authorization, referral management or care coordination for healthcare providers, with named products and product documentation, demonstrations or initial deployment evidence",
+          "mode": "hybrid",
+          "explanation": "Replace the single workflow-services phrasing with several explicit product use cases and inspectable product hints. Thesis sections 2, 3 H and 6 H."
+        },
+        "predicates": [],
+        "fields": [
+          "basic_info.name",
+          "basic_info.primary_domain",
+          "basic_info.description"
+        ],
+        "limit": 8
+      },
+      "branch_digest": "b94903481c536ece6a8f41c99b82cf07176afdec4195483ca1c3707f3242882d",
+      "catalog_version": "crustdata-company-2025-11-01-2026-10-24.2",
+      "catalog_digest": "6670200d139ebfbcca63b9d1caaf8725ebc9e0f187d77a0bbd36ae6b893161ac",
+      "request": {
+        "fields": [
+          "basic_info.name",
+          "basic_info.primary_domain",
+          "basic_info.description"
+        ],
+        "limit": 8,
+        "search": {
+          "query": "Emerging companies developing reusable software products for clinical documentation, prior authorization, referral management or care coordination for healthcare providers, with named products and product documentation, demonstrations or initial deployment evidence",
+          "mode": "hybrid"
+        }
+      },
+      "request_digest": "940b4a9dfb717a200de988f74dd5c50a6f36946294bcfd6c16dcebe4fd4e92c1",
+      "requires_lossy_filter_approval": false,
+      "quoted_microcredits_ceiling": 240000,
+      "semantics": "discovery_lead_only"
+    },
+    {
+      "branch": {
+        "id": "batch-R-research-tools-v1",
+        "mandate_id": "mandate_51a7af5e3dcf4d20a002eee760b49779",
+        "reference_path": "planning/investment-thesis/scouting-mandate.md",
+        "reference_version": "0.3",
+        "reference_sha256": "2d01a3b2a91b25aa5c4285aefcfffc5f84246833dbfe54aa66778ba96c0e6ce4",
+        "action": "crustdata.company.search",
+        "hypothesis": {
+          "id": "batch-R-research-tools-v1:hypothesis",
+          "criterion_ids": [
+            "C1",
+            "C3",
+            "C4",
+            "C7"
+          ],
+          "track": "R",
+          "route": "company_first",
+          "hypothesis": "Retrieve enabling products across computational and physical tools without imposing software revenue or clinical proof. Thesis sections 3 R and 6 R.",
+          "problem_terms": [
+            "bioscience research tools"
+          ],
+          "user_or_buyer_terms": [
+            "scientists"
+          ],
+          "artifact_or_milestone_terms": [
+            "named tool, assay or instrument",
+            "technical documentation",
+            "reproducible experiment or demonstration"
+          ],
+          "semantic_checks": [
+            "Verify product/program identity and actual artifact before expensive assessment.",
+            "Attribute founder/team accomplishments from sources; keep gaps unknown.",
+            "Known YC is not novel; operational allowance does not decide merit."
+          ],
+          "recall_risks": [
+            "Contract research can resemble a platform; inspect the reusable core",
+            "A paper or vendor claim does not establish reproducibility",
+            "Human-health-enabling tools are core; unrelated industrial applications need scope review"
+          ]
+        },
+        "ranked": {
+          "criterion_ids": [
+            "C1",
+            "C3",
+            "C4",
+            "C7"
+          ],
+          "query": "Emerging companies developing reusable bioscience research tools for scientists and biotechnology laboratories: microscopy analysis, bioinformatics, lab automation, assays or scientific instruments, with a named tool, prototype, technical documentation or experimental demonstration",
+          "mode": "hybrid",
+          "explanation": "Retrieve enabling products across computational and physical tools without imposing software revenue or clinical proof. Thesis sections 3 R and 6 R."
+        },
+        "predicates": [],
+        "fields": [
+          "basic_info.name",
+          "basic_info.primary_domain",
+          "basic_info.description"
+        ],
+        "limit": 8
+      },
+      "branch_digest": "b2e951c1c3d7b5f1b882f6f0fe031d5d0e58c60bbc7da57df8081474b144da2b",
+      "catalog_version": "crustdata-company-2025-11-01-2026-10-24.2",
+      "catalog_digest": "6670200d139ebfbcca63b9d1caaf8725ebc9e0f187d77a0bbd36ae6b893161ac",
+      "request": {
+        "fields": [
+          "basic_info.name",
+          "basic_info.primary_domain",
+          "basic_info.description"
+        ],
+        "limit": 8,
+        "search": {
+          "query": "Emerging companies developing reusable bioscience research tools for scientists and biotechnology laboratories: microscopy analysis, bioinformatics, lab automation, assays or scientific instruments, with a named tool, prototype, technical documentation or experimental demonstration",
+          "mode": "hybrid"
+        }
+      },
+      "request_digest": "36e10b0f36a39799cd8ae2e94224c20ad5155bbce71503df988101df9c803b9a",
+      "requires_lossy_filter_approval": false,
+      "quoted_microcredits_ceiling": 240000,
+      "semantics": "discovery_lead_only"
+    },
+    {
+      "branch": {
+        "id": "batch-D-diagnostics-devices-v1",
+        "mandate_id": "mandate_51a7af5e3dcf4d20a002eee760b49779",
+        "reference_path": "planning/investment-thesis/scouting-mandate.md",
+        "reference_version": "0.3",
+        "reference_sha256": "2d01a3b2a91b25aa5c4285aefcfffc5f84246833dbfe54aa66778ba96c0e6ce4",
+        "action": "crustdata.company.search",
+        "hypothesis": {
+          "id": "batch-D-diagnostics-devices-v1:hypothesis",
+          "criterion_ids": [
+            "C1",
+            "C3",
+            "C4",
+            "C7"
+          ],
+          "track": "D",
+          "route": "company_first",
+          "hypothesis": "Cover tests, software and devices with an intended use and a researchable artifact, without requiring regulatory clearance or clinical efficacy at discovery. Thesis sections 3 D and 6 D.",
+          "problem_terms": [
+            "diagnostic tests"
+          ],
+          "user_or_buyer_terms": [
+            "clinical use"
+          ],
+          "artifact_or_milestone_terms": [
+            "defined intended use",
+            "named prototype or device",
+            "study or technical validation report"
+          ],
+          "semantic_checks": [
+            "Verify product/program identity and actual artifact before expensive assessment.",
+            "Attribute founder/team accomplishments from sources; keep gaps unknown.",
+            "Known YC is not novel; operational allowance does not decide merit."
+          ],
+          "recall_risks": [
+            "Validation claims may not match the intended population",
+            "Distributors and ordinary clinics may appear",
+            "Early prototypes need not have regulatory approval; specialist review remains separate"
+          ]
+        },
+        "ranked": {
+          "criterion_ids": [
+            "C1",
+            "C3",
+            "C4",
+            "C7"
+          ],
+          "query": "Emerging companies developing diagnostic tests, diagnostic software, patient monitoring or therapeutic medical devices for a defined clinical use, with a named prototype or product and early technical study, validation report or intended-use documentation",
+          "mode": "hybrid",
+          "explanation": "Cover tests, software and devices with an intended use and a researchable artifact, without requiring regulatory clearance or clinical efficacy at discovery. Thesis sections 3 D and 6 D."
+        },
+        "predicates": [],
+        "fields": [
+          "basic_info.name",
+          "basic_info.primary_domain",
+          "basic_info.description"
+        ],
+        "limit": 8
+      },
+      "branch_digest": "3934859a25b6fefdd61f2befa5c7aa9fc64006ecaf5921c0d5f8b045004facc2",
+      "catalog_version": "crustdata-company-2025-11-01-2026-10-24.2",
+      "catalog_digest": "6670200d139ebfbcca63b9d1caaf8725ebc9e0f187d77a0bbd36ae6b893161ac",
+      "request": {
+        "fields": [
+          "basic_info.name",
+          "basic_info.primary_domain",
+          "basic_info.description"
+        ],
+        "limit": 8,
+        "search": {
+          "query": "Emerging companies developing diagnostic tests, diagnostic software, patient monitoring or therapeutic medical devices for a defined clinical use, with a named prototype or product and early technical study, validation report or intended-use documentation",
+          "mode": "hybrid"
+        }
+      },
+      "request_digest": "bedf7a356e0792ddb5ad5078c11ab6ef488c1af5aa78426a88e422e3f70cc0fc",
+      "requires_lossy_filter_approval": false,
+      "quoted_microcredits_ceiling": 240000,
+      "semantics": "discovery_lead_only"
+    },
+    {
+      "branch": {
+        "id": "batch-T-therapeutic-programs-v1",
+        "mandate_id": "mandate_51a7af5e3dcf4d20a002eee760b49779",
+        "reference_path": "planning/investment-thesis/scouting-mandate.md",
+        "reference_version": "0.3",
+        "reference_sha256": "2d01a3b2a91b25aa5c4285aefcfffc5f84246833dbfe54aa66778ba96c0e6ce4",
+        "action": "crustdata.company.search",
+        "hypothesis": {
+          "id": "batch-T-therapeutic-programs-v1:hypothesis",
+          "criterion_ids": [
+            "C1",
+            "C3",
+            "C4",
+            "C7"
+          ],
+          "track": "T",
+          "route": "company_first",
+          "hypothesis": "Find actual programs and platform-to-asset connections, including preclinical teams. No revenue, clinical-stage or software artifact requirement. Thesis sections 3 T and 6 T.",
+          "problem_terms": [
+            "therapeutic assets"
+          ],
+          "user_or_buyer_terms": [
+            "drug discovery"
+          ],
+          "artifact_or_milestone_terms": [
+            "initial disease program",
+            "target, modality or candidate",
+            "attributable experiment or pipeline documentation"
+          ],
+          "semantic_checks": [
+            "Verify product/program identity and actual artifact before expensive assessment.",
+            "Attribute founder/team accomplishments from sources; keep gaps unknown.",
+            "Known YC is not novel; operational allowance does not decide merit."
+          ],
+          "recall_risks": [
+            "Pipeline text is a source-reported claim until inspected",
+            "Predictions and publications do not establish patient benefit or company asset rights",
+            "Stealth programs may be missed; no paper-count or clinical-stage threshold"
+          ]
+        },
+        "ranked": {
+          "criterion_ids": [
+            "C1",
+            "C3",
+            "C4",
+            "C7"
+          ],
+          "query": "Emerging biotechnology companies developing therapeutic assets or a drug discovery platform linked to an initial disease program, with a named target, modality or candidate and attributable experimental results, preclinical study, scientific publication or pipeline documentation",
+          "mode": "hybrid",
+          "explanation": "Find actual programs and platform-to-asset connections, including preclinical teams. No revenue, clinical-stage or software artifact requirement. Thesis sections 3 T and 6 T."
+        },
+        "predicates": [],
+        "fields": [
+          "basic_info.name",
+          "basic_info.primary_domain",
+          "basic_info.description"
+        ],
+        "limit": 8
+      },
+      "branch_digest": "d15ce8ccf4a795b63820b5ae498a298399c8d301c60a49585ed3fe1df8d0970a",
+      "catalog_version": "crustdata-company-2025-11-01-2026-10-24.2",
+      "catalog_digest": "6670200d139ebfbcca63b9d1caaf8725ebc9e0f187d77a0bbd36ae6b893161ac",
+      "request": {
+        "fields": [
+          "basic_info.name",
+          "basic_info.primary_domain",
+          "basic_info.description"
+        ],
+        "limit": 8,
+        "search": {
+          "query": "Emerging biotechnology companies developing therapeutic assets or a drug discovery platform linked to an initial disease program, with a named target, modality or candidate and attributable experimental results, preclinical study, scientific publication or pipeline documentation",
+          "mode": "hybrid"
+        }
+      },
+      "request_digest": "469594232b620e5be0064235b49f9e03c871dfbf4ae47ea59d2417232bdaf690",
+      "requires_lossy_filter_approval": false,
+      "quoted_microcredits_ceiling": 240000,
+      "semantics": "discovery_lead_only"
+    }
+  ],
+  "continuous_run_authority": "Explicit human bounded continuous run, max30minutes/4newcases/20providerrequests/50credits/4modelassessments; existing four-track queries reused with20results each. No new filters."
+}

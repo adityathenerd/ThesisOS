@@ -1,5 +1,11 @@
 # Agents implementation and discovery handoff
 
+## Pre-outreach calibration newly authorized and implemented
+
+The human has NOW authorized the previously deferred calibration. agents/pre_outreach.py and threepre-outreachschemas are implemented;105tests pass. Exact seam/sourcepins/adapter/currentness rules: planning/agents/pre-outreach-integration.md. Pureaudit of existingnine passes exact case/evidence/assessment/sourceSHA bindings with original outputs unchanged: planning/agents/pre-outreach-existing-nine-audit.json. Actual guidance yields8outreach_candidate/1research_first without hardcoded quotas; Cadex currentoperatorstatus blocker, not validationgate. FindNuclei merits conversation with person/routeunknown. Backend owns persistence/activation/HTTP ready-stale-unavailable; frontend renders derived stage notqualification. No newcalls/promptupdates/strictgatechanges or Gitmutations here.
+
+Pinned Cadex nullcallquestion is faithfully adapted from decisive_blocker.text+sameblocker evidenceIDs withadapter_note, preserving rawsourcefile/hash. Sourceowner/backend notified. Existing continuouspaidworker is reused perbackend; backend owns <=4newcases/20Crustrequests/50credits/4models/singleconcurrent/deadline/noautoretry. Newcases do not inherit boundnineguidance. Agent-side source/timeout/identity honesty guards supplied; read-only runner review next asmoduleappears. Earlier deferred-only note below is historical and superseded solely by this explicit new authorization.
+
 ## Current version frozen; pre-outreach calibration is NEXT only
 
 Latest human steering is preserved in planning/agents/next-pre-outreach-calibration.md: eventually loosen needs-evidence expectations for pre-outreach scouting, explicitly AFTER the current version is ready. This is deferred, not implemented/activated. Current thresholds, prompt0.3, actual saved assessments/readiness interpretations and all nine human research handoffs remain unchanged. No further source/provider/model calls or readiness changes are authorized by this note. Current agent implementation/review scope is complete.

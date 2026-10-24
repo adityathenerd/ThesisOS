@@ -22,6 +22,7 @@ from .batch import BatchStore
 from .follow_up import research_follow_up,execute_research_intent
 from .models import ResearchExecutionInput
 from .pre_outreach import pre_outreach_review
+from .scouting_loop import ScoutingLoop,RunStore,StartScoutingRun
 
 
 def create_app(settings: Settings | None = None) -> FastAPI:
@@ -39,9 +40,12 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         state.initialize()
         app.state.recovered_task_count = state.recover_interrupted_tasks()
         app.state.runner = InProcessRunner(state, provider, assessments, settings.max_cases_per_run)
+        app.state.scouting_loop=ScoutingLoop(state,settings)
+        app.state.scouting_loop.recover()
         app.state.runtime_ready=True
         yield
         app.state.runtime_ready=False
+        app.state.scouting_loop.close()
         app.state.runner.close()
 
     app = FastAPI(title="ThesisOS local harness", version="0.1", lifespan=lifespan, responses={400: {"model": ErrorResponse}, 404: {"model": ErrorResponse}, 422: {"model": ErrorResponse}, 503: {"model": ErrorResponse}})
@@ -80,6 +84,23 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     @app.get('/api/v1/runtime/status')
     def runtime_status():
         return {'lifespan_ready':getattr(app.state,'runtime_ready',False),'pid':os.getpid(),'recovered_task_count':getattr(app.state,'recovered_task_count',0)}
+
+    @app.get('/api/v1/scouting-runs')
+    def scouting_runs():
+        return {'items':RunStore(state).list()}
+
+    @app.post('/api/v1/scouting-runs')
+    def start_scouting_run(request:StartScoutingRun):
+        if not getattr(app.state,'runtime_ready',False):raise ServiceError('runtime_not_ready','Wait for serving startup recovery before starting a run',409)
+        return app.state.scouting_loop.start(request)
+
+    @app.get('/api/v1/scouting-runs/{run_id}')
+    def scouting_run(run_id:str):
+        return RunStore(state).get(run_id)
+
+    @app.post('/api/v1/scouting-runs/{run_id}/stop')
+    def stop_scouting_run(run_id:str):
+        return app.state.scouting_loop.stop(run_id)
 
     @app.get("/api/v1/config/status", response_model=ConfigStatus)
     def config_status():

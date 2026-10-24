@@ -1,0 +1,19 @@
+{
+  "active": true,
+  "layer": "pre_outreach_conversation_only",
+  "version": "0.1",
+  "authorization_ref": "human-turn-2026-10-24-activate-pre-outreach-calibration",
+  "policy_overlay": {
+    "id": "pre-outreach-conversation-v0.1",
+    "path": "planning/investment-thesis/pre-outreach-overlay-v0.1.md",
+    "version": "0.1",
+    "sha256": "8decb2846efa18e776c987a8e07ee872a742bb7e9568c72fe108f6eda4816f85"
+  },
+  "case_guidance": {
+    "path": "planning/investment-thesis/pre-outreach-nine-case-triage.json",
+    "version": "0.1",
+    "sha256": "7c772f52ca6da64a8f736f2d5d58f490cc842d8034bca58838c08fdcfee8534f"
+  },
+  "changes_qualification_policy": false,
+  "sending_authorized": false
+}

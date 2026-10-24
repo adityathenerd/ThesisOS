@@ -48,8 +48,10 @@ class ScriptedGraphTransport:
         executable = APP_ROOT / "agents/.venv/Scripts/python.exe"
         try:
             run = subprocess.run([str(executable), "-m", "backend.app.agent_bridge_worker"], input=encoded, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd=APP_ROOT, timeout=self.timeout_seconds, creationflags=subprocess.CREATE_NO_WINDOW if os.name == "nt" else 0, check=False)
-        except (OSError, subprocess.TimeoutExpired):
-            raise ServiceError("agent_unavailable", "Bounded agent subprocess unavailable or timed out; no model call/fallback was made", 503, True) from None
+        except subprocess.TimeoutExpired:
+            raise ServiceError("agent_unavailable", "Bounded agent subprocess timed out after dispatch; model execution and billing may have occurred. No retry or fallback was made.", 503, False) from None
+        except OSError:
+            raise ServiceError("agent_unavailable", "Agent subprocess could not start; no fallback was made.", 503, False) from None
         if run.returncode or len(run.stdout) > 250000:
             raise ServiceError("agent_unavailable", "Agent subprocess failed; raw output omitted", 503)
         try:

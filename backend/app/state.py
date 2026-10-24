@@ -155,6 +155,11 @@ class StateService:
                     id TEXT PRIMARY KEY,case_id TEXT NOT NULL REFERENCES cases(id),
                     assessment_id TEXT NOT NULL REFERENCES semantic_assessments(id),
                     binding_key TEXT NOT NULL UNIQUE,payload TEXT NOT NULL,created_at TEXT NOT NULL);
+                CREATE TABLE IF NOT EXISTS scouting_runs (
+                    id TEXT PRIMARY KEY,idempotency_key TEXT NOT NULL UNIQUE,status TEXT NOT NULL,
+                    payload TEXT NOT NULL,created_at TEXT NOT NULL,updated_at TEXT NOT NULL);
+                CREATE UNIQUE INDEX IF NOT EXISTS one_active_scouting_loop ON scouting_runs((1))
+                    WHERE status IN ('queued','running','stopping');
                 PRAGMA user_version=4;
             """)
             # Additive v1 -> v2 backfill: preserve existing accepted history and
