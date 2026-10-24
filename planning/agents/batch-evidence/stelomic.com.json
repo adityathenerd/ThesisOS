@@ -1,0 +1,133 @@
+{
+  "document_type": "bounded_primary_source_prep_not_assessment",
+  "batch_id": "batch_3b0c1b071c274f12a608aca3b0d90dd5",
+  "candidate_id_exact_from_returned_pool": "pool_5389c51b366a405a99c5b71ca6886d16",
+  "company": {
+    "name": "Stelomic",
+    "domain": "stelomic.com",
+    "identity_limitations": [
+      "Current primary product site could not be directly retrieved in this bounded pass.",
+      "Search names/handles and personal portfolio matches cannot establish founding or ownership."
+    ]
+  },
+  "track": {
+    "primary": "R",
+    "secondary": [],
+    "rationale": "Provider/indexed description suggests microscopy segmentation and quantitative analysis, but primary retrieval remains unresolved."
+  },
+  "plain_language_product_or_program": "Indexed company material describes a microscopy-image segmentation and measurement product; current product function and scientific validation were not verified here.",
+  "user_or_patient_population": "Purported microscopy researchers; intended task/population needs accessible primary product evidence.",
+  "people": [],
+  "source_groups": [
+    {
+      "id": "stelomic:company-site-unavailable",
+      "claim_origin": "Stelomic homepage",
+      "publisher_relationship": "first_party",
+      "independence_limitations": [
+        "Indexed copy is not a successful current page retrieval."
+      ]
+    },
+    {
+      "id": "stelomic:unresolved-portfolio-link",
+      "claim_origin": "Developer self-authored portfolio",
+      "publisher_relationship": "unresolved_relationship",
+      "independence_limitations": [
+        "Self-description and old indexed project match do not establish a current Stelomic role or founder contribution."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "stelomic:home-attempt",
+      "url": "https://stelomic.com/",
+      "title": "Stelomic homepage retrieval attempt",
+      "publication_date": null,
+      "event_date": null,
+      "retrieved_at": "2026-10-24T08:36:39.946877+00:00",
+      "retrieval_status": "connect_timeout",
+      "source_group_id": "stelomic:company-site-unavailable",
+      "evidence_mode": "failed_retrieval_not_company_evidence",
+      "snapshot_receipt": "planning/agents/batch-evidence/snapshots/stelomic.com.home.receipt.json",
+      "paraphrase": null,
+      "limitations": [
+        "No current HTTP body obtained.",
+        "Search index describes segmentation/analytics and accuracy/speed claims, but no underlying benchmark or dataset was inspected; do not ingest those numbers as established findings."
+      ]
+    },
+    {
+      "id": "stelomic:www-attempt",
+      "url": "https://www.stelomic.com/",
+      "title": "Alternate canonical homepage attempt",
+      "publication_date": null,
+      "event_date": null,
+      "retrieved_at": "2026-10-24T08:37:48.528958+00:00",
+      "retrieval_status": "connect_timeout",
+      "source_group_id": "stelomic:company-site-unavailable",
+      "evidence_mode": "failed_retrieval_not_company_evidence",
+      "snapshot_receipt": "planning/agents/batch-evidence/snapshots/stelomic.com.www.receipt.json",
+      "paraphrase": null,
+      "limitations": [
+        "Alternative host also unavailable; stop repeated unchanged homepage attempts."
+      ]
+    },
+    {
+      "id": "stelomic:portfolio-unresolved",
+      "url": "https://www.ammarfarooq.live/",
+      "title": "Ammar Farooq developer portfolio",
+      "publication_date": null,
+      "event_date": null,
+      "retrieved_at": "2026-10-24",
+      "retrieval_status": "web_tool_readable",
+      "source_group_id": "stelomic:unresolved-portfolio-link",
+      "evidence_mode": "live_retrieval_person_self_report_unlinked",
+      "paraphrase": "Personal site names Ammar Farooq as a full-stack developer and describes ML Bench work. An older indexed rendering associated a Stelomic project, while the opened rendering highlighted other projects; no inspected current page attributes Stelomic's core model or founding to him.",
+      "limitations": [
+        "Do not create founder/employment/collaboration linkage or positive founder signal from the indexed association.",
+        "Specific Stelomic work and role remain unestablished."
+      ],
+      "retrieval_time_precision": "day",
+      "retrieval_time_limitation": "Web tool supplied no exact retrieval timestamp; do not infer an event or publication time."
+    }
+  ],
+  "observations": [],
+  "counterevidence": [],
+  "material_unknowns": [
+    "Accessible current product/artifact",
+    "Company entity and named current founders",
+    "Attributable segmentation/model contribution",
+    "Validation datasets, comparator and task-specific metrics",
+    "Clinical-use limits, data handling and current user evidence",
+    "YC backing/novelty"
+  ],
+  "failed_fetches": [
+    {
+      "url": "https://stelomic.com/",
+      "status": "web_tool_timeout_and_direct_connect_timeout"
+    },
+    {
+      "url": "https://www.stelomic.com/",
+      "status": "direct_connect_timeout"
+    },
+    {
+      "url": "https://www.ammarfarooq.live/projects/details",
+      "status": "web_tool_timeout"
+    }
+  ],
+  "next_check": {
+    "question": "Can the owner supply an accessible product workflow and name who built its core segmentation capability?",
+    "why_material": "Would resolve product and contributor attribution; access failure itself does not contradict merit.",
+    "possible_decision_changes": [
+      "Targeted research becomes useful with accessible attributed work",
+      "If no material source can be obtained now, preserve an access gap and avoid presenting indexed numbers as scientific proof"
+    ]
+  },
+  "unique_urls_attempted": 4,
+  "research_limitations": [
+    "No successful current primary company page in this pass.",
+    "No inferred founder, benchmark validity, rights, compliance or clinical efficacy.",
+    "Other candidates may offer more inspectable evidence for this batch; this is source triage, not investment rejection.",
+    "No provider/model calls or backend edits; failed retrieval is operational, not a negative company fact."
+  ],
+  "provider_or_model_calls": 0,
+  "backend_packets_modified": false
+}

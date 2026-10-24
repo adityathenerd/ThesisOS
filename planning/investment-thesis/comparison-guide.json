@@ -1,0 +1,103 @@
+{
+  "document_type": "reviewable_investment_mandate_outline",
+  "version": "0.3",
+  "status": "draft_for_human_review_not_runtime_configuration",
+  "as_of": "2026-10-24",
+  "positioning": "Hypothetical YC scouting workflow; independently drafted; not YC-endorsed",
+  "primary_document": "scouting-mandate.md",
+  "user_selected": {
+    "healthtech_and_biosciences": "equally_core_with_separate_evaluation_criteria",
+    "therapeutics": "core",
+    "product_evidence_before_partner_review": true
+  },
+  "proposed_policy": {
+    "investment_thesis": "Seek early teams turning a costly care, biological research, or treatment bottleneck into a repeatable product, research platform, or therapeutic asset, supported by attributable execution and a decisive next milestone.",
+    "geography": "global_discovery_retained_from_prior_draft",
+    "stage_focus": ["idea", "pre_seed", "seed"],
+    "later_stage_handling": "human_scope_exception_review",
+    "qualification_owner": "human_reviewer",
+    "counted_outcome": "outreach_ready",
+    "target_count": null,
+    "resource_budget": null,
+    "numerical_fit_weights": null,
+    "fit_cutoff": null,
+    "check_size": null,
+    "outbound_delivery": "outside_authorized_scope"
+  },
+  "tracks": [
+    {
+      "id": "H",
+      "name": "healthcare_delivery_and_operations",
+      "search_terms": ["referral intake", "prior authorization", "clinical documentation", "tissue ordering", "care coordination", "health data infrastructure"],
+      "required_context": ["workflow", "user", "budget_owner", "current_alternative", "operational_benefit", "integration_and_review_burden"],
+      "proposed_product_gate": "Inspectable working workflow or attributable use record showing functionality",
+      "next_checks": ["demonstration", "actual_use", "baseline_comparison", "buyer_access"],
+      "insufficient_alone": ["landing_page", "letter_of_intent", "customer_logos", "financing"]
+    },
+    {
+      "id": "R",
+      "name": "bioscience_research_and_enabling_tools",
+      "search_terms": ["bioinformatics", "microscopy analysis", "lab automation", "assay platform", "bioprocess analytics", "experimental design"],
+      "required_context": ["research_task", "user_and_buyer", "baseline", "worked_result", "repeatability", "input_and_IP_access", "reusable_core"],
+      "proposed_product_gate": "Working tool/example, functioning prototype, or measured experimental capability",
+      "next_checks": ["worked_example", "relevant_benchmark", "repeatability", "services_dependence"],
+      "insufficient_alone": ["paper_title", "unexamined_patent", "tool_description", "future_data_access"]
+    },
+    {
+      "id": "D",
+      "name": "diagnostics_and_clinical_devices",
+      "search_terms": ["diagnostic assay", "point of care", "medical device", "clinical monitoring", "validation study"],
+      "required_context": ["intended_use", "population", "setting", "comparator", "prototype", "study_context", "action_after_result", "jurisdiction_and_route_to_use"],
+      "proposed_product_gate": "Functioning prototype/test plus attributable result relevant to intended capability",
+      "next_checks": ["underlying_validation", "population_relevance", "official_status_if_applicable", "clinical_workflow"],
+      "insufficient_alone": ["concept_render", "context_free_accuracy", "registration_as_clearance", "partnership_logo"],
+      "review_owner": "human_with_relevant_clinical_or_technical_expertise"
+    },
+    {
+      "id": "T",
+      "name": "therapeutics_and_drug_development",
+      "search_terms": ["target validation", "therapeutic modality", "functional assay", "preclinical", "disease model", "lab in the loop", "drug discovery spinout"],
+      "required_context": ["indication", "biological_rationale", "modality_or_platform_role", "program_maturity", "experimental_findings", "model_controls_and_limitations", "rights", "next_development_milestone"],
+      "proposed_product_gate": "Inspectable experimental findings tied to an initial biological program or platform capability",
+      "next_checks": ["underlying_experiments", "program_linkage", "contrary_results", "rights_and_access", "decisive_next_test"],
+      "insufficient_alone": ["computational_prediction", "platform_diagram", "funding", "claim_of_clinical_benefit_without_human_evidence"],
+      "review_owner": "human_scientific_reviewer",
+      "do_not_require_at_early_stage": ["revenue", "completed_clinical_trials", "marketed_drug"]
+    }
+  ],
+  "shared_criteria": [
+    {"id": "C1", "name": "specific_problem_and_entry_point"},
+    {"id": "C2", "name": "attributable_founder_advantage"},
+    {"id": "C3", "name": "distinctive_mechanism"},
+    {"id": "C4", "name": "product_or_experimental_execution"},
+    {"id": "C5", "name": "advantage_against_relevant_alternative"},
+    {"id": "C6", "name": "adoption_or_development_path"},
+    {"id": "C7", "name": "repeatability_and_future_defensibility"},
+    {"id": "C8", "name": "decisive_next_milestone_and_resources"}
+  ],
+  "assessment_template": {
+    "criterion_id": null,
+    "finding": null,
+    "permitted_findings": ["supported", "mixed", "contradicted", "unknown", "not_applicable"],
+    "evidence_ids": [],
+    "counterevidence_ids": [],
+    "confidence": null,
+    "confidence_rationale": null,
+    "interpretation": null,
+    "decision_changing_gap": null
+  },
+  "evidence_fields": ["entity", "claim", "source_url_or_record", "source_author", "publication_or_event_date_if_known", "access_date", "evidence_mode", "limitations"],
+  "decision_rules": [
+    "Assign primary track by initial product/asset and value-capture model, not sector tags alone.",
+    "Known YC-backed companies exit novel sourcing counts; unknown backing remains unknown.",
+    "Prioritize investigation for a specific in-scope case with relevant attributable team and meaningful evidence or a resolvable material gap.",
+    "Partner review requires the proposed track-specific product gate and an articulable evidence-backed case; specialist review applies to D/T.",
+    "Missing evidence creates a targeted question, not a zero score or confirmed failure.",
+    "Compare within track and comparable milestone; present cross-track allocation to the human.",
+    "Preserve fit separately from evidence sufficiency and actionability.",
+    "Evidence or budget exhaustion records work stoppage, not company rejection."
+  ],
+  "candidate_output_fields": ["identity_and_as_of", "founder_or_operator_role_evidence", "primary_and_secondary_track", "problem_or_program_and_alternative", "C1_to_C8", "product_gate_and_evidence_mode", "stage_check", "YC_status_and_novelty_limits", "reason_to_pursue", "strongest_reason_to_pass", "decisive_unknown", "next_check_and_consequence", "recommendation_and_reviewer", "why_now_status"],
+  "human_review_required": ["central_investment_bet", "track_specific_product_gate_interpretation", "conventional_services_and_nonhealth_biology_boundaries", "run_limits_and_target"],
+  "implementation_note": "Conceptual outline only. Existing contracts and graph structure are not changed or prescribed."
+}

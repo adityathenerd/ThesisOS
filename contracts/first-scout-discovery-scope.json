@@ -1,0 +1,34 @@
+{
+  "record_type": "control_discovery_scope",
+  "version": "0.1",
+  "approval_ref": "control-first-scout-v03-h-001",
+  "authority": "Control-selected routine query within the human-reviewed v0.3 direction and explicitly authorized first-scout/real-testing work; not a human qualification record",
+  "scope": "discovery_only",
+  "approved": true,
+  "reference_document": "planning/investment-thesis/scouting-mandate.md",
+  "reference_version": "0.3",
+  "reference_document_hash": "2d01a3b2a91b25aa5c4285aefcfffc5f84246833dbfe54aa66778ba96c0e6ce4",
+  "track": "H",
+  "criterion_ids": [
+    "C1",
+    "C4",
+    "C6"
+  ],
+  "query": "Companies building software for referral intake and care coordination workflows for clinics and hospitals",
+  "mode": "hybrid",
+  "max_results": 3,
+  "fields": [
+    "basic_info.name",
+    "basic_info.primary_domain",
+    "basic_info.description"
+  ],
+  "predicates": [],
+  "execution_owner": "ThesisOS Backend Foundation",
+  "runtime_binding": "Backend binds and stores actual mandate_id, thesis_version, policy_version, branch_id and source hash in ScopedDiscoveryApproval before execution. Do not invent or reuse mismatched IDs.",
+  "qualification_policy_active": false,
+  "limits": "One initial bounded request; no automatic retries/pagination. Preserve any error. Scope does not assert relevance, product proof, team identities, novelty or final qualification.",
+  "source_docs": [
+    "https://docs.crustdata.com/company-docs/search/introduction",
+    "https://docs.crustdata.com/company-docs/search/reference"
+  ]
+}

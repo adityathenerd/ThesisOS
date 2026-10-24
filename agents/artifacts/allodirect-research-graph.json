@@ -1,0 +1,1115 @@
+{
+  "schema_version": "0.1",
+  "graph_id": "research-graph:f1faac7becb02aeed6744e3b",
+  "case_id": null,
+  "research_example_ref": "planning/investment-thesis/comparison-examples.md#allodirect-v0.3",
+  "snapshot_ref": {
+    "case_id": "research-allodirect-v03",
+    "case_version": 1,
+    "thesis_version": 3,
+    "policy_version": 1,
+    "evidence_hash": "474047fd41f9a21fbe2b2c2119dd0f33805d00873f7f5cab45f656b284864265"
+  },
+  "generated_at": "2026-10-24T07:31:11.700949+00:00",
+  "nodes": [
+    {
+      "id": "research-allodirect",
+      "kind": "organisation",
+      "label": "AlloDirect",
+      "canonical_entity_ref": {
+        "kind": "company",
+        "id": "research-allodirect"
+      },
+      "source_refs": [
+        "source:allodirect-release-S10"
+      ],
+      "attributes": {
+        "identity_source": "supplied_snapshot",
+        "qualification_implied": false
+      },
+      "temporal_scope": {
+        "precision": "unknown",
+        "value": null,
+        "start": null,
+        "end": null,
+        "basis": "unknown",
+        "limitation": null
+      }
+    },
+    {
+      "id": "research-rhett-barker",
+      "kind": "person",
+      "label": "Rhett Barker",
+      "canonical_entity_ref": {
+        "kind": "person",
+        "id": "research-rhett-barker"
+      },
+      "source_refs": [
+        "source:allodirect-release-S10"
+      ],
+      "attributes": {
+        "identity_source": "supplied_snapshot"
+      },
+      "temporal_scope": {
+        "precision": "unknown",
+        "value": null,
+        "start": null,
+        "end": null,
+        "basis": "unknown",
+        "limitation": null
+      }
+    },
+    {
+      "id": "research-james-casavant",
+      "kind": "person",
+      "label": "James A. Casavant",
+      "canonical_entity_ref": {
+        "kind": "person",
+        "id": "research-james-casavant"
+      },
+      "source_refs": [
+        "source:allodirect-release-S10"
+      ],
+      "attributes": {
+        "identity_source": "supplied_snapshot"
+      },
+      "temporal_scope": {
+        "precision": "unknown",
+        "value": null,
+        "start": null,
+        "end": null,
+        "basis": "unknown",
+        "limitation": null
+      }
+    },
+    {
+      "id": "product:allodirect-tissue-ordering",
+      "kind": "product",
+      "label": "Tissue-ordering software (reported)",
+      "canonical_entity_ref": null,
+      "source_refs": [
+        "source:allodirect-release-S10"
+      ],
+      "attributes": {
+        "track": "H",
+        "artifact_inspected": false,
+        "product_gate": "partly_evidenced_not_cleared"
+      },
+      "temporal_scope": {
+        "precision": "unknown",
+        "value": null,
+        "start": null,
+        "end": null,
+        "basis": "unknown",
+        "limitation": null
+      }
+    },
+    {
+      "id": "event:allodirect-financing-announcement-2026-09-25",
+      "kind": "event",
+      "label": "Pre-seed announcement · 25 Sep 2026",
+      "canonical_entity_ref": null,
+      "source_refs": [
+        "source:allodirect-release-S10"
+      ],
+      "attributes": {
+        "event_type": "financing_announcement",
+        "assertion_kind": "source_reported"
+      },
+      "temporal_scope": {
+        "precision": "day",
+        "value": "2026-09-25",
+        "start": null,
+        "end": null,
+        "basis": "event",
+        "limitation": "Announcement publication date, not founding date or independently verified financing close."
+      }
+    },
+    {
+      "id": "source:allodirect-release-S10",
+      "kind": "source",
+      "label": "https://www.allo.direct/news/allodirect-pre-seed-round-m25",
+      "canonical_entity_ref": {
+        "kind": "source",
+        "id": "source:allodirect-release-S10"
+      },
+      "source_refs": [
+        "source:allodirect-release-S10"
+      ],
+      "attributes": {
+        "data_mode": "captured",
+        "source_type": "captured_research_note_about_first_party_release",
+        "source_quality": "company_controlled_claim_not_independent_validation"
+      },
+      "temporal_scope": {
+        "precision": "unknown",
+        "value": null,
+        "start": null,
+        "end": null,
+        "basis": "unknown",
+        "limitation": null
+      }
+    },
+    {
+      "id": "claim:ad-product",
+      "kind": "claim",
+      "label": "product_and_use_claim",
+      "canonical_entity_ref": {
+        "kind": "evidence",
+        "id": "ad-product"
+      },
+      "source_refs": [
+        "source:allodirect-release-S10"
+      ],
+      "attributes": {
+        "summary": "Captured research notes from comparison-examples.md v0.3 report a company-controlled release describing tissue-ordering software for surgical facilities and claiming production orders since September 2025. The underlying working application/workflow was NOT inspected; product-page access failed. This does not establish independent functionality, repeat usage or measured benefit.",
+        "summary_truncated": false,
+        "assertion_kind": "source_reported",
+        "support_status": "supported",
+        "freshness": "unknown",
+        "admissible_for_assessment": true
+      },
+      "temporal_scope": {
+        "precision": "unknown",
+        "value": null,
+        "start": null,
+        "end": null,
+        "basis": "unknown",
+        "limitation": null
+      }
+    },
+    {
+      "id": "claim:ad-funding",
+      "kind": "claim",
+      "label": "financing_announcement",
+      "canonical_entity_ref": {
+        "kind": "evidence",
+        "id": "ad-funding"
+      },
+      "source_refs": [
+        "source:allodirect-release-S10"
+      ],
+      "attributes": {
+        "summary": "Captured research notes report a pre-seed announcement published 25 September 2026. YC backing is unknown. No current verified novelty, revenue floor, investment availability or verified regulatory/payment catalyst is established.",
+        "summary_truncated": false,
+        "assertion_kind": "source_reported",
+        "support_status": "supported",
+        "freshness": "unknown",
+        "admissible_for_assessment": true
+      },
+      "temporal_scope": {
+        "precision": "unknown",
+        "value": null,
+        "start": null,
+        "end": null,
+        "basis": "unknown",
+        "limitation": null
+      }
+    },
+    {
+      "id": "claim:ad-role-ceo",
+      "kind": "claim",
+      "label": "company_attributed_CEO_role",
+      "canonical_entity_ref": {
+        "kind": "evidence",
+        "id": "ad-role-ceo"
+      },
+      "source_refs": [
+        "source:allodirect-release-S10"
+      ],
+      "attributes": {
+        "summary": "The research handoff records the first-party release identifying Rhett Barker as CEO. Founder status and individual product contribution remain unverified.",
+        "summary_truncated": false,
+        "assertion_kind": "source_reported",
+        "support_status": "supported",
+        "freshness": "unknown",
+        "admissible_for_assessment": true
+      },
+      "temporal_scope": {
+        "precision": "unknown",
+        "value": null,
+        "start": null,
+        "end": null,
+        "basis": "unknown",
+        "limitation": null
+      }
+    },
+    {
+      "id": "claim:ad-role-cto",
+      "kind": "claim",
+      "label": "company_attributed_CTO_role",
+      "canonical_entity_ref": {
+        "kind": "evidence",
+        "id": "ad-role-cto"
+      },
+      "source_refs": [
+        "source:allodirect-release-S10"
+      ],
+      "attributes": {
+        "summary": "The research handoff records the first-party release identifying James A. Casavant as CTO. Founder status and individual product contribution remain unverified.",
+        "summary_truncated": false,
+        "assertion_kind": "source_reported",
+        "support_status": "supported",
+        "freshness": "unknown",
+        "admissible_for_assessment": true
+      },
+      "temporal_scope": {
+        "precision": "unknown",
+        "value": null,
+        "start": null,
+        "end": null,
+        "basis": "unknown",
+        "limitation": null
+      }
+    },
+    {
+      "id": "claim:ad-operator",
+      "kind": "claim",
+      "label": "company_claimed_operator_background",
+      "canonical_entity_ref": {
+        "kind": "evidence",
+        "id": "ad-operator"
+      },
+      "source_refs": [
+        "source:allodirect-release-S10"
+      ],
+      "attributes": {
+        "summary": "The research handoff reports the release describing Barker's orthopedic sales background. Relevant operator signal, not independently verified founder status or attributable software execution.",
+        "summary_truncated": false,
+        "assertion_kind": "source_reported",
+        "support_status": "supported",
+        "freshness": "unknown",
+        "admissible_for_assessment": true
+      },
+      "temporal_scope": {
+        "precision": "unknown",
+        "value": null,
+        "start": null,
+        "end": null,
+        "basis": "unknown",
+        "limitation": null
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge:claim:ad-product",
+      "from_id": "research-allodirect",
+      "to_id": "claim:ad-product",
+      "relation": "has_claim",
+      "label": "Reported observation",
+      "evidence_ids": [
+        "ad-product"
+      ],
+      "source_refs": [
+        "source:allodirect-release-S10"
+      ],
+      "assertion_kind": "source_reported",
+      "support_status": "supported",
+      "temporal_scope": {
+        "precision": "unknown",
+        "value": null,
+        "start": null,
+        "end": null,
+        "basis": "unknown",
+        "limitation": null
+      },
+      "limitation": "Five preserved observations derive from one underlying company release; they are not independent corroboration.; Research notes were captured; the underlying application, customer outcomes and founder contribution were not inspected.",
+      "interpretation_ref": null
+    },
+    {
+      "id": "edge:source:ad-product",
+      "from_id": "source:allodirect-release-S10",
+      "to_id": "claim:ad-product",
+      "relation": "records",
+      "label": "Records this claim",
+      "evidence_ids": [
+        "ad-product"
+      ],
+      "source_refs": [
+        "source:allodirect-release-S10"
+      ],
+      "assertion_kind": "source_reported",
+      "support_status": "supported",
+      "temporal_scope": {
+        "precision": "unknown",
+        "value": null,
+        "start": null,
+        "end": null,
+        "basis": "unknown",
+        "limitation": null
+      },
+      "limitation": "Five preserved observations derive from one underlying company release; they are not independent corroboration.; Research notes were captured; the underlying application, customer outcomes and founder contribution were not inspected.",
+      "interpretation_ref": null
+    },
+    {
+      "id": "edge:claim:ad-funding",
+      "from_id": "research-allodirect",
+      "to_id": "claim:ad-funding",
+      "relation": "has_claim",
+      "label": "Reported observation",
+      "evidence_ids": [
+        "ad-funding"
+      ],
+      "source_refs": [
+        "source:allodirect-release-S10"
+      ],
+      "assertion_kind": "source_reported",
+      "support_status": "supported",
+      "temporal_scope": {
+        "precision": "unknown",
+        "value": null,
+        "start": null,
+        "end": null,
+        "basis": "unknown",
+        "limitation": null
+      },
+      "limitation": "Five preserved observations derive from one underlying company release; they are not independent corroboration.; Research notes were captured; the underlying application, customer outcomes and founder contribution were not inspected.",
+      "interpretation_ref": null
+    },
+    {
+      "id": "edge:source:ad-funding",
+      "from_id": "source:allodirect-release-S10",
+      "to_id": "claim:ad-funding",
+      "relation": "records",
+      "label": "Records this claim",
+      "evidence_ids": [
+        "ad-funding"
+      ],
+      "source_refs": [
+        "source:allodirect-release-S10"
+      ],
+      "assertion_kind": "source_reported",
+      "support_status": "supported",
+      "temporal_scope": {
+        "precision": "unknown",
+        "value": null,
+        "start": null,
+        "end": null,
+        "basis": "unknown",
+        "limitation": null
+      },
+      "limitation": "Five preserved observations derive from one underlying company release; they are not independent corroboration.; Research notes were captured; the underlying application, customer outcomes and founder contribution were not inspected.",
+      "interpretation_ref": null
+    },
+    {
+      "id": "edge:claim:ad-role-ceo",
+      "from_id": "research-rhett-barker",
+      "to_id": "claim:ad-role-ceo",
+      "relation": "has_claim",
+      "label": "Reported observation",
+      "evidence_ids": [
+        "ad-role-ceo"
+      ],
+      "source_refs": [
+        "source:allodirect-release-S10"
+      ],
+      "assertion_kind": "source_reported",
+      "support_status": "supported",
+      "temporal_scope": {
+        "precision": "unknown",
+        "value": null,
+        "start": null,
+        "end": null,
+        "basis": "unknown",
+        "limitation": null
+      },
+      "limitation": "Five preserved observations derive from one underlying company release; they are not independent corroboration.; Research notes were captured; the underlying application, customer outcomes and founder contribution were not inspected.",
+      "interpretation_ref": null
+    },
+    {
+      "id": "edge:source:ad-role-ceo",
+      "from_id": "source:allodirect-release-S10",
+      "to_id": "claim:ad-role-ceo",
+      "relation": "records",
+      "label": "Records this claim",
+      "evidence_ids": [
+        "ad-role-ceo"
+      ],
+      "source_refs": [
+        "source:allodirect-release-S10"
+      ],
+      "assertion_kind": "source_reported",
+      "support_status": "supported",
+      "temporal_scope": {
+        "precision": "unknown",
+        "value": null,
+        "start": null,
+        "end": null,
+        "basis": "unknown",
+        "limitation": null
+      },
+      "limitation": "Five preserved observations derive from one underlying company release; they are not independent corroboration.; Research notes were captured; the underlying application, customer outcomes and founder contribution were not inspected.",
+      "interpretation_ref": null
+    },
+    {
+      "id": "edge:claim:ad-role-cto",
+      "from_id": "research-james-casavant",
+      "to_id": "claim:ad-role-cto",
+      "relation": "has_claim",
+      "label": "Reported observation",
+      "evidence_ids": [
+        "ad-role-cto"
+      ],
+      "source_refs": [
+        "source:allodirect-release-S10"
+      ],
+      "assertion_kind": "source_reported",
+      "support_status": "supported",
+      "temporal_scope": {
+        "precision": "unknown",
+        "value": null,
+        "start": null,
+        "end": null,
+        "basis": "unknown",
+        "limitation": null
+      },
+      "limitation": "Five preserved observations derive from one underlying company release; they are not independent corroboration.; Research notes were captured; the underlying application, customer outcomes and founder contribution were not inspected.",
+      "interpretation_ref": null
+    },
+    {
+      "id": "edge:source:ad-role-cto",
+      "from_id": "source:allodirect-release-S10",
+      "to_id": "claim:ad-role-cto",
+      "relation": "records",
+      "label": "Records this claim",
+      "evidence_ids": [
+        "ad-role-cto"
+      ],
+      "source_refs": [
+        "source:allodirect-release-S10"
+      ],
+      "assertion_kind": "source_reported",
+      "support_status": "supported",
+      "temporal_scope": {
+        "precision": "unknown",
+        "value": null,
+        "start": null,
+        "end": null,
+        "basis": "unknown",
+        "limitation": null
+      },
+      "limitation": "Five preserved observations derive from one underlying company release; they are not independent corroboration.; Research notes were captured; the underlying application, customer outcomes and founder contribution were not inspected.",
+      "interpretation_ref": null
+    },
+    {
+      "id": "edge:claim:ad-operator",
+      "from_id": "research-rhett-barker",
+      "to_id": "claim:ad-operator",
+      "relation": "has_claim",
+      "label": "Reported observation",
+      "evidence_ids": [
+        "ad-operator"
+      ],
+      "source_refs": [
+        "source:allodirect-release-S10"
+      ],
+      "assertion_kind": "source_reported",
+      "support_status": "supported",
+      "temporal_scope": {
+        "precision": "unknown",
+        "value": null,
+        "start": null,
+        "end": null,
+        "basis": "unknown",
+        "limitation": null
+      },
+      "limitation": "Five preserved observations derive from one underlying company release; they are not independent corroboration.; Research notes were captured; the underlying application, customer outcomes and founder contribution were not inspected.",
+      "interpretation_ref": null
+    },
+    {
+      "id": "edge:source:ad-operator",
+      "from_id": "source:allodirect-release-S10",
+      "to_id": "claim:ad-operator",
+      "relation": "records",
+      "label": "Records this claim",
+      "evidence_ids": [
+        "ad-operator"
+      ],
+      "source_refs": [
+        "source:allodirect-release-S10"
+      ],
+      "assertion_kind": "source_reported",
+      "support_status": "supported",
+      "temporal_scope": {
+        "precision": "unknown",
+        "value": null,
+        "start": null,
+        "end": null,
+        "basis": "unknown",
+        "limitation": null
+      },
+      "limitation": "Five preserved observations derive from one underlying company release; they are not independent corroboration.; Research notes were captured; the underlying application, customer outcomes and founder contribution were not inspected.",
+      "interpretation_ref": null
+    },
+    {
+      "id": "edge:relationship:role-barker",
+      "from_id": "research-rhett-barker",
+      "to_id": "research-allodirect",
+      "relation": "held_role_at",
+      "label": "Reported role: CEO; founder status unknown",
+      "evidence_ids": [
+        "ad-role-ceo"
+      ],
+      "source_refs": [
+        "source:allodirect-release-S10"
+      ],
+      "assertion_kind": "source_reported",
+      "support_status": "supported",
+      "temporal_scope": {
+        "precision": "unknown",
+        "value": null,
+        "start": null,
+        "end": null,
+        "basis": "unknown",
+        "limitation": "Role start/end dates are not established by retrieval or publication dates."
+      },
+      "limitation": "Role attribution is limited to the cited source; no founding, current-employment or collaboration history is inferred.",
+      "interpretation_ref": null
+    },
+    {
+      "id": "edge:relationship:role-casavant",
+      "from_id": "research-james-casavant",
+      "to_id": "research-allodirect",
+      "relation": "held_role_at",
+      "label": "Reported role: CTO; founder status unknown",
+      "evidence_ids": [
+        "ad-role-cto"
+      ],
+      "source_refs": [
+        "source:allodirect-release-S10"
+      ],
+      "assertion_kind": "source_reported",
+      "support_status": "supported",
+      "temporal_scope": {
+        "precision": "unknown",
+        "value": null,
+        "start": null,
+        "end": null,
+        "basis": "unknown",
+        "limitation": "Role start/end dates are not established by retrieval or publication dates."
+      },
+      "limitation": "Role attribution is limited to the cited source; no founding, current-employment or collaboration history is inferred.",
+      "interpretation_ref": null
+    },
+    {
+      "id": "edge:allodirect-offers-product",
+      "from_id": "research-allodirect",
+      "to_id": "product:allodirect-tissue-ordering",
+      "relation": "offers",
+      "label": "Reports offering tissue-ordering software",
+      "evidence_ids": [
+        "ad-product"
+      ],
+      "source_refs": [
+        "source:allodirect-release-S10"
+      ],
+      "assertion_kind": "source_reported",
+      "support_status": "supported",
+      "temporal_scope": {
+        "precision": "unknown",
+        "value": null,
+        "start": null,
+        "end": null,
+        "basis": "unknown",
+        "limitation": null
+      },
+      "limitation": "Source reports a product/use claim; no working application or outcome was inspected.",
+      "interpretation_ref": null
+    },
+    {
+      "id": "edge:allodirect-announced-funding",
+      "from_id": "research-allodirect",
+      "to_id": "event:allodirect-financing-announcement-2026-09-25",
+      "relation": "announced",
+      "label": "Published a pre-seed financing announcement",
+      "evidence_ids": [
+        "ad-funding"
+      ],
+      "source_refs": [
+        "source:allodirect-release-S10"
+      ],
+      "assertion_kind": "source_reported",
+      "support_status": "supported",
+      "temporal_scope": {
+        "precision": "day",
+        "value": "2026-09-25",
+        "start": null,
+        "end": null,
+        "basis": "publication",
+        "limitation": null
+      },
+      "limitation": "Announcement is not independent confirmation of financing terms, a current round or investment availability.",
+      "interpretation_ref": null
+    }
+  ],
+  "sources": [
+    {
+      "id": "source:allodirect-release-S10",
+      "evidence_ids": [
+        "ad-product",
+        "ad-funding",
+        "ad-role-ceo",
+        "ad-role-cto",
+        "ad-operator"
+      ],
+      "source_url": "https://www.allo.direct/news/allodirect-pre-seed-round-m25",
+      "source_keys": [
+        "research-handoff-v0.3:S10:ad-product",
+        "research-handoff-v0.3:S10:ad-funding",
+        "research-handoff-v0.3:S10:ad-role-ceo",
+        "research-handoff-v0.3:S10:ad-role-cto",
+        "research-handoff-v0.3:S10:ad-operator"
+      ],
+      "source_type": "captured_research_note_about_first_party_release",
+      "source_quality": "company_controlled_claim_not_independent_validation",
+      "data_mode": "captured",
+      "publication_time": {
+        "precision": "day",
+        "value": "2026-09-25",
+        "start": null,
+        "end": null,
+        "basis": "publication",
+        "limitation": null
+      },
+      "observation_times": [
+        {
+          "precision": "unknown",
+          "value": null,
+          "start": null,
+          "end": null,
+          "basis": "unknown",
+          "limitation": null
+        }
+      ],
+      "retrieval_times": [
+        {
+          "precision": "day",
+          "value": "2026-10-24",
+          "start": null,
+          "end": null,
+          "basis": "retrieval",
+          "limitation": "Research handoff records an access date, not an exact clock time."
+        }
+      ],
+      "limitations": [
+        "Five preserved observations derive from one underlying company release; they are not independent corroboration.",
+        "Research notes were captured; the underlying application, customer outcomes and founder contribution were not inspected."
+      ]
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:founder-attribution",
+      "target_node_ids": [
+        "research-allodirect",
+        "research-rhett-barker",
+        "research-james-casavant",
+        "product:allodirect-tissue-ordering"
+      ],
+      "target_edge_ids": [],
+      "criterion_ids": [
+        "C2",
+        "C4"
+      ],
+      "question": "Which of the named operators are founders, and which specific product work did each own?",
+      "decision_consequence": "Could establish attributable team–problem fit; titles and background alone do not resolve it."
+    },
+    {
+      "id": "question:collaboration-and-setbacks",
+      "target_node_ids": [
+        "research-rhett-barker",
+        "research-james-casavant"
+      ],
+      "target_edge_ids": [],
+      "criterion_ids": [
+        "C2"
+      ],
+      "question": "What sourced work history shows sustained building, collaboration, setbacks and responses? When and how did the team actually work together?",
+      "decision_consequence": "Could contextualize learning and collaboration; missing history is unknown, not a grit/loyalty penalty, and a pivot may show learning."
+    },
+    {
+      "id": "question:working-artifact",
+      "target_node_ids": [
+        "product:allodirect-tissue-ordering"
+      ],
+      "target_edge_ids": [],
+      "criterion_ids": [
+        "C4",
+        "C5"
+      ],
+      "question": "Can an attributable workflow demonstration or deployment record establish the reported functionality and its limits?",
+      "decision_consequence": "Could resolve track-H product evidence; a release, financing event or graph density does not clear the review gate."
+    },
+    {
+      "id": "question:role-chronology",
+      "target_node_ids": [
+        "research-allodirect",
+        "research-rhett-barker",
+        "research-james-casavant"
+      ],
+      "target_edge_ids": [],
+      "criterion_ids": [],
+      "question": "What establishes founding dates, role tenure and current roles?",
+      "decision_consequence": "Would improve chronology/contact attribution; no meeting, founding or employment start dates are inferred from publication or retrieval."
+    },
+    {
+      "id": "question:yc-status",
+      "target_node_ids": [
+        "research-allodirect"
+      ],
+      "target_edge_ids": [],
+      "criterion_ids": [],
+      "question": "What establishes YC backing and novelty against the declared known-company universe?",
+      "decision_consequence": "Known backing would remove a novel-sourcing count without constituting a negative investment judgment; current status is unknown."
+    }
+  ],
+  "matcher_interpretations": [
+    {
+      "id": "interpretation:C1",
+      "assessment_ref": "agents/work/live-smoke.json#/matcher/result",
+      "input_ref": {
+        "case_id": "research-allodirect-v03",
+        "case_version": 1,
+        "thesis_version": 3,
+        "policy_version": 1,
+        "evidence_hash": "474047fd41f9a21fbe2b2c2119dd0f33805d00873f7f5cab45f656b284864265"
+      },
+      "prompt_version": "0.1",
+      "driver_kind": "semantic",
+      "criterion_id": "C1",
+      "target_node_ids": [
+        "research-allodirect"
+      ],
+      "evidence_ids": [
+        "ad-product"
+      ],
+      "counterevidence_ids": [],
+      "source_refs": [
+        "source:allodirect-release-S10"
+      ],
+      "comparison_state": "supported",
+      "interpretation": "Supported at the entry-point level: the captured release identifies tissue ordering for surgical facilities, placing AlloDirect in track H. The actual staff user, budget owner, current ordering alternative and before/after workflow remain unspecified.",
+      "authority": "model_interpretation_not_new_evidence"
+    },
+    {
+      "id": "interpretation:C2",
+      "assessment_ref": "agents/work/live-smoke.json#/matcher/result",
+      "input_ref": {
+        "case_id": "research-allodirect-v03",
+        "case_version": 1,
+        "thesis_version": 3,
+        "policy_version": 1,
+        "evidence_hash": "474047fd41f9a21fbe2b2c2119dd0f33805d00873f7f5cab45f656b284864265"
+      },
+      "prompt_version": "0.1",
+      "driver_kind": "semantic",
+      "criterion_id": "C2",
+      "target_node_ids": [
+        "research-allodirect",
+        "research-rhett-barker",
+        "research-james-casavant"
+      ],
+      "evidence_ids": [
+        "ad-role-ceo",
+        "ad-role-cto",
+        "ad-operator"
+      ],
+      "counterevidence_ids": [],
+      "source_refs": [
+        "source:allodirect-release-S10"
+      ],
+      "comparison_state": "unknown",
+      "interpretation": "The release identifies Barker as CEO and Casavant as CTO. Barker's reported orthopedic sales background offers plausible proximity to tissue-ordering customers, but founder status, specific workflow insight, individual product contributions and practical customer access are unverified. No attributable technical work is supplied for Casavant.",
+      "authority": "model_interpretation_not_new_evidence"
+    },
+    {
+      "id": "interpretation:C3",
+      "assessment_ref": "agents/work/live-smoke.json#/matcher/result",
+      "input_ref": {
+        "case_id": "research-allodirect-v03",
+        "case_version": 1,
+        "thesis_version": 3,
+        "policy_version": 1,
+        "evidence_hash": "474047fd41f9a21fbe2b2c2119dd0f33805d00873f7f5cab45f656b284864265"
+      },
+      "prompt_version": "0.1",
+      "driver_kind": "semantic",
+      "criterion_id": "C3",
+      "target_node_ids": [
+        "research-allodirect"
+      ],
+      "evidence_ids": [
+        "ad-product"
+      ],
+      "counterevidence_ids": [],
+      "source_refs": [
+        "source:allodirect-release-S10"
+      ],
+      "comparison_state": "unknown",
+      "interpretation": "Tissue-ordering software describes a product category and entry point, but the packet does not explain a distinctive mechanism or how it changes an important workflow outcome.",
+      "authority": "model_interpretation_not_new_evidence"
+    },
+    {
+      "id": "interpretation:C4",
+      "assessment_ref": "agents/work/live-smoke.json#/matcher/result",
+      "input_ref": {
+        "case_id": "research-allodirect-v03",
+        "case_version": 1,
+        "thesis_version": 3,
+        "policy_version": 1,
+        "evidence_hash": "474047fd41f9a21fbe2b2c2119dd0f33805d00873f7f5cab45f656b284864265"
+      },
+      "prompt_version": "0.1",
+      "driver_kind": "semantic",
+      "criterion_id": "C4",
+      "target_node_ids": [
+        "research-allodirect"
+      ],
+      "evidence_ids": [
+        "ad-product"
+      ],
+      "counterevidence_ids": [],
+      "source_refs": [
+        "source:allodirect-release-S10"
+      ],
+      "comparison_state": "unknown",
+      "interpretation": "The company reportedly claims production orders since September 2025, but no working workflow or attributable deployment record was inspected. Product gate: unknown, with a first-party execution claim recorded. Evidence mode: captured release notes, not inspected application or workflow. The failed product-page access is an evidence limitation, not contrary execution evidence.",
+      "authority": "model_interpretation_not_new_evidence"
+    },
+    {
+      "id": "interpretation:C5",
+      "assessment_ref": "agents/work/live-smoke.json#/matcher/result",
+      "input_ref": {
+        "case_id": "research-allodirect-v03",
+        "case_version": 1,
+        "thesis_version": 3,
+        "policy_version": 1,
+        "evidence_hash": "474047fd41f9a21fbe2b2c2119dd0f33805d00873f7f5cab45f656b284864265"
+      },
+      "prompt_version": "0.1",
+      "driver_kind": "semantic",
+      "criterion_id": "C5",
+      "target_node_ids": [
+        "research-allodirect"
+      ],
+      "evidence_ids": [
+        "ad-product"
+      ],
+      "counterevidence_ids": [],
+      "source_refs": [
+        "source:allodirect-release-S10"
+      ],
+      "comparison_state": "unknown",
+      "interpretation": "No suitable baseline, measured time or cost benefit, error rate, review burden or integration burden is supplied. Relevant advantage over the existing ordering process cannot be assessed.",
+      "authority": "model_interpretation_not_new_evidence"
+    },
+    {
+      "id": "interpretation:C6",
+      "assessment_ref": "agents/work/live-smoke.json#/matcher/result",
+      "input_ref": {
+        "case_id": "research-allodirect-v03",
+        "case_version": 1,
+        "thesis_version": 3,
+        "policy_version": 1,
+        "evidence_hash": "474047fd41f9a21fbe2b2c2119dd0f33805d00873f7f5cab45f656b284864265"
+      },
+      "prompt_version": "0.1",
+      "driver_kind": "semantic",
+      "criterion_id": "C6",
+      "target_node_ids": [
+        "research-allodirect"
+      ],
+      "evidence_ids": [
+        "ad-product"
+      ],
+      "counterevidence_ids": [],
+      "source_refs": [
+        "source:allodirect-release-S10"
+      ],
+      "comparison_state": "unknown",
+      "interpretation": "Surgical facilities are a plausible customer setting, and the release claims production orders. However, the buyer, procurement route, deployment conditions, integrations and attributable customer use are unresolved.",
+      "authority": "model_interpretation_not_new_evidence"
+    },
+    {
+      "id": "interpretation:C7",
+      "assessment_ref": "agents/work/live-smoke.json#/matcher/result",
+      "input_ref": {
+        "case_id": "research-allodirect-v03",
+        "case_version": 1,
+        "thesis_version": 3,
+        "policy_version": 1,
+        "evidence_hash": "474047fd41f9a21fbe2b2c2119dd0f33805d00873f7f5cab45f656b284864265"
+      },
+      "prompt_version": "0.1",
+      "driver_kind": "semantic",
+      "criterion_id": "C7",
+      "target_node_ids": [
+        "research-allodirect"
+      ],
+      "evidence_ids": [
+        "ad-product"
+      ],
+      "counterevidence_ids": [],
+      "source_refs": [
+        "source:allodirect-release-S10"
+      ],
+      "comparison_state": "unknown",
+      "interpretation": "A software offering suggests a potentially reusable core, but repeatable deployment, workflow embedding, proprietary know-how, rights and dependence on bespoke implementation labor are not evidenced.",
+      "authority": "model_interpretation_not_new_evidence"
+    },
+    {
+      "id": "interpretation:C8",
+      "assessment_ref": "agents/work/live-smoke.json#/matcher/result",
+      "input_ref": {
+        "case_id": "research-allodirect-v03",
+        "case_version": 1,
+        "thesis_version": 3,
+        "policy_version": 1,
+        "evidence_hash": "474047fd41f9a21fbe2b2c2119dd0f33805d00873f7f5cab45f656b284864265"
+      },
+      "prompt_version": "0.1",
+      "driver_kind": "semantic",
+      "criterion_id": "C8",
+      "target_node_ids": [
+        "research-allodirect"
+      ],
+      "evidence_ids": [
+        "ad-funding"
+      ],
+      "counterevidence_ids": [],
+      "source_refs": [
+        "source:allodirect-release-S10"
+      ],
+      "comparison_state": "unknown",
+      "interpretation": "The September 2026 pre-seed announcement supplies financing context, but no concrete de-risking milestone, required resources or decision consequence is documented.",
+      "authority": "model_interpretation_not_new_evidence"
+    }
+  ],
+  "matcher_summary": {
+    "assessment_ref": "agents/work/live-smoke.json#/matcher/result",
+    "input_ref": {
+      "case_id": "research-allodirect-v03",
+      "case_version": 1,
+      "thesis_version": 3,
+      "policy_version": 1,
+      "evidence_hash": "474047fd41f9a21fbe2b2c2119dd0f33805d00873f7f5cab45f656b284864265"
+    },
+    "prompt_version": "0.1",
+    "driver_kind": "semantic",
+    "why_this": {
+      "summary": "As of the 24 October 2026 packet, AlloDirect is a plausible H-track lead addressing tissue ordering for surgical facilities; no secondary track is established. We would investigate because this defined workflow is addressed by ordering software, and a captured company release supports the limited conclusion that the company claims production orders since September 2025. The decisive uncertainty is whether an inspectable workflow demonstrates the claimed functionality. Inspecting that workflow would change product-gate readiness, not independently establish superiority or investment qualification.",
+      "evidence_ids": [
+        "ad-product",
+        "ad-funding"
+      ],
+      "source_refs": [
+        "source:allodirect-release-S10"
+      ],
+      "objections": [
+        "There is no demonstrated advantage against an identified current ordering process.",
+        "The packet does not yet support partner-review readiness; no supported outside-mandate or investment-pass rationale is established."
+      ],
+      "unknowns": [
+        "Exact user, buyer and current alternative.",
+        "Actual product functionality and attributable deployment.",
+        "Current stage beyond the reported pre-seed announcement.",
+        "YC backing and novelty against a declared known-company universe."
+      ]
+    },
+    "why_them": {
+      "summary": "The release identifies Rhett Barker as CEO and James A. Casavant as CTO. Barker's reported orthopedic sales background is relevant to the customer setting, but the packet does not establish either person's founder status or ownership of the core product work.",
+      "evidence_ids": [
+        "ad-role-ceo",
+        "ad-role-cto",
+        "ad-operator"
+      ],
+      "source_refs": [
+        "source:allodirect-release-S10"
+      ],
+      "objections": [
+        "Titles do not establish technical contribution or execution.",
+        "The role and background observations come from one company-controlled release, not independent corroboration."
+      ],
+      "unknowns": [
+        "Who designed and built the ordering workflow.",
+        "Which customer observations shaped the product.",
+        "Current customer access and each operator's contribution."
+      ]
+    },
+    "why_now": {
+      "summary": "The reported 25 September 2026 pre-seed announcement is a dated reason to recheck AlloDirect. It does not establish a new customer need, infrastructure shift or regulatory/payment catalyst. Investment timing remains unsubstantiated and is not treated as an additional qualification gate.",
+      "evidence_ids": [
+        "ad-funding",
+        "ad-product"
+      ],
+      "source_refs": [
+        "source:allodirect-release-S10"
+      ],
+      "objections": [
+        "Financing is not evidence of demand or operational benefit.",
+        "The claimed production-order history has not been inspected or independently verified."
+      ],
+      "unknowns": [
+        "What changed recently to make adoption more feasible.",
+        "Current deployments and the next decision-relevant product milestone."
+      ]
+    },
+    "team_problem_fit": {
+      "summary": "Barker's reported orthopedic sales experience could provide proximity to surgical-facility ordering, while Casavant's reported CTO role identifies a potential technical owner. The missing link is attributable evidence showing how these people translated workflow knowledge into a functioning, repeatable product with manageable deployment and review burdens.",
+      "evidence_ids": [
+        "ad-role-ceo",
+        "ad-role-cto",
+        "ad-operator",
+        "ad-product"
+      ],
+      "source_refs": [
+        "source:allodirect-release-S10"
+      ],
+      "objections": [
+        "No observed design decision, release sequence or customer-learning loop connects the team to the claimed product.",
+        "There is no basis to infer clinical efficacy, clinical safety or regulatory status from tissue-ordering software claims."
+      ],
+      "unknowns": [
+        "Founder identities and contribution attribution.",
+        "Control of the product and access to users.",
+        "Whether patient-affecting decisions are involved and require specialist review."
+      ]
+    },
+    "authority": "model_interpretation_not_new_evidence"
+  },
+  "research_decision": {
+    "assessment_ref": "agents/work/live-smoke.json#/matcher/result",
+    "input_ref": {
+      "case_id": "research-allodirect-v03",
+      "case_version": 1,
+      "thesis_version": 3,
+      "policy_version": 1,
+      "evidence_hash": "474047fd41f9a21fbe2b2c2119dd0f33805d00873f7f5cab45f656b284864265"
+    },
+    "decision": "monitor",
+    "next_action": "Return this comparison as needs evidence, with a non-authoritative monitor proposal. No investigation can be executed or usefully assigned under the supplied zero-call budget and empty capabilities. If authorized resources become available, prioritize inspection of an actual tissue-ordering workflow or attributable deployment record showing claimed functionality; then resolve team contribution and the relevant baseline. Human review remains required for readiness and attractiveness.",
+    "decision_consequence": "An attributable working-workflow record could resolve the product-evidence gap; it would not establish human approval.",
+    "future_trigger": "Authorized access to a working-workflow demonstration or attributable deployment record becomes available.",
+    "evidence_ids": [
+      "ad-product",
+      "ad-role-ceo",
+      "ad-role-cto",
+      "ad-operator",
+      "ad-funding"
+    ],
+    "source_refs": [
+      "source:allodirect-release-S10"
+    ],
+    "assertion_kind": "inferred",
+    "qualification_note": "Research next-action recommendation only; human qualification approval remains separate"
+  },
+  "limitations": [
+    "Graph is a sourced research projection, not independent verification, a personality score or qualification approval.",
+    "Missing founder/collaboration/setback history is a question, not negative evidence; a pivot can reflect learning.",
+    "Matcher interpretations are separate references and create no new source/evidence records.",
+    "Source-reported, observed and inferred assertions retain their provenance; source DataMode does not change assertion kind.",
+    "This is a captured research example, separate from stored live-provider case state.",
+    "Any matcher references are preserved historical prompt-v0.1 comparisons, not new evidence or current human approval."
+  ]
+}

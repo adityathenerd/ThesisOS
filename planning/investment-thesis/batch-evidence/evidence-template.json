@@ -1,0 +1,68 @@
+{
+  "document_type": "planning_only_public_research_template_not_evidence",
+  "status": "unpopulated_template",
+  "batch_id": null,
+  "candidate_id_exact_from_returned_pool": null,
+  "selection_reference": null,
+  "assignment_confirmed_by": null,
+  "assignment_checked_at": null,
+  "company": {"name": null, "domain": null, "identity_limitations": []},
+  "track": {"primary": null, "secondary": [], "rationale": null},
+  "plain_language_product_or_program": null,
+  "user_or_patient_population": null,
+  "people": [
+    {
+      "name": null,
+      "reported_current_role": null,
+      "founder_status": "unknown",
+      "attributable_contribution": null,
+      "source_ids": [],
+      "unknowns": []
+    }
+  ],
+  "source_groups": [
+    {"id": null, "claim_origin": null, "publisher_relationship": null, "independence_limitations": []}
+  ],
+  "sources": [
+    {
+      "id": null,
+      "url": null,
+      "title": null,
+      "author_or_speaker": null,
+      "publication_date": null,
+      "event_date": null,
+      "retrieved_at": null,
+      "retrieval_status": null,
+      "source_group_id": null,
+      "evidence_mode": null,
+      "exact_quote_if_necessary": null,
+      "paraphrase": null,
+      "limitations": []
+    }
+  ],
+  "observations": [
+    {
+      "id": null,
+      "claim": null,
+      "source_ids": [],
+      "criterion_ids": [],
+      "model_or_population": null,
+      "sample_or_input_context": null,
+      "comparator_or_controls": null,
+      "measured_endpoint": null,
+      "underlying_methods_or_data_inspected": null,
+      "supports": null,
+      "does_not_establish": [],
+      "confidence": null,
+      "confidence_rationale": null
+    }
+  ],
+  "counterevidence": [],
+  "material_unknowns": [],
+  "already_fetched_or_reserved_urls_checked": [],
+  "failed_fetches": [],
+  "next_check": {"question": null, "why_material": null, "possible_decision_changes": []},
+  "research_limitations": ["No implied qualification or independent scientific validation; backend owns ingestion and evaluation."],
+  "provider_or_model_calls": 0,
+  "backend_packets_modified": false
+}

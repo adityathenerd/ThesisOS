@@ -1,0 +1,683 @@
+{
+  "checked_at": "2026-10-24T10:12:02.271Z",
+  "mandate_id": "mandate_51a7af5e3dcf4d20a002eee760b49779",
+  "reference": {
+    "binding_status": "Server reference and content hash verified",
+    "hash": "2d01a3b2a91b25aa5c4285aefcfffc5f84246833dbfe54aa66778ba96c0e6ce4",
+    "chars": 23728,
+    "assessment_count": null,
+    "qualification_policy_approved": false
+  },
+  "cases": [
+    {
+      "case_id": "case_d57d6d50977a4652b98272704449804d",
+      "company": "careMESH",
+      "version": 3,
+      "assessment_id": "assessment_ce07fba6dd3f4edbb7b8c5cdf27d2610",
+      "prompt_version": "0.3",
+      "assessment_current": true,
+      "workflow_state": "human_research_required",
+      "work_current": true,
+      "work_label": "Human research needed",
+      "brief_status": "available",
+      "brief_origin": "saved_agent_brief",
+      "brief_assessment": "assessment_ce07fba6dd3f4edbb7b8c5cdf27d2610",
+      "attempts": 9,
+      "review_packet": null,
+      "human_questions": [
+        {
+          "id": "question:caremesh.com:current-builder",
+          "question": "Who currently owns NAVIGATE pathway design, integration and revisions, and can they explain one completed case and one failure/rework path?",
+          "consequence": "Do not repeat the completed profile, post-engagement or public-document lookups. Reassess when the owner-attributed current workflow evidence is obtained and the benefit headline is contextualized or explicitly excluded. If authorized owner access is unavailable, pause that route and reopen on an attributable current deployment record naming implementation responsibility.",
+          "what_to_obtain": "An authorized named-owner record/walkthrough; historical deployment evidence is already inspected and need not be rediscovered.",
+          "why_stopped": "Recorded attempt did not resolve this question in the current assessment; do not repeat unchanged research.",
+          "matched_attempts": 2
+        },
+        {
+          "id": "question:caremesh.com:benefit-method",
+          "question": "What baseline, denominator, period and method support the reduction headline, or should it be excluded from the advantage comparison?",
+          "consequence": "Do not repeat the completed profile, post-engagement or public-document lookups. Reassess when the owner-attributed current workflow evidence is obtained and the benefit headline is contextualized or explicitly excluded. If authorized owner access is unavailable, pause that route and reopen on an attributable current deployment record naming implementation responsibility.",
+          "what_to_obtain": "An interpretable measurement method or explicit removal of that unsupported metric; no general requirement for clinical efficacy at this stage.",
+          "why_stopped": "Recorded attempt did not resolve this question in the current assessment; do not repeat unchanged research.",
+          "matched_attempts": 1
+        }
+      ],
+      "qualification_accepted": false,
+      "graph": {
+        "id": "research-graph:2cd62af9b6f95b4d8cc9c66f",
+        "nodes": 86,
+        "edges": 116,
+        "sources": 19,
+        "kinds": [
+          "organisation",
+          "person",
+          "product",
+          "post",
+          "topic",
+          "event",
+          "source",
+          "claim"
+        ],
+        "ecosystem_coverage": {
+          "unique_entities": 26,
+          "entities_by_kind": {
+            "event": 2,
+            "organisation": 12,
+            "person": 5,
+            "post": 5,
+            "product": 1,
+            "topic": 1
+          },
+          "supported_typed_edges": 24,
+          "typed_relationship_types": [
+            "affiliated_with",
+            "authored",
+            "mentions",
+            "participated_in",
+            "posted_about"
+          ],
+          "dated_event_ids": [
+            "event:caremesh:2026-ai-summit"
+          ],
+          "repeated_dated_ties": [],
+          "full_network_density": null,
+          "limitations": [
+            "Counts describe only this sourced observed subgraph; total network size and density are unknown.",
+            "Distinct URLs, engagement counts and repeated ties are not founder quality, grit, access or friendship scores.",
+            "Repeated collaboration requires distinct sourced works/events and dates; one engagement never establishes it."
+          ]
+        },
+        "ecosystem_interpretations": 0
+      }
+    },
+    {
+      "case_id": "case_5a0be0c7b23d4f3da9b1edfa8629e09b",
+      "company": "Aphotic Bio",
+      "version": 3,
+      "assessment_id": "assessment_ed611a1c2bd740bcb6b52908a1683e20",
+      "prompt_version": "0.3",
+      "assessment_current": true,
+      "workflow_state": "human_research_required",
+      "work_current": true,
+      "work_label": "Human research needed",
+      "brief_status": "available",
+      "brief_origin": "saved_agent_brief",
+      "brief_assessment": "assessment_ed611a1c2bd740bcb6b52908a1683e20",
+      "attempts": 5,
+      "review_packet": null,
+      "human_questions": [
+        {
+          "id": "question:aphoticbio.com:program-experiment",
+          "question": "Is an authorized functional experimental report available for a named initial Aphotic program, beyond computational predictions?",
+          "consequence": "Do not repeat the completed public validation query or indexed-post search without a new source lead. Resolve authorized availability of one program's experimental and rights/access materials; reopen scientific readiness on their inspection. If unavailable, revisit at the stated end-2026 checkpoint for an attributable program-linked result.",
+          "what_to_obtain": "The program-linked model, controls, measured effect, limitations and next falsifying experiment, for scientific specialist inspection.",
+          "why_stopped": "Recorded attempt did not resolve this question in the current assessment; do not repeat unchanged research.",
+          "matched_attempts": 1
+        },
+        {
+          "id": "question:aphoticbio.com:current-contributions",
+          "question": "Who currently owns model implementation, experimental decisions and access, and what Aphotic work has each founder delivered?",
+          "consequence": "Do not repeat the completed public validation query or indexed-post search without a new source lead. Resolve authorized availability of one program's experimental and rights/access materials; reopen scientific readiness on their inspection. If unavailable, revisit at the stated end-2026 checkpoint for an attributable program-linked result.",
+          "what_to_obtain": "Attributed current responsibilities/deliverables and available experimental access; academic work and investment employment alone do not establish these.",
+          "why_stopped": "Recorded attempt did not resolve this question in the current assessment; do not repeat unchanged research.",
+          "matched_attempts": 2
+        }
+      ],
+      "qualification_accepted": false,
+      "graph": {
+        "id": "research-graph:b55f7b2489e8e7cfeecf2b34",
+        "nodes": 54,
+        "edges": 79,
+        "sources": 11,
+        "kinds": [
+          "organisation",
+          "person",
+          "product",
+          "project",
+          "source",
+          "claim"
+        ],
+        "ecosystem_coverage": {
+          "unique_entities": 13,
+          "entities_by_kind": {
+            "organisation": 7,
+            "person": 3,
+            "product": 1,
+            "project": 2
+          },
+          "supported_typed_edges": 13,
+          "typed_relationship_types": [
+            "affiliated_with",
+            "coauthored",
+            "coauthored_with"
+          ],
+          "dated_event_ids": [],
+          "repeated_dated_ties": [],
+          "full_network_density": null,
+          "limitations": [
+            "Counts describe only this sourced observed subgraph; total network size and density are unknown.",
+            "Distinct URLs, engagement counts and repeated ties are not founder quality, grit, access or friendship scores.",
+            "Repeated collaboration requires distinct sourced works/events and dates; one engagement never establishes it."
+          ]
+        },
+        "ecosystem_interpretations": 0
+      }
+    },
+    {
+      "case_id": "case_723e3ade86f14d08be801ca16d68a54d",
+      "company": "Swiftacare",
+      "version": 3,
+      "assessment_id": "assessment_6d1eaf2915b547eaaeb99c7a5cfdba6a",
+      "prompt_version": "0.3",
+      "assessment_current": true,
+      "workflow_state": "human_research_required",
+      "work_current": true,
+      "work_label": "Human research needed",
+      "brief_status": "available",
+      "brief_origin": "saved_agent_brief",
+      "brief_assessment": "assessment_6d1eaf2915b547eaaeb99c7a5cfdba6a",
+      "attempts": 5,
+      "review_packet": null,
+      "human_questions": [
+        {
+          "id": "question:swiftacare.com:working-referral",
+          "question": "Can an accountable builder show a current de-identified referral-to-documentation handoff and distinguish reusable configuration from custom work?",
+          "consequence": "Stop repeating the completed public-source checks. Reassess on an authorized referral-to-documentation demonstration or substantive deployment record identifying builder decisions, the prior alternative and reusable versus custom work; another profile, feature description or event listing alone does not resolve the gap.",
+          "what_to_obtain": "An authorized internal or external implementation/workflow record with inputs, outputs, previous alternative and named technical responsibility; an unrelated customer is not a universal gate.",
+          "why_stopped": "Recorded attempt did not resolve this question in the current assessment; do not repeat unchanged research.",
+          "matched_attempts": 2
+        }
+      ],
+      "qualification_accepted": false,
+      "graph": {
+        "id": "research-graph:057e4ff6bb65cc439c26848b",
+        "nodes": 46,
+        "edges": 61,
+        "sources": 11,
+        "kinds": [
+          "organisation",
+          "person",
+          "product",
+          "post",
+          "topic",
+          "event",
+          "source",
+          "claim"
+        ],
+        "ecosystem_coverage": {
+          "unique_entities": 13,
+          "entities_by_kind": {
+            "event": 1,
+            "organisation": 4,
+            "person": 3,
+            "post": 3,
+            "product": 1,
+            "topic": 1
+          },
+          "supported_typed_edges": 12,
+          "typed_relationship_types": [
+            "affiliated_with",
+            "authored",
+            "participated_in",
+            "posted_about"
+          ],
+          "dated_event_ids": [
+            "event:public:19ff3b209055acd5dd"
+          ],
+          "repeated_dated_ties": [],
+          "full_network_density": null,
+          "limitations": [
+            "Counts describe only this sourced observed subgraph; total network size and density are unknown.",
+            "Distinct URLs, engagement counts and repeated ties are not founder quality, grit, access or friendship scores.",
+            "Repeated collaboration requires distinct sourced works/events and dates; one engagement never establishes it."
+          ]
+        },
+        "ecosystem_interpretations": 0
+      }
+    },
+    {
+      "case_id": "case_2ad527916cc748269880081553bfdba8",
+      "company": "Replicate.Health",
+      "version": 3,
+      "assessment_id": "assessment_ad6e7de7d13c4ca4acc86ca4292ba560",
+      "prompt_version": "0.3",
+      "assessment_current": true,
+      "workflow_state": "human_research_required",
+      "work_current": true,
+      "work_label": "Human research needed",
+      "brief_status": "available",
+      "brief_origin": "saved_agent_brief",
+      "brief_assessment": "assessment_ad6e7de7d13c4ca4acc86ca4292ba560",
+      "attempts": 10,
+      "review_packet": null,
+      "human_questions": [
+        {
+          "id": "question:replicate.health:ledger-workflow",
+          "question": "Can a named builder show Ledger processing a de-identified work item and reconcile mandatory versus practice-configurable submission review?",
+          "consequence": "Do not repeat the completed public-page, login or engagement checks without a new lead. Advance the same authorized Ledger walkthrough-and-attribution check through human research review; if access cannot be arranged, wait for an attributable execution recording or deployment record identifying the builder and submission-review scope before reopening the product-gate judgment.",
+          "what_to_obtain": "An authorized input-to-output workflow, implementation attribution and version-specific review policy; no patient identifiers.",
+          "why_stopped": "Recorded attempt did not resolve this question in the current assessment; do not repeat unchanged research.",
+          "matched_attempts": 4
+        },
+        {
+          "id": "question:replicate.health:builder-responsibility",
+          "question": "Which current founders built the billing core, control practice access and own its learning/revision cycle?",
+          "consequence": "Do not repeat the completed public-page, login or engagement checks without a new lead. Advance the same authorized Ledger walkthrough-and-attribution check through human research review; if access cannot be arranged, wait for an attributable execution recording or deployment record identifying the builder and submission-review scope before reopening the product-gate judgment.",
+          "what_to_obtain": "Role-verifiable contribution records or an authorized technical account connecting Chris Thomas and Sahil Shaikh to specific implemented work.",
+          "why_stopped": "Recorded attempt did not resolve this question in the current assessment; do not repeat unchanged research.",
+          "matched_attempts": 2
+        }
+      ],
+      "qualification_accepted": false,
+      "graph": {
+        "id": "research-graph:c468425229bcbe90e4c4f151",
+        "nodes": 54,
+        "edges": 71,
+        "sources": 13,
+        "kinds": [
+          "organisation",
+          "person",
+          "product",
+          "post",
+          "topic",
+          "source",
+          "claim"
+        ],
+        "ecosystem_coverage": {
+          "unique_entities": 14,
+          "entities_by_kind": {
+            "organisation": 8,
+            "person": 2,
+            "post": 2,
+            "product": 1,
+            "topic": 1
+          },
+          "supported_typed_edges": 14,
+          "typed_relationship_types": [
+            "affiliated_with",
+            "authored",
+            "posted_about"
+          ],
+          "dated_event_ids": [],
+          "repeated_dated_ties": [],
+          "full_network_density": null,
+          "limitations": [
+            "Counts describe only this sourced observed subgraph; total network size and density are unknown.",
+            "Distinct URLs, engagement counts and repeated ties are not founder quality, grit, access or friendship scores.",
+            "Repeated collaboration requires distinct sourced works/events and dates; one engagement never establishes it."
+          ]
+        },
+        "ecosystem_interpretations": 0
+      }
+    },
+    {
+      "case_id": "case_62ab29c28e8c49d5b5b15d88bdc4e5d3",
+      "company": "Cadex Genomics",
+      "version": 3,
+      "assessment_id": "assessment_c7ec60a3c1cc45edaf7ab89272c2a25a",
+      "prompt_version": "0.3",
+      "assessment_current": true,
+      "workflow_state": "human_research_required",
+      "work_current": true,
+      "work_label": "Human research needed",
+      "brief_status": "available",
+      "brief_origin": "saved_agent_brief",
+      "brief_assessment": "assessment_c7ec60a3c1cc45edaf7ab89272c2a25a",
+      "attempts": 10,
+      "review_packet": null,
+      "human_questions": [
+        {
+          "id": "question:cadexgenomics.com:full-validation-report",
+          "question": "Can the full CADEX-0001/NCT03892096 Alibrex validation report be supplied with its exact assay version, cohort and contributor attribution?",
+          "consequence": "Stop automated retries of the recorded searches, publisher and DOI routes. Continue through a human owner/access handoff; reopen substantive assessment when an authorized validation report and scientific-contribution attribution are supplied. If no accountable contact or accessible report can be established, wait for that specific evidence trigger without inferring scientific failure.",
+          "what_to_obtain": "An authorized manuscript/report with evaluable denominators, timing, imaging comparator, cutoffs and uncertainty; establish whether the inaccessible AACR lead is actually the same assay/cohort.",
+          "why_stopped": "Recorded attempt did not resolve this question in the current assessment; do not repeat unchanged research.",
+          "matched_attempts": 5
+        },
+        {
+          "id": "question:cadexgenomics.com:current-accountability",
+          "question": "Who is the current accountable scientific/operator lead, and what is Alibrex availability and the actual current division of work?",
+          "consequence": "Stop automated retries of the recorded searches, publisher and DOI routes. Continue through a human owner/access handoff; reopen substantive assessment when an authorized validation report and scientific-contribution attribution are supplied. If no accountable contact or accessible report can be established, wait for that specific evidence trigger without inferring scientific failure.",
+          "what_to_obtain": "Role-verifiable current operating information reconciling historical leadership/profile end dates and older launch targets; do not infer inactivity from them.",
+          "why_stopped": "Recorded attempt did not resolve this question in the current assessment; do not repeat unchanged research.",
+          "matched_attempts": 3
+        }
+      ],
+      "qualification_accepted": false,
+      "graph": {
+        "id": "research-graph:ac7581c807646cce56362c08",
+        "nodes": 55,
+        "edges": 81,
+        "sources": 11,
+        "kinds": [
+          "organisation",
+          "person",
+          "product",
+          "project",
+          "source",
+          "claim"
+        ],
+        "ecosystem_coverage": {
+          "unique_entities": 11,
+          "entities_by_kind": {
+            "organisation": 7,
+            "person": 2,
+            "product": 1,
+            "project": 1
+          },
+          "supported_typed_edges": 10,
+          "typed_relationship_types": [
+            "affiliated_with"
+          ],
+          "dated_event_ids": [],
+          "repeated_dated_ties": [],
+          "full_network_density": null,
+          "limitations": [
+            "Counts describe only this sourced observed subgraph; total network size and density are unknown.",
+            "Distinct URLs, engagement counts and repeated ties are not founder quality, grit, access or friendship scores.",
+            "Repeated collaboration requires distinct sourced works/events and dates; one engagement never establishes it."
+          ]
+        },
+        "ecosystem_interpretations": 0
+      }
+    },
+    {
+      "case_id": "case_bde3999e8d1f4aa79568e3599b714a5d",
+      "company": "NeoTargets AB",
+      "version": 3,
+      "assessment_id": "assessment_733dc789af334c3384174cf2a3ebe2e3",
+      "prompt_version": "0.3",
+      "assessment_current": true,
+      "workflow_state": "human_research_required",
+      "work_current": true,
+      "work_label": "Human research needed",
+      "brief_status": "available",
+      "brief_origin": "saved_agent_brief",
+      "brief_assessment": "assessment_733dc789af334c3384174cf2a3ebe2e3",
+      "attempts": 8,
+      "review_packet": {
+        "label": "Specialist evidence review requested; company-capability linkage unresolved.",
+        "evidence_ids": [
+          "evidence:neotargets-com:3:0",
+          "evidence:neotargets-com:5:1",
+          "evidence:neotargets-com:5:2",
+          "evidence:enrich:02b1e4e877a0fda4c5:21",
+          "evidence:enrich:02b1e4e877a0fda4c5:29",
+          "evidence:neotargets-com:4:0",
+          "evidence:neotargets-com:5:0",
+          "evidence:enrich:02b1e4e877a0fda4c5:30"
+        ],
+        "interpretation_source": "planning/investment-thesis/neotargets-readiness-interpretation.md"
+      },
+      "human_questions": [
+        {
+          "id": "question:neotargets.com:program-map",
+          "question": "Which current NeoTargets program OR platform capability do the inspected DCPS experiments demonstrate, what was the company contribution, and what continuing experimental access remains?",
+          "consequence": "Do not repeat the completed public rights query or profile/social enrichment without a new lead. Reassess on the requested CSO program-linkage, rights/access and confounder-aware milestone documentation; if unavailable, wait for an attributable company-linked experimental or licensing milestone.",
+          "what_to_obtain": "A credible present capability/collaborator account and continuing experimental access can bridge attribution; a named exclusively owned drug or full legal data room is not the only path. Seek rights detail specifically if an owned/licensable asset is claimed.",
+          "why_stopped": "Recorded attempt did not resolve this question in the current assessment; do not repeat unchanged research.",
+          "matched_attempts": 5
+        },
+        {
+          "id": "question:neotargets.com:confounder-validation",
+          "question": "What confounder-aware next experiment would test the biomarker/mechanism after the hydroxyurea limitation identified in the original AML research?",
+          "consequence": "Do not repeat the completed public rights query or profile/social enrichment without a new lead. Reassess on the requested CSO program-linkage, rights/access and confounder-aware milestone documentation; if unavailable, wait for an attributable company-linked experimental or licensing milestone.",
+          "what_to_obtain": "A specialist-readable validation design with model/population, control/comparator, access/resources and a decision-changing outcome. Existing papers are the starting evidence, not proof that this next validation has occurred.",
+          "why_stopped": "No validated executable investigation is mapped to this specific question.",
+          "matched_attempts": 0
+        }
+      ],
+      "qualification_accepted": false,
+      "graph": {
+        "id": "research-graph:59420edbb5af99f2b5e57bca",
+        "nodes": 92,
+        "edges": 136,
+        "sources": 19,
+        "kinds": [
+          "organisation",
+          "person",
+          "product",
+          "project",
+          "post",
+          "topic",
+          "source",
+          "claim"
+        ],
+        "ecosystem_coverage": {
+          "unique_entities": 31,
+          "entities_by_kind": {
+            "organisation": 12,
+            "person": 7,
+            "post": 5,
+            "product": 1,
+            "project": 4,
+            "topic": 2
+          },
+          "supported_typed_edges": 39,
+          "typed_relationship_types": [
+            "affiliated_with",
+            "authored",
+            "coauthored",
+            "coauthored_with",
+            "mentions",
+            "posted_about"
+          ],
+          "dated_event_ids": [],
+          "repeated_dated_ties": [
+            {
+              "from_id": "person:neotargets-com:0",
+              "to_id": "person:neotargets-com:2",
+              "relation": "coauthored_with",
+              "event_refs": [
+                "project:paper:5069ba5684f70fc7f3",
+                "project:paper:9e5b43d9b08e82ba3c"
+              ],
+              "dates": [
+                "2025-06-26",
+                "2026-03-27"
+              ],
+              "evidence_ids": [
+                "evidence:enrich:02b1e4e877a0fda4c5:29",
+                "evidence:enrich:02b1e4e877a0fda4c5:30"
+              ]
+            }
+          ],
+          "full_network_density": null,
+          "limitations": [
+            "Counts describe only this sourced observed subgraph; total network size and density are unknown.",
+            "Distinct URLs, engagement counts and repeated ties are not founder quality, grit, access or friendship scores.",
+            "Repeated collaboration requires distinct sourced works/events and dates; one engagement never establishes it."
+          ]
+        },
+        "ecosystem_interpretations": 2
+      }
+    },
+    {
+      "case_id": "case_93e02144618b4341acf31c75727f135d",
+      "company": "TherapySelect Dr. Frank Kischkel",
+      "version": 3,
+      "assessment_id": "assessment_51db1909fc7b470baa360ecebd2c46cd",
+      "prompt_version": "0.3",
+      "assessment_current": true,
+      "workflow_state": "human_research_required",
+      "work_current": true,
+      "work_label": "Human research needed",
+      "brief_status": "available",
+      "brief_origin": "saved_agent_brief",
+      "brief_assessment": "assessment_51db1909fc7b470baa360ecebd2c46cd",
+      "attempts": 8,
+      "review_packet": null,
+      "human_questions": [
+        {
+          "id": "question:therapyselect.de:entity-and-validation",
+          "question": "Which commercial/nonprofit entity controls current CTR-Test know-how and laboratory access, and what original validation supports the intended assay use?",
+          "consequence": "Stop automated follow-through on the supplied paths. Resume the entity-control assessment when a human can obtain an authorized rights/access account or instrument; if a credible commercial asset route is established, inspect an original validation report before considering specialist partner review. This is not a rejection or a finding that the assay fails.",
+          "what_to_obtain": "An authorized current arrangement and an original assay/validation report with contributor attribution; keep targeted/immunotherapy limitations explicit.",
+          "why_stopped": "Recorded attempt did not resolve this question in the current assessment; do not repeat unchanged research.",
+          "matched_attempts": 2
+        },
+        {
+          "id": "question:therapyselect.de:experimental-owner",
+          "question": "What current experimental and validation decisions do Kischkel and Reiser actually own?",
+          "consequence": "Stop automated follow-through on the supplied paths. Resume the entity-control assessment when a human can obtain an authorized rights/access account or instrument; if a credible commercial asset route is established, inspect an original validation report before considering specialist partner review. This is not a rejection or a finding that the assay fails.",
+          "what_to_obtain": "Role-verifiable current contribution records; owner/director titles and a know-how account do not establish all experimental responsibilities or founder status.",
+          "why_stopped": "Recorded attempt did not resolve this question in the current assessment; do not repeat unchanged research.",
+          "matched_attempts": 3
+        }
+      ],
+      "qualification_accepted": false,
+      "graph": {
+        "id": "research-graph:297253a88eef10f9b6acb929",
+        "nodes": 33,
+        "edges": 40,
+        "sources": 11,
+        "kinds": [
+          "organisation",
+          "person",
+          "product",
+          "source",
+          "claim"
+        ],
+        "ecosystem_coverage": {
+          "unique_entities": 5,
+          "entities_by_kind": {
+            "organisation": 2,
+            "person": 2,
+            "product": 1
+          },
+          "supported_typed_edges": 2,
+          "typed_relationship_types": [
+            "affiliated_with"
+          ],
+          "dated_event_ids": [],
+          "repeated_dated_ties": [],
+          "full_network_density": null,
+          "limitations": [
+            "Counts describe only this sourced observed subgraph; total network size and density are unknown.",
+            "Distinct URLs, engagement counts and repeated ties are not founder quality, grit, access or friendship scores.",
+            "Repeated collaboration requires distinct sourced works/events and dates; one engagement never establishes it."
+          ]
+        },
+        "ecosystem_interpretations": 0
+      }
+    },
+    {
+      "case_id": "case_324df432ed8c49ffa64f141f1356e994",
+      "company": "Find Nuclei",
+      "version": 3,
+      "assessment_id": "assessment_68b0cda777114daebc53ba8dfabb70e9",
+      "prompt_version": "0.3",
+      "assessment_current": true,
+      "workflow_state": "human_research_required",
+      "work_current": true,
+      "work_label": "Human research needed",
+      "brief_status": "available",
+      "brief_origin": "saved_agent_brief",
+      "brief_assessment": "assessment_68b0cda777114daebc53ba8dfabb70e9",
+      "attempts": 4,
+      "review_packet": null,
+      "human_questions": [
+        {
+          "id": "question:find-nuclei.com:named-builder",
+          "question": "Who is the role-verifiable individual who built and controls the demonstrated viewer/rendering/annotation workflow?",
+          "consequence": "Reassess on a role-verifiable builder attribution record tied to the already observed rendering and annotation implementation. Stop repeating the completed sample demonstration and bounded indexed searches without a new source lead; if attribution cannot be obtained, wait for a named contributor disclosure or authorized builder walkthrough.",
+          "what_to_obtain": "A named company-role and implementation attribution. The public sample render and Distance annotation succeeded; do not repeat that now-resolved test.",
+          "why_stopped": "Recorded attempt did not resolve this question in the current assessment; do not repeat unchanged research.",
+          "matched_attempts": 2
+        }
+      ],
+      "qualification_accepted": false,
+      "graph": {
+        "id": "research-graph:d9165361eac447967b9d33bd",
+        "nodes": 21,
+        "edges": 21,
+        "sources": 9,
+        "kinds": [
+          "organisation",
+          "product",
+          "source",
+          "claim"
+        ],
+        "ecosystem_coverage": {
+          "unique_entities": 2,
+          "entities_by_kind": {
+            "organisation": 1,
+            "product": 1
+          },
+          "supported_typed_edges": 0,
+          "typed_relationship_types": [],
+          "dated_event_ids": [],
+          "repeated_dated_ties": [],
+          "full_network_density": null,
+          "limitations": [
+            "Counts describe only this sourced observed subgraph; total network size and density are unknown.",
+            "Distinct URLs, engagement counts and repeated ties are not founder quality, grit, access or friendship scores.",
+            "Repeated collaboration requires distinct sourced works/events and dates; one engagement never establishes it."
+          ]
+        },
+        "ecosystem_interpretations": 0
+      }
+    },
+    {
+      "case_id": "case_982bf92d162a476fa1c6f367e0a102da",
+      "company": "SlideScope: Professional Microscopy Image Viewer",
+      "version": 3,
+      "assessment_id": "assessment_479d68527e674574a559292f994c9fd0",
+      "prompt_version": "0.3",
+      "assessment_current": true,
+      "workflow_state": "human_research_required",
+      "work_current": true,
+      "work_label": "Human research needed",
+      "brief_status": "available",
+      "brief_origin": "saved_agent_brief",
+      "brief_assessment": "assessment_479d68527e674574a559292f994c9fd0",
+      "attempts": 5,
+      "review_packet": null,
+      "human_questions": [
+        {
+          "id": "question:slidescope.science:attributed-sample-run",
+          "question": "Can authorized access establish a representative sample run and Yair Nevet's specific implementation contribution?",
+          "consequence": "Reassess when the authorized observed sample run and specific builder attribution are available. If access cannot be arranged, stop further repetition of the public-documentation route and retain the gap until an attributable worked demonstration is supplied; do not treat unavailable access as contrary investment evidence.",
+          "what_to_obtain": "Retain the input, output, version, quality-control steps and attributable builder explanation; inspected instructions and a founder title do not answer this.",
+          "why_stopped": "Recorded attempt did not resolve this question in the current assessment; do not repeat unchanged research.",
+          "matched_attempts": 3
+        }
+      ],
+      "qualification_accepted": false,
+      "graph": {
+        "id": "research-graph:f0f213a15d8d84c1ec373b1f",
+        "nodes": 23,
+        "edges": 25,
+        "sources": 9,
+        "kinds": [
+          "organisation",
+          "person",
+          "product",
+          "source",
+          "claim"
+        ],
+        "ecosystem_coverage": {
+          "unique_entities": 3,
+          "entities_by_kind": {
+            "organisation": 1,
+            "person": 1,
+            "product": 1
+          },
+          "supported_typed_edges": 1,
+          "typed_relationship_types": [
+            "affiliated_with"
+          ],
+          "dated_event_ids": [],
+          "repeated_dated_ties": [],
+          "full_network_density": null,
+          "limitations": [
+            "Counts describe only this sourced observed subgraph; total network size and density are unknown.",
+            "Distinct URLs, engagement counts and repeated ties are not founder quality, grit, access or friendship scores.",
+            "Repeated collaboration requires distinct sourced works/events and dates; one engagement never establishes it."
+          ]
+        },
+        "ecosystem_interpretations": 0
+      }
+    }
+  ]
+}

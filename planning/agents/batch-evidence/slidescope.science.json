@@ -1,0 +1,187 @@
+{
+  "document_type": "bounded_primary_source_prep_not_assessment",
+  "batch_id": "batch_3b0c1b071c274f12a608aca3b0d90dd5",
+  "candidate_id_exact_from_returned_pool": "pool_b26c71b8e3ee4050a2258d90a4469edb",
+  "company": {
+    "name": "SlideScope: Professional Microscopy Image Viewer",
+    "domain": "slidescope.science",
+    "identity_limitations": [
+      "Do not merge with slidescope.net / Jonas Teuwen or slidescope.app; these are different identities.",
+      "Legal entity and named founder have not been established."
+    ]
+  },
+  "track": {
+    "primary": "R",
+    "secondary": [],
+    "rationale": "Research microscopy viewing and quantification; sources explicitly limit clinical use."
+  },
+  "plain_language_product_or_program": "SlideScope offers a desktop application that lets research laboratories view, measure and quantify microscopy images from different instrument formats in one workspace.",
+  "user_or_patient_population": "Microscopy researchers, laboratory/core-facility staff and educators; not a clinically validated diagnostic population.",
+  "people": [],
+  "source_groups": [
+    {
+      "id": "slidescope:first-party-site",
+      "claim_origin": "SlideScope company-authored pages",
+      "publisher_relationship": "first_party",
+      "independence_limitations": [
+        "Multiple pages are one interested source family, not independent corroboration."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "slidescope:home",
+      "url": "https://slidescope.science/en/",
+      "title": "SlideScope microscopy viewer",
+      "publication_date": null,
+      "event_date": "2026-10-23",
+      "date_basis": "Page displays a dated release label; exact latest version differs between observed indexed renders and needs direct release-note verification.",
+      "retrieved_at": "2026-10-24T08:37:48.527961+00:00",
+      "retrieval_status": "direct_http_200",
+      "source_group_id": "slidescope:first-party-site",
+      "evidence_mode": "live_retrieval_source_reported",
+      "paraphrase": "Company offers a downloadable Windows/macOS viewer for mixed microscopy formats, measurement and local quantification. It lists samples and demonstrations. Research use is explicit; software was not installed or tested.",
+      "limitations": [
+        "Product page and demo links inspected as text only; no executable test, customer adoption or performance verification.",
+        "Testimonials on the company's own site are not independent validation."
+      ],
+      "snapshot_receipt": "planning\\agents\\batch-evidence\\snapshots\\slidescope.science.home.receipt.json"
+    },
+    {
+      "id": "slidescope:about",
+      "url": "https://slidescope.science/about/",
+      "title": "About SlideScope \u2014 Independent Microscopy Software",
+      "publication_date": null,
+      "event_date": null,
+      "retrieved_at": "2026-10-24T08:37:48.528958+00:00",
+      "retrieval_status": "direct_http_200",
+      "source_group_id": "slidescope:first-party-site",
+      "evidence_mode": "live_retrieval_source_reported",
+      "paraphrase": "The company describes an independent desktop viewer addressing fragmented vendor formats. It distinguishes its review workflow from scriptable analysis pipelines and clinical diagnosis. No named founder or individual authorship is provided on the inspected page.",
+      "limitations": [
+        "Company identity and product purpose are source-reported; no named person's contribution, founder status, tenure or rights established."
+      ],
+      "snapshot_receipt": "planning\\agents\\batch-evidence\\snapshots\\slidescope.science.about.receipt.json"
+    },
+    {
+      "id": "slidescope:quantification",
+      "url": "https://slidescope.science/en/quantification/",
+      "title": "Cell and Nuclei Quantification on Your Own Computer",
+      "publication_date": null,
+      "event_date": null,
+      "retrieved_at": "2026-10-24T08:37:48.528958+00:00",
+      "retrieval_status": "direct_http_200",
+      "source_group_id": "slidescope:first-party-site",
+      "evidence_mode": "live_retrieval_source_reported",
+      "paraphrase": "Documentation describes local segmentation using InstanSeg or thresholding, saved analysis recipes, overlays for manual correction and CSV/GeoJSON/mask exports. Results require visual quality control and are not validated for diagnostic decisions.",
+      "limitations": [
+        "Methods described by vendor, not reproduced here.",
+        "Using an external segmentation model does not establish proprietary model ownership or superior performance."
+      ],
+      "snapshot_receipt": "planning\\agents\\batch-evidence\\snapshots\\slidescope.science.quantification.receipt.json"
+    },
+    {
+      "id": "slidescope:releases",
+      "url": "https://slidescope.science/en/release-notes/",
+      "title": "SlideScope Release Notes",
+      "publication_date": null,
+      "event_date": "2026-10-23",
+      "date_basis": "Company-declared release date for stable1.13.0; no binary executed.",
+      "retrieved_at": "2026-10-24T08:39:11Z",
+      "retrieval_status": "direct_http_200",
+      "source_group_id": "slidescope:first-party-site",
+      "evidence_mode": "live_retrieval_source_reported",
+      "snapshot_receipt": "planning/agents/batch-evidence/snapshots/slidescope.science.releases.receipt.json",
+      "paraphrase": "Dated release notes describe viewer updates, free sample workflows and image-format handling; stable1.13.0 is labeled23October2026. Earlier notes describe quality checks and slide alignment.",
+      "limitations": [
+        "Self-published release history is not independently reproduced functionality, adoption or personal contribution."
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "id": "slidescope:product",
+      "subject_kind": "company",
+      "claim": "Named reusable desktop microscopy viewer with documented quantification workflow.",
+      "source_ids": [
+        "slidescope:home",
+        "slidescope:quantification"
+      ],
+      "criterion_ids": [
+        "C1",
+        "C3",
+        "C4",
+        "C7"
+      ],
+      "underlying_methods_or_data_inspected": "Textual product/workflow documentation only; no run or benchmark inspection.",
+      "supports": "Product identity and a concrete tool workflow can be researched.",
+      "does_not_establish": [
+        "Working functionality independently verified",
+        "Defensible advantage",
+        "Clinical validation",
+        "Customer traction",
+        "Human qualification"
+      ]
+    },
+    {
+      "id": "slidescope:limits",
+      "subject_kind": "company",
+      "claim": "Source explicitly positions software for research/review and requires quality control.",
+      "source_ids": [
+        "slidescope:about",
+        "slidescope:quantification"
+      ],
+      "criterion_ids": [
+        "C4",
+        "C5",
+        "C6"
+      ],
+      "supports": "Keep R-tool comparison separate from D clinical efficacy.",
+      "does_not_establish": [
+        "Failure of research-tool fit",
+        "Regulatory status independently checked"
+      ]
+    },
+    {
+      "id": "slidescope:dated-release",
+      "subject_kind": "company",
+      "claim": "Source reports stable1.13.0 released23October2026.",
+      "source_ids": [
+        "slidescope:releases"
+      ],
+      "criterion_ids": [
+        "C4",
+        "C8"
+      ],
+      "supports": "A concrete dated product milestone for investigation.",
+      "does_not_establish": [
+        "Founder identity",
+        "Exceptional sustained execution",
+        "Clinical efficacy",
+        "Urgency to invest"
+      ]
+    }
+  ],
+  "counterevidence": [],
+  "material_unknowns": [
+    "Named founder and attributable development contribution",
+    "Legal entity and relevant rights",
+    "Representative task accuracy/repeatability versus current alternative",
+    "Dated deployment or repeat-user evidence",
+    "YC backing/known-universe novelty"
+  ],
+  "next_check": {
+    "question": "Who built the core workflow, and can a representative sample be reproduced against a researcher's existing tool?",
+    "why_material": "Could support contribution and relevant advantage without inferring them from product copy."
+  },
+  "failed_fetches": [],
+  "unique_primary_urls_read": 4,
+  "research_limitations": [
+    "Source prep only; backend owns ingestion and genuine matcher.",
+    "No claim of a named founder, grit, cofounder history or investment qualification.",
+    "No binaries downloaded, installed or executed.",
+    "No outreach sent."
+  ],
+  "provider_or_model_calls": 0,
+  "backend_packets_modified": false
+}

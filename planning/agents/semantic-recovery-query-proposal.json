@@ -1,0 +1,58 @@
+{
+  "plan_id": "scientific-mechanism-semantic-supplement-v1",
+  "plan_version": "1.0",
+  "status": "proposed_pending_control_scope_approval",
+  "reference_source": "planning/investment-thesis/scouting-mandate.md",
+  "reference_version": "0.3",
+  "prompt_version": "0.3",
+  "supersedes_executed_queries": false,
+  "max_additional_search_requests": 2,
+  "max_results_per_request": 8,
+  "max_additional_encounters": 16,
+  "automatic_retries": 0,
+  "pagination": false,
+  "fields": ["basic_info.name", "basic_info.primary_domain", "basic_info.description"],
+  "branches": [
+    {
+      "id": "supplement-R-microscopy-quantification-v1",
+      "track": "R",
+      "criterion_ids": ["C1", "C3", "C4", "C7"],
+      "query": "Software that quantifies microscopy images for cell biology researchers",
+      "mode": "semantic",
+      "limit": 8,
+      "rationale": "Names one tool function and scientific user, rather than research-services vocabulary. Semantic mode is documented and avoids hybrid lexical emphasis on names containing emerging. Hypothesis: the returned pool will contain more task-specific tool builders; this has not been tested.",
+      "scope_basis": "Mandate sections 3 R and 6 R: microscopy analysis, repeatable research tool and scientist user.",
+      "semantic_checks": ["Resolve the actual builder and named analysis product", "Inspect representative microscopy input/output, tutorial, repository or measured comparison when accessible", "Distinguish reusable image analysis from custom analysis services and hardware distribution"],
+      "recall_limitations": ["Samples only microscopy software, not full R coverage", "Commercial and open-source builders may appear; do not infer company asset rights", "No stage preference is encoded; maturity and known-YC status remain downstream context"],
+      "request": {
+        "search": {"query": "Software that quantifies microscopy images for cell biology researchers", "mode": "semantic"},
+        "fields": ["basic_info.name", "basic_info.primary_domain", "basic_info.description"],
+        "limit": 8
+      }
+    },
+    {
+      "id": "supplement-D-blood-molecular-cancer-v1",
+      "track": "D",
+      "criterion_ids": ["C1", "C3", "C4", "C7"],
+      "query": "Companies commercializing blood-based molecular diagnostic tests for cancer detection",
+      "mode": "semantic",
+      "limit": 8,
+      "rationale": "Names sample type, diagnostic mechanism and intended clinical use instead of generic medical innovation, development consulting or artifact wishlists. Hypothesis: results will better identify test developers; no account relevance guarantee is claimed.",
+      "scope_basis": "Mandate sections 3 D and 6 D: diagnostic test with defined intended use, patient population and appropriate validation context.",
+      "semantic_checks": ["Resolve company and named blood-based molecular test", "Identify intended population/use and actual clinical action before interpreting performance", "Inspect prototype/study evidence and distinguish test developer from consultant, reseller or ordinary clinic"],
+      "recall_limitations": ["Samples one D use case, not all diagnostics/devices", "Commercializing is retrieval language, not a sales, clearance or qualification gate", "Mature incumbents and screening/recurrence uses may appear; record actual scope, stage and novelty rather than inferring them"],
+      "request": {
+        "search": {"query": "Companies commercializing blood-based molecular diagnostic tests for cancer detection", "mode": "semantic"},
+        "fields": ["basic_info.name", "basic_info.primary_domain", "basic_info.description"],
+        "limit": 8
+      }
+    }
+  ],
+  "execution_conditions": [
+    "Control must explicitly amend the paid-call scope before backend executes either branch; this file is not an approval record.",
+    "Backend alone binds the exact query/mode/limit/current reference hash and catalog to new scoped approval records, persists raw responses before normalization and retains original/recovery receipts.",
+    "No provider filters, People/Enrich calls, automatic retries, pagination or further query expansion.",
+    "Deduplicate against all existing original/recovered candidates and known-company universe; preserve encounter lineage, deferred/excluded reasons and actual unique count.",
+    "Do not increase the existing nine-successful-assessment target or force nine researchable/positive cases. Artifact/founder/scientific checks remain downstream; no new fund gate."
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "$defs": {
+    "Investigation": {
+      "additionalProperties": false,
+      "properties": {
+        "criterion_id": {
+          "title": "Criterion Id",
+          "type": "string"
+        },
+        "subject_kind": {
+          "enum": [
+            "company",
+            "person",
+            "relationship",
+            "market"
+          ],
+          "title": "Subject Kind",
+          "type": "string"
+        },
+        "subject_id": {
+          "title": "Subject Id",
+          "type": "string"
+        },
+        "action": {
+          "title": "Action",
+          "type": "string"
+        },
+        "question": {
+          "minLength": 1,
+          "title": "Question",
+          "type": "string"
+        },
+        "decision_consequence": {
+          "minLength": 1,
+          "title": "Decision Consequence",
+          "type": "string"
+        },
+        "query": {
+          "minLength": 1,
+          "title": "Query",
+          "type": "string"
+        },
+        "max_calls": {
+          "minimum": 1,
+          "title": "Max Calls",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "criterion_id",
+        "subject_kind",
+        "subject_id",
+        "action",
+        "question",
+        "decision_consequence",
+        "query",
+        "max_calls"
+      ],
+      "title": "Investigation",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "minLength": 1,
+      "title": "Id",
+      "type": "string"
+    },
+    "criterion_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Criterion Ids",
+      "type": "array"
+    },
+    "question": {
+      "minLength": 1,
+      "title": "Question",
+      "type": "string"
+    },
+    "decision_consequence": {
+      "minLength": 1,
+      "title": "Decision Consequence",
+      "type": "string"
+    },
+    "what_to_obtain": {
+      "minLength": 1,
+      "title": "What To Obtain",
+      "type": "string"
+    },
+    "evidence_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Evidence Ids",
+      "type": "array"
+    },
+    "investigation": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Investigation"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    }
+  },
+  "required": [
+    "id",
+    "question",
+    "decision_consequence",
+    "what_to_obtain"
+  ],
+  "title": "ResearchPoint",
+  "type": "object"
+}

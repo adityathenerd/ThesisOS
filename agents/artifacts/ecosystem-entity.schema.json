@@ -1,0 +1,183 @@
+{
+  "$defs": {
+    "CanonicalEntityRef": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "title": "Kind",
+          "type": "string"
+        },
+        "id": {
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "id"
+      ],
+      "title": "CanonicalEntityRef",
+      "type": "object"
+    },
+    "TemporalScope": {
+      "additionalProperties": false,
+      "properties": {
+        "precision": {
+          "default": "unknown",
+          "enum": [
+            "unknown",
+            "year",
+            "month",
+            "day",
+            "datetime",
+            "interval"
+          ],
+          "title": "Precision",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        },
+        "start": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Start"
+        },
+        "end": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "End"
+        },
+        "basis": {
+          "default": "unknown",
+          "enum": [
+            "unknown",
+            "publication",
+            "observation",
+            "retrieval",
+            "event",
+            "reported_as_of"
+          ],
+          "title": "Basis",
+          "type": "string"
+        },
+        "limitation": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Limitation"
+        }
+      },
+      "title": "TemporalScope",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "kind": {
+      "enum": [
+        "person",
+        "organisation",
+        "product",
+        "asset",
+        "project",
+        "event",
+        "post",
+        "topic",
+        "award"
+      ],
+      "title": "Kind",
+      "type": "string"
+    },
+    "label": {
+      "title": "Label",
+      "type": "string"
+    },
+    "evidence_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Evidence Ids",
+      "type": "array"
+    },
+    "canonical_entity_ref": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/CanonicalEntityRef"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "attributes": {
+      "additionalProperties": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "integer"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "title": "Attributes",
+      "type": "object"
+    },
+    "temporal_scope": {
+      "$ref": "#/$defs/TemporalScope"
+    }
+  },
+  "required": [
+    "id",
+    "kind",
+    "label",
+    "evidence_ids"
+  ],
+  "title": "EntitySpec",
+  "type": "object"
+}

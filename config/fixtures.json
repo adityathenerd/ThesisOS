@@ -1,0 +1,86 @@
+{
+  "description": "Entirely synthetic development cast. All names, domains, people, evidence, scores and dispositions are illustrative. No investment thesis matching is performed.",
+  "companies": [
+    {
+      "key": "northstar",
+      "company_name": "Northstar Robotics (fictional)",
+      "canonical_domain": "northstar-robotics.example",
+      "evidence": [
+        {"claim_type":"company_profile","summary":"Synthetic company profile: warehouse inspection robots; this is an invented development example."},
+        {"claim_type":"pilot_validation","summary":"Synthetic scenario includes a completed customer pilot. No real customer or source is asserted."},
+        {"claim_type":"founder_context","summary":"Synthetic founder Mira Shah leads this fictional company."}
+      ],
+      "assessment": {
+        "recommendation":"outreach_ready", "thesis_fit":0.86, "evidence_sufficiency":0.9,
+        "missing_claims":[], "next_action":"Review the synthetic founder brief and draft. Sending is not implemented.",
+        "reasoning_summary":"The fixture demonstrates a complete handoff with a fictional founder and illustrative evidence.",
+        "dimensions":[
+          {"name":"Illustrative company context","score":0.86,"status":"supported","rationale":"Catalog assignment for demo display; not a thesis judgment.","evidence_claims":["company_profile"]},
+          {"name":"Illustrative validation","score":0.9,"status":"supported","rationale":"Synthetic pilot and founder facts are present in this scenario.","evidence_claims":["pilot_validation","founder_context"]},
+          {"name":"Actual thesis match","score":null,"status":"unknown","rationale":"Semantic matching and review of the real reference are pending.","evidence_claims":[]}
+        ],
+        "outreach": {
+          "person":{"id":"fixture-person-mira","name":"Mira Shah (fictional)","role":"Founder","profile_url":null,"source_key":"fixture:northstar:founder","data_mode":"synthetic"},
+          "rationale":"SYNTHETIC EXAMPLE: fictional pilot and founder context make a reviewable handoff visible.",
+          "draft":"Illustrative draft — Hi Mira, we are exploring warehouse inspection workflows. Would you be open to sharing what you learned from your pilot? This is an unsent fictional example.",
+          "readiness_gaps":[],"data_mode":"synthetic"
+        }
+      }
+    },
+    {
+      "key":"orbit",
+      "company_name":"Orbit Materials (fictional)",
+      "canonical_domain":"orbit-materials.example",
+      "evidence":[
+        {"claim_type":"company_profile","summary":"Synthetic profile: industrial materials inspection software; invented example awaiting a pilot milestone."},
+        {"claim_type":"founder_context","summary":"Synthetic founder Arun Mehta leads this fictional company."}
+      ],
+      "assessment": {
+        "recommendation":"needs_evidence", "thesis_fit":0.79,"evidence_sufficiency":0.42,
+        "missing_claims":["pilot_validation"],"next_action":"Replay the catalog pilot milestone to demonstrate a saved re-evaluation.",
+        "reasoning_summary":"The fixture has company and founder context but lacks its declared pilot milestone.",
+        "dimensions":[
+          {"name":"Illustrative company context","score":0.79,"status":"supported","rationale":"Fixed development scenario, independent of thesis text.","evidence_claims":["company_profile"]},
+          {"name":"Pilot milestone","score":null,"status":"unknown","rationale":"No synthetic pilot milestone has been replayed yet.","evidence_claims":[]},
+          {"name":"Actual thesis match","score":null,"status":"unknown","rationale":"A genuine semantic evaluator is not installed.","evidence_claims":[]}
+        ]
+      },
+      "signals":[{
+        "key":"pilot_milestone",
+        "label":"Replay synthetic pilot milestone",
+        "input":{"summary":"Synthetic replay: Orbit Materials completed its illustrative customer pilot.","claim_type":"pilot_validation","source_url":null,"replayed":true,"data_mode":"synthetic"},
+        "assessment":{
+          "recommendation":"outreach_ready","thesis_fit":0.79,"evidence_sufficiency":0.88,
+          "missing_claims":[],"next_action":"Review the synthetic outreach package; verify real claims before any real use.",
+          "reasoning_summary":"The catalog milestone closes the synthetic pilot gap. Prior evaluations remain unchanged; this is not verified live evidence.",
+          "dimensions":[
+            {"name":"Illustrative company context","score":0.79,"status":"supported","rationale":"Fixed scenario assignment remains unchanged.","evidence_claims":["company_profile"]},
+            {"name":"Pilot milestone","score":0.88,"status":"supported","rationale":"The exact catalog signal has been replayed as synthetic evidence.","evidence_claims":["pilot_validation"]},
+            {"name":"Actual thesis match","score":null,"status":"unknown","rationale":"Semantic matching is still pending.","evidence_claims":[]}
+          ],
+          "outreach":{
+            "person":{"id":"fixture-person-arun","name":"Arun Mehta (fictional)","role":"Founder","profile_url":null,"source_key":"fixture:orbit:founder","data_mode":"synthetic"},
+            "rationale":"SYNTHETIC EXAMPLE: a replayed pilot milestone closes this fixture's evidence gap.",
+            "draft":"Illustrative draft — Hi Arun, the pilot milestone in this fictional scenario suggests an interesting time to compare notes on inspection workflows. This draft is unsent and synthetic.",
+            "readiness_gaps":[],"data_mode":"synthetic"
+          }
+        }
+      }]
+    },
+    {
+      "key":"atlas",
+      "company_name":"Atlas Consumer (fictional)",
+      "canonical_domain":"atlas-consumer.example",
+      "evidence":[{"claim_type":"company_profile","summary":"Synthetic profile: a fictional consumer marketplace used to demonstrate a rejected case."}],
+      "assessment":{
+        "recommendation":"rejected","thesis_fit":0.2,"evidence_sufficiency":0.82,
+        "missing_claims":[],"next_action":"Retain the illustrative pass reason; no outreach action.",
+        "reasoning_summary":"This is a predefined rejected fixture, not a conclusion inferred from the submitted investment thesis.",
+        "dimensions":[
+          {"name":"Illustrative disposition","score":0.2,"status":"contradicted","rationale":"Rejected by catalog assignment to demonstrate preserved pass reasoning.","evidence_claims":["company_profile"]},
+          {"name":"Actual thesis match","score":null,"status":"unknown","rationale":"Actual criteria are not interpreted by the fixture evaluator.","evidence_claims":[]}
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "document_type": "planning_public_source_evidence_not_runtime_packet",
+  "company_name": "ClikRx",
+  "domain": "clikrx.com",
+  "batch_id": "batch_3b0c1b071c274f12a608aca3b0d90dd5",
+  "candidate_id": "pool_e0427108a4ed4c35824521d27630bcac",
+  "discovery": "Actually returned H candidate; explicitly assigned by control for parallel research. Not an assertion of backend selection or qualification.",
+  "researcher": "Investment-thesis research chat",
+  "retrieved_on": "2026-10-24",
+  "research_completed_at": "2026-10-24T08:28:41Z",
+  "retrieval_mode": "Public pages opened/read through web tool; original company site unavailable. Public company-profile evidence and secondary operating-status claims are labeled separately. No current product execution or operating-status verification.",
+  "track": "H",
+  "suggested_research_priority": "Resolve current operating status before treating this as a current outreach prospect. Preserve historical product relevance without assuming the indexed description is fresh.",
+  "source_groups": [
+    {"id": "clikrx-gust-profile", "origin": "Hosted company profile; authorship/update date not established. Treat as company-profile representation, not independently verified current facts."},
+    {"id": "getlatka-secondary-database", "origin": "Commercial secondary database; underlying provenance of shutdown/founder claims not established."}
+  ],
+  "sources": [
+    {
+      "id": "cr-gust",
+      "url": "https://gust.com/companies/clikrx",
+      "publication_date": null,
+      "retrieved_on": "2026-10-24",
+      "source_group": "clikrx-gust-profile",
+      "evidence_mode": "hosted_company_profile_unverified_freshness",
+      "claims": [
+        "Profile describes hospital referral/integration software routing patients by need and insurance and supporting referral paperwork.",
+        "Profile lists Zack Thompson under Team and reports an October 2018 founding date."
+      ],
+      "limits": [
+        "Profile age and current operating status are not established; product-ready labeling is not inspected current functionality.",
+        "Team membership does not establish founder/CEO status or attributable contribution.",
+        "The linked personal profile redirects to sign-in; no gated material was accessed."
+      ]
+    },
+    {
+      "id": "cr-latka",
+      "url": "https://getlatka.com/companies/clikrx",
+      "publication_date": null,
+      "page_updated_date_reported": "2026-08-10",
+      "retrieved_on": "2026-10-24",
+      "source_group": "getlatka-secondary-database",
+      "evidence_mode": "secondary_database_claim_requiring_primary_confirmation",
+      "claims": [
+        "Database labels ClikRx shut down and attributes founder/CEO status to Zack Thompson."
+      ],
+      "exact_quote": "Shut down",
+      "limits": [
+        "No primary closure announcement or legal record was obtained. This is an adverse status lead, not a confirmed company closure.",
+        "Historical revenue/headcount values have no recorded underlying source on the page and are omitted from assessment.",
+        "A page update date is not a closure date or proof that every field was freshly verified."
+      ]
+    }
+  ],
+  "people": [
+    {"name": "Zack Thompson", "reported_role": "Team member in hosted profile; founder/CEO attributed by secondary database", "contribution": null, "source_ids": ["cr-gust", "cr-latka"], "limits": "Current role, founder status and personal product contribution remain unverified."}
+  ],
+  "possible_brief": {
+    "company_description": "Historical public profiles describe ClikRx as hospital referral and prescription-paperwork software.",
+    "strongest_company_signal": "A specific historical workflow matches H, but current operability is unresolved and a secondary source reports closure.",
+    "founder_signal": "Zack Thompson is named in a hosted team profile; stronger founder/current-role claims are secondary and unconfirmed.",
+    "decisive_check": "Establish whether the company and product still operate through a current authoritative source before further product diligence or outreach."
+  },
+  "gate_observation": "current_product_and_operating_status_unknown_material_adverse_secondary_status_claim",
+  "open_questions": [
+    "Is the original entity/product operating, closed, acquired, or succeeded by a different entity?",
+    "What primary evidence supports current status and the named person's current role?",
+    "If active, what current artifact demonstrates product functionality and contribution?",
+    "Current financing, YC backing and novelty remain unknown."
+  ],
+  "failed_fetches": [
+    {"url": "https://clikrx.com/", "outcome": "Web tool reported inaccessible; this is not proof of shutdown."},
+    {"url": "https://www.clikrx.com/", "outcome": "Web tool returned zero readable lines."},
+    {"url": "https://www.cbinsights.com/company/clikrx", "outcome": "Full-page retrieval forbidden (403); search snippet was a lead only and is not used as reviewed evidence."},
+    {"url": "https://gust.com/user/69cd4fab-910e-4009-b53a-7ae79fbc0a4a", "outcome": "Redirected to sign-in; no biography inspected."}
+  ],
+  "no_qualification_implied": true,
+  "provider_or_model_calls": 0,
+  "backend_packets_modified": false
+}

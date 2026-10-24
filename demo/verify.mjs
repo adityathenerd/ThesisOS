@@ -1,0 +1,36 @@
+import assert from 'node:assert/strict';
+import {writeFile} from 'node:fs/promises';
+const base=process.argv[2]??'http://127.0.0.1:8000';
+async function request(path,body){const r=await fetch(base+path,{method:body===undefined?'GET':'POST',headers:body===undefined?undefined:{'Content-Type':'application/json'},body:body===undefined?undefined:JSON.stringify(body),signal:AbortSignal.timeout(12000)});const data=await r.json();assert(r.ok,`${path}: HTTP ${r.status}: ${data.error?.message??'unknown error'}`);return data}
+const config=await request('/api/v1/config/status');
+assert.equal(config.provider_mode,'fixture','This verification is restricted to fixture provider mode; no live provider calls are authorized by this script.');
+assert.equal((await request('/health')).contract_version,'0.1');
+const thesis='  PLACEHOLDER — integration verification only.\nThis text must be retained exactly.  ';
+const m=await request('/api/v1/mandates',{title:'INTEGRATION CHECK · synthetic placeholder',thesis_text:thesis,target_count:2,reference_status:'placeholder'});
+assert.equal(m.thesis_text,thesis);
+async function run(){let task=await request(`/api/v1/mandates/${m.id}/run`,{});for(let i=0;i<40&&(task.status==='pending'||task.status==='running');i++){await new Promise(r=>setTimeout(r,100));task=await request(`/api/v1/tasks/${task.id}`)}assert.equal(task.status,'succeeded')}
+await run();
+const before=(await request(`/api/v1/mandates/${m.id}/cases`)).items;
+assert.equal(before.length,3);assert(before.every(c=>c.data_mode==='synthetic'));
+const candidate=before.find(c=>c.status==='needs_evidence');assert(candidate);
+const original=await request(`/api/v1/cases/${candidate.id}`);
+const templates=(await request('/api/v1/fixtures/signals')).items;
+const template=templates.find(t=>t.canonical_domain===candidate.canonical_domain);assert(template);
+const after=await request(`/api/v1/cases/${candidate.id}/signals`,template.signal);
+assert.equal(after.evaluations.length,original.evaluations.length+1);
+assert.deepEqual(after.evaluations[0],original.evaluations[0]);
+assert(after.events.some(e=>e.replayed&&e.data_mode==='synthetic'));
+assert.equal(after.outreach?.data_mode,'synthetic');
+const repeated=await request(`/api/v1/cases/${candidate.id}/signals`,template.signal);
+assert.equal(repeated.evaluations.length,after.evaluations.length);
+await run();
+const again=(await request(`/api/v1/mandates/${m.id}/cases`)).items;
+assert.deepEqual(again.map(c=>c.id).sort(),before.map(c=>c.id).sort());
+assert.equal((await request(`/api/v1/cases/${candidate.id}`)).evaluations.length,after.evaluations.length);
+const negative=await fetch(base+`/api/v1/cases/${candidate.id}/signals`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({...template.signal,replayed:false,data_mode:'live'})});
+assert.equal(negative.status,422);assert.equal((await negative.json()).error.code,'validation_error');
+const saved=await request(`/api/v1/mandates/${m.id}`);
+assert.equal(saved.progress.outreach_ready,2);
+const report={verified_at:new Date().toISOString(),base_url:base,transport:'HTTP backend',provider_mode:'fixture',data_mode:'synthetic',mandate_id:m.id,case_count:again.length,before:original.status,after:after.status,evaluation_count:after.evaluations.length,progress:saved.progress,checks:['health and config','exact thesis retention','sourcing task and 3 cases','per-record synthetic labels','catalog replay appends assessment','earlier evaluation unchanged','catalog replay idempotency','rerun case identity and history','live signal rejected with safe error','synthetic outreach package'],limitations:['No Crustdata request or genuine capture','No semantic matching','No real reference thesis','No outbound outreach','Browser evidence is documented separately in verification.md']};
+await writeFile(new URL('./integration-report.json',import.meta.url),JSON.stringify(report,null,2)+'\n');
+console.log(JSON.stringify(report,null,2));

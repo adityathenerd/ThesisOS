@@ -1,0 +1,114 @@
+{
+  "$defs": {
+    "RepeatedDatedTie": {
+      "additionalProperties": false,
+      "properties": {
+        "from_id": {
+          "title": "From Id",
+          "type": "string"
+        },
+        "to_id": {
+          "title": "To Id",
+          "type": "string"
+        },
+        "relation": {
+          "title": "Relation",
+          "type": "string"
+        },
+        "event_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Event Refs",
+          "type": "array"
+        },
+        "dates": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Dates",
+          "type": "array"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "from_id",
+        "to_id",
+        "relation",
+        "event_refs",
+        "dates",
+        "evidence_ids"
+      ],
+      "title": "RepeatedDatedTie",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "unique_entities": {
+      "title": "Unique Entities",
+      "type": "integer"
+    },
+    "entities_by_kind": {
+      "additionalProperties": {
+        "type": "integer"
+      },
+      "title": "Entities By Kind",
+      "type": "object"
+    },
+    "supported_typed_edges": {
+      "title": "Supported Typed Edges",
+      "type": "integer"
+    },
+    "typed_relationship_types": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Typed Relationship Types",
+      "type": "array"
+    },
+    "dated_event_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Dated Event Ids",
+      "type": "array"
+    },
+    "repeated_dated_ties": {
+      "items": {
+        "$ref": "#/$defs/RepeatedDatedTie"
+      },
+      "title": "Repeated Dated Ties",
+      "type": "array"
+    },
+    "full_network_density": {
+      "default": null,
+      "title": "Full Network Density",
+      "type": "null"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Limitations",
+      "type": "array"
+    }
+  },
+  "required": [
+    "unique_entities",
+    "entities_by_kind",
+    "supported_typed_edges",
+    "typed_relationship_types",
+    "dated_event_ids",
+    "repeated_dated_ties",
+    "limitations"
+  ],
+  "title": "EcosystemCoverage",
+  "type": "object"
+}

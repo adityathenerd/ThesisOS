@@ -1,0 +1,231 @@
+{
+  "status": "PROPOSED_NOT_APPROVED_NOT_EXECUTABLE",
+  "qualification_policy_active": false,
+  "branches": [
+    {
+      "id": "v03-H-ranked-draft",
+      "mandate_id": "REPLACE_WITH_REVIEWED_MANDATE_ID",
+      "reference_path": "planning/investment-thesis/scouting-mandate.md",
+      "reference_version": "0.3",
+      "reference_sha256": "2d01a3b2a91b25aa5c4285aefcfffc5f84246833dbfe54aa66778ba96c0e6ce4",
+      "action": "crustdata.company.search",
+      "hypothesis": {
+        "id": "hypothesis-H",
+        "criterion_ids": [
+          "C1",
+          "C4",
+          "C6"
+        ],
+        "track": "H",
+        "route": "company_first",
+        "hypothesis": "Find leads in track H by a concrete problem and user/buyer; evidence gates require later investigation.",
+        "problem_terms": [
+          "referral intake"
+        ],
+        "user_or_buyer_terms": [
+          "clinic administrators"
+        ],
+        "artifact_or_milestone_terms": [
+          "workflow demonstration",
+          "deployment record"
+        ],
+        "semantic_checks": [
+          "Inspect track-appropriate product or experimental proof; never infer it from ranking.",
+          "Verify attributable team contribution and roles.",
+          "Check YC/known-universe status; unknown stays unknown.",
+          "Compare within track/milestone; specialist review for D/T."
+        ],
+        "recall_risks": [
+          "Provider ranking/index coverage may miss young teams and alternate wording.",
+          "Do not hard-require artifact vocabulary, funding, size, revenue, pedigree or an AI label."
+        ]
+      },
+      "ranked": {
+        "criterion_ids": [
+          "C1",
+          "C4",
+          "C6"
+        ],
+        "query": "referral intake workflow tools for clinic administrators and care providers, including product demonstrations or deployment examples",
+        "mode": "hybrid",
+        "explanation": "Ranking proxy for thesis vocabulary, not a hard evidence filter or qualification judgment."
+      },
+      "predicates": [],
+      "fields": [
+        "basic_info.name",
+        "basic_info.primary_domain"
+      ],
+      "limit": 1
+    },
+    {
+      "id": "v03-R-ranked-draft",
+      "mandate_id": "REPLACE_WITH_REVIEWED_MANDATE_ID",
+      "reference_path": "planning/investment-thesis/scouting-mandate.md",
+      "reference_version": "0.3",
+      "reference_sha256": "2d01a3b2a91b25aa5c4285aefcfffc5f84246833dbfe54aa66778ba96c0e6ce4",
+      "action": "crustdata.company.search",
+      "hypothesis": {
+        "id": "hypothesis-R",
+        "criterion_ids": [
+          "C1",
+          "C4",
+          "C6"
+        ],
+        "track": "R",
+        "route": "company_first",
+        "hypothesis": "Find leads in track R by a concrete problem and user/buyer; evidence gates require later investigation.",
+        "problem_terms": [
+          "microscopy analysis"
+        ],
+        "user_or_buyer_terms": [
+          "scientists"
+        ],
+        "artifact_or_milestone_terms": [
+          "worked example",
+          "prototype"
+        ],
+        "semantic_checks": [
+          "Inspect track-appropriate product or experimental proof; never infer it from ranking.",
+          "Verify attributable team contribution and roles.",
+          "Check YC/known-universe status; unknown stays unknown.",
+          "Compare within track/milestone; specialist review for D/T."
+        ],
+        "recall_risks": [
+          "Provider ranking/index coverage may miss young teams and alternate wording.",
+          "Do not hard-require artifact vocabulary, funding, size, revenue, pedigree or an AI label."
+        ]
+      },
+      "ranked": {
+        "criterion_ids": [
+          "C1",
+          "C4",
+          "C6"
+        ],
+        "query": "microscopy analysis and bioinformatics research tools for scientists and laboratories, including worked examples and prototypes",
+        "mode": "hybrid",
+        "explanation": "Ranking proxy for thesis vocabulary, not a hard evidence filter or qualification judgment."
+      },
+      "predicates": [],
+      "fields": [
+        "basic_info.name",
+        "basic_info.primary_domain"
+      ],
+      "limit": 1
+    },
+    {
+      "id": "v03-D-ranked-draft",
+      "mandate_id": "REPLACE_WITH_REVIEWED_MANDATE_ID",
+      "reference_path": "planning/investment-thesis/scouting-mandate.md",
+      "reference_version": "0.3",
+      "reference_sha256": "2d01a3b2a91b25aa5c4285aefcfffc5f84246833dbfe54aa66778ba96c0e6ce4",
+      "action": "crustdata.company.search",
+      "hypothesis": {
+        "id": "hypothesis-D",
+        "criterion_ids": [
+          "C1",
+          "C4",
+          "C6"
+        ],
+        "track": "D",
+        "route": "company_first",
+        "hypothesis": "Find leads in track D by a concrete problem and user/buyer; evidence gates require later investigation.",
+        "problem_terms": [
+          "diagnostic assay"
+        ],
+        "user_or_buyer_terms": [
+          "clinical users"
+        ],
+        "artifact_or_milestone_terms": [
+          "prototype",
+          "validation report"
+        ],
+        "semantic_checks": [
+          "Inspect track-appropriate product or experimental proof; never infer it from ranking.",
+          "Verify attributable team contribution and roles.",
+          "Check YC/known-universe status; unknown stays unknown.",
+          "Compare within track/milestone; specialist review for D/T."
+        ],
+        "recall_risks": [
+          "Provider ranking/index coverage may miss young teams and alternate wording.",
+          "Do not hard-require artifact vocabulary, funding, size, revenue, pedigree or an AI label."
+        ]
+      },
+      "ranked": {
+        "criterion_ids": [
+          "C1",
+          "C4",
+          "C6"
+        ],
+        "query": "diagnostic assay and point-of-care prototypes for clinical users, intended populations and validation contexts",
+        "mode": "hybrid",
+        "explanation": "Ranking proxy for thesis vocabulary, not a hard evidence filter or qualification judgment."
+      },
+      "predicates": [],
+      "fields": [
+        "basic_info.name",
+        "basic_info.primary_domain"
+      ],
+      "limit": 1
+    },
+    {
+      "id": "v03-T-ranked-draft",
+      "mandate_id": "REPLACE_WITH_REVIEWED_MANDATE_ID",
+      "reference_path": "planning/investment-thesis/scouting-mandate.md",
+      "reference_version": "0.3",
+      "reference_sha256": "2d01a3b2a91b25aa5c4285aefcfffc5f84246833dbfe54aa66778ba96c0e6ce4",
+      "action": "crustdata.company.search",
+      "hypothesis": {
+        "id": "hypothesis-T",
+        "criterion_ids": [
+          "C1",
+          "C4",
+          "C6"
+        ],
+        "track": "T",
+        "route": "company_first",
+        "hypothesis": "Find leads in track T by a concrete problem and user/buyer; evidence gates require later investigation.",
+        "problem_terms": [
+          "functional assay"
+        ],
+        "user_or_buyer_terms": [
+          "drug developers"
+        ],
+        "artifact_or_milestone_terms": [
+          "experimental findings",
+          "preclinical milestone"
+        ],
+        "semantic_checks": [
+          "Inspect track-appropriate product or experimental proof; never infer it from ranking.",
+          "Verify attributable team contribution and roles.",
+          "Check YC/known-universe status; unknown stays unknown.",
+          "Compare within track/milestone; specialist review for D/T."
+        ],
+        "recall_risks": [
+          "Provider ranking/index coverage may miss young teams and alternate wording.",
+          "Do not hard-require artifact vocabulary, funding, size, revenue, pedigree or an AI label."
+        ]
+      },
+      "ranked": {
+        "criterion_ids": [
+          "C1",
+          "C4",
+          "C6"
+        ],
+        "query": "functional assay and preclinical therapeutic programs for drug developers and scientific partners, with attributable experimental findings",
+        "mode": "hybrid",
+        "explanation": "Ranking proxy for thesis vocabulary, not a hard evidence filter or qualification judgment."
+      },
+      "predicates": [],
+      "fields": [
+        "basic_info.name",
+        "basic_info.primary_domain"
+      ],
+      "limit": 1
+    }
+  ],
+  "review_needed": [
+    "Exact search meaning and recall tradeoff",
+    "Explicit per-branch call/result/quoted-credit allowance",
+    "Mandate identity and current source digest"
+  ]
+}

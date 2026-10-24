@@ -1,0 +1,102 @@
+{
+  "document_type": "bounded_public_investigation_follow_through_not_runtime_packet",
+  "company_name": "Cadex Genomics",
+  "domain": "cadexgenomics.com",
+  "case_id": "case_62ab29c28e8c49d5b5b15d88bdc4e5d3",
+  "prior_assessment_id": "assessment_574db8ca6f7a4fbfbb883a6c824e3aea",
+  "batch_id": "batch_3b0c1b071c274f12a608aca3b0d90dd5",
+  "assignment": "Control-assigned decisive follow-up for existing case only; backend reservation message sent before investigation.",
+  "retrieved_on": "2026-10-24",
+  "completed_at_utc": "2026-10-24T09:26:36Z",
+  "client_timezone": "Asia/Calcutta",
+  "question": "Can the full CADEX-0001 / NCT03892096 Alibrex validation report be located and inspected for advanced-cancer treatment-nonresponse monitoring?",
+  "scope_limits": {"public_search_queries_max": 2, "selected_primary_report_urls_max": 3, "paid_api_or_model_calls": 0, "new_company_discovery": false, "contact_or_login": false},
+  "actual_usage": {"public_search_queries": 2, "selected_primary_report_urls_attempted": 2, "full_original_reports_successfully_read": 0, "paid_api_or_model_calls": 0, "backend_files_modified": false},
+  "existing_material_reused_without_refetch": [
+    "C:/Users/ASUS/Documents/Codex/2026-10-24/new-chat/work/cadex-control-research.json",
+    "C:/Users/ASUS/Documents/Codex/2026-10-24/new-chat/work/cadex-source-check/home.raw",
+    "C:/Users/ASUS/Documents/Codex/2026-10-24/new-chat/work/cadex-source-check/registry.raw",
+    "C:/Users/ASUS/Desktop/ThesisOS/backend/work/scout-batch/cadexgenomics.com/research-spec.json"
+  ],
+  "attempts": [
+    {
+      "id": "cadex-follow-search-1",
+      "kind": "public_web_search",
+      "query": "\"CADEX-0001\" OR \"NCT03892096\" OR \"Alibrex\" validation publication study",
+      "date": "2026-10-24",
+      "outcome": "Search tool returned no results for this query; not proof that no report exists.",
+      "raw_receipt": "cadex-follow-through-raw/search-1.json"
+    },
+    {
+      "id": "cadex-follow-search-2",
+      "kind": "public_web_search",
+      "query": "Cadex Genomics Alibrex 130 patients clinical validation publication report",
+      "date": "2026-10-24",
+      "outcome": "Returned a potentially related 2026 AACR abstract lead plus already-known study/announcement material and unrelated assay studies. No full CADEX-0001 report was established from the results.",
+      "raw_receipt": "cadex-follow-through-raw/search-2.json"
+    },
+    {
+      "id": "cadex-follow-cached-source-check",
+      "kind": "read_existing_local_snapshots_only",
+      "outcome": "The cached homepage hrefs did not expose a full report; the cached registry has no references module/document section and hasResults=false. No homepage/registry HTTP call was repeated.",
+      "limits": "This is an inspection of prior snapshots, not a fresh assertion of current registry state or absence of publications elsewhere."
+    },
+    {
+      "id": "cadex-follow-publisher",
+      "kind": "selected_primary_publication_page_open",
+      "url": "https://aacrjournals.org/cancerres/article/86/7_Supplement/1035/776619/Abstract-1035-Ultrasensitive-cfDNA-fragmentomics",
+      "date": "2026-10-24",
+      "outcome": "Web tool reported 403 Forbidden; no full page was read.",
+      "raw_receipt": "cadex-follow-through-raw/aacr-web-read.json"
+    },
+    {
+      "id": "cadex-follow-doi",
+      "kind": "selected_canonical_doi_open",
+      "url": "https://doi.org/10.1158/1538-7445.AM2026-1035",
+      "date": "2026-10-24",
+      "outcome": "Web tool reported URL inaccessible; no full page was read.",
+      "raw_receipt": "cadex-follow-through-raw/doi-web-read.json"
+    }
+  ],
+  "uninspected_leads": [
+    {
+      "title_as_indexed": "Abstract 1035: Ultrasensitive cfDNA fragmentomics assay for early treatment response assessment in solid tumors",
+      "url": "https://aacrjournals.org/cancerres/article/86/7_Supplement/1035/776619/Abstract-1035-Ultrasensitive-cfDNA-fragmentomics",
+      "doi_as_indexed": "10.1158/1538-7445.AM2026-1035",
+      "apparent_publication_year": "2026",
+      "source_group": "aacr-conference-abstract-index-lead-unread",
+      "status": "Search lead only; selected publisher/DOI access failed. Not imported as inspected original evidence.",
+      "unresolved_linkage": "Cannot establish that OncoAlibrex in the indexed abstract is the same version, cohort, protocol or complete CADEX-0001 report. No indexed performance claim or author role is promoted to a verified fact."
+    }
+  ],
+  "findings": [
+    {
+      "finding": "The assigned public report search was executed and bounded; it did not yield an inspectable full CADEX-0001 validation report.",
+      "support": ["cadex-follow-search-1", "cadex-follow-search-2", "cadex-follow-publisher", "cadex-follow-doi"],
+      "limits": "Limited searches and access failures cannot establish that a report does not exist, that science failed, or that the company is inactive."
+    },
+    {
+      "finding": "The next review should distinguish an original full validation report from a potentially related conference abstract and from the company's existing headline claims.",
+      "support": ["cadex-follow-search-2", "cadex-follow-cached-source-check"],
+      "limits": "No new clinical performance, clinical utility, current founder role, assay ownership or availability was validated in this follow-up."
+    }
+  ],
+  "human_research_points_before_further_pursuit": [
+    {
+      "question": "Can you supply the full CADEX-0001/NCT03892096 Alibrex validation manuscript or study report and its exact publication identifier/version?",
+      "why_it_matters": "Allows specialist inspection of intended population, evaluable denominators, timing, imaging comparator, cutoff selection, uncertainty, exclusions and contributor attribution behind the reported monitoring results.",
+      "limits": "These are report-inspection questions, not new universal investment gates or numeric acceptance thresholds. No message to the company was sent."
+    },
+    {
+      "question": "Is the 2026 OncoAlibrex AACR abstract the same assay/version and CADEX-0001 cohort, and where is the full underlying report?",
+      "why_it_matters": "Prevents conflating analytical validation, another cohort or assay version, and the requested advanced-cancer nonresponse study."
+    }
+  ],
+  "recommended_research_execution_state": "human_research_points_required_before_further_pursuit",
+  "recommended_next_step": "Backend may include these actual attempts in its one authorized reassessment. Preserve the missing-report gap and present the human questions; do not repeat generic pursuit or issue another search without a new specific authorized route.",
+  "possible_reassessment_effect": "Changes proposed-but-unexecuted report search to attempted-but-unresolved. It does not justify a positive or negative clinical conclusion or an automatic monitor/qualification label.",
+  "monitor_condition_if_human_chooses_to_wait": "An accessible full report or author/sponsor-provided report with clear assay/cohort linkage becomes available.",
+  "qualification_or_readiness_override": false,
+  "raw_successful_original_sources": [],
+  "raw_receipt_format": "Unmodified tool-result JSON; records include failures and search output, not an authenticated or successful original-study download."
+}

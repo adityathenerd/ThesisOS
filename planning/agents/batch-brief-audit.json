@@ -1,0 +1,93 @@
+{
+  "recorded_at": "2026-10-24T08:45:10.323379+00:00",
+  "status": "two_saved_cases_audited_not_full_batch",
+  "checks": [
+    {
+      "domain": "caremesh.com",
+      "case_id": "case_d57d6d50977a4652b98272704449804d",
+      "assessment_ref": "assessment_c5112e389ea14cee88833f8bae3fddf9",
+      "input_ref": {
+        "case_id": "case_d57d6d50977a4652b98272704449804d",
+        "case_version": 2,
+        "thesis_version": 1,
+        "policy_version": 1,
+        "evidence_hash": "665a406a42dfa5e47f0ed55d3825d14b44ce48c36dfcaa5948ddf50b7f8e2ea0"
+      },
+      "artifact_checks": {
+        "factual_hash_matches": true,
+        "citation_person_role_guards_pass": true,
+        "prompt_version_03": true,
+        "snapshot_binding": true,
+        "assessment_binding": true,
+        "posture_matches": true,
+        "action_matches": true,
+        "trigger_matches": true,
+        "qualification_not_accepted": true,
+        "substantive_pursue_survives_zero_budget": true
+      },
+      "local_http_checked": {
+        "case_detail": 200,
+        "scout_result": 200,
+        "research_graph": 200,
+        "graph_id_matches_saved": true,
+        "people_names_and_sourced_roles_available": true
+      },
+      "source_integrity_findings": [
+        "Company-reported role and contribution are qualified rather than treated as independently verified.",
+        "Why-now preserves missing or future-only timing; no urgency inferred.",
+        "Prototype/code or screenshots do not establish deployment advantage or biological effect."
+      ],
+      "clarity_findings": [
+        "Opening is substantially concrete: named product, hospital teams and referral workflow.",
+        "Main reason could be shorter; current execution check is process language, and historical implementation must stay visibly historical."
+      ],
+      "graph_provenance_followup": "The provider name/domain observation and indexed description from one Company Search execution are rendered as two graph source records. Treat them as the same underlying provider response, never independent corroboration; backend can explicitly group original_source_id in pure graph metadata without a paid rerun.",
+      "model_reassessment_needed_for_style": false
+    },
+    {
+      "domain": "aphoticbio.com",
+      "case_id": "case_5a0be0c7b23d4f3da9b1edfa8629e09b",
+      "assessment_ref": "assessment_a9b61d833f5d468d83c5ca1e2e35deda",
+      "input_ref": {
+        "case_id": "case_5a0be0c7b23d4f3da9b1edfa8629e09b",
+        "case_version": 2,
+        "thesis_version": 1,
+        "policy_version": 1,
+        "evidence_hash": "ff1f32bcb5e3d5bab2822e29e5de9b40853078e6824a6fb75ffddbdead1a9473"
+      },
+      "artifact_checks": {
+        "factual_hash_matches": true,
+        "citation_person_role_guards_pass": true,
+        "prompt_version_03": true,
+        "snapshot_binding": true,
+        "assessment_binding": true,
+        "posture_matches": true,
+        "action_matches": true,
+        "trigger_matches": true,
+        "qualification_not_accepted": true,
+        "substantive_pursue_survives_zero_budget": true
+      },
+      "local_http_checked": {
+        "case_detail": 200,
+        "scout_result": 200,
+        "research_graph": 200,
+        "graph_id_matches_saved": true,
+        "people_names_and_sourced_roles_available": true
+      },
+      "source_integrity_findings": [
+        "Company-reported role and contribution are qualified rather than treated as independently verified.",
+        "Why-now preserves missing or future-only timing; no urgency inferred.",
+        "Prototype/code or screenshots do not establish deployment advantage or biological effect."
+      ],
+      "clarity_findings": [
+        "Regulatory-genome target-discovery platform is opaque for a twenty-second opening.",
+        "Specialist-review readiness describes internal process rather than why the scientific bet matters.",
+        "Use plain predicted drug targets versus observed biological results; retain computational-to-biological uncertainty."
+      ],
+      "graph_provenance_followup": "The provider name/domain observation and indexed description from one Company Search execution are rendered as two graph source records. Treat them as the same underlying provider response, never independent corroboration; backend can explicitly group original_source_id in pure graph metadata without a paid rerun.",
+      "model_reassessment_needed_for_style": false
+    }
+  ],
+  "prompts_modified": false,
+  "model_or_provider_calls": 0
+}

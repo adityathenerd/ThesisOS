@@ -1,0 +1,47 @@
+{
+  "test": "Isolated saved-snapshot replay, not a new live assessment",
+  "case_version": 3,
+  "before": {
+    "phase": "after",
+    "currentId": "assessment_733dc789af334c3384174cf2a3ebe2e3",
+    "oldId": "assessment_03fa71d34fb44806a118d18dc505dcca",
+    "counts": {
+      "/": 1,
+      "/assets/index-B1U4bOuR.js": 1,
+      "/assets/index-BimLwbIr.css": 1,
+      "/favicon.ico": 1,
+      "/health": 1,
+      "/api/v1/config/status": 1,
+      "/api/v1/mandates": 1,
+      "/api/v1/cases/case_bde3999e8d1f4aa79568e3599b714a5d": 4,
+      "/api/v1/research-batches": 1,
+      "/api/v1/mandates/mandate_51a7af5e3dcf4d20a002eee760b49779/cases": 1,
+      "/api/v1/cases/case_bde3999e8d1f4aa79568e3599b714a5d/research-follow-up": 3,
+      "/api/v1/cases/case_bde3999e8d1f4aa79568e3599b714a5d/research-graph": 2,
+      "/__replay_counts": 2
+    }
+  },
+  "after": {
+    "phase": "after",
+    "currentId": "assessment_733dc789af334c3384174cf2a3ebe2e3",
+    "oldId": "assessment_03fa71d34fb44806a118d18dc505dcca",
+    "counts": {
+      "/": 1,
+      "/assets/index-B1U4bOuR.js": 1,
+      "/assets/index-BimLwbIr.css": 1,
+      "/favicon.ico": 1,
+      "/health": 1,
+      "/api/v1/config/status": 1,
+      "/api/v1/mandates": 1,
+      "/api/v1/cases/case_bde3999e8d1f4aa79568e3599b714a5d": 4,
+      "/api/v1/research-batches": 1,
+      "/api/v1/mandates/mandate_51a7af5e3dcf4d20a002eee760b49779/cases": 1,
+      "/api/v1/cases/case_bde3999e8d1f4aa79568e3599b714a5d/research-follow-up": 4,
+      "/api/v1/cases/case_bde3999e8d1f4aa79568e3599b714a5d/research-graph": 2,
+      "/__replay_counts": 3
+    }
+  },
+  "detailStable": true,
+  "graphStable": true,
+  "workPolled": true
+}

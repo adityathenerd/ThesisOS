@@ -1,0 +1,88 @@
+{
+  "document_type": "planning_only_research_assignment_status",
+  "as_of_local_date": "2026-10-24",
+  "timezone": "Asia/Calcutta",
+  "batch_id": "batch_3b0c1b071c274f12a608aca3b0d90dd5",
+  "observed_progress_updated_at": "2026-10-24T08:13:32.764469Z",
+  "observed_batch_status": "screening",
+  "observed_pool_count": 8,
+  "observed_selected_count": 0,
+  "research_status": "five_explicit_assignments_completed_three_H_one_T_one_D",
+  "observed_search_receipts": {
+    "H": "succeeded_8_returned",
+    "R": "failed_usage_unknown_reservation_retained",
+    "D": "failed_usage_unknown_reservation_retained",
+    "T": "failed_usage_unknown_reservation_retained"
+  },
+  "maximum_scientific_candidates": 3,
+  "assigned_candidates": [
+    {
+      "candidate_id": "pool_f953a11aafca414c9e3b8b9a5774cf85",
+      "domain": "replicate.health",
+      "assigned_by": "explicit_control_delegation",
+      "research_status": "completed",
+      "track": "H"
+    },
+    {
+      "candidate_id": "pool_e0427108a4ed4c35824521d27630bcac",
+      "domain": "clikrx.com",
+      "assigned_by": "explicit_control_delegation",
+      "research_status": "completed",
+      "track": "H"
+    },
+    {
+      "candidate_id": "pool_9924f0ad8cd248f19e2794280c9e752a",
+      "domain": "swiftacare.com",
+      "assigned_by": "explicit_control_delegation",
+      "research_status": "completed",
+      "track": "H"
+    },
+    {
+      "candidate_id": "pool_08ff93ccb6ac494888aa465b852fe7a1",
+      "domain": "neotargets.com",
+      "assigned_by": "explicit_control_delegation",
+      "research_status": "completed",
+      "track": "T"
+    },
+    {
+      "candidate_id": "pool_1c60224ba6424e03b1f260f269b5dc82",
+      "domain": "therapyselect.de",
+      "assigned_by": "explicit_control_delegation",
+      "research_status": "completed",
+      "track": "D"
+    }
+  ],
+  "reserved_urls": [
+    "https://replicate.health/",
+    "https://replicate.health/products/ledger/",
+    "https://replicate.health/about/",
+    "https://gust.com/companies/clikrx",
+    "https://getlatka.com/companies/clikrx",
+    "https://swiftacare.com/",
+    "https://swiftacare.com/about-us",
+    "https://swiftacare.com/our-leadership",
+    "https://neotargets.com/",
+    "https://neotargets.com/platform/",
+    "https://neotargets.com/pipeline/",
+    "https://neotargets.com/about/",
+    "https://www.nature.com/articles/s41375-025-02661-z",
+    "https://link.springer.com/article/10.1007/s12672-026-04880-x",
+    "https://therapyselect.de/en",
+    "https://therapyselect.de/en/about-us/management",
+    "https://therapyselect.de/en/which-test-for-whom",
+    "https://therapyselect.de/en/ctr-test",
+    "https://www.therapyselect.de/en/ctr-test/studies-publications",
+    "https://www.therapyselect.de/de/non-profit"
+  ],
+  "completed_evidence_notes": [
+    "replicate.health.json",
+    "clikrx.com.json",
+    "swiftacare.com.json",
+    "neotargets.com.json",
+    "therapyselect.de.json"
+  ],
+  "next_action": "Backend consumes five completed sidecars with source attribution and limits preserved. Any additional research needs specific actual-pool identity/URL assignment; no paid execution here.",
+  "no_calibration_examples_imported": true,
+  "no_provider_or_model_calls": true,
+  "no_backend_packet_edits": true
+}

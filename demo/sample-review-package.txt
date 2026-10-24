@@ -1,0 +1,26 @@
+ThesisOS — REVIEW DRAFT / NOT SENT
+Company: Orbit Materials (fictional)
+Case data: synthetic
+Package data: synthetic
+Person: Arun Mehta (fictional)
+Mandate: Workflow infrastructure · demo mandate (thesis v1)
+Reference: placeholder
+
+Rationale
+SYNTHETIC EXAMPLE: a replayed pilot milestone closes this fixture's evidence gap.
+
+Readiness gaps
+None listed; review before use.
+
+Draft
+Illustrative draft — Hi Arun, the pilot milestone in this fictional scenario suggests an interesting time to compare notes on inspection workflows. This draft is unsent and synthetic.
+
+Evidence
+[synthetic] Synthetic profile: industrial materials inspection software; invented example awaiting a pilot milestone.
+fixture:orbit:seed:0
+
+[synthetic] Synthetic founder Arun Mehta leads this fictional company.
+fixture:orbit:seed:1
+
+[synthetic] Synthetic replay: Orbit Materials completed its illustrative customer pilot.
+fixture:orbit:signal:pilot_milestone

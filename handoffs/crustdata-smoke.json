@@ -1,0 +1,56 @@
+{
+  "checked_at": "2026-10-24T05:27:11.388966+00:00",
+  "endpoint": "https://api.crustdata.com/company/search",
+  "request": {
+    "filters": {
+      "op": "and",
+      "conditions": [
+        {
+          "field": "headcount.growth_percent.6m",
+          "type": ">",
+          "value": 15
+        },
+        {
+          "field": "headcount.total",
+          "type": ">",
+          "value": 200
+        },
+        {
+          "field": "headcount.total",
+          "type": "<",
+          "value": 2000
+        }
+      ]
+    },
+    "fields": [
+      "basic_info.name",
+      "basic_info.primary_domain",
+      "headcount.total"
+    ],
+    "limit": 1
+  },
+  "api_version": "2025-11-01",
+  "key_loaded": true,
+  "automatic_retries": 0,
+  "http_status": 200,
+  "elapsed_seconds": 4.42,
+  "response_type": "dict",
+  "response_keys": [
+    "companies",
+    "next_cursor",
+    "total_count"
+  ],
+  "total_count": 5730,
+  "returned_count": 1,
+  "sample": {
+    "name": "Arvind SmartSpaces Limited",
+    "domain": "arvindsmartspaces.com",
+    "headcount": 579,
+    "record_keys": [
+      "crustdata_company_id",
+      "basic_info",
+      "headcount"
+    ]
+  },
+  "ok": true
+}

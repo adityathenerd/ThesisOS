@@ -1,0 +1,45 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "minLength": 1,
+      "title": "Id",
+      "type": "string"
+    },
+    "version": {
+      "const": "0.1",
+      "default": "0.1",
+      "title": "Version",
+      "type": "string"
+    },
+    "source_path": {
+      "minLength": 1,
+      "title": "Source Path",
+      "type": "string"
+    },
+    "source_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "title": "Source Sha256",
+      "type": "string"
+    },
+    "base_reference_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "title": "Base Reference Sha256",
+      "type": "string"
+    },
+    "authorization_ref": {
+      "minLength": 1,
+      "title": "Authorization Ref",
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "source_path",
+    "source_sha256",
+    "base_reference_sha256",
+    "authorization_ref"
+  ],
+  "title": "PreOutreachOverlay",
+  "type": "object"
+}

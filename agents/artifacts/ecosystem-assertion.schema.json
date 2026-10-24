@@ -1,0 +1,194 @@
+{
+  "$defs": {
+    "TemporalScope": {
+      "additionalProperties": false,
+      "properties": {
+        "precision": {
+          "default": "unknown",
+          "enum": [
+            "unknown",
+            "year",
+            "month",
+            "day",
+            "datetime",
+            "interval"
+          ],
+          "title": "Precision",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        },
+        "start": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Start"
+        },
+        "end": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "End"
+        },
+        "basis": {
+          "default": "unknown",
+          "enum": [
+            "unknown",
+            "publication",
+            "observation",
+            "retrieval",
+            "event",
+            "reported_as_of"
+          ],
+          "title": "Basis",
+          "type": "string"
+        },
+        "limitation": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Limitation"
+        }
+      },
+      "title": "TemporalScope",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "from_id": {
+      "title": "From Id",
+      "type": "string"
+    },
+    "to_id": {
+      "title": "To Id",
+      "type": "string"
+    },
+    "relation": {
+      "enum": [
+        "authored",
+        "coauthored",
+        "coauthored_with",
+        "affiliated_with",
+        "participated_in",
+        "received_award",
+        "award_at",
+        "posted_about",
+        "mentions",
+        "reacted_to",
+        "commented_on",
+        "collaborated_on",
+        "collaborated_with",
+        "interest_in"
+      ],
+      "title": "Relation",
+      "type": "string"
+    },
+    "label": {
+      "title": "Label",
+      "type": "string"
+    },
+    "evidence_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Evidence Ids",
+      "type": "array"
+    },
+    "assertion_kind": {
+      "default": "source_reported",
+      "enum": [
+        "source_reported",
+        "observed",
+        "inferred"
+      ],
+      "title": "Assertion Kind",
+      "type": "string"
+    },
+    "support_status": {
+      "default": "unknown",
+      "enum": [
+        "supported",
+        "mixed",
+        "contradicted",
+        "unknown"
+      ],
+      "title": "Support Status",
+      "type": "string"
+    },
+    "temporal_scope": {
+      "$ref": "#/$defs/TemporalScope"
+    },
+    "limitation": {
+      "title": "Limitation",
+      "type": "string"
+    },
+    "interpretation_ref": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Interpretation Ref"
+    },
+    "event_ref": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Event Ref"
+    }
+  },
+  "required": [
+    "id",
+    "from_id",
+    "to_id",
+    "relation",
+    "label",
+    "evidence_ids",
+    "limitation"
+  ],
+  "title": "EcosystemAssertionSpec",
+  "type": "object"
+}

@@ -1,0 +1,37 @@
+{
+  "checked_at": "2026-10-24T06:46:22.747630+00:00",
+  "base_url": "http://127.0.0.1:8000",
+  "health": {
+    "status": "ok",
+    "contract_version": "0.1"
+  },
+  "configuration": {
+    "provider_mode": "fixture",
+    "provider_implementation": "crustdata_search_and_fixture",
+    "semantic_matcher_configured": false,
+    "evaluator_kind": "fixture",
+    "thesis_status": "awaiting_reference",
+    "discovery_query_status": "awaiting_configuration"
+  },
+  "read_scope": "latest 10 mandates, at most 20 cases per mandate",
+  "case_count": 6,
+  "case_modes": {
+    "synthetic": 6
+  },
+  "saved_evaluator_kinds": {
+    "fixture": 8
+  },
+  "assessment_modes": {
+    "synthetic": 8
+  },
+  "evidence_modes": {
+    "synthetic": 14
+  },
+  "real_connected_agent_journey_verified": false,
+  "blockers": [
+    "Serving backend reports semantic_matcher_configured=false and evaluator_kind=fixture.",
+    "Agent/backend handoffs have not confirmed a connected runtime or its HTTP trigger and accepted projection.",
+    "Approved runtime thesis/policy and model choice are not established by credential presence."
+  ],
+  "actions_this_check": "Read-only local HTTP requests only; no provider/model requests, no credential reads, no state mutations."
+}

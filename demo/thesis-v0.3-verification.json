@@ -1,0 +1,33 @@
+{
+  "checked_at": "2026-10-24T07:05:31.719579+00:00",
+  "reference_version": "0.3",
+  "source_snapshot_sha256": "2d01a3b2a91b25aa5c4285aefcfffc5f84246833dbfe54aa66778ba96c0e6ce4",
+  "source_snapshot_matches_primary": true,
+  "full_reference_characters": 23728,
+  "editable_starter_characters": 5824,
+  "saved_mandates_observed": 2,
+  "saved_cases_observed": 6,
+  "saved_evaluations_observed": 8,
+  "frontend_case_mutations": 0,
+  "new_provider_model_calls": 0,
+  "checks": [
+    "four distinct proof tracks including equally core therapeutics",
+    "explicit abridgment under unchanged 20000-character API limit",
+    "full source actual browser download includes final section",
+    "primary-R filter includes MORF-Bio/Biodock and excludes primary-T Graph",
+    "T filter Graph, D transparent coverage gap",
+    "research examples outside saved pipeline and novelty counts",
+    "Biodock known YC-backed reference, no investment-rejection claim",
+    "three readiness/review concepts and unresolved counting",
+    "earlier placeholder text and Orbit History (2) retained",
+    "390px mobile viewport, 375px document width",
+    "production build and 6 source/provenance tests pass"
+  ],
+  "not_claimed": [
+    "active normalized runtime policy",
+    "real model assessment of v0.3",
+    "thesis-relevant provider query",
+    "product/experimental gates completed for research examples",
+    "human acceptance or clinical efficacy"
+  ]
+}

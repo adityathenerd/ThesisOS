@@ -1,0 +1,35 @@
+{
+  "verified_at": "2026-10-24T05:31:10.075Z",
+  "base_url": "http://127.0.0.1:8000",
+  "transport": "HTTP backend",
+  "provider_mode": "fixture",
+  "data_mode": "synthetic",
+  "mandate_id": "mandate_ca9bf538f94e49a7bebaacaaa78c83cf",
+  "case_count": 3,
+  "before": "needs_evidence",
+  "after": "outreach_ready",
+  "evaluation_count": 2,
+  "progress": {
+    "total": 3,
+    "outreach_ready": 2
+  },
+  "checks": [
+    "health and config",
+    "exact thesis retention",
+    "sourcing task and 3 cases",
+    "per-record synthetic labels",
+    "catalog replay appends assessment",
+    "earlier evaluation unchanged",
+    "catalog replay idempotency",
+    "rerun case identity and history",
+    "live signal rejected with safe error",
+    "synthetic outreach package"
+  ],
+  "limitations": [
+    "No Crustdata request or genuine capture",
+    "No semantic matching",
+    "No real reference thesis",
+    "No outbound outreach",
+    "Browser evidence is documented separately in verification.md"
+  ]
+}

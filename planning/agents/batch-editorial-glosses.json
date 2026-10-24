@@ -1,0 +1,93 @@
+{
+  "schema_version": "0.1-proposal-not-wire-contract",
+  "recorded_at": "2026-10-24T08:45:10.323379+00:00",
+  "status": "frontend_may_use_as_labeled_editorial_view_no_case_writes",
+  "cases": [
+    {
+      "domain": "caremesh.com",
+      "case_id": "case_d57d6d50977a4652b98272704449804d",
+      "assessment_ref": "assessment_c5112e389ea14cee88833f8bae3fddf9",
+      "input_ref": {
+        "case_id": "case_d57d6d50977a4652b98272704449804d",
+        "case_version": 2,
+        "thesis_version": 1,
+        "policy_version": 1,
+        "evidence_hash": "665a406a42dfa5e47f0ed55d3825d14b44ce48c36dfcaa5948ddf50b7f8e2ea0"
+      },
+      "authority": "proposed_editorial_paraphrase_of_saved_evidence_not_new_model_output",
+      "fields": {
+        "company_description": {
+          "text": "careMESH builds NAVIGATE, software that helps hospital teams manage patient referrals, paperwork, appointments and follow-up.",
+          "evidence_ids": [
+            "evidence:caremesh-com:1:0",
+            "evidence:caremesh-com:2:1"
+          ]
+        },
+        "main_reason": {
+          "text": "Pursue a current product walkthrough: there are product screenshots and a named hospital implementation report, but the report is from 2021.",
+          "evidence_ids": [
+            "evidence:caremesh-com:1:1",
+            "evidence:caremesh-com:2:0"
+          ]
+        },
+        "decisive_doubt": {
+          "text": "We have not seen a current workflow run or evidence explaining the claimed improvement.",
+          "evidence_ids": [
+            "evidence:caremesh-com:1:0",
+            "evidence:caremesh-com:2:0"
+          ]
+        }
+      },
+      "preserve_original_model_brief": true,
+      "apply_only_if_all_bindings_current": true,
+      "preserve_named_founder_limits_and_original_next_action": true
+    },
+    {
+      "domain": "aphoticbio.com",
+      "case_id": "case_5a0be0c7b23d4f3da9b1edfa8629e09b",
+      "assessment_ref": "assessment_a9b61d833f5d468d83c5ca1e2e35deda",
+      "input_ref": {
+        "case_id": "case_5a0be0c7b23d4f3da9b1edfa8629e09b",
+        "case_version": 2,
+        "thesis_version": 1,
+        "policy_version": 1,
+        "evidence_hash": "ff1f32bcb5e3d5bab2822e29e5de9b40853078e6824a6fb75ffddbdead1a9473"
+      },
+      "authority": "proposed_editorial_paraphrase_of_saved_evidence_not_new_model_output",
+      "fields": {
+        "company_description": {
+          "text": "Aphotic Bio uses computer models of DNA changes to look for drug targets for diseases including inflammatory bowel disease and type 2 diabetes.",
+          "evidence_ids": [
+            "evidence:aphoticbio-com:0:0",
+            "evidence:aphoticbio-com:3:0"
+          ]
+        },
+        "main_reason": {
+          "text": "Pursue an experimental report: company-reported cofounder Tess Marvin is named on relevant modeling code, but predicted drug targets still need biological evidence.",
+          "evidence_ids": [
+            "evidence:aphoticbio-com:1:0",
+            "evidence:aphoticbio-com:5:0",
+            "evidence:aphoticbio-com:5:1",
+            "evidence:aphoticbio-com:3:0"
+          ]
+        },
+        "decisive_doubt": {
+          "text": "We have not inspected an experiment showing that a predicted target has a useful biological effect in one of its disease programs.",
+          "evidence_ids": [
+            "evidence:aphoticbio-com:3:0",
+            "evidence:aphoticbio-com:4:1",
+            "evidence:aphoticbio-com:5:1"
+          ]
+        }
+      },
+      "preserve_original_model_brief": true,
+      "apply_only_if_all_bindings_current": true,
+      "preserve_named_founder_limits_and_original_next_action": true
+    }
+  ],
+  "limitations": [
+    "No new facts or revised investment judgment.",
+    "Preserve original model output/history and material caveats.",
+    "Exact case, assessment, thesis/policy and evidence hash must match; refuse stale paraphrase."
+  ]
+}

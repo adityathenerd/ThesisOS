@@ -1,0 +1,265 @@
+{
+  "$defs": {
+    "BriefClaim": {
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "maxLength": 450,
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "text",
+        "evidence_ids"
+      ],
+      "title": "BriefClaim",
+      "type": "object"
+    },
+    "CaseBrief": {
+      "additionalProperties": false,
+      "description": "Concise sourced view of an assessment, never a new evidence record.",
+      "properties": {
+        "company_description": {
+          "$ref": "#/$defs/BriefClaim"
+        },
+        "research_posture": {
+          "enum": [
+            "pursue",
+            "monitor"
+          ],
+          "title": "Research Posture",
+          "type": "string"
+        },
+        "main_reason": {
+          "$ref": "#/$defs/BriefClaim"
+        },
+        "strongest_facts": {
+          "items": {
+            "$ref": "#/$defs/SourcedBriefClaim"
+          },
+          "maxItems": 2,
+          "title": "Strongest Facts",
+          "type": "array"
+        },
+        "founder_signals": {
+          "items": {
+            "$ref": "#/$defs/FounderSignal"
+          },
+          "maxItems": 2,
+          "title": "Founder Signals",
+          "type": "array"
+        },
+        "founder_unknowns": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 3,
+          "title": "Founder Unknowns",
+          "type": "array"
+        },
+        "decisive_doubt": {
+          "$ref": "#/$defs/BriefClaim"
+        },
+        "next_action": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Next Action",
+          "type": "string"
+        },
+        "future_trigger": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Future Trigger"
+        },
+        "operational_limitations": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 3,
+          "title": "Operational Limitations",
+          "type": "array"
+        }
+      },
+      "required": [
+        "company_description",
+        "research_posture",
+        "main_reason",
+        "strongest_facts",
+        "founder_signals",
+        "founder_unknowns",
+        "decisive_doubt",
+        "next_action",
+        "future_trigger",
+        "operational_limitations"
+      ],
+      "title": "CaseBrief",
+      "type": "object"
+    },
+    "FounderSignal": {
+      "additionalProperties": false,
+      "properties": {
+        "person_id": {
+          "title": "Person Id",
+          "type": "string"
+        },
+        "contribution": {
+          "maxLength": 300,
+          "minLength": 1,
+          "title": "Contribution",
+          "type": "string"
+        },
+        "relevance": {
+          "maxLength": 300,
+          "minLength": 1,
+          "title": "Relevance",
+          "type": "string"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "source_strength": {
+          "enum": [
+            "first_party_claim",
+            "inspectable_work",
+            "independent_report",
+            "mixed"
+          ],
+          "title": "Source Strength",
+          "type": "string"
+        }
+      },
+      "required": [
+        "person_id",
+        "contribution",
+        "relevance",
+        "evidence_ids",
+        "source_strength"
+      ],
+      "title": "FounderSignal",
+      "type": "object"
+    },
+    "SourcedBriefClaim": {
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "maxLength": 450,
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Evidence Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "text",
+        "evidence_ids"
+      ],
+      "title": "SourcedBriefClaim",
+      "type": "object"
+    },
+    "VersionRef": {
+      "additionalProperties": false,
+      "properties": {
+        "case_id": {
+          "title": "Case Id",
+          "type": "string"
+        },
+        "case_version": {
+          "minimum": 0,
+          "title": "Case Version",
+          "type": "integer"
+        },
+        "thesis_version": {
+          "minimum": 1,
+          "title": "Thesis Version",
+          "type": "integer"
+        },
+        "policy_version": {
+          "minimum": 1,
+          "title": "Policy Version",
+          "type": "integer"
+        },
+        "evidence_hash": {
+          "title": "Evidence Hash",
+          "type": "string"
+        }
+      },
+      "required": [
+        "case_id",
+        "case_version",
+        "thesis_version",
+        "policy_version",
+        "evidence_hash"
+      ],
+      "title": "VersionRef",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "0.1",
+      "default": "0.1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "assessment_ref": {
+      "minLength": 1,
+      "title": "Assessment Ref",
+      "type": "string"
+    },
+    "input_ref": {
+      "$ref": "#/$defs/VersionRef"
+    },
+    "prompt_version": {
+      "title": "Prompt Version",
+      "type": "string"
+    },
+    "driver_kind": {
+      "enum": [
+        "scripted",
+        "semantic"
+      ],
+      "title": "Driver Kind",
+      "type": "string"
+    },
+    "brief": {
+      "$ref": "#/$defs/CaseBrief"
+    }
+  },
+  "required": [
+    "assessment_ref",
+    "input_ref",
+    "prompt_version",
+    "driver_kind",
+    "brief"
+  ],
+  "title": "CaseBriefProjection",
+  "type": "object"
+}

@@ -1,0 +1,52 @@
+{
+  "checked_at_utc": "2026-10-24T07:53:11Z",
+  "frontend": "http://127.0.0.1:5173",
+  "default_view": "dashboard",
+  "case_route": "http://127.0.0.1:5173/#cases/case_201e1de12eea4da49abc6f8de3317e5a",
+  "case_id": "case_201e1de12eea4da49abc6f8de3317e5a",
+  "mandate_id": "mandate_400f07654daf4e43acc6c991ff29cc8f",
+  "assessment_id": "assessment_960ba2c8c0c743e5aa12fc73e9d8dffd",
+  "case_version": 2,
+  "graph_id": "research-graph:a65194cdf52b63cb2a224e35",
+  "nodes": 24,
+  "edges": 28,
+  "source_groups": 6,
+  "open_questions": 4,
+  "model_interpretation_refs": 8,
+  "research_decision": "monitor",
+  "operational_status": "needs_evidence",
+  "qualification_accepted": false,
+  "new_frontend_provider_or_model_calls": 0,
+  "frontend_run_signal_or_review_posts": 0,
+  "build": "passed",
+  "frontend_tests": {
+    "passed": 19,
+    "failed": 0
+  },
+  "browser_checks": [
+    "Dashboard pipeline/radar/observed-work/recent-events",
+    "Focused case collection hidden",
+    "Case and mandate identity resolved on reload",
+    "Actual graph from case HTTP route, not captured example",
+    "Founder role source selected; dates and first-party limits visible",
+    "Reopening trigger, consequence and four source-linked reasoning answers",
+    "C7 mixed and counterevidence preserved",
+    "Zoom 120%, fit 100%, keyboard pan, Home reset",
+    "Unknown-date filter produces honest empty relationships",
+    "Show evidence nodes exposes complete 24-node/28-edge neighborhood",
+    "Browser JSON export parsed and graph ID matches backend artifact",
+    "Mobile 390px: document 375px; canvas scroll contained"
+  ],
+  "export": "demo/first-scout-export.json",
+  "screenshots": [
+    "demo/screenshots/dashboard-overview.jpg",
+    "demo/screenshots/first-scout-graph-source.jpg"
+  ],
+  "limits": [
+    "Current independent/background agent execution not reported by available telemetry",
+    "Semantic comparison did not qualify or reject the company",
+    "No product gate, novelty/YC backing, human approval or outreach readiness asserted",
+    "Formal qualification review action UI remains separate from this immediate graph milestone",
+    "Current default provider config for new general runs remains fixture; saved record modes stay per-record"
+  ]
+}

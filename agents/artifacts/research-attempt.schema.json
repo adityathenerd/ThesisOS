@@ -1,0 +1,78 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "task_id": {
+      "minLength": 1,
+      "title": "Task Id",
+      "type": "string"
+    },
+    "question_id": {
+      "title": "Question Id",
+      "type": "string"
+    },
+    "investigation_key": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Investigation Key"
+    },
+    "status": {
+      "enum": [
+        "queued",
+        "running",
+        "succeeded",
+        "failed",
+        "inaccessible",
+        "no_answer",
+        "exhausted"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "summary": {
+      "minLength": 1,
+      "title": "Summary",
+      "type": "string"
+    },
+    "accepted_evidence_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Accepted Evidence Ids",
+      "type": "array"
+    },
+    "source_urls": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Source Urls",
+      "type": "array"
+    },
+    "attempted_at": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Attempted At"
+    }
+  },
+  "required": [
+    "task_id",
+    "question_id",
+    "status",
+    "summary"
+  ],
+  "title": "ResearchAttempt",
+  "type": "object"
+}

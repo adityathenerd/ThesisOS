@@ -1,0 +1,85 @@
+{
+  "document_type": "planning_public_source_evidence_not_runtime_packet",
+  "company_name": "Replicate.Health",
+  "domain": "replicate.health",
+  "batch_id": "batch_3b0c1b071c274f12a608aca3b0d90dd5",
+  "candidate_id": "pool_f953a11aafca414c9e3b8b9a5774cf85",
+  "discovery": "Actually returned H candidate; explicitly assigned by control for parallel research. Not an assertion of backend selection or qualification.",
+  "researcher": "Investment-thesis research chat",
+  "retrieved_on": "2026-10-24",
+  "research_completed_at": "2026-10-24T08:28:41Z",
+  "retrieval_mode": "Public pages opened and read through web tool; content may be cached. No direct HTTP receipt, product execution, provider enrichment or independent validation.",
+  "track": "H",
+  "suggested_research_priority": "A named provider-operations product family warrants focused product inspection; founder identity/contribution and independent use remain unresolved.",
+  "source_groups": [{"id": "replicate-health-company", "origin": "Company-controlled pages; three pages are one claim-origin group, not three independent confirmations."}],
+  "sources": [
+    {
+      "id": "rh-home",
+      "url": "https://replicate.health/",
+      "publication_date": null,
+      "retrieved_on": "2026-10-24",
+      "source_group": "replicate-health-company",
+      "evidence_mode": "first_party_product_description_and_marketing_claims",
+      "claims": [
+        "Company describes Ledger for billing, Manifest for insurance discovery, and early-access Authority and Roster for prior authorization and credentialing.",
+        "Homepage describes practice-configurable review gates and claims design partners live since Q1 2026; named implementation/customer claims are not independently checked.",
+        "Portal tour is explicitly labeled as demo data. No application session or video execution was inspected."
+      ],
+      "exact_quote": "Client portal live · demo data",
+      "limits": [
+        "A detailed public product description is not hands-on proof or validated customer benefit.",
+        "Early-access labeling should not be rewritten as all products fully deployed.",
+        "Compliance and audit statements are company assertions, not verified certifications."
+      ]
+    },
+    {
+      "id": "rh-ledger",
+      "url": "https://replicate.health/products/ledger/",
+      "publication_date": null,
+      "retrieved_on": "2026-10-24",
+      "source_group": "replicate-health-company",
+      "evidence_mode": "first_party_product_description",
+      "claims": [
+        "Ledger is described as handling claim filing, appeals, reconciliation and underpayment detection, with an ingest/review/submit workflow and named EHR/clearinghouse integrations."
+      ],
+      "limits": [
+        "Integration names do not establish working customer deployments.",
+        "This retrieved page states human review on every external submission; the homepage describes configurable automation. Resolve version/scope before asserting an absolute approval policy.",
+        "Generic industry billing statistics on the page are not measured company outcomes."
+      ]
+    },
+    {
+      "id": "rh-about",
+      "url": "https://replicate.health/about/",
+      "publication_date": null,
+      "retrieved_on": "2026-10-24",
+      "source_group": "replicate-health-company",
+      "evidence_mode": "first_party_company_description",
+      "claims": [
+        "Company describes a New Jersey engineering team serving practices; no individual founder names or person-level product contributions appear in the retrieved about-page text."
+      ],
+      "limits": [
+        "No named founder in these pages does not establish absence of founders or relevant expertise.",
+        "Provider-indexed description has three products; the retrieved homepage has four. Prefer explicit current-page attribution rather than silently merging snapshots."
+      ]
+    }
+  ],
+  "people": [],
+  "founder_evidence_status": "unknown_from_reviewed_primary_pages",
+  "possible_brief": {
+    "company_description": "Replicate.Health describes AI tools for medical-practice billing, insurance discovery, authorizations and credentialing.",
+    "strongest_company_signal": "Named workflows and a described product loop provide concrete material for C1/C3/C4 investigation.",
+    "founder_signal": "No individual founder or attributable contribution established in reviewed sources; retain unknown.",
+    "decisive_check": "Identify current founders and their contribution, then inspect one actual practice workflow and corroborate use, review burden and benefit."
+  },
+  "gate_observation": "partly_evidenced_public_product_descriptions_not_hands_on_execution",
+  "open_questions": [
+    "Who are the current founders and who designed/built the reusable core?",
+    "Which products are operational beyond early access, and can a practice corroborate actual use?",
+    "What is the measured baseline-to-outcome benefit after human review and integration effort?",
+    "Current financing stage, ownership, YC backing and pipeline novelty are unknown."
+  ],
+  "no_qualification_implied": true,
+  "provider_or_model_calls": 0,
+  "backend_packets_modified": false
+}

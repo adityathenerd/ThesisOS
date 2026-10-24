@@ -1,0 +1,94 @@
+{
+  "document_type": "planning_public_source_evidence_not_runtime_packet",
+  "company_name": "Swiftacare",
+  "domain": "swiftacare.com",
+  "batch_id": "batch_3b0c1b071c274f12a608aca3b0d90dd5",
+  "candidate_id": "pool_9924f0ad8cd248f19e2794280c9e752a",
+  "discovery": "Actually returned H candidate; explicitly assigned by control for parallel research. Not an assertion of backend selection or qualification.",
+  "researcher": "Investment-thesis research chat",
+  "retrieved_on": "2026-10-24",
+  "research_completed_at": "2026-10-24T08:28:41Z",
+  "retrieval_mode": "Public pages opened and read through web tool; content may be cached. No direct HTTP receipt, application execution or independent customer validation.",
+  "track": "H",
+  "suggested_research_priority": "Specific product and dated founder-linked internal-development account merit investigation; distinguish internal/related-party use from independent customer adoption.",
+  "source_groups": [{"id": "swiftacare-company", "origin": "All sources are company-controlled; content about founder-founded Support & Growth is related-party context, not independent corroboration."}],
+  "sources": [
+    {
+      "id": "sc-home",
+      "url": "https://swiftacare.com/",
+      "publication_date": null,
+      "retrieved_on": "2026-10-24",
+      "source_group": "swiftacare-company",
+      "evidence_mode": "first_party_product_description",
+      "claims": [
+        "Company describes connected practice/case management, care coordination and clinical documentation for health and human-services organizations.",
+        "Public page identifies intake, referrals, scheduling, notes and reporting as product functions and describes migration, configuration and onboarding support."
+      ],
+      "limits": [
+        "Public descriptions and image labels were inspected; the actual application and individual screenshots were not tested.",
+        "Customer logos, privacy claims and expected benefits are not independent outcome or compliance validation.",
+        "Implementation support alone does not make this a consultancy; investigate how much work is repeatable software."
+      ]
+    },
+    {
+      "id": "sc-about",
+      "url": "https://swiftacare.com/about-us",
+      "publication_date": null,
+      "event_dates_reported": ["2018: Support & Growth founded", "2022: internal Swiftacare development began", "2024: Support & Growth reported running on Swiftacare"],
+      "retrieved_on": "2026-10-24",
+      "source_group": "swiftacare-company",
+      "evidence_mode": "first_party_origin_and_deployment_history",
+      "claims": [
+        "Company traces the product to Michael Assiamah's Support & Growth organization and difficulties using disconnected systems.",
+        "It reports internal development beginning in 2022 and use at Support & Growth by 2024."
+      ],
+      "limits": [
+        "These are dated events reported on an undated page, not independently verified milestones or the publication date.",
+        "Initial use is reported at an organization founded by the same person; do not present it as an independent customer endorsement.",
+        "Claimed efficiency improvement is qualitative; no verified baseline-to-outcome measurement was established."
+      ]
+    },
+    {
+      "id": "sc-leadership",
+      "url": "https://swiftacare.com/our-leadership",
+      "publication_date": null,
+      "retrieved_on": "2026-10-24",
+      "source_group": "swiftacare-company",
+      "evidence_mode": "first_party_role_and_contribution_attribution",
+      "claims": [
+        "Company names Michael Assiamah as founder/CEO and says he led Swiftacare development while working in mental-health service delivery.",
+        "Company attributes technical architecture, cloud and security strategy to Anthony Klah, and leadership of software engineering to Perry Kankam."
+      ],
+      "exact_quote": "Founder & Chief Executive Officer",
+      "limits": [
+        "Company-reported roles and contributions; personal code authorship and ownership were not independently established.",
+        "Do not turn architecture/engineering employee titles into additional founder claims.",
+        "The first URL fetch intermittently failed; a subsequent web-tool retrieval returned the readable page."
+      ]
+    }
+  ],
+  "people": [
+    {"name": "Michael Assiamah", "reported_role": "Founder and CEO", "contribution": "Company says he led development following service-delivery experience", "source_ids": ["sc-leadership", "sc-about"], "limits": "First-party; not independently verified authorship, grit, tenure or sustained velocity."},
+    {"name": "Anthony Klah", "reported_role": "Vice President, Technical Architecture", "contribution": "Company attributes architecture, cloud and security strategy", "source_ids": ["sc-leadership"], "limits": "Founder status not established."},
+    {"name": "Perry Kankam", "reported_role": "Lead Software Engineer", "contribution": "Company attributes engineering-team leadership", "source_ids": ["sc-leadership"], "limits": "Founder status not established."}
+  ],
+  "possible_brief": {
+    "company_description": "Swiftacare describes software connecting intake, referrals, case work, scheduling and clinical records for health and human-services teams.",
+    "strongest_company_signal": "A reported 2022-to-2024 internal-build/use sequence and named functional modules make the product more concrete than a generic platform claim.",
+    "founder_signal": "Michael Assiamah is explicitly named founder/CEO and linked to product development and the originating care organization; this is company-reported.",
+    "decisive_check": "Inspect a current workflow with an unrelated customer and establish repeatable benefit, integration/service effort, and actual team contribution."
+  },
+  "gate_observation": "partly_evidenced_public_product_and_related_party_use_history_not_hands_on_execution",
+  "open_questions": [
+    "Can an unrelated organization corroborate use and measured workflow benefit?",
+    "How much implementation is reusable configuration versus bespoke engineering?",
+    "Which individuals own the current core technical work and rights?",
+    "Current stage, ownership, YC backing, novelty and recent substantive catalyst remain unknown."
+  ],
+  "failed_fetches": [
+    {"url": null, "link_context": "Care Coordination link on https://swiftacare.com/", "outcome": "Click returned no readable content; exact final URL was not established. No guessed path is supplied as a source."}
+  ],
+  "no_qualification_implied": true,
+  "provider_or_model_calls": 0,
+  "backend_packets_modified": false
+}

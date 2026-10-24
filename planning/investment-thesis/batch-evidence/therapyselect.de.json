@@ -1,0 +1,99 @@
+{
+  "document_type": "planning_public_source_evidence_not_runtime_packet",
+  "company_name": "TherapySelect Dr. Frank Kischkel",
+  "domain": "therapyselect.de",
+  "batch_id": "batch_3b0c1b071c274f12a608aca3b0d90dd5",
+  "candidate_id": "pool_1c60224ba6424e03b1f260f269b5dc82",
+  "discovery": "Actually returned D-pool identity explicitly assigned by control; research does not assert backend selection or qualification.",
+  "researcher": "Investment-thesis research chat",
+  "retrieved_on": "2026-10-24",
+  "research_completed_at": "2026-10-24T08:34:38Z",
+  "retrieval_mode": "Public company technical, management, study-summary and entity pages opened/read through web tool, potentially cached. External original-study fetch failed; no lab execution or independent clinical evaluation.",
+  "track": "D",
+  "unique_public_sources_successfully_read": 6,
+  "additional_original_study_link_attempts": 1,
+  "unique_url_budget_note": "Six canonical successful pages plus one failed linked original-study attempt; root redirect to /en treated as one retrieval target. No further sources fetched.",
+  "suggested_research_priority": "Concrete functional cancer-testing workflow merits technical review, but early-stage fit, investable entity/rights and indication-specific clinical utility require resolution.",
+  "source_groups": [{"id": "therapyselect-company", "origin": "All successfully read sources are company-controlled, including curated article abstracts and two described related entities. Not independent clinical corroboration."}],
+  "sources": [
+    {
+      "id": "ts-home",
+      "url": "https://therapyselect.de/en",
+      "publication_date": null,
+      "retrieved_on": "2026-10-24",
+      "source_group": "therapyselect-company",
+      "evidence_mode": "first_party_intended_use_and_limitations",
+      "claims": ["Company offers personalized-oncology diagnostic services and explicitly says CTR-Test is not yet validated for targeted therapies and immunotherapies."],
+      "exact_quote": "For targeted therapies and immunotherapies the CTR-Test® is not yet validated.",
+      "limits": ["Do not generalize a chemotherapy-resistance claim to all drugs or cancer care; no clinical recommendation or current regulatory status established."]
+    },
+    {
+      "id": "ts-management",
+      "url": "https://therapyselect.de/en/about-us/management",
+      "publication_date": null,
+      "retrieved_on": "2026-10-24",
+      "source_group": "therapyselect-company",
+      "evidence_mode": "first_party_role_and_contribution_attribution",
+      "claims": ["Page identifies Frank C. Kischkel as managing/scientific director and describes prior apoptosis research; attributes further CTR-Test development and study writing to Julia Reiser."],
+      "limits": ["Personal historical discovery/achievement claims were not independently checked and are not proof of current test performance.", "The reviewed page does not explicitly establish Kischkel's founder status; Reiser's development role is not a founder claim."]
+    },
+    {
+      "id": "ts-selection",
+      "url": "https://therapyselect.de/en/which-test-for-whom",
+      "publication_date": null,
+      "retrieved_on": "2026-10-24",
+      "source_group": "therapyselect-company",
+      "evidence_mode": "first_party_product_selection_context",
+      "claims": ["Company distinguishes several diagnostic offerings, including its CTR-Test and other named test services; the business is not a single undifferentiated assay."],
+      "limits": ["Distribution of another named test does not establish ownership or development of that test.", "Patient-selection guidance is company material, not an independent clinical guideline."]
+    },
+    {
+      "id": "ts-ctr",
+      "url": "https://therapyselect.de/en/ctr-test",
+      "publication_date": null,
+      "event_date_reported": "Offered by TherapySelect since 2006",
+      "retrieved_on": "2026-10-24",
+      "source_group": "therapyselect-company",
+      "evidence_mode": "first_party_diagnostic_workflow_and_lab_method",
+      "claims": ["CTR-Test uses viable tumor material, exposes cells to selected chemotherapy agents, compares growth with untreated controls and reports to the physician; the page describes sample transport and laboratory processing."],
+      "limits": ["Detailed workflow inspected, not actual testing or current clinical/regulatory validation.", "Headline accuracy, adoption counts and survival-benefit statements were not independently verified and must not be repeated as established outcomes.", "Long reported availability warrants early-stage scope review; it is not an automatic age exclusion."]
+    },
+    {
+      "id": "ts-studies",
+      "url": "https://www.therapyselect.de/en/ctr-test/studies-publications",
+      "publication_date": null,
+      "retrieved_on": "2026-10-24",
+      "source_group": "therapyselect-company",
+      "evidence_mode": "company_curated_literature_summaries_not_independently_retrieved_articles",
+      "claims": ["The curated 1999 ovarian-cancer study summary explicitly notes nonrandomized patients and possible prognostic confounding; the page groups clinical and specimen-validation studies."],
+      "limits": ["Study counts and manufacturer-wide utility claims are not independently validated.", "Correlation, specimen validation and treatment-guided survival benefit are distinct questions.", "The external original-study link failed; this pass reviewed company-hosted summaries, not the original publication."]
+    },
+    {
+      "id": "ts-entities",
+      "url": "https://www.therapyselect.de/de/non-profit",
+      "publication_date": null,
+      "event_date_reported": "Page describes 2019 creation of a nonprofit alongside the existing enterprise; legal dates not verified",
+      "retrieved_on": "2026-10-24",
+      "source_group": "therapyselect-company",
+      "evidence_mode": "first_party_entity_and_development_structure_German_page_paraphrased_in_English",
+      "claims": ["Page distinguishes TherapySelect non-profit gUG, intended to take on CTR-Test development and laboratory access/cooperation, from TherapySelect Dr. Frank Kischkel offering diagnostics and patient coaching."],
+      "limits": ["This is a description of structure/plans, not proof that rights transferred or that a particular entity is investable.", "Do not merge nonprofit development assets with the returned commercial entity; confirm ownership/licensing and current arrangement."]
+    }
+  ],
+  "people": [
+    {"name": "Frank C. Kischkel", "reported_role": "Managing Director and Scientific Director", "source_ids": ["ts-management"], "contribution": "Company attributes scientific leadership and prior research; direct test-development role/rights require clearer attribution.", "founder_status": "not_explicitly_established_in_reviewed_pages"},
+    {"name": "Julia Reiser", "reported_role": "Clinical-trials/development contributor", "source_ids": ["ts-management"], "contribution": "Company attributes CTR-Test further development and study/publication work.", "founder_status": "unknown"}
+  ],
+  "possible_brief": {
+    "company_description": "TherapySelect offers cancer diagnostics including a viable-tumor assay intended to identify chemotherapy resistance, alongside other test services and patient coaching.",
+    "strongest_company_signal": "An explicit laboratory workflow and inspectable validation claims provide a concrete D-track research object.",
+    "founder_signal": "Scientific leadership and a specific development contributor are named; founder status and independent contributions remain qualified.",
+    "decisive_check": "Confirm the actual investable entity and CTR-Test rights, then obtain original intended-use-specific utility evidence and current status through specialist review."
+  },
+  "gate_observation": "technical_workflow_and_manufacturer_summaries_inspected_not_independent_clinical_utility_validation",
+  "open_questions": ["What company or nonprofit owns current development rights and what is the proposed investable opportunity?", "What original validation supports the precise current intended use and which outcomes were measured?", "What is current stage, regulatory/clinical-use status, reimbursement model and product differentiation?", "YC backing, novelty, founder status and a recent company-specific catalyst remain unknown."],
+  "failed_fetches": [{"url": null, "link_context": "External original 1999 study link on ts-studies", "outcome": "Tool returned error without readable source or resolved final URL; not counted as inspected original literature."}],
+  "no_qualification_implied": true,
+  "provider_or_model_calls": 0,
+  "backend_packets_modified": false
+}

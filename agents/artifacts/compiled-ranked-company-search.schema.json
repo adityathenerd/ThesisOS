@@ -1,0 +1,138 @@
+{
+  "$defs": {
+    "RankedCompanySearchRequest": {
+      "additionalProperties": false,
+      "properties": {
+        "search": {
+          "$ref": "#/$defs/RankedSearch"
+        },
+        "fields": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Fields",
+          "type": "array"
+        },
+        "limit": {
+          "maximum": 100,
+          "minimum": 1,
+          "title": "Limit",
+          "type": "integer"
+        },
+        "filters": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Filters"
+        }
+      },
+      "required": [
+        "search",
+        "fields",
+        "limit"
+      ],
+      "title": "RankedCompanySearchRequest",
+      "type": "object"
+    },
+    "RankedSearch": {
+      "additionalProperties": false,
+      "properties": {
+        "query": {
+          "minLength": 1,
+          "title": "Query",
+          "type": "string"
+        },
+        "mode": {
+          "default": "hybrid",
+          "enum": [
+            "hybrid",
+            "lexical",
+            "semantic"
+          ],
+          "title": "Mode",
+          "type": "string"
+        }
+      },
+      "required": [
+        "query"
+      ],
+      "title": "RankedSearch",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "request": {
+      "$ref": "#/$defs/RankedCompanySearchRequest"
+    },
+    "approval_ref": {
+      "title": "Approval Ref",
+      "type": "string"
+    },
+    "approval_scope": {
+      "const": "discovery_only",
+      "default": "discovery_only",
+      "title": "Approval Scope",
+      "type": "string"
+    },
+    "mandate_id": {
+      "title": "Mandate Id",
+      "type": "string"
+    },
+    "thesis_version": {
+      "title": "Thesis Version",
+      "type": "integer"
+    },
+    "policy_version": {
+      "title": "Policy Version",
+      "type": "integer"
+    },
+    "reference_document_hash": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Reference Document Hash"
+    },
+    "branch_id": {
+      "title": "Branch Id",
+      "type": "string"
+    },
+    "criterion_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Criterion Ids",
+      "type": "array"
+    },
+    "qualification_policy_approved": {
+      "title": "Qualification Policy Approved",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "request",
+    "approval_ref",
+    "mandate_id",
+    "thesis_version",
+    "policy_version",
+    "reference_document_hash",
+    "branch_id",
+    "criterion_ids",
+    "qualification_policy_approved"
+  ],
+  "title": "CompiledRankedCompanySearch",
+  "type": "object"
+}

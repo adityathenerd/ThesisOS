@@ -1,0 +1,65 @@
+{
+  "plan_id": "nine-case-product-program-v1",
+  "plan_version": "1.0",
+  "prompt_version": "0.3",
+  "reference_source": "planning/investment-thesis/scouting-mandate.md",
+  "reference_version": "0.3",
+  "authority": "Human-requested bounded nine-company batch; backend binds exact queries and current source hash to scoped discovery approval before execution. This plan is not a qualification policy or an approval record.",
+  "target_unique_researched_cases": 9,
+  "max_search_requests": 4,
+  "max_search_encounters": 32,
+  "mode": "hybrid",
+  "fields": ["basic_info.name", "basic_info.primary_domain", "basic_info.description"],
+  "filters": null,
+  "branches": [
+    {
+      "id": "batch-H-product-workflows-v1",
+      "track": "H",
+      "criterion_ids": ["C1", "C3", "C4", "C7"],
+      "limit": 8,
+      "query": "Emerging companies developing reusable software products for clinical documentation, prior authorization, referral management or care coordination for healthcare providers, with named products and product documentation, demonstrations or initial deployment evidence",
+      "rationale": "Replace the single workflow-services phrasing with several explicit product use cases and inspectable product hints. Thesis sections 2, 3 H and 6 H.",
+      "artifact_hints": ["named software product", "product documentation or demo", "attributable deployment"],
+      "recall_risks": ["Publicly documented products can dominate results over less visible builders", "The ranker may return services firms or established companies; inspect, do not infer fit", "This query samples H and is not exhaustive"]
+    },
+    {
+      "id": "batch-R-research-tools-v1",
+      "track": "R",
+      "criterion_ids": ["C1", "C3", "C4", "C7"],
+      "limit": 8,
+      "query": "Emerging companies developing reusable bioscience research tools for scientists and biotechnology laboratories: microscopy analysis, bioinformatics, lab automation, assays or scientific instruments, with a named tool, prototype, technical documentation or experimental demonstration",
+      "rationale": "Retrieve enabling products across computational and physical tools without imposing software revenue or clinical proof. Thesis sections 3 R and 6 R.",
+      "artifact_hints": ["named tool, assay or instrument", "technical documentation", "reproducible experiment or demonstration"],
+      "recall_risks": ["Contract research can resemble a platform; inspect the reusable core", "A paper or vendor claim does not establish reproducibility", "Human-health-enabling tools are core; unrelated industrial applications need scope review"]
+    },
+    {
+      "id": "batch-D-diagnostics-devices-v1",
+      "track": "D",
+      "criterion_ids": ["C1", "C3", "C4", "C7"],
+      "limit": 8,
+      "query": "Emerging companies developing diagnostic tests, diagnostic software, patient monitoring or therapeutic medical devices for a defined clinical use, with a named prototype or product and early technical study, validation report or intended-use documentation",
+      "rationale": "Cover tests, software and devices with an intended use and a researchable artifact, without requiring regulatory clearance or clinical efficacy at discovery. Thesis sections 3 D and 6 D.",
+      "artifact_hints": ["defined intended use", "named prototype or device", "study or technical validation report"],
+      "recall_risks": ["Validation claims may not match the intended population", "Distributors and ordinary clinics may appear", "Early prototypes need not have regulatory approval; specialist review remains separate"]
+    },
+    {
+      "id": "batch-T-therapeutic-programs-v1",
+      "track": "T",
+      "criterion_ids": ["C1", "C3", "C4", "C7"],
+      "limit": 8,
+      "query": "Emerging biotechnology companies developing therapeutic assets or a drug discovery platform linked to an initial disease program, with a named target, modality or candidate and attributable experimental results, preclinical study, scientific publication or pipeline documentation",
+      "rationale": "Find actual programs and platform-to-asset connections, including preclinical teams. No revenue, clinical-stage or software artifact requirement. Thesis sections 3 T and 6 T.",
+      "artifact_hints": ["initial disease program", "target, modality or candidate", "attributable experiment or pipeline documentation"],
+      "recall_risks": ["Pipeline text is a source-reported claim until inspected", "Predictions and publications do not establish patient benefit or company asset rights", "Stealth programs may be missed; no paper-count or clinical-stage threshold"]
+    }
+  ],
+  "selection_protocol": [
+    "Persist every returned encounter with query, rank and request lineage; deduplicate canonical domain/company identity across branches and existing cases.",
+    "Inspect the current first-party product/program page and one most relevant linked artifact when accessible. Record exact URL, retrieval time, claim, evidence status and any access failure. Search snippets alone cannot establish the artifact.",
+    "Research-triage each unique identity as product/program identified, identity or artifact unclear, or services/reseller-only currently evidenced. This controls scarce research order only; it is not qualification or automatic investment rejection. A services team with an emerging reusable core remains researchable.",
+    "Prefer emerging founding teams with a named product/asset, a clear user or disease problem and an accessible early-development artifact over generic category claims or mature incumbents. This is a semantic research-order preference, not a new funding/age/headcount gate or rejection rule. Then prefer evidence that can change a C1-C8 judgment, with attributable builder contribution, relevant alternative and an interesting unresolved bet. Source support and novelty status remain explicit, not numeric scores.",
+    "Select one researchable candidate from each available H/R/D/T branch before revisiting a branch, then continue round-robin in source-supported research priority until nine unique cases or documented shortfall. This is batch coverage scheduling, not fund allocation, equal quality or a qualification quota.",
+    "Known YC-backed entities are reference/known-universe cases, not novel prospects; preserve their exclusion reason. Unknown backing remains unknown. Do not silently fill the nine with known references or the historical consultancy.",
+    "Retain excluded/deferred encounters and reasons. Do not pad nine with identities that cannot be resolved, force positive recommendations or silently add more queries. Backend reports the actual batch, failures and shortfall under its approved execution bound."
+  ]
+}

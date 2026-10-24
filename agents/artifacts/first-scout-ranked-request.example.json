@@ -1,0 +1,12 @@
+{
+  "search": {
+    "query": "Companies building software for referral intake and care coordination workflows for clinics and hospitals",
+    "mode": "hybrid"
+  },
+  "fields": [
+    "basic_info.name",
+    "basic_info.primary_domain",
+    "basic_info.description"
+  ],
+  "limit": 3
+}

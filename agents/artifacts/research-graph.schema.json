@@ -1,0 +1,1068 @@
+{
+  "$defs": {
+    "CanonicalEntityRef": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "title": "Kind",
+          "type": "string"
+        },
+        "id": {
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "id"
+      ],
+      "title": "CanonicalEntityRef",
+      "type": "object"
+    },
+    "EcosystemCoverage": {
+      "additionalProperties": false,
+      "properties": {
+        "unique_entities": {
+          "title": "Unique Entities",
+          "type": "integer"
+        },
+        "entities_by_kind": {
+          "additionalProperties": {
+            "type": "integer"
+          },
+          "title": "Entities By Kind",
+          "type": "object"
+        },
+        "supported_typed_edges": {
+          "title": "Supported Typed Edges",
+          "type": "integer"
+        },
+        "typed_relationship_types": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Typed Relationship Types",
+          "type": "array"
+        },
+        "dated_event_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Dated Event Ids",
+          "type": "array"
+        },
+        "repeated_dated_ties": {
+          "items": {
+            "$ref": "#/$defs/RepeatedDatedTie"
+          },
+          "title": "Repeated Dated Ties",
+          "type": "array"
+        },
+        "full_network_density": {
+          "default": null,
+          "title": "Full Network Density",
+          "type": "null"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Limitations",
+          "type": "array"
+        }
+      },
+      "required": [
+        "unique_entities",
+        "entities_by_kind",
+        "supported_typed_edges",
+        "typed_relationship_types",
+        "dated_event_ids",
+        "repeated_dated_ties",
+        "limitations"
+      ],
+      "title": "EcosystemCoverage",
+      "type": "object"
+    },
+    "EcosystemInterpretation": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "input_ref": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "person_id": {
+          "title": "Person Id",
+          "type": "string"
+        },
+        "topic_id": {
+          "title": "Topic Id",
+          "type": "string"
+        },
+        "supporting_edge_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Supporting Edge Ids",
+          "type": "array"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "source_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Source Refs",
+          "type": "array"
+        },
+        "temporal_scope": {
+          "$ref": "#/$defs/TemporalScope"
+        },
+        "explanation": {
+          "title": "Explanation",
+          "type": "string"
+        },
+        "authority": {
+          "const": "derived_observed_topic_engagement_not_personality_or_friendship",
+          "default": "derived_observed_topic_engagement_not_personality_or_friendship",
+          "title": "Authority",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "input_ref",
+        "person_id",
+        "topic_id",
+        "supporting_edge_ids",
+        "evidence_ids",
+        "source_refs",
+        "temporal_scope",
+        "explanation"
+      ],
+      "title": "EcosystemInterpretation",
+      "type": "object"
+    },
+    "MatcherInterpretationRef": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "assessment_ref": {
+          "title": "Assessment Ref",
+          "type": "string"
+        },
+        "input_ref": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "prompt_version": {
+          "title": "Prompt Version",
+          "type": "string"
+        },
+        "driver_kind": {
+          "enum": [
+            "scripted",
+            "semantic"
+          ],
+          "title": "Driver Kind",
+          "type": "string"
+        },
+        "criterion_id": {
+          "title": "Criterion Id",
+          "type": "string"
+        },
+        "target_node_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Target Node Ids",
+          "type": "array"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "counterevidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Counterevidence Ids",
+          "type": "array"
+        },
+        "source_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Source Refs",
+          "type": "array"
+        },
+        "comparison_state": {
+          "enum": [
+            "supported",
+            "mixed",
+            "contradicted",
+            "unknown",
+            "not_applicable"
+          ],
+          "title": "Comparison State",
+          "type": "string"
+        },
+        "interpretation": {
+          "title": "Interpretation",
+          "type": "string"
+        },
+        "authority": {
+          "const": "model_interpretation_not_new_evidence",
+          "default": "model_interpretation_not_new_evidence",
+          "title": "Authority",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "assessment_ref",
+        "input_ref",
+        "prompt_version",
+        "driver_kind",
+        "criterion_id",
+        "target_node_ids",
+        "evidence_ids",
+        "counterevidence_ids",
+        "source_refs",
+        "comparison_state",
+        "interpretation"
+      ],
+      "title": "MatcherInterpretationRef",
+      "type": "object"
+    },
+    "MatcherResearchSummary": {
+      "additionalProperties": false,
+      "properties": {
+        "assessment_ref": {
+          "title": "Assessment Ref",
+          "type": "string"
+        },
+        "input_ref": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "prompt_version": {
+          "title": "Prompt Version",
+          "type": "string"
+        },
+        "driver_kind": {
+          "enum": [
+            "scripted",
+            "semantic"
+          ],
+          "title": "Driver Kind",
+          "type": "string"
+        },
+        "why_this": {
+          "$ref": "#/$defs/ResearchInterpretationAnswer"
+        },
+        "why_them": {
+          "$ref": "#/$defs/ResearchInterpretationAnswer"
+        },
+        "why_now": {
+          "$ref": "#/$defs/ResearchInterpretationAnswer"
+        },
+        "team_problem_fit": {
+          "$ref": "#/$defs/ResearchInterpretationAnswer"
+        },
+        "authority": {
+          "const": "model_interpretation_not_new_evidence",
+          "default": "model_interpretation_not_new_evidence",
+          "title": "Authority",
+          "type": "string"
+        }
+      },
+      "required": [
+        "assessment_ref",
+        "input_ref",
+        "prompt_version",
+        "driver_kind",
+        "why_this",
+        "why_them",
+        "why_now",
+        "team_problem_fit"
+      ],
+      "title": "MatcherResearchSummary",
+      "type": "object"
+    },
+    "RepeatedDatedTie": {
+      "additionalProperties": false,
+      "properties": {
+        "from_id": {
+          "title": "From Id",
+          "type": "string"
+        },
+        "to_id": {
+          "title": "To Id",
+          "type": "string"
+        },
+        "relation": {
+          "title": "Relation",
+          "type": "string"
+        },
+        "event_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Event Refs",
+          "type": "array"
+        },
+        "dates": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Dates",
+          "type": "array"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "from_id",
+        "to_id",
+        "relation",
+        "event_refs",
+        "dates",
+        "evidence_ids"
+      ],
+      "title": "RepeatedDatedTie",
+      "type": "object"
+    },
+    "ResearchDecision": {
+      "additionalProperties": false,
+      "properties": {
+        "assessment_ref": {
+          "title": "Assessment Ref",
+          "type": "string"
+        },
+        "input_ref": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "decision": {
+          "enum": [
+            "pursue",
+            "monitor"
+          ],
+          "title": "Decision",
+          "type": "string"
+        },
+        "next_action": {
+          "minLength": 1,
+          "title": "Next Action",
+          "type": "string"
+        },
+        "decision_consequence": {
+          "minLength": 1,
+          "title": "Decision Consequence",
+          "type": "string"
+        },
+        "future_trigger": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Future Trigger"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "source_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Source Refs",
+          "type": "array"
+        },
+        "assertion_kind": {
+          "const": "inferred",
+          "default": "inferred",
+          "title": "Assertion Kind",
+          "type": "string"
+        },
+        "qualification_note": {
+          "const": "Research next-action recommendation only; human qualification approval remains separate",
+          "default": "Research next-action recommendation only; human qualification approval remains separate",
+          "title": "Qualification Note",
+          "type": "string"
+        }
+      },
+      "required": [
+        "assessment_ref",
+        "input_ref",
+        "decision",
+        "next_action",
+        "decision_consequence",
+        "evidence_ids",
+        "source_refs"
+      ],
+      "title": "ResearchDecision",
+      "type": "object"
+    },
+    "ResearchEdge": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "from_id": {
+          "title": "From Id",
+          "type": "string"
+        },
+        "to_id": {
+          "title": "To Id",
+          "type": "string"
+        },
+        "relation": {
+          "maxLength": 80,
+          "minLength": 1,
+          "title": "Relation",
+          "type": "string"
+        },
+        "label": {
+          "maxLength": 300,
+          "minLength": 1,
+          "title": "Label",
+          "type": "string"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "source_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Source Refs",
+          "type": "array"
+        },
+        "assertion_kind": {
+          "enum": [
+            "source_reported",
+            "observed",
+            "inferred"
+          ],
+          "title": "Assertion Kind",
+          "type": "string"
+        },
+        "support_status": {
+          "enum": [
+            "supported",
+            "mixed",
+            "contradicted",
+            "unknown"
+          ],
+          "title": "Support Status",
+          "type": "string"
+        },
+        "temporal_scope": {
+          "$ref": "#/$defs/TemporalScope"
+        },
+        "limitation": {
+          "maxLength": 2400,
+          "minLength": 1,
+          "title": "Limitation",
+          "type": "string"
+        },
+        "interpretation_ref": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Interpretation Ref"
+        },
+        "event_ref": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Event Ref"
+        }
+      },
+      "required": [
+        "id",
+        "from_id",
+        "to_id",
+        "relation",
+        "label",
+        "evidence_ids",
+        "source_refs",
+        "assertion_kind",
+        "support_status",
+        "limitation"
+      ],
+      "title": "ResearchEdge",
+      "type": "object"
+    },
+    "ResearchInterpretationAnswer": {
+      "additionalProperties": false,
+      "properties": {
+        "summary": {
+          "title": "Summary",
+          "type": "string"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "source_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Source Refs",
+          "type": "array"
+        },
+        "objections": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Objections",
+          "type": "array"
+        },
+        "unknowns": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Unknowns",
+          "type": "array"
+        }
+      },
+      "required": [
+        "summary",
+        "evidence_ids",
+        "source_refs",
+        "objections",
+        "unknowns"
+      ],
+      "title": "ResearchInterpretationAnswer",
+      "type": "object"
+    },
+    "ResearchNode": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "person",
+            "organisation",
+            "product",
+            "asset",
+            "project",
+            "event",
+            "post",
+            "topic",
+            "award",
+            "claim",
+            "source"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "label": {
+          "maxLength": 240,
+          "minLength": 1,
+          "title": "Label",
+          "type": "string"
+        },
+        "canonical_entity_ref": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/CanonicalEntityRef"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "source_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Source Refs",
+          "type": "array"
+        },
+        "attributes": {
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "integer"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "title": "Attributes",
+          "type": "object"
+        },
+        "temporal_scope": {
+          "$ref": "#/$defs/TemporalScope"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "label"
+      ],
+      "title": "ResearchNode",
+      "type": "object"
+    },
+    "ResearchQuestion": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "target_node_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Target Node Ids",
+          "type": "array"
+        },
+        "target_edge_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Target Edge Ids",
+          "type": "array"
+        },
+        "criterion_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Criterion Ids",
+          "type": "array"
+        },
+        "question": {
+          "minLength": 1,
+          "title": "Question",
+          "type": "string"
+        },
+        "decision_consequence": {
+          "minLength": 1,
+          "title": "Decision Consequence",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "target_node_ids",
+        "question",
+        "decision_consequence"
+      ],
+      "title": "ResearchQuestion",
+      "type": "object"
+    },
+    "ResearchSource": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "source_url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Source Url"
+        },
+        "source_keys": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Source Keys",
+          "type": "array"
+        },
+        "source_type": {
+          "title": "Source Type",
+          "type": "string"
+        },
+        "source_quality": {
+          "title": "Source Quality",
+          "type": "string"
+        },
+        "data_mode": {
+          "enum": [
+            "live",
+            "captured",
+            "synthetic"
+          ],
+          "title": "Data Mode",
+          "type": "string"
+        },
+        "publication_time": {
+          "$ref": "#/$defs/TemporalScope"
+        },
+        "observation_times": {
+          "items": {
+            "$ref": "#/$defs/TemporalScope"
+          },
+          "title": "Observation Times",
+          "type": "array"
+        },
+        "retrieval_times": {
+          "items": {
+            "$ref": "#/$defs/TemporalScope"
+          },
+          "title": "Retrieval Times",
+          "type": "array"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Limitations",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "evidence_ids",
+        "source_url",
+        "source_keys",
+        "source_type",
+        "source_quality",
+        "data_mode",
+        "publication_time",
+        "observation_times",
+        "retrieval_times",
+        "limitations"
+      ],
+      "title": "ResearchSource",
+      "type": "object"
+    },
+    "TemporalScope": {
+      "additionalProperties": false,
+      "properties": {
+        "precision": {
+          "default": "unknown",
+          "enum": [
+            "unknown",
+            "year",
+            "month",
+            "day",
+            "datetime",
+            "interval"
+          ],
+          "title": "Precision",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        },
+        "start": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Start"
+        },
+        "end": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "End"
+        },
+        "basis": {
+          "default": "unknown",
+          "enum": [
+            "unknown",
+            "publication",
+            "observation",
+            "retrieval",
+            "event",
+            "reported_as_of"
+          ],
+          "title": "Basis",
+          "type": "string"
+        },
+        "limitation": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Limitation"
+        }
+      },
+      "title": "TemporalScope",
+      "type": "object"
+    },
+    "VersionRef": {
+      "additionalProperties": false,
+      "properties": {
+        "case_id": {
+          "title": "Case Id",
+          "type": "string"
+        },
+        "case_version": {
+          "minimum": 0,
+          "title": "Case Version",
+          "type": "integer"
+        },
+        "thesis_version": {
+          "minimum": 1,
+          "title": "Thesis Version",
+          "type": "integer"
+        },
+        "policy_version": {
+          "minimum": 1,
+          "title": "Policy Version",
+          "type": "integer"
+        },
+        "evidence_hash": {
+          "title": "Evidence Hash",
+          "type": "string"
+        }
+      },
+      "required": [
+        "case_id",
+        "case_version",
+        "thesis_version",
+        "policy_version",
+        "evidence_hash"
+      ],
+      "title": "VersionRef",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "0.1",
+      "default": "0.1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "graph_id": {
+      "title": "Graph Id",
+      "type": "string"
+    },
+    "case_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Case Id"
+    },
+    "research_example_ref": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Research Example Ref"
+    },
+    "snapshot_ref": {
+      "$ref": "#/$defs/VersionRef"
+    },
+    "generated_at": {
+      "title": "Generated At",
+      "type": "string"
+    },
+    "nodes": {
+      "items": {
+        "$ref": "#/$defs/ResearchNode"
+      },
+      "title": "Nodes",
+      "type": "array"
+    },
+    "edges": {
+      "items": {
+        "$ref": "#/$defs/ResearchEdge"
+      },
+      "title": "Edges",
+      "type": "array"
+    },
+    "sources": {
+      "items": {
+        "$ref": "#/$defs/ResearchSource"
+      },
+      "title": "Sources",
+      "type": "array"
+    },
+    "open_questions": {
+      "items": {
+        "$ref": "#/$defs/ResearchQuestion"
+      },
+      "title": "Open Questions",
+      "type": "array"
+    },
+    "matcher_interpretations": {
+      "items": {
+        "$ref": "#/$defs/MatcherInterpretationRef"
+      },
+      "title": "Matcher Interpretations",
+      "type": "array"
+    },
+    "matcher_summary": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/MatcherResearchSummary"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "research_decision": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/ResearchDecision"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Limitations",
+      "type": "array"
+    },
+    "ecosystem_interpretations": {
+      "items": {
+        "$ref": "#/$defs/EcosystemInterpretation"
+      },
+      "title": "Ecosystem Interpretations",
+      "type": "array"
+    },
+    "ecosystem_coverage": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/EcosystemCoverage"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    }
+  },
+  "required": [
+    "graph_id",
+    "case_id",
+    "research_example_ref",
+    "snapshot_ref",
+    "generated_at",
+    "nodes",
+    "edges",
+    "sources",
+    "open_questions",
+    "limitations"
+  ],
+  "title": "ResearchGraph",
+  "type": "object"
+}

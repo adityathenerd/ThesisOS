@@ -1,0 +1,1352 @@
+{
+  "document_type": "human_authorized_pre_outreach_stage_calibration_guidance",
+  "version": "0.1",
+  "date": "2026-10-24",
+  "status": "source_bound_editorial_guidance_not_fresh_model_output_or_runtime_activation",
+  "overlay_path": "C:/Users/ASUS/Desktop/ThesisOS/planning/investment-thesis/pre-outreach-overlay-v0.1.md",
+  "overlay_sha256": "8decb2846efa18e776c987a8e07ee872a742bb7e9568c72fe108f6eda4816f85",
+  "provenance": "Human-authorized stage calibration using existing nine v3 reassessments/evidence only; no fresh source/provider/model calls.",
+  "decision_question": "Is an introductory conversation worth pursuing?",
+  "strict_v03_and_assessments_preserved": true,
+  "qualification_or_sending_authorized": false,
+  "continuous_scouting_run_started": false,
+  "global_limitations": [
+    "Categories express conversation merit, not investment fit proven, formal partner-review readiness or qualification.",
+    "Contact routes were not newly checked. Named person and public-profile evidence do not establish a deliverable personal address or permission to send.",
+    "All facts remain bounded by saved source attribution and dates; provider-indexed current roles are not independently verified.",
+    "No count/category target was used. Version/hash bindings must be checked before use."
+  ],
+  "cases": [
+    {
+      "domain": "replicate.health",
+      "conversation_category": "outreach_candidate",
+      "conversation_rationale": "A concrete provider-billing workflow plus named source-attributed founders with relevant automation/operations work makes a focused introduction useful before a private demo is available.",
+      "material_contrary_facts": [],
+      "source_bound_risks": [
+        "Working execution and founder-specific Ledger authorship unverified; submission-review descriptions conflict across source snapshots; some products remain early access."
+      ],
+      "person_actionability": {
+        "status": "named_current_roles_source_reported",
+        "people": [
+          "Chris Thomas",
+          "Sahil Shaikh"
+        ],
+        "limits": "Indexed founder roles and work attribution, not independently verified current contribution.",
+        "bound_people": [
+          {
+            "person_id": "person:crustdata:172554834",
+            "name": "Chris Thomas",
+            "roles": [
+              {
+                "id": "role:provider:05c47337e4a17634b1",
+                "person_id": "person:crustdata:172554834",
+                "company_id": "company_71b1c9069db545dc9006c4db77d4d2af",
+                "role": "CEO - Founder (current in indexed profile; dates/source unverified)",
+                "status": "supported",
+                "evidence_ids": [
+                  "evidence:enrich:622c40383afa2631d3:3"
+                ]
+              }
+            ]
+          },
+          {
+            "person_id": "person:crustdata:195633791",
+            "name": "Sahil Shaikh",
+            "roles": [
+              {
+                "id": "role:provider:8b6ff512d45f0c0d64",
+                "person_id": "person:crustdata:195633791",
+                "company_id": "company_71b1c9069db545dc9006c4db77d4d2af",
+                "role": "Founder (current in indexed profile; dates/source unverified)",
+                "status": "supported",
+                "evidence_ids": [
+                  "evidence:enrich:622c40383afa2631d3:10"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "contact_actionability": {
+        "status": "delivery_route_not_established_by_this_mapping",
+        "route": null,
+        "limits": "Use only already-saved company/profile route evidence for human review; do not infer an email or personal route."
+      },
+      "case_id": "case_2ad527916cc748269880081553bfdba8",
+      "assessment_ref": "assessment_ad6e7de7d13c4ca4acc86ca4292ba560",
+      "input_ref": {
+        "case_id": "case_2ad527916cc748269880081553bfdba8",
+        "case_version": 3,
+        "thesis_version": 1,
+        "policy_version": 1,
+        "evidence_hash": "33186340be099a9de8e9743e472bbcb1d97f9a49f7466f0a97579c600e1d399f"
+      },
+      "case_version": 3,
+      "category": "outreach_candidate",
+      "rationale": {
+        "text": "A concrete provider-billing workflow plus named source-attributed founders with relevant automation/operations work makes a focused introduction useful before a private demo is available.",
+        "evidence_ids": [
+          "evidence:replicate-health:0:0",
+          "evidence:replicate-health:1:0",
+          "evidence:enrich:622c40383afa2631d3:3",
+          "evidence:enrich:622c40383afa2631d3:10",
+          "evidence:enrich:622c40383afa2631d3:4",
+          "evidence:enrich:622c40383afa2631d3:7",
+          "evidence:enrich:622c40383afa2631d3:13"
+        ]
+      },
+      "minimum_basis": {
+        "identity_scope": {
+          "supported": true,
+          "text": "Exact saved company/project identity and H/R/D/T scope for replicate.health; currentness limitations remain separate.",
+          "evidence_ids": [
+            "evidence_994cec2096d2411b96e049c3c80e3998"
+          ]
+        },
+        "concrete_product_program_problem": {
+          "supported": true,
+          "text": "Replicate.Health describes software for healthcare practices that automates billing, insurance discovery, prior authorization and credentialing to reduce administrative work.",
+          "evidence_ids": [
+            "evidence:replicate-health:0:0"
+          ]
+        },
+        "useful_conversation_reason": {
+          "supported": true,
+          "text": "A concrete provider-billing workflow plus named source-attributed founders with relevant automation/operations work makes a focused introduction useful before a private demo is available.",
+          "evidence_ids": [
+            "evidence:replicate-health:0:0",
+            "evidence:replicate-health:1:0",
+            "evidence:enrich:622c40383afa2631d3:3",
+            "evidence:enrich:622c40383afa2631d3:10",
+            "evidence:enrich:622c40383afa2631d3:4",
+            "evidence:enrich:622c40383afa2631d3:7",
+            "evidence:enrich:622c40383afa2631d3:13"
+          ]
+        }
+      },
+      "contrary_facts": [],
+      "bound_risks": [
+        {
+          "text": "Working execution and founder-specific Ledger authorship unverified; submission-review descriptions conflict across source snapshots; some products remain early access.",
+          "evidence_ids": [
+            "evidence:enrich:622c40383afa2631d3:19",
+            "evidence:replicate-health:1:0",
+            "evidence:replicate-health:0:1",
+            "evidence:enrich:622c40383afa2631d3:17"
+          ]
+        }
+      ],
+      "decisive_blocker": null,
+      "call_questions": [
+        {
+          "text": "What is live in Ledger today, and which submissions are reviewed versus automatic?",
+          "evidence_ids": [
+            "evidence:enrich:622c40383afa2631d3:19",
+            "evidence:replicate-health:1:0",
+            "evidence:replicate-health:0:1",
+            "evidence:enrich:622c40383afa2631d3:17",
+            "evidence:enrich:622c40383afa2631d3:3",
+            "evidence:enrich:622c40383afa2631d3:10"
+          ]
+        },
+        {
+          "text": "Which founder/builder owns the core workflow, and what have practices actually used or changed?",
+          "evidence_ids": [
+            "evidence:enrich:622c40383afa2631d3:19",
+            "evidence:replicate-health:1:0",
+            "evidence:replicate-health:0:1",
+            "evidence:enrich:622c40383afa2631d3:17",
+            "evidence:enrich:622c40383afa2631d3:3",
+            "evidence:enrich:622c40383afa2631d3:10"
+          ]
+        }
+      ],
+      "source_snapshot": {
+        "path": "C:\\Users\\ASUS\\Desktop\\ThesisOS\\backend\\work\\enrichment-pass\\replicate.health\\reassessment.json",
+        "sha256": "b0d08289e4761ff90625a27ee7944c6b92911aa3f2ed245482996cd45c891792"
+      }
+    },
+    {
+      "domain": "caremesh.com",
+      "conversation_category": "outreach_candidate",
+      "conversation_rationale": "NAVIGATE's specific referral workflow, source-reported deployments and founder-linked clinical problem insight provide a credible introductory agenda without proving personal implementation or current benefit first.",
+      "material_contrary_facts": [],
+      "source_bound_risks": [
+        "Current operation and named implementation ownership remain unverified; advertised comparative reduction has no interpretable methodology in the packet."
+      ],
+      "person_actionability": {
+        "status": "named_relevant_person_source_reported",
+        "people": [
+          "Peter Tippett"
+        ],
+        "limits": "Reported founder/CEO and design rationale do not establish personal code authorship; current role should be confirmed at introduction.",
+        "bound_people": [
+          {
+            "person_id": "person:caremesh-com:0",
+            "name": "Peter Tippett",
+            "roles": [
+              {
+                "id": "role:caremesh-com:0",
+                "person_id": "person:caremesh-com:0",
+                "company_id": "company_e05c8e6b14554e9b830a45edf4abc5ed",
+                "role": "Founder & CEO (company-reported; tenure unknown)",
+                "status": "supported",
+                "evidence_ids": [
+                  "evidence:caremesh-com:0:0",
+                  "evidence:caremesh-com:0:1"
+                ]
+              },
+              {
+                "id": "role:provider:7e191092c45bdb69ad",
+                "person_id": "person:caremesh-com:0",
+                "company_id": "company_e05c8e6b14554e9b830a45edf4abc5ed",
+                "role": "Founder & CEO (current in indexed profile; dates/source unverified)",
+                "status": "supported",
+                "evidence_ids": [
+                  "evidence:enrich:31a747a141927c4f09:4"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "contact_actionability": {
+        "status": "delivery_route_not_established_by_this_mapping",
+        "route": null,
+        "limits": "A person name is not a verified direct route; retain any previously saved company contact route separately."
+      },
+      "case_id": "case_d57d6d50977a4652b98272704449804d",
+      "assessment_ref": "assessment_ce07fba6dd3f4edbb7b8c5cdf27d2610",
+      "input_ref": {
+        "case_id": "case_d57d6d50977a4652b98272704449804d",
+        "case_version": 3,
+        "thesis_version": 1,
+        "policy_version": 1,
+        "evidence_hash": "fd73dbf5ae0662cf63c0c17716952ff5a28f7b02225c84cbe26b464412715001"
+      },
+      "case_version": 3,
+      "category": "outreach_candidate",
+      "rationale": {
+        "text": "NAVIGATE's specific referral workflow, source-reported deployments and founder-linked clinical problem insight provide a credible introductory agenda without proving personal implementation or current benefit first.",
+        "evidence_ids": [
+          "evidence:caremesh-com:1:0",
+          "evidence:enrich:31a747a141927c4f09:26",
+          "evidence:enrich:31a747a141927c4f09:22",
+          "evidence:caremesh-com:0:0",
+          "evidence:caremesh-com:4:0",
+          "evidence:caremesh-com:4:1"
+        ]
+      },
+      "minimum_basis": {
+        "identity_scope": {
+          "supported": true,
+          "text": "Exact saved company/project identity and H/R/D/T scope for caremesh.com; currentness limitations remain separate.",
+          "evidence_ids": [
+            "evidence_171b0f6931b2458093930b1b7969a292"
+          ]
+        },
+        "concrete_product_program_problem": {
+          "supported": true,
+          "text": "careMESH's NAVIGATE organizes referrals, records, tasks and follow-up for hospital teams replacing fragmented spreadsheet-and-folder coordination.",
+          "evidence_ids": [
+            "evidence:caremesh-com:1:0",
+            "evidence:enrich:31a747a141927c4f09:26"
+          ]
+        },
+        "useful_conversation_reason": {
+          "supported": true,
+          "text": "NAVIGATE's specific referral workflow, source-reported deployments and founder-linked clinical problem insight provide a credible introductory agenda without proving personal implementation or current benefit first.",
+          "evidence_ids": [
+            "evidence:caremesh-com:1:0",
+            "evidence:enrich:31a747a141927c4f09:26",
+            "evidence:enrich:31a747a141927c4f09:22",
+            "evidence:caremesh-com:0:0",
+            "evidence:caremesh-com:4:0",
+            "evidence:caremesh-com:4:1"
+          ]
+        }
+      },
+      "contrary_facts": [],
+      "bound_risks": [
+        {
+          "text": "Current operation and named implementation ownership remain unverified; advertised comparative reduction has no interpretable methodology in the packet.",
+          "evidence_ids": [
+            "evidence:enrich:31a747a141927c4f09:25",
+            "evidence:enrich:31a747a141927c4f09:26",
+            "evidence:caremesh-com:4:1"
+          ]
+        }
+      ],
+      "decisive_blocker": null,
+      "call_questions": [
+        {
+          "text": "How does one current NAVIGATE referral pathway work, and who owns its design and revisions?",
+          "evidence_ids": [
+            "evidence:enrich:31a747a141927c4f09:25",
+            "evidence:enrich:31a747a141927c4f09:26",
+            "evidence:caremesh-com:4:1",
+            "evidence:enrich:31a747a141927c4f09:22"
+          ]
+        },
+        {
+          "text": "What operational change was measured against which baseline, and what is the current customer/development focus?",
+          "evidence_ids": [
+            "evidence:enrich:31a747a141927c4f09:25",
+            "evidence:enrich:31a747a141927c4f09:26",
+            "evidence:caremesh-com:4:1",
+            "evidence:enrich:31a747a141927c4f09:22"
+          ]
+        }
+      ],
+      "source_snapshot": {
+        "path": "C:\\Users\\ASUS\\Desktop\\ThesisOS\\backend\\work\\enrichment-pass\\caremesh.com\\reassessment.json",
+        "sha256": "954cd01de0234aaa2527cd2680f0f2383cb18c6f398adfb977a319d5ebb9b2df"
+      }
+    },
+    {
+      "domain": "swiftacare.com",
+      "conversation_category": "outreach_candidate",
+      "conversation_rationale": "A defined care-operations product and founder-attributed internal-build/use account justify learning about current use and the reusable core through an introductory conversation.",
+      "material_contrary_facts": [],
+      "source_bound_risks": [
+        "Initial use is at a founder-founded related organization; unrelated adoption, current implementation and shared-versus-custom work remain unknown."
+      ],
+      "person_actionability": {
+        "status": "named_relevant_person_source_reported",
+        "people": [
+          "Michael Assiamah"
+        ],
+        "limits": "Company-attributed founder/development leadership; named technical contributors remain distinct from founders.",
+        "bound_people": [
+          {
+            "person_id": "person:swiftacare-com:0",
+            "name": "Michael Assiamah",
+            "roles": [
+              {
+                "id": "role:swiftacare-com:0",
+                "person_id": "person:swiftacare-com:0",
+                "company_id": "company_fbfc08f4630341d7b60ca00ebfbc3aa6",
+                "role": "Founder and CEO (company-reported)",
+                "status": "supported",
+                "evidence_ids": [
+                  "evidence:swiftacare-com:2:0",
+                  "evidence:swiftacare-com:2:1",
+                  "evidence:swiftacare-com:2:2",
+                  "evidence:swiftacare-com:1:0",
+                  "evidence:swiftacare-com:1:1"
+                ]
+              },
+              {
+                "id": "role:provider:fdd0540253604d54ac",
+                "person_id": "person:swiftacare-com:0",
+                "company_id": "company_fbfc08f4630341d7b60ca00ebfbc3aa6",
+                "role": "Founder & Chief Executive Officer (current in indexed profile; dates/source unverified)",
+                "status": "supported",
+                "evidence_ids": [
+                  "evidence:enrich:52472dc1c8591923bf:3"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "contact_actionability": {
+        "status": "delivery_route_not_established_by_this_mapping",
+        "route": null,
+        "limits": "No new route check or personal-address inference."
+      },
+      "case_id": "case_723e3ade86f14d08be801ca16d68a54d",
+      "assessment_ref": "assessment_6d1eaf2915b547eaaeb99c7a5cfdba6a",
+      "input_ref": {
+        "case_id": "case_723e3ade86f14d08be801ca16d68a54d",
+        "case_version": 3,
+        "thesis_version": 1,
+        "policy_version": 1,
+        "evidence_hash": "a055d48b584cc5c8e21873a3773eef142925b8239c8d06f8debb27913bef2c9c"
+      },
+      "case_version": 3,
+      "category": "outreach_candidate",
+      "rationale": {
+        "text": "A defined care-operations product and founder-attributed internal-build/use account justify learning about current use and the reusable core through an introductory conversation.",
+        "evidence_ids": [
+          "evidence:swiftacare-com:0:1",
+          "evidence:swiftacare-com:1:0",
+          "evidence:swiftacare-com:1:1",
+          "evidence:enrich:52472dc1c8591923bf:12",
+          "evidence:swiftacare-com:2:0"
+        ]
+      },
+      "minimum_basis": {
+        "identity_scope": {
+          "supported": true,
+          "text": "Exact saved company/project identity and H/R/D/T scope for swiftacare.com; currentness limitations remain separate.",
+          "evidence_ids": [
+            "evidence_9e0bf3d51077485d99c54128b349d7d4"
+          ]
+        },
+        "concrete_product_program_problem": {
+          "supported": true,
+          "text": "Swiftacare describes software for health and human-services teams to connect referrals, intake, scheduling, notes and reporting instead of working across disconnected systems.",
+          "evidence_ids": [
+            "evidence:swiftacare-com:0:1",
+            "evidence:swiftacare-com:1:0"
+          ]
+        },
+        "useful_conversation_reason": {
+          "supported": true,
+          "text": "A defined care-operations product and founder-attributed internal-build/use account justify learning about current use and the reusable core through an introductory conversation.",
+          "evidence_ids": [
+            "evidence:swiftacare-com:0:1",
+            "evidence:swiftacare-com:1:0",
+            "evidence:swiftacare-com:1:1",
+            "evidence:enrich:52472dc1c8591923bf:12",
+            "evidence:swiftacare-com:2:0"
+          ]
+        }
+      },
+      "contrary_facts": [],
+      "bound_risks": [
+        {
+          "text": "Initial use is at a founder-founded related organization; unrelated adoption, current implementation and shared-versus-custom work remain unknown.",
+          "evidence_ids": [
+            "evidence:swiftacare-com:0:1",
+            "evidence:swiftacare-com:1:1",
+            "evidence:enrich:52472dc1c8591923bf:12"
+          ]
+        }
+      ],
+      "decisive_blocker": null,
+      "call_questions": [
+        {
+          "text": "Which workflow is live beyond the originating organization, and how much is common product versus custom implementation?",
+          "evidence_ids": [
+            "evidence:swiftacare-com:0:1",
+            "evidence:swiftacare-com:1:1",
+            "evidence:enrich:52472dc1c8591923bf:12"
+          ]
+        },
+        {
+          "text": "Who owns current technical work, and what changed after users tried the system?",
+          "evidence_ids": [
+            "evidence:swiftacare-com:0:1",
+            "evidence:swiftacare-com:1:1",
+            "evidence:enrich:52472dc1c8591923bf:12"
+          ]
+        }
+      ],
+      "source_snapshot": {
+        "path": "C:\\Users\\ASUS\\Desktop\\ThesisOS\\backend\\work\\enrichment-pass\\swiftacare.com\\reassessment.json",
+        "sha256": "aefb0aa1b2e04644bd3b2c2d117a3a612de20d313b00cf2669637b3478e94f58"
+      }
+    },
+    {
+      "domain": "therapyselect.de",
+      "conversation_category": "outreach_candidate",
+      "conversation_rationale": "A concrete viable-tumor chemotherapy-resistance testing workflow and named assay-related contributors give a useful introduction agenda. The conversation can clarify commercial/nonprofit structure before legal or clinical diligence.",
+      "material_contrary_facts": [],
+      "source_bound_risks": [
+        "Commercial/nonprofit roles and rights are unresolved; intended-use validation is limited and manufacturer headline benefits are unverified; early-stage opportunity may need scope clarification."
+      ],
+      "person_actionability": {
+        "status": "named_relevant_operators_source_reported_founder_status_unknown",
+        "people": [
+          "Frank C. Kischkel",
+          "Julia Reiser"
+        ],
+        "limits": "Scientific/managing direction and test-development roles are relevant; do not relabel them verified founders.",
+        "bound_people": [
+          {
+            "person_id": "person:therapyselect-de:0",
+            "name": "Frank C. Kischkel",
+            "roles": [
+              {
+                "id": "role:therapyselect-de:0",
+                "person_id": "person:therapyselect-de:0",
+                "company_id": "company_3ad8c730c3064f50a923dd033c32f3c4",
+                "role": "Managing Director and Scientific Director (source-reported; tenure unknown)",
+                "status": "supported",
+                "evidence_ids": [
+                  "evidence:therapyselect-de:1:0",
+                  "evidence:therapyselect-de:1:1"
+                ]
+              },
+              {
+                "id": "role:provider:f637e11d7d182e3e7c",
+                "person_id": "person:therapyselect-de:0",
+                "company_id": "company_3ad8c730c3064f50a923dd033c32f3c4",
+                "role": "Owner (current in indexed profile; dates/source unverified)",
+                "status": "supported",
+                "evidence_ids": [
+                  "evidence:enrich:0137f241337bd93778:3"
+                ]
+              }
+            ]
+          },
+          {
+            "person_id": "person:therapyselect-de:1",
+            "name": "Julia Reiser",
+            "roles": [
+              {
+                "id": "role:therapyselect-de:1",
+                "person_id": "person:therapyselect-de:1",
+                "company_id": "company_3ad8c730c3064f50a923dd033c32f3c4",
+                "role": "Clinical-trials/development contributor (source-reported; tenure unknown)",
+                "status": "supported",
+                "evidence_ids": [
+                  "evidence:therapyselect-de:1:0",
+                  "evidence:therapyselect-de:1:1"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "contact_actionability": {
+        "status": "delivery_route_not_established_by_this_mapping",
+        "route": null,
+        "limits": "Any existing company professional route needs human review; no new contact lookup."
+      },
+      "case_id": "case_93e02144618b4341acf31c75727f135d",
+      "assessment_ref": "assessment_51db1909fc7b470baa360ecebd2c46cd",
+      "input_ref": {
+        "case_id": "case_93e02144618b4341acf31c75727f135d",
+        "case_version": 3,
+        "thesis_version": 1,
+        "policy_version": 1,
+        "evidence_hash": "463f81999dca8cc72d8547bf618d49c28478abd819b0f668fe7a7971a60f61d2"
+      },
+      "case_version": 3,
+      "category": "outreach_candidate",
+      "rationale": {
+        "text": "A concrete viable-tumor chemotherapy-resistance testing workflow and named assay-related contributors give a useful introduction agenda. The conversation can clarify commercial/nonprofit structure before legal or clinical diligence.",
+        "evidence_ids": [
+          "evidence:therapyselect-de:3:0",
+          "evidence:therapyselect-de:2:0",
+          "evidence:therapyselect-de:1:1",
+          "evidence:therapyselect-de:5:0",
+          "evidence:therapyselect-de:1:0",
+          "evidence:enrich:0137f241337bd93778:6"
+        ]
+      },
+      "minimum_basis": {
+        "identity_scope": {
+          "supported": true,
+          "text": "Exact saved company/project identity and H/R/D/T scope for therapyselect.de; currentness limitations remain separate.",
+          "evidence_ids": [
+            "evidence_1cb04d6308b84906bdeff8a41ebb0746"
+          ]
+        },
+        "concrete_product_program_problem": {
+          "supported": true,
+          "text": "TherapySelect offers oncology diagnostic services, including a CTR-Test described as exposing viable tumor cells to chemotherapy agents to inform physicians about resistance.",
+          "evidence_ids": [
+            "evidence:therapyselect-de:3:0",
+            "evidence:therapyselect-de:2:0"
+          ]
+        },
+        "useful_conversation_reason": {
+          "supported": true,
+          "text": "A concrete viable-tumor chemotherapy-resistance testing workflow and named assay-related contributors give a useful introduction agenda. The conversation can clarify commercial/nonprofit structure before legal or clinical diligence.",
+          "evidence_ids": [
+            "evidence:therapyselect-de:3:0",
+            "evidence:therapyselect-de:2:0",
+            "evidence:therapyselect-de:1:1",
+            "evidence:therapyselect-de:5:0",
+            "evidence:therapyselect-de:1:0",
+            "evidence:enrich:0137f241337bd93778:6"
+          ]
+        }
+      },
+      "contrary_facts": [],
+      "bound_risks": [
+        {
+          "text": "Commercial/nonprofit roles and rights are unresolved; intended-use validation is limited and manufacturer headline benefits are unverified; early-stage opportunity may need scope clarification.",
+          "evidence_ids": [
+            "evidence:therapyselect-de:5:0",
+            "evidence:enrich:0137f241337bd93778:6",
+            "evidence:therapyselect-de:4:0"
+          ]
+        }
+      ],
+      "decisive_blocker": null,
+      "call_questions": [
+        {
+          "text": "Which commercial entity/opportunity are you developing today, and how does it relate to nonprofit CTR-Test development and know-how?",
+          "evidence_ids": [
+            "evidence:therapyselect-de:5:0",
+            "evidence:enrich:0137f241337bd93778:6",
+            "evidence:therapyselect-de:4:0",
+            "evidence:therapyselect-de:3:0",
+            "evidence:therapyselect-de:1:1"
+          ]
+        },
+        {
+          "text": "What precise intended use is supported by the strongest original validation, and what remains to be demonstrated?",
+          "evidence_ids": [
+            "evidence:therapyselect-de:5:0",
+            "evidence:enrich:0137f241337bd93778:6",
+            "evidence:therapyselect-de:4:0",
+            "evidence:therapyselect-de:3:0",
+            "evidence:therapyselect-de:1:1"
+          ]
+        }
+      ],
+      "source_snapshot": {
+        "path": "C:\\Users\\ASUS\\Desktop\\ThesisOS\\backend\\work\\enrichment-pass\\therapyselect.de\\reassessment.json",
+        "sha256": "0003157c4d8629eac5936fb83e71ce9242fa418228f0b7865643aaddfd0dbd5e"
+      }
+    },
+    {
+      "domain": "neotargets.com",
+      "conversation_category": "outreach_candidate",
+      "conversation_rationale": "Original AML experiments and specific scientific contributions linked to a company-described oncology collaboration justify an introductory discussion about the platform and programs, with asset linkage and validation risks on the agenda.",
+      "material_contrary_facts": [
+        "The saved original follow-up reports pretreatment-related biomarker confounding; this qualifies the scientific claim rather than eliminating conversation merit."
+      ],
+      "source_bound_risks": [
+        "Published DCPS experiments are not mapped to a named current company-controlled asset; current access, ownership and broad platform performance remain unresolved."
+      ],
+      "person_actionability": {
+        "status": "named_relevant_scientific_people_source_reported",
+        "people": [
+          "Julian Walfridsson",
+          "Andreas Höglund"
+        ],
+        "limits": "Specific published contribution roles; do not infer sole invention, asset ownership or all experiments personally performed.",
+        "bound_people": [
+          {
+            "person_id": "person:neotargets-com:0",
+            "name": "Julian Walfridsson",
+            "roles": [
+              {
+                "id": "role:neotargets-com:0",
+                "person_id": "person:neotargets-com:0",
+                "company_id": "company_ee029b5a82574f0b944ecf453aa4a57e",
+                "role": "CSO and founder (source-reported; tenure unknown)",
+                "status": "supported",
+                "evidence_ids": [
+                  "evidence:neotargets-com:3:0"
+                ]
+              },
+              {
+                "id": "role:provider:165dc1eb53604aa565",
+                "person_id": "person:neotargets-com:0",
+                "company_id": "company_ee029b5a82574f0b944ecf453aa4a57e",
+                "role": "Founder and CSO (current in indexed profile; dates/source unverified)",
+                "status": "supported",
+                "evidence_ids": [
+                  "evidence:enrich:02b1e4e877a0fda4c5:10"
+                ]
+              }
+            ]
+          },
+          {
+            "person_id": "person:neotargets-com:2",
+            "name": "Andreas Höglund",
+            "roles": [
+              {
+                "id": "role:neotargets-com:2",
+                "person_id": "person:neotargets-com:2",
+                "company_id": "company_ee029b5a82574f0b944ecf453aa4a57e",
+                "role": "Head of biology (source-reported; tenure unknown)",
+                "status": "supported",
+                "evidence_ids": [
+                  "evidence:neotargets-com:3:0"
+                ]
+              },
+              {
+                "id": "role:provider:997db4725b92baf4ab",
+                "person_id": "person:neotargets-com:2",
+                "company_id": "company_ee029b5a82574f0b944ecf453aa4a57e",
+                "role": "Head of Biology (current in indexed profile; dates/source unverified)",
+                "status": "supported",
+                "evidence_ids": [
+                  "evidence:enrich:02b1e4e877a0fda4c5:17"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "contact_actionability": {
+        "status": "delivery_route_not_established_by_this_mapping",
+        "route": null,
+        "limits": "Saved company/profile information may support a human-reviewed route; no route verification or sending occurred."
+      },
+      "case_id": "case_bde3999e8d1f4aa79568e3599b714a5d",
+      "assessment_ref": "assessment_733dc789af334c3384174cf2a3ebe2e3",
+      "input_ref": {
+        "case_id": "case_bde3999e8d1f4aa79568e3599b714a5d",
+        "case_version": 3,
+        "thesis_version": 1,
+        "policy_version": 1,
+        "evidence_hash": "2536782e50bb8207d3412311588d723cee19748cddfa81d1ae3d2e48f6e35c21"
+      },
+      "case_version": 3,
+      "category": "outreach_candidate",
+      "rationale": {
+        "text": "Original AML experiments and specific scientific contributions linked to a company-described oncology collaboration justify an introductory discussion about the platform and programs, with asset linkage and validation risks on the agenda.",
+        "evidence_ids": [
+          "evidence:neotargets-com:0:0",
+          "evidence:neotargets-com:1:0",
+          "evidence:neotargets-com:3:0",
+          "evidence:neotargets-com:4:0",
+          "evidence:neotargets-com:5:1",
+          "evidence:neotargets-com:5:2",
+          "evidence:enrich:02b1e4e877a0fda4c5:29"
+        ]
+      },
+      "minimum_basis": {
+        "identity_scope": {
+          "supported": true,
+          "text": "Exact saved company/project identity and H/R/D/T scope for neotargets.com; currentness limitations remain separate.",
+          "evidence_ids": [
+            "evidence_0ee1a7c19a3c4b428f104a73a57f8d19"
+          ]
+        },
+        "concrete_product_program_problem": {
+          "supported": true,
+          "text": "NeoTargets develops oncology target-discovery and preclinical programs for prospective pharma partners, aiming to improve cancer-target selection through biomarker-linked biological validation.",
+          "evidence_ids": [
+            "evidence:neotargets-com:0:0",
+            "evidence:neotargets-com:1:0",
+            "evidence:neotargets-com:3:0"
+          ]
+        },
+        "useful_conversation_reason": {
+          "supported": true,
+          "text": "Original AML experiments and specific scientific contributions linked to a company-described oncology collaboration justify an introductory discussion about the platform and programs, with asset linkage and validation risks on the agenda.",
+          "evidence_ids": [
+            "evidence:neotargets-com:0:0",
+            "evidence:neotargets-com:1:0",
+            "evidence:neotargets-com:3:0",
+            "evidence:neotargets-com:4:0",
+            "evidence:neotargets-com:5:1",
+            "evidence:neotargets-com:5:2",
+            "evidence:enrich:02b1e4e877a0fda4c5:29"
+          ]
+        }
+      },
+      "contrary_facts": [
+        {
+          "text": "The saved original follow-up reports pretreatment-related biomarker confounding; this qualifies the scientific claim rather than eliminating conversation merit.",
+          "evidence_ids": [
+            "evidence:neotargets-com:5:0"
+          ]
+        }
+      ],
+      "bound_risks": [
+        {
+          "text": "Published DCPS experiments are not mapped to a named current company-controlled asset; current access, ownership and broad platform performance remain unresolved.",
+          "evidence_ids": [
+            "evidence:neotargets-com:2:0",
+            "evidence:neotargets-com:5:0"
+          ]
+        }
+      ],
+      "decisive_blocker": null,
+      "call_questions": [
+        {
+          "text": "Which current platform capability or program does the published work demonstrate, and what did the company contribute and retain access to?",
+          "evidence_ids": [
+            "evidence:neotargets-com:2:0",
+            "evidence:neotargets-com:5:0",
+            "evidence:neotargets-com:4:0",
+            "evidence:neotargets-com:5:1",
+            "evidence:neotargets-com:5:2",
+            "evidence:enrich:02b1e4e877a0fda4c5:29"
+          ]
+        },
+        {
+          "text": "How does the reported confounder affect the program, and which next experiment would change your view?",
+          "evidence_ids": [
+            "evidence:neotargets-com:2:0",
+            "evidence:neotargets-com:5:0",
+            "evidence:neotargets-com:4:0",
+            "evidence:neotargets-com:5:1",
+            "evidence:neotargets-com:5:2",
+            "evidence:enrich:02b1e4e877a0fda4c5:29"
+          ]
+        }
+      ],
+      "source_snapshot": {
+        "path": "C:\\Users\\ASUS\\Desktop\\ThesisOS\\backend\\work\\enrichment-pass\\neotargets.com\\reassessment.json",
+        "sha256": "0b1400d12bd382a525a9d9409e63edc47c9be54166e9d9f6f12bfc0e8d94e1e7"
+      }
+    },
+    {
+      "domain": "aphoticbio.com",
+      "conversation_category": "outreach_candidate",
+      "conversation_rationale": "Founder-linked computational work, an inspectable technical artifact and named disease programs provide a credible reason to discuss the scientific approach before private biological experiments or complete rights evidence are available.",
+      "material_contrary_facts": [],
+      "source_bound_risks": [
+        "Program-linked biological validation has not been inspected; the public computational artifact does not prove a therapeutic effect or commercial rights."
+      ],
+      "person_actionability": {
+        "status": "named_relevant_founders_source_reported",
+        "people": [
+          "Tess Marvin",
+          "Sagar Tikoo"
+        ],
+        "limits": "Marvin has an attributable computational-work lead; Tikoo's title does not establish a scientific deliverable.",
+        "bound_people": [
+          {
+            "person_id": "person:aphoticbio-com:0",
+            "name": "Tess Marvin",
+            "roles": [
+              {
+                "id": "role:aphoticbio-com:0",
+                "person_id": "person:aphoticbio-com:0",
+                "company_id": "company_2b06db21dbe1446fb446d0ee6e1de478",
+                "role": "Cofounder & CSO (company-reported)",
+                "status": "supported",
+                "evidence_ids": [
+                  "evidence:aphoticbio-com:1:0",
+                  "evidence:aphoticbio-com:1:1"
+                ]
+              },
+              {
+                "id": "role:provider:862148b6e70e582b99",
+                "person_id": "person:aphoticbio-com:0",
+                "company_id": "company_2b06db21dbe1446fb446d0ee6e1de478",
+                "role": "Co-Founder, Chief Scientific Officer (current in indexed profile; dates/source unverified)",
+                "status": "supported",
+                "evidence_ids": [
+                  "evidence:enrich:1b2df6e974919fceba:3"
+                ]
+              }
+            ]
+          },
+          {
+            "person_id": "person:aphoticbio-com:1",
+            "name": "Sagar Tikoo",
+            "roles": [
+              {
+                "id": "role:aphoticbio-com:1",
+                "person_id": "person:aphoticbio-com:1",
+                "company_id": "company_2b06db21dbe1446fb446d0ee6e1de478",
+                "role": "Cofounder & CEO (company-reported)",
+                "status": "supported",
+                "evidence_ids": [
+                  "evidence:aphoticbio-com:1:0",
+                  "evidence:aphoticbio-com:1:1"
+                ]
+              },
+              {
+                "id": "role:provider:9648713d0a2707809e",
+                "person_id": "person:aphoticbio-com:1",
+                "company_id": "company_2b06db21dbe1446fb446d0ee6e1de478",
+                "role": "Cofounder, CEO (current in indexed profile; dates/source unverified)",
+                "status": "supported",
+                "evidence_ids": [
+                  "evidence:enrich:1b2df6e974919fceba:10"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "contact_actionability": {
+        "status": "delivery_route_not_established_by_this_mapping",
+        "route": null,
+        "limits": "No new contact lookup or request for private material was sent."
+      },
+      "case_id": "case_5a0be0c7b23d4f3da9b1edfa8629e09b",
+      "assessment_ref": "assessment_ed611a1c2bd740bcb6b52908a1683e20",
+      "input_ref": {
+        "case_id": "case_5a0be0c7b23d4f3da9b1edfa8629e09b",
+        "case_version": 3,
+        "thesis_version": 1,
+        "policy_version": 1,
+        "evidence_hash": "8a4f08adacb8fd05717348c0edd863bf342568a734c80731f7e4d67d25cefeb4"
+      },
+      "case_version": 3,
+      "category": "outreach_candidate",
+      "rationale": {
+        "text": "Founder-linked computational work, an inspectable technical artifact and named disease programs provide a credible reason to discuss the scientific approach before private biological experiments or complete rights evidence are available.",
+        "evidence_ids": [
+          "evidence:aphoticbio-com:0:0",
+          "evidence:aphoticbio-com:3:0",
+          "evidence_337b69d667574b0ea206f743d6c5fffb",
+          "evidence:aphoticbio-com:5:0",
+          "evidence:aphoticbio-com:2:1",
+          "evidence:aphoticbio-com:3:1",
+          "evidence:aphoticbio-com:1:0",
+          "evidence:aphoticbio-com:4:0"
+        ]
+      },
+      "minimum_basis": {
+        "identity_scope": {
+          "supported": true,
+          "text": "Exact saved company/project identity and H/R/D/T scope for aphoticbio.com; currentness limitations remain separate.",
+          "evidence_ids": [
+            "evidence_fd9e77000eb3416fb30be515e4fa6d6a"
+          ]
+        },
+        "concrete_product_program_problem": {
+          "supported": true,
+          "text": "Aphotic Bio is developing a regulatory-genome target-discovery platform and therapeutic programs for chronic and age-related diseases, seeking disease-relevant intervention points in noncoding DNA.",
+          "evidence_ids": [
+            "evidence:aphoticbio-com:0:0",
+            "evidence:aphoticbio-com:3:0",
+            "evidence_337b69d667574b0ea206f743d6c5fffb"
+          ]
+        },
+        "useful_conversation_reason": {
+          "supported": true,
+          "text": "Founder-linked computational work, an inspectable technical artifact and named disease programs provide a credible reason to discuss the scientific approach before private biological experiments or complete rights evidence are available.",
+          "evidence_ids": [
+            "evidence:aphoticbio-com:0:0",
+            "evidence:aphoticbio-com:3:0",
+            "evidence_337b69d667574b0ea206f743d6c5fffb",
+            "evidence:aphoticbio-com:5:0",
+            "evidence:aphoticbio-com:2:1",
+            "evidence:aphoticbio-com:3:1",
+            "evidence:aphoticbio-com:1:0",
+            "evidence:aphoticbio-com:4:0"
+          ]
+        }
+      },
+      "contrary_facts": [],
+      "bound_risks": [
+        {
+          "text": "Program-linked biological validation has not been inspected; the public computational artifact does not prove a therapeutic effect or commercial rights.",
+          "evidence_ids": [
+            "evidence:aphoticbio-com:4:1",
+            "evidence:aphoticbio-com:3:0",
+            "evidence:aphoticbio-com:5:1"
+          ]
+        }
+      ],
+      "decisive_blocker": null,
+      "call_questions": [
+        {
+          "text": "What has been experimentally tested in one named program, and what is still a prediction or planned milestone?",
+          "evidence_ids": [
+            "evidence:aphoticbio-com:4:1",
+            "evidence:aphoticbio-com:3:0",
+            "evidence:aphoticbio-com:5:1",
+            "evidence:aphoticbio-com:5:0",
+            "evidence:aphoticbio-com:2:1",
+            "evidence:aphoticbio-com:3:1"
+          ]
+        },
+        {
+          "text": "How do DISCERN and DIS+ relate technically and commercially, and who owns current implementation and experimental work?",
+          "evidence_ids": [
+            "evidence:aphoticbio-com:4:1",
+            "evidence:aphoticbio-com:3:0",
+            "evidence:aphoticbio-com:5:1",
+            "evidence:aphoticbio-com:5:0",
+            "evidence:aphoticbio-com:2:1",
+            "evidence:aphoticbio-com:3:1"
+          ]
+        }
+      ],
+      "source_snapshot": {
+        "path": "C:\\Users\\ASUS\\Desktop\\ThesisOS\\backend\\work\\enrichment-pass\\aphoticbio.com\\reassessment.json",
+        "sha256": "917207e6fca147f555e7d2d94823a427bf41072a1be3cf75a8f74e55e15dfb77"
+      }
+    },
+    {
+      "domain": "slidescope.science",
+      "conversation_category": "outreach_candidate",
+      "conversation_rationale": "A specific microscopy viewing/quantification task, detailed workflow guide and an exact-domain indexed founder lead make a builder conversation worthwhile before an observed sample run or complete authorship proof.",
+      "material_contrary_facts": [],
+      "source_bound_risks": [
+        "Working outputs, quality control, current contribution and repeat-user benefit remain unverified; no clinical claims should be inferred."
+      ],
+      "person_actionability": {
+        "status": "named_current_founder_lead_indexed_not_independently_verified",
+        "people": [
+          "Yair Nevet"
+        ],
+        "limits": "Exact company-linked indexed role; no inferred implementation contribution or merger with other SlideScope domains.",
+        "bound_people": [
+          {
+            "person_id": "person:crustdata:554379876",
+            "name": "Yair Nevet",
+            "roles": [
+              {
+                "id": "role:provider:798defb2682c4ea537",
+                "person_id": "person:crustdata:554379876",
+                "company_id": "company_443239f9b14745bea79694add732d96d",
+                "role": "Founder (current in indexed profile; dates/source unverified)",
+                "status": "supported",
+                "evidence_ids": [
+                  "evidence:enrich:e3f03cdf0c8eca7205:3"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "contact_actionability": {
+        "status": "delivery_route_not_established_by_this_mapping",
+        "route": null,
+        "limits": "A profile lead exists; deliverable contact route and current responsiveness not established."
+      },
+      "case_id": "case_982bf92d162a476fa1c6f367e0a102da",
+      "assessment_ref": "assessment_479d68527e674574a559292f994c9fd0",
+      "input_ref": {
+        "case_id": "case_982bf92d162a476fa1c6f367e0a102da",
+        "case_version": 3,
+        "thesis_version": 1,
+        "policy_version": 1,
+        "evidence_hash": "70f08cae086a08b6ff1c6861a6dfeb4b9e9ac6356d39c7e898ce2297ce0985a6"
+      },
+      "case_version": 3,
+      "category": "outreach_candidate",
+      "rationale": {
+        "text": "A specific microscopy viewing/quantification task, detailed workflow guide and an exact-domain indexed founder lead make a builder conversation worthwhile before an observed sample run or complete authorship proof.",
+        "evidence_ids": [
+          "evidence:slidescope-science:0:0",
+          "evidence:slidescope-science:1:0",
+          "evidence:enrich:e3f03cdf0c8eca7205:4"
+        ]
+      },
+      "minimum_basis": {
+        "identity_scope": {
+          "supported": true,
+          "text": "Exact saved company/project identity and H/R/D/T scope for slidescope.science; currentness limitations remain separate.",
+          "evidence_ids": [
+            "evidence_7a3b058d84834e579df610a177e8ca74"
+          ]
+        },
+        "concrete_product_program_problem": {
+          "supported": true,
+          "text": "SlideScope describes a desktop microscopy viewer for researchers to review mixed image formats and perform local measurement and quantification.",
+          "evidence_ids": [
+            "evidence:slidescope-science:0:0",
+            "evidence:slidescope-science:1:0"
+          ]
+        },
+        "useful_conversation_reason": {
+          "supported": true,
+          "text": "A specific microscopy viewing/quantification task, detailed workflow guide and an exact-domain indexed founder lead make a builder conversation worthwhile before an observed sample run or complete authorship proof.",
+          "evidence_ids": [
+            "evidence:slidescope-science:0:0",
+            "evidence:slidescope-science:1:0",
+            "evidence:enrich:e3f03cdf0c8eca7205:4"
+          ]
+        }
+      },
+      "contrary_facts": [],
+      "bound_risks": [
+        {
+          "text": "Working outputs, quality control, current contribution and repeat-user benefit remain unverified; no clinical claims should be inferred.",
+          "evidence_ids": [
+            "evidence:enrich:e3f03cdf0c8eca7205:3",
+            "evidence:enrich:e3f03cdf0c8eca7205:4"
+          ]
+        }
+      ],
+      "decisive_blocker": null,
+      "call_questions": [
+        {
+          "text": "Which microscopy task works today, and how does a representative input become a checked result?",
+          "evidence_ids": [
+            "evidence:enrich:e3f03cdf0c8eca7205:3",
+            "evidence:enrich:e3f03cdf0c8eca7205:4"
+          ]
+        },
+        {
+          "text": "What did you personally build, and what have researchers changed or requested after using it?",
+          "evidence_ids": [
+            "evidence:enrich:e3f03cdf0c8eca7205:3",
+            "evidence:enrich:e3f03cdf0c8eca7205:4"
+          ]
+        }
+      ],
+      "source_snapshot": {
+        "path": "C:\\Users\\ASUS\\Desktop\\ThesisOS\\backend\\work\\enrichment-pass\\slidescope.science\\reassessment.json",
+        "sha256": "1be4027bf8753844e78245cc4351767c0e309ff4cf000b8b4a694a4be51aa4b4"
+      }
+    },
+    {
+      "domain": "find-nuclei.com",
+      "conversation_category": "outreach_candidate",
+      "conversation_rationale": "An actually observed public microscopy render/annotation workflow provides conversation merit despite no named individual builder. Named-person/route resolution limits contact preparation, not the value of discussing the exact project.",
+      "material_contrary_facts": [],
+      "source_bound_risks": [
+        "Observation covers limited functionality, not measurement validity, performance or adoption; the paid collaboration workspace is planned rather than live."
+      ],
+      "person_actionability": {
+        "status": "unknown_named_person",
+        "people": [],
+        "limits": "Corporate authorship and zero indexed people results do not establish absence of builders or weak founder quality.",
+        "bound_people": []
+      },
+      "contact_actionability": {
+        "status": "relevant_person_and_delivery_route_need_resolution",
+        "route": null,
+        "limits": "Do not generate a named founder message. Human-reviewed project/company-route resolution is a contact task, not automatic negative conversation merit."
+      },
+      "case_id": "case_324df432ed8c49ffa64f141f1356e994",
+      "assessment_ref": "assessment_68b0cda777114daebc53ba8dfabb70e9",
+      "input_ref": {
+        "case_id": "case_324df432ed8c49ffa64f141f1356e994",
+        "case_version": 3,
+        "thesis_version": 1,
+        "policy_version": 1,
+        "evidence_hash": "67922d0025d39f1c00eabbbf66a9452ed2cdf317dfffba1523095a3a9ef5b3c8"
+      },
+      "case_version": 3,
+      "category": "outreach_candidate",
+      "rationale": {
+        "text": "An actually observed public microscopy render/annotation workflow provides conversation merit despite no named individual builder. Named-person/route resolution limits contact preparation, not the value of discussing the exact project.",
+        "evidence_ids": [
+          "evidence:find-nuclei-com:0:0",
+          "evidence:find-nuclei-com:1:0",
+          "evidence:find-nuclei-com:2:0",
+          "evidence:enrich:bc4fb17c1865aab287:2",
+          "evidence:find-nuclei-com:4:0"
+        ]
+      },
+      "minimum_basis": {
+        "identity_scope": {
+          "supported": true,
+          "text": "Exact saved company/project identity and H/R/D/T scope for find-nuclei.com; currentness limitations remain separate.",
+          "evidence_ids": [
+            "evidence_f4e6bea483564b598142daea30023938"
+          ]
+        },
+        "concrete_product_program_problem": {
+          "supported": true,
+          "text": "Find Nuclei offers microscopy scientists a browser OME-Zarr viewer and local data tools for handling large imaging datasets; its paid collaboration workspace remains planned.",
+          "evidence_ids": [
+            "evidence:find-nuclei-com:0:0",
+            "evidence:find-nuclei-com:1:0",
+            "evidence:find-nuclei-com:2:0"
+          ]
+        },
+        "useful_conversation_reason": {
+          "supported": true,
+          "text": "An actually observed public microscopy render/annotation workflow provides conversation merit despite no named individual builder. Named-person/route resolution limits contact preparation, not the value of discussing the exact project.",
+          "evidence_ids": [
+            "evidence:find-nuclei-com:0:0",
+            "evidence:find-nuclei-com:1:0",
+            "evidence:find-nuclei-com:2:0",
+            "evidence:enrich:bc4fb17c1865aab287:2",
+            "evidence:find-nuclei-com:4:0"
+          ]
+        }
+      },
+      "contrary_facts": [],
+      "bound_risks": [
+        {
+          "text": "Observation covers limited functionality, not measurement validity, performance or adoption; the paid collaboration workspace is planned rather than live.",
+          "evidence_ids": [
+            "evidence:find-nuclei-com:4:0",
+            "evidence:enrich:bc4fb17c1865aab287:2"
+          ]
+        }
+      ],
+      "decisive_blocker": null,
+      "call_questions": [
+        {
+          "text": "Who builds and controls this exact viewer, and what is the current legal/project and commercial arrangement?",
+          "evidence_ids": [
+            "evidence:find-nuclei-com:4:0",
+            "evidence:enrich:bc4fb17c1865aab287:2"
+          ]
+        },
+        {
+          "text": "Which current scientist workflow has repeat use, and what belongs to the future collaboration roadmap?",
+          "evidence_ids": [
+            "evidence:find-nuclei-com:4:0",
+            "evidence:enrich:bc4fb17c1865aab287:2"
+          ]
+        }
+      ],
+      "source_snapshot": {
+        "path": "C:\\Users\\ASUS\\Desktop\\ThesisOS\\backend\\work\\enrichment-pass\\find-nuclei.com\\reassessment.json",
+        "sha256": "4b049ff02a6615d21f71fb1aeed326b9c47440adf237f081e5b5016de05fdac3"
+      }
+    },
+    {
+      "domain": "cadexgenomics.com",
+      "conversation_category": "research_first",
+      "conversation_rationale": "The assay/study provide a credible discussion topic, but current operator and offering continuity are materially unclear: saved leadership evidence is historical, indexed roles are past, and the website's launch expectations are overdue. Resolve the present target before presenting a current-company introduction.",
+      "material_contrary_facts": [
+        "Saved indexed histories label the known Cadex roles as past, while the company page retains an old expected launch period. These are source-attributed currentness concerns, not proof of closure."
+      ],
+      "source_bound_risks": [
+        "Full CADEX-0001 report remains unavailable from the completed bounded search; that missing private/public report alone is NOT a pre-intro blocker.",
+        "A 2026 abstract lead was not inspected or linked to the same assay/cohort; no new performance claim is accepted."
+      ],
+      "pre_intro_check": "Establish whether Cadex/Alibrex is currently an active offering or development project and identify a current accountable operator, or explicitly frame any conversation as historical rather than a current-company opportunity.",
+      "what_would_change_category": "A credible current-operator/active-project account, or a deliberately historical research conversation, can justify outreach_candidate without first obtaining the full validation report.",
+      "call_questions_if_intro_proceeds": [
+        "Who owns the present project and what is available or being developed now?",
+        "Where is the complete CADEX-0001 report, and does the later OncoAlibrex abstract concern the same assay/version/cohort?"
+      ],
+      "person_actionability": {
+        "status": "historical_people_known_current_operator_unresolved",
+        "people": [
+          "Bill Haack",
+          "Greg Schafer"
+        ],
+        "limits": "Do not address either as current Cadex leadership without confirming or explicitly qualifying the historical role.",
+        "bound_people": [
+          {
+            "person_id": "person:cadexgenomics-com:0",
+            "name": "Bill Haack",
+            "roles": [
+              {
+                "id": "role:cadexgenomics-com:0",
+                "person_id": "person:cadexgenomics-com:0",
+                "company_id": "company_05224725e2304f8bb9cef9f499c1e07c",
+                "role": "CEO/cofounder in May 2020 interview; current role unknown",
+                "status": "supported",
+                "evidence_ids": [
+                  "evidence:cadexgenomics-com:1:0",
+                  "evidence:cadexgenomics-com:1:1",
+                  "evidence:cadexgenomics-com:1:2"
+                ]
+              },
+              {
+                "id": "role:provider:aa98aa6ade343c8760",
+                "person_id": "person:cadexgenomics-com:0",
+                "company_id": "company_05224725e2304f8bb9cef9f499c1e07c",
+                "role": "Co-founder & CEO (past in indexed profile; dates/source unverified)",
+                "status": "supported",
+                "evidence_ids": [
+                  "evidence:enrich:cb22dc325ea7c69594:4"
+                ]
+              }
+            ]
+          },
+          {
+            "person_id": "person:crustdata:60495243",
+            "name": "Greg Schafer",
+            "roles": [
+              {
+                "id": "role:provider:724854df0bbfd86fac",
+                "person_id": "person:crustdata:60495243",
+                "company_id": "company_05224725e2304f8bb9cef9f499c1e07c",
+                "role": "Co-Founder and Chief Commercial Officer (past in indexed profile; dates/source unverified)",
+                "status": "supported",
+                "evidence_ids": [
+                  "evidence:enrich:cb22dc325ea7c69594:11"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "contact_actionability": {
+        "status": "current_operator_and_delivery_route_need_resolution",
+        "route": null,
+        "limits": "No closure inferred, no fresh contact route checked, no contact sent."
+      },
+      "case_id": "case_62ab29c28e8c49d5b5b15d88bdc4e5d3",
+      "assessment_ref": "assessment_c7ec60a3c1cc45edaf7ab89272c2a25a",
+      "input_ref": {
+        "case_id": "case_62ab29c28e8c49d5b5b15d88bdc4e5d3",
+        "case_version": 3,
+        "thesis_version": 1,
+        "policy_version": 1,
+        "evidence_hash": "bd0172a2566bea0a9a8517424e92d869ec5c27f95cb57566068710e9c7a02353"
+      },
+      "case_version": 3,
+      "category": "research_first",
+      "rationale": {
+        "text": "The assay/study provide a credible discussion topic, but current operator and offering continuity are materially unclear: saved leadership evidence is historical, indexed roles are past, and the website's launch expectations are overdue. Resolve the present target before presenting a current-company introduction.",
+        "evidence_ids": [
+          "evidence:cadexgenomics-com:0:0",
+          "evidence:cadexgenomics-com:2:2",
+          "evidence:cadexgenomics-com:3:1",
+          "evidence:cadexgenomics-com:0:1",
+          "evidence:enrich:cb22dc325ea7c69594:19",
+          "evidence:cadexgenomics-com:1:0",
+          "evidence:cadexgenomics-com:1:1"
+        ]
+      },
+      "minimum_basis": {
+        "identity_scope": {
+          "supported": true,
+          "text": "Exact saved company/project identity and H/R/D/T scope for cadexgenomics.com; currentness limitations remain separate.",
+          "evidence_ids": [
+            "evidence_84f81b20d0b44d40ad5d3aa5ef7a79de"
+          ]
+        },
+        "concrete_product_program_problem": {
+          "supported": true,
+          "text": "Cadex Genomics describes Alibrex as a blood-based cfDNA test to help oncologists identify stage-IV solid-tumor patients whose treatment is not working before later imaging.",
+          "evidence_ids": [
+            "evidence:cadexgenomics-com:0:0",
+            "evidence:cadexgenomics-com:2:2"
+          ]
+        },
+        "useful_conversation_reason": {
+          "supported": true,
+          "text": "The assay/study provide a credible discussion topic, but current operator and offering continuity are materially unclear: saved leadership evidence is historical, indexed roles are past, and the website's launch expectations are overdue. Resolve the present target before presenting a current-company introduction.",
+          "evidence_ids": [
+            "evidence:cadexgenomics-com:0:0",
+            "evidence:cadexgenomics-com:2:2",
+            "evidence:cadexgenomics-com:3:1",
+            "evidence:cadexgenomics-com:0:1",
+            "evidence:enrich:cb22dc325ea7c69594:19",
+            "evidence:cadexgenomics-com:1:0",
+            "evidence:cadexgenomics-com:1:1"
+          ]
+        }
+      },
+      "contrary_facts": [
+        {
+          "text": "Saved indexed histories label the known Cadex roles as past, while the company page retains an old expected launch period. These are source-attributed currentness concerns, not proof of closure.",
+          "evidence_ids": [
+            "evidence:enrich:cb22dc325ea7c69594:4",
+            "evidence:enrich:cb22dc325ea7c69594:11",
+            "evidence:cadexgenomics-com:0:0"
+          ]
+        }
+      ],
+      "bound_risks": [
+        {
+          "text": "Full CADEX-0001 report remains unavailable from the completed bounded search; that missing private/public report alone is NOT a pre-intro blocker.",
+          "evidence_ids": [
+            "evidence:cadexgenomics-com:0:1",
+            "evidence:cadexgenomics-com:3:0",
+            "evidence:cadexgenomics-com:3:2"
+          ]
+        },
+        {
+          "text": "A 2026 abstract lead was not inspected or linked to the same assay/cohort; no new performance claim is accepted.",
+          "evidence_ids": [
+            "evidence:cadexgenomics-com:0:1",
+            "evidence:cadexgenomics-com:3:0",
+            "evidence:cadexgenomics-com:3:2"
+          ]
+        }
+      ],
+      "decisive_blocker": {
+        "kind": "current_target_operator_or_offering_continuity",
+        "text": "Establish whether Cadex/Alibrex is currently an active offering or development project and identify a current accountable operator, or explicitly frame any conversation as historical rather than a current-company opportunity.",
+        "evidence_ids": [
+          "evidence:enrich:cb22dc325ea7c69594:4",
+          "evidence:enrich:cb22dc325ea7c69594:11",
+          "evidence:cadexgenomics-com:0:0"
+        ],
+        "not_a_blocker": "The missing validation report alone does not block introductory conversation merit."
+      },
+      "call_questions": [
+        {
+          "text": null,
+          "evidence_ids": [
+            "evidence:cadexgenomics-com:0:1",
+            "evidence:cadexgenomics-com:3:0",
+            "evidence:cadexgenomics-com:3:2",
+            "evidence:cadexgenomics-com:3:1",
+            "evidence:enrich:cb22dc325ea7c69594:19"
+          ]
+        }
+      ],
+      "source_snapshot": {
+        "path": "C:\\Users\\ASUS\\Desktop\\ThesisOS\\backend\\work\\enrichment-pass\\cadexgenomics.com\\reassessment.json",
+        "sha256": "52563dc2eb84b47b2c93937b4b52e8ea58c64dc1b696fc3db93820c1f1906f31"
+      }
+    }
+  ]
+}

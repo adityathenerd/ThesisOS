@@ -1,0 +1,135 @@
+{
+  "$defs": {
+    "TemporalScope": {
+      "additionalProperties": false,
+      "properties": {
+        "precision": {
+          "default": "unknown",
+          "enum": [
+            "unknown",
+            "year",
+            "month",
+            "day",
+            "datetime",
+            "interval"
+          ],
+          "title": "Precision",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        },
+        "start": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Start"
+        },
+        "end": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "End"
+        },
+        "basis": {
+          "default": "unknown",
+          "enum": [
+            "unknown",
+            "publication",
+            "observation",
+            "retrieval",
+            "event",
+            "reported_as_of"
+          ],
+          "title": "Basis",
+          "type": "string"
+        },
+        "limitation": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Limitation"
+        }
+      },
+      "title": "TemporalScope",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "person_id": {
+      "title": "Person Id",
+      "type": "string"
+    },
+    "topic_id": {
+      "title": "Topic Id",
+      "type": "string"
+    },
+    "supporting_edge_ids": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 2,
+      "title": "Supporting Edge Ids",
+      "type": "array"
+    },
+    "evidence_ids": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Evidence Ids",
+      "type": "array"
+    },
+    "temporal_scope": {
+      "$ref": "#/$defs/TemporalScope"
+    },
+    "explanation": {
+      "minLength": 1,
+      "title": "Explanation",
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "person_id",
+    "topic_id",
+    "supporting_edge_ids",
+    "evidence_ids",
+    "temporal_scope",
+    "explanation"
+  ],
+  "title": "TopicInterestSpec",
+  "type": "object"
+}

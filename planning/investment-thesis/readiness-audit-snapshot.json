@@ -1,0 +1,287 @@
+{
+  "document_type": "planning_read_only_runtime_audit_not_policy_activation",
+  "observed_at_utc": "2026-10-24T09:17:54.6681292Z",
+  "client_local_date": "2026-10-24",
+  "client_timezone": "Asia/Calcutta",
+  "batch_id": "batch_3b0c1b071c274f12a608aca3b0d90dd5",
+  "mandate_api": {
+    "id": "mandate_51a7af5e3dcf4d20a002eee760b49779",
+    "title": "Nine-company product/program research batch - v0.3",
+    "thesis_text": "Research batch: nine NEW source-backed company/founder cases, graphs and genuine research recommendations. Source planning/investment-thesis/scouting-mandate.md v0.3. Human qualification remains separate. Legacy target_count is only a required compatibility field, not this batch completion metric.\n\nSeek early-stage teams turning a costly bottleneck in care delivery, biological research, or disease treatment into a repeatable product, research platform, or therapeutic asset. Prioritize specific founder insight, attributable technical or experimental execution, and evidence that the approach improves on a relevant alternative. The initial opportunity must have a credible route to adoption or development, and the next milestone must resolve a material uncertainty.",
+    "status": "shortfall",
+    "thesis_version": 1,
+    "target_count": 1
+  },
+  "case_statuses": [
+    {
+      "id": "case_d57d6d50977a4652b98272704449804d",
+      "company_name": "careMESH",
+      "status": "needs_evidence"
+    },
+    {
+      "id": "case_5a0be0c7b23d4f3da9b1edfa8629e09b",
+      "company_name": "Aphotic Bio",
+      "status": "needs_evidence"
+    },
+    {
+      "id": "case_723e3ade86f14d08be801ca16d68a54d",
+      "company_name": "Swiftacare",
+      "status": "needs_evidence"
+    },
+    {
+      "id": "case_2ad527916cc748269880081553bfdba8",
+      "company_name": "Replicate.Health",
+      "status": "needs_evidence"
+    },
+    {
+      "id": "case_62ab29c28e8c49d5b5b15d88bdc4e5d3",
+      "company_name": "Cadex Genomics",
+      "status": "needs_evidence"
+    },
+    {
+      "id": "case_bde3999e8d1f4aa79568e3599b714a5d",
+      "company_name": "NeoTargets AB",
+      "status": "needs_evidence"
+    },
+    {
+      "id": "case_93e02144618b4341acf31c75727f135d",
+      "company_name": "TherapySelect Dr. Frank Kischkel",
+      "status": "needs_evidence"
+    },
+    {
+      "id": "case_324df432ed8c49ffa64f141f1356e994",
+      "company_name": "Find Nuclei",
+      "status": "needs_evidence"
+    },
+    {
+      "id": "case_982bf92d162a476fa1c6f367e0a102da",
+      "company_name": "SlideScope: Professional Microscopy Image Viewer",
+      "status": "needs_evidence"
+    }
+  ],
+  "cases": [
+    {
+      "domain": "replicate.health",
+      "case_id": "case_2ad527916cc748269880081553bfdba8",
+      "assessment_id": "assessment_45dbb53e44544f958c1d848d703211cf",
+      "source_file": "C:\\Users\\ASUS\\Desktop\\ThesisOS\\backend\\work\\scout-batch\\replicate.health\\matcher.json",
+      "full_reference_matches_current_file": true,
+      "reference_characters": 23728,
+      "reference_version": "0.3",
+      "runtime_thesis_version": 1,
+      "mode": "reference_comparison",
+      "policy_approved": false,
+      "required_criteria_count": 0,
+      "capabilities_count": 0,
+      "remaining_calls": 0,
+      "result_outcome": "needs_approval",
+      "research_posture": "pursue",
+      "saved_next_action": "Inspect one attributable Ledger claim-to-reconciliation workflow with its builder and clarify which submissions require human approval.",
+      "saved_decisive_doubt": "Can an identified builder demonstrate the claimed billing workflow, including the actual approval policy, rather than only describe it?",
+      "saved_execution_limits": [
+        "No remaining research calls or permitted capabilities are supplied; the useful artifact check is proposed but execution is paused.",
+        "This is a reference comparison, not an authoritative qualification or rejection."
+      ],
+      "execution_of_next_action_proven_by_this_audit": false
+    },
+    {
+      "domain": "caremesh.com",
+      "case_id": "case_d57d6d50977a4652b98272704449804d",
+      "assessment_id": "assessment_c5112e389ea14cee88833f8bae3fddf9",
+      "source_file": "C:\\Users\\ASUS\\Desktop\\ThesisOS\\backend\\work\\scout-batch\\caremesh.com\\matcher.json",
+      "full_reference_matches_current_file": true,
+      "reference_characters": 23728,
+      "reference_version": "0.3",
+      "runtime_thesis_version": 1,
+      "mode": "reference_comparison",
+      "policy_approved": false,
+      "required_criteria_count": 0,
+      "capabilities_count": 0,
+      "remaining_calls": 0,
+      "result_outcome": "needs_approval",
+      "research_posture": "pursue",
+      "saved_next_action": "Inspect an authorized current referral-workflow walkthrough or deployment record, attribute its implementation, and clarify the advertised reduction metric.",
+      "saved_decisive_doubt": "Static screenshots and a historical deployment report do not yet establish a current attributable working workflow; the advertised reduction claim also lacks an interpretable method.",
+      "saved_execution_limits": [
+        "No research calls remain and no retrieval capabilities are supplied; the useful investigation is proposed, not executed.",
+        "The policy permits reference comparison only, not authoritative qualification or rejection."
+      ],
+      "execution_of_next_action_proven_by_this_audit": false
+    },
+    {
+      "domain": "swiftacare.com",
+      "case_id": "case_723e3ade86f14d08be801ca16d68a54d",
+      "assessment_id": "assessment_0b920be0d00243f99785130322945143",
+      "source_file": "C:\\Users\\ASUS\\Desktop\\ThesisOS\\backend\\work\\scout-batch\\swiftacare.com\\matcher.json",
+      "full_reference_matches_current_file": true,
+      "reference_characters": 23728,
+      "reference_version": "0.3",
+      "runtime_thesis_version": 1,
+      "mode": "reference_comparison",
+      "policy_approved": false,
+      "required_criteria_count": 0,
+      "capabilities_count": 0,
+      "remaining_calls": 0,
+      "result_outcome": "needs_approval",
+      "research_posture": "pursue",
+      "saved_next_action": "Seek an authorized intake-to-documentation walkthrough showing actual functionality, attributable builder decisions, the prior alternative and shared software versus custom work.",
+      "saved_decisive_doubt": "The actual workflow has not been inspected, so differentiated functionality and a repeatable core remain unestablished despite reported internal use.",
+      "saved_execution_limits": [
+        "No research capabilities or remaining calls are available in this packet; execution of the useful inspection is paused. No investigation tool call is proposed."
+      ],
+      "execution_of_next_action_proven_by_this_audit": false
+    },
+    {
+      "domain": "therapyselect.de",
+      "case_id": "case_93e02144618b4341acf31c75727f135d",
+      "assessment_id": "assessment_04006c9a9f1b4ba68c6b4de8586f9e0f",
+      "source_file": "C:\\Users\\ASUS\\Desktop\\ThesisOS\\backend\\work\\scout-batch\\therapyselect.de\\matcher.json",
+      "full_reference_matches_current_file": true,
+      "reference_characters": 23728,
+      "reference_version": "0.3",
+      "runtime_thesis_version": 1,
+      "mode": "reference_comparison",
+      "policy_approved": false,
+      "required_criteria_count": 0,
+      "capabilities_count": 0,
+      "remaining_calls": 0,
+      "result_outcome": "needs_approval",
+      "research_posture": "pursue",
+      "saved_next_action": "Establish entity-specific CTR-Test ownership/licensing and laboratory access; if a credible commercial asset route exists, inspect an original validation report with assay and contributor attribution.",
+      "saved_decisive_doubt": "It is unclear whether the commercial entity controls the diagnostic asset and whether attributable original validation supports its intended use; company-hosted summaries do not resolve either question.",
+      "saved_execution_limits": [
+        "No permitted research capabilities and no remaining calls are supplied; useful research is identified but not executed.",
+        "The original-study link failed in the supplied research; an accessible alternative would be needed.",
+        "This is reference comparison, not an authoritative qualification or rejection."
+      ],
+      "execution_of_next_action_proven_by_this_audit": false
+    },
+    {
+      "domain": "neotargets.com",
+      "case_id": "case_bde3999e8d1f4aa79568e3599b714a5d",
+      "assessment_id": "assessment_03fa71d34fb44806a118d18dc505dcca",
+      "source_file": "C:\\Users\\ASUS\\Desktop\\ThesisOS\\backend\\work\\scout-batch\\neotargets.com\\matcher.json",
+      "full_reference_matches_current_file": true,
+      "reference_characters": 23728,
+      "reference_version": "0.3",
+      "runtime_thesis_version": 1,
+      "mode": "reference_comparison",
+      "policy_approved": false,
+      "required_criteria_count": 0,
+      "capabilities_count": 0,
+      "remaining_calls": 0,
+      "result_outcome": "needs_approval",
+      "research_posture": "pursue",
+      "saved_next_action": "Review the current program-to-publication linkage, ownership/license and model-access evidence, alongside a biomarker-validation plan addressing hydroxyurea confounding.",
+      "saved_decisive_doubt": "The published DCPS work is not yet linked to a current NeoTargets-controlled asset, and the proposed biomarker has a material reported confounder.",
+      "saved_execution_limits": [
+        "No remaining research calls or permitted execution capabilities are supplied; the useful review action is proposed, not executed.",
+        "This is a reference comparison, not an authoritative qualification decision."
+      ],
+      "execution_of_next_action_proven_by_this_audit": false
+    },
+    {
+      "domain": "aphoticbio.com",
+      "case_id": "case_5a0be0c7b23d4f3da9b1edfa8629e09b",
+      "assessment_id": "assessment_a9b61d833f5d468d83c5ca1e2e35deda",
+      "source_file": "C:\\Users\\ASUS\\Desktop\\ThesisOS\\backend\\work\\scout-batch\\aphoticbio.com\\matcher.json",
+      "full_reference_matches_current_file": true,
+      "reference_characters": 23728,
+      "reference_version": "0.3",
+      "runtime_thesis_version": 1,
+      "mode": "reference_comparison",
+      "policy_approved": false,
+      "required_criteria_count": 0,
+      "capabilities_count": 0,
+      "remaining_calls": 0,
+      "result_outcome": "needs_approval",
+      "research_posture": "pursue",
+      "saved_next_action": "Seek human review of authorized access to one named program's experimental report, including controls, endpoints, founder attribution and rights/access; inspect it before reassessing specialist-review readiness.",
+      "saved_decisive_doubt": "No program-linked biological experiment was inspected. The computational artifact does not establish that a nominated target produces a therapeutically relevant effect.",
+      "saved_execution_limits": [
+        "No remaining calls or permitted investigation capabilities are supplied; research execution is paused, not deemed low merit.",
+        "Private materials have not been accessed; any request requires an authorized, human-reviewed channel.",
+        "This is a reference comparison, not qualification approval or outreach authorization."
+      ],
+      "execution_of_next_action_proven_by_this_audit": false
+    },
+    {
+      "domain": "slidescope.science",
+      "case_id": "case_982bf92d162a476fa1c6f367e0a102da",
+      "assessment_id": "assessment_8e40237637c54827ac750c5ac10bc87e",
+      "source_file": "C:\\Users\\ASUS\\Desktop\\ThesisOS\\backend\\work\\scout-batch\\slidescope.science\\matcher.json",
+      "full_reference_matches_current_file": true,
+      "reference_characters": 23728,
+      "reference_version": "0.3",
+      "runtime_thesis_version": 1,
+      "mode": "reference_comparison",
+      "policy_approved": false,
+      "required_criteria_count": 0,
+      "capabilities_count": 0,
+      "remaining_calls": 0,
+      "result_outcome": "needs_approval",
+      "research_posture": "pursue",
+      "saved_next_action": "Inspect one published sample workflow with authorized access and establish the responsible builder's contribution before reconsidering partner-review readiness.",
+      "saved_decisive_doubt": "The documented functions have not been inspected through a worked artifact or attributed to a named builder, leaving the product-evidence and founder-contribution conditions unresolved.",
+      "saved_execution_limits": [
+        "No calls remain and no execution capabilities are supplied; artifact inspection is proposed, not authorized, scheduled or performed.",
+        "Current evidence is text-only and source-reported. Operational limits do not establish poor fit."
+      ],
+      "execution_of_next_action_proven_by_this_audit": false
+    },
+    {
+      "domain": "find-nuclei.com",
+      "case_id": "case_324df432ed8c49ffa64f141f1356e994",
+      "assessment_id": "assessment_2ea14b5c83324fdaa2eeb488126bcf39",
+      "source_file": "C:\\Users\\ASUS\\Desktop\\ThesisOS\\backend\\work\\scout-batch\\find-nuclei.com\\matcher.json",
+      "full_reference_matches_current_file": true,
+      "reference_characters": 23728,
+      "reference_version": "0.3",
+      "runtime_thesis_version": 1,
+      "mode": "reference_comparison",
+      "policy_approved": false,
+      "required_criteria_count": 0,
+      "capabilities_count": 0,
+      "remaining_calls": 0,
+      "result_outcome": "needs_approval",
+      "research_posture": "pursue",
+      "saved_next_action": "Inspect one linked OME-Zarr example end to end and verify the named builder's role and implementation contribution when inspection capability is available.",
+      "saved_decisive_doubt": "Can a named company builder demonstrate a working microscopy workflow? Current evidence establishes neither a functioning worked example nor individual contribution.",
+      "saved_execution_limits": [
+        "No calls remain and no execution capabilities are supplied; the useful inspection is paused, not completed.",
+        "No permitted executable investigation can be proposed in the current packet."
+      ],
+      "execution_of_next_action_proven_by_this_audit": false
+    },
+    {
+      "domain": "cadexgenomics.com",
+      "case_id": "case_62ab29c28e8c49d5b5b15d88bdc4e5d3",
+      "assessment_id": "assessment_574db8ca6f7a4fbfbb883a6c824e3aea",
+      "source_file": "C:\\Users\\ASUS\\Desktop\\ThesisOS\\backend\\work\\scout-batch\\cadexgenomics.com\\matcher.json",
+      "full_reference_matches_current_file": true,
+      "reference_characters": 23728,
+      "reference_version": "0.3",
+      "runtime_thesis_version": 1,
+      "mode": "reference_comparison",
+      "policy_approved": false,
+      "required_criteria_count": 0,
+      "capabilities_count": 0,
+      "remaining_calls": 0,
+      "result_outcome": "needs_approval",
+      "research_posture": "pursue",
+      "saved_next_action": "Obtain and inspect the full CADEX-0001 validation report and named scientific contributions to determine whether specialist partner review is justified.",
+      "saved_decisive_doubt": "Does the completed study support early treatment non-response monitoring in the intended population, with inspectable methods and attributable scientific execution? The company headline and registry alone do not settle this.",
+      "saved_execution_limits": [
+        "No calls remain and no research capabilities are supplied; execution of the useful report-inspection action is paused.",
+        "This assessment is reference comparison only, not an authoritative qualification or rejection."
+      ],
+      "execution_of_next_action_proven_by_this_audit": false
+    }
+  ],
+  "limits": [
+    "Read-only saved-file and local GET audit; no browser visual verification.",
+    "Saved initial packets are not proof of current provider capability or execution budgets.",
+    "No new sources, paid provider/model calls, backend edits or qualification changes.",
+    "Short API mandate excerpt does not imply truncated agent reference; all nine saved full references matched."
+  ]
+}

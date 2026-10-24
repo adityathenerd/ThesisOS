@@ -1,0 +1,207 @@
+{
+  "document_type": "bounded_primary_source_prep_not_assessment",
+  "batch_id": "batch_3b0c1b071c274f12a608aca3b0d90dd5",
+  "candidate_id_exact_from_returned_pool": "pool_655daca8090f4040a2b6ebdf9653f289",
+  "company": {
+    "name": "Find Nuclei",
+    "domain": "find-nuclei.com",
+    "identity_limitations": [
+      "Website links to the Find-Nuclei GitHub organization/repository; inspectable project linkage, not proof of legal entity or named founder."
+    ]
+  },
+  "track": {
+    "primary": "R",
+    "secondary": [],
+    "rationale": "Microscopy-data viewing, annotation and sharing infrastructure for research laboratories."
+  },
+  "plain_language_product_or_program": "Find Nuclei provides a browser viewer and local data server that help scientists open, annotate and share large microscopy datasets without moving all their images into a new cloud system.",
+  "user_or_patient_population": "Microscopy researchers, imaging core facilities and laboratory teams handling OME-Zarr datasets.",
+  "people": [],
+  "source_groups": [
+    {
+      "id": "find-nuclei:first-party-project",
+      "claim_origin": "Company pages and company-linked project repository/citation",
+      "publisher_relationship": "first_party",
+      "independence_limitations": [
+        "GitHub hosts the project's own material; separate URLs/host do not make independent corroboration."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "find-nuclei:home",
+      "url": "https://find-nuclei.com/",
+      "title": "Find Nuclei \u00e2\u20ac\u201d Microscopy Data Solutions",
+      "publication_date": null,
+      "event_date": null,
+      "retrieved_at": "2026-10-24T08:36:39.946877+00:00",
+      "retrieval_status": "direct_http_200",
+      "source_group_id": "find-nuclei:first-party-project",
+      "evidence_mode": "live_retrieval_source_reported",
+      "snapshot_receipt": "planning/agents/batch-evidence/snapshots/find-nuclei.com.home.receipt.json",
+      "paraphrase": "Current site offers a browser OME-Zarr viewer, local data server and embeddable viewer, linked to documentation and GitHub. It describes free existing tools and local image handling.",
+      "limitations": [
+        "Text inspected; no image opened, server run or privacy/performance test."
+      ]
+    },
+    {
+      "id": "find-nuclei:about",
+      "url": "https://www.find-nuclei.com/about",
+      "title": "About Find Nuclei",
+      "publication_date": null,
+      "event_date": null,
+      "retrieved_at": "2026-10-24T08:37:48.527961+00:00",
+      "retrieval_status": "direct_http_200",
+      "source_group_id": "find-nuclei:first-party-project",
+      "evidence_mode": "live_retrieval_source_reported",
+      "snapshot_receipt": "planning/agents/batch-evidence/snapshots/find-nuclei.com.about.receipt.json",
+      "paraphrase": "The company targets large multi-channel, high-content and volumetric microscopy data. It explains open-standard/local workflows but identifies no individual founder or developer in the inspected page.",
+      "limitations": [
+        "No individual attribution, relevant work history or company rights established."
+      ]
+    },
+    {
+      "id": "find-nuclei:platform",
+      "url": "https://www.find-nuclei.com/platform",
+      "title": "Find Nuclei Platform",
+      "publication_date": null,
+      "event_date": "2027",
+      "date_basis": "Forward-looking launch year explicitly shown in direct HTTP snapshot; not a completed launch.",
+      "retrieved_at": "2026-10-24T08:37:48.527961+00:00",
+      "retrieval_status": "direct_http_200",
+      "source_group_id": "find-nuclei:first-party-project",
+      "evidence_mode": "live_retrieval_source_reported",
+      "snapshot_receipt": "planning/agents/batch-evidence/snapshots/find-nuclei.com.platform.receipt.json",
+      "paraphrase": "The collaboration workspace is a planned paid per-user product for 2027, currently a waitlist. Team workspaces and experiment tracking are planned features, distinct from existing free tools.",
+      "limitations": [
+        "Roadmap is not current functionality, revenue or customer adoption.",
+        "Older indexed About material showed 2026; current direct platform/about snapshots show 2027 and take precedence for current plan."
+      ]
+    },
+    {
+      "id": "find-nuclei:repository",
+      "url": "https://github.com/Find-Nuclei/find-nuclei.github.io",
+      "title": "Find Nuclei Viewer repository",
+      "publication_date": null,
+      "event_date": null,
+      "retrieved_at": "2026-10-24T08:39:11.098130+00:00",
+      "retrieval_status": "direct_http_200",
+      "source_group_id": "find-nuclei:first-party-project",
+      "evidence_mode": "live_retrieval_project_artifact",
+      "snapshot_receipt": "planning/agents/batch-evidence/snapshots/find-nuclei.com.repository.receipt.json",
+      "paraphrase": "Public repository contains project files, guides and linked microscopy examples for a browser viewer, with annotations, segmentation-label display and measurement-table phenotyping described. It provides concrete implementation/documentation leads rather than only a sales page.",
+      "limitations": [
+        "Source tree/README existence inspected, not a code audit or executed workflow.",
+        "Segmentation-mask viewing is not evidence that the product generated validated segmentation.",
+        "Public repository does not imply an open-source license."
+      ]
+    },
+    {
+      "id": "find-nuclei:citation",
+      "url": "https://github.com/Find-Nuclei/find-nuclei.github.io/blob/main/CITATION.cff",
+      "title": "Find Nuclei Viewer CITATION.cff",
+      "publication_date": null,
+      "event_date": "2026-09-19",
+      "date_basis": "Project-declared version/date-released; not independently verified release or incorporation date.",
+      "retrieved_at": "2026-10-24T08:39:11.098130+00:00",
+      "retrieval_status": "direct_http_200",
+      "source_group_id": "find-nuclei:first-party-project",
+      "evidence_mode": "live_retrieval_project_metadata",
+      "snapshot_receipt": "planning/agents/batch-evidence/snapshots/find-nuclei.com.citation.receipt.json",
+      "paraphrase": "Citation metadata names the corporate project Find Nuclei as author, gives release date 19 September 2026 and marks the license proprietary. It does not identify an individual contributor or founder.",
+      "limitations": [
+        "Corporate authorship cannot establish person identity, founder contribution, sustained execution or asset ownership."
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "id": "find-nuclei:current-tool",
+      "subject_kind": "company",
+      "claim": "Existing viewer/server/embed tools and an inspectable public project provide a concrete research workflow lead.",
+      "source_ids": [
+        "find-nuclei:home",
+        "find-nuclei:repository"
+      ],
+      "criterion_ids": [
+        "C1",
+        "C3",
+        "C4",
+        "C7"
+      ],
+      "supports": "Product identity and inspectable artifact available for targeted investigation.",
+      "does_not_establish": [
+        "Performance superiority",
+        "Usage or commercial traction",
+        "Independent reproducibility",
+        "Named founder contribution"
+      ]
+    },
+    {
+      "id": "find-nuclei:roadmap",
+      "subject_kind": "company",
+      "claim": "Paid collaborative platform is planned for 2027; current tools must not be conflated with future platform.",
+      "source_ids": [
+        "find-nuclei:platform"
+      ],
+      "criterion_ids": [
+        "C4",
+        "C6",
+        "C8"
+      ],
+      "supports": "Separate delivered tool evidence from commercial roadmap and milestone uncertainty.",
+      "does_not_establish": [
+        "Current paid platform",
+        "Revenue",
+        "Enterprise adoption"
+      ]
+    },
+    {
+      "id": "find-nuclei:dated-artifact",
+      "subject_kind": "company",
+      "claim": "Project records a 19 September 2026 viewer release and corporate authorship.",
+      "source_ids": [
+        "find-nuclei:citation"
+      ],
+      "criterion_ids": [
+        "C4",
+        "C8"
+      ],
+      "supports": "A dated project milestone exists as self-reported metadata.",
+      "does_not_establish": [
+        "Why-now urgency",
+        "Founder identity",
+        "Company founding date",
+        "Exceptional execution velocity"
+      ]
+    }
+  ],
+  "counterevidence": [],
+  "material_unknowns": [
+    "Named founder/contributor and core authorship",
+    "Legal entity and rights",
+    "A reproduced representative image workflow and comparison",
+    "User adoption and paid path beyond planned workspace",
+    "YC backing/known-universe novelty"
+  ],
+  "next_check": {
+    "question": "Who owns and built the current viewer, and can a laboratory reproduce a representative data workflow before evaluating the planned paid collaboration layer?",
+    "why_material": "Would connect inspectable product work to people and distinguish current utility from future business claims."
+  },
+  "failed_fetches": [
+    {
+      "url": "https://find-nuclei.com/",
+      "retrieval_status": "web_tool_inaccessible_then_direct_http_200",
+      "limitation": "Initial web-tool failure was resolved by direct HTTP; it is not disconfirming company evidence."
+    }
+  ],
+  "unique_primary_urls_read": 5,
+  "research_limitations": [
+    "Backend reported earlier About/platform/GitHub-org/citation reads; these notes add reusable direct snapshots and preserve shared-source grouping, not independent corroboration.",
+    "No personal founder signal can be asserted from corporate authorship.",
+    "No paid provider/model call, executable project run or outreach.",
+    "Web index and direct page can differ; current direct platform roadmap retained."
+  ],
+  "provider_or_model_calls": 0,
+  "backend_packets_modified": false
+}

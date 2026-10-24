@@ -1,0 +1,526 @@
+{
+  "$defs": {
+    "CalibrationClaim": {
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "text"
+      ],
+      "title": "CalibrationClaim",
+      "type": "object"
+    },
+    "ContactRouteStatus": {
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "source_supported_route",
+            "not_established",
+            "human_confirmation_needed"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "route_kind": {
+          "default": "unknown",
+          "enum": [
+            "company_route",
+            "person_route",
+            "operator_record",
+            "unknown"
+          ],
+          "title": "Route Kind",
+          "type": "string"
+        },
+        "route_ref": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Route Ref"
+        },
+        "person_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Person Id"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "explanation": {
+          "minLength": 1,
+          "title": "Explanation",
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "explanation"
+      ],
+      "title": "ContactRouteStatus",
+      "type": "object"
+    },
+    "IntroBlocker": {
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "kind": {
+          "enum": [
+            "identity",
+            "scope",
+            "current_operator_or_status",
+            "missing_concrete_rationale"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "what_to_resolve": {
+          "minLength": 1,
+          "title": "What To Resolve",
+          "type": "string"
+        },
+        "decision_consequence": {
+          "minLength": 1,
+          "title": "Decision Consequence",
+          "type": "string"
+        }
+      },
+      "required": [
+        "text",
+        "kind",
+        "what_to_resolve",
+        "decision_consequence"
+      ],
+      "title": "IntroBlocker",
+      "type": "object"
+    },
+    "IntroCondition": {
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "status": {
+          "enum": [
+            "supported",
+            "unresolved",
+            "contradicted"
+          ],
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "text",
+        "status"
+      ],
+      "title": "IntroCondition",
+      "type": "object"
+    },
+    "IntroContraryFact": {
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "effect": {
+          "enum": [
+            "limits_claim",
+            "prevents_honest_intro",
+            "confirmed_outside_scope"
+          ],
+          "title": "Effect",
+          "type": "string"
+        }
+      },
+      "required": [
+        "text",
+        "effect"
+      ],
+      "title": "IntroContraryFact",
+      "type": "object"
+    },
+    "IntroMinimum": {
+      "additionalProperties": false,
+      "properties": {
+        "identity_and_scope": {
+          "$ref": "#/$defs/IntroCondition"
+        },
+        "concrete_product_program_or_problem": {
+          "$ref": "#/$defs/IntroCondition"
+        },
+        "useful_conversation_reason": {
+          "$ref": "#/$defs/IntroCondition"
+        }
+      },
+      "required": [
+        "identity_and_scope",
+        "concrete_product_program_or_problem",
+        "useful_conversation_reason"
+      ],
+      "title": "IntroMinimum",
+      "type": "object"
+    },
+    "PreOutreachOverlay": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "version": {
+          "const": "0.1",
+          "default": "0.1",
+          "title": "Version",
+          "type": "string"
+        },
+        "source_path": {
+          "minLength": 1,
+          "title": "Source Path",
+          "type": "string"
+        },
+        "source_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Source Sha256",
+          "type": "string"
+        },
+        "base_reference_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Base Reference Sha256",
+          "type": "string"
+        },
+        "authorization_ref": {
+          "minLength": 1,
+          "title": "Authorization Ref",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "source_path",
+        "source_sha256",
+        "base_reference_sha256",
+        "authorization_ref"
+      ],
+      "title": "PreOutreachOverlay",
+      "type": "object"
+    },
+    "RelevantPersonStatus": {
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "source_attributed_current",
+            "historical_or_uncertain",
+            "unknown"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "person_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Person Ids",
+          "type": "array"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "explanation": {
+          "minLength": 1,
+          "title": "Explanation",
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "explanation"
+      ],
+      "title": "RelevantPersonStatus",
+      "type": "object"
+    },
+    "VersionRef": {
+      "additionalProperties": false,
+      "properties": {
+        "case_id": {
+          "title": "Case Id",
+          "type": "string"
+        },
+        "case_version": {
+          "minimum": 0,
+          "title": "Case Version",
+          "type": "integer"
+        },
+        "thesis_version": {
+          "minimum": 1,
+          "title": "Thesis Version",
+          "type": "integer"
+        },
+        "policy_version": {
+          "minimum": 1,
+          "title": "Policy Version",
+          "type": "integer"
+        },
+        "evidence_hash": {
+          "title": "Evidence Hash",
+          "type": "string"
+        }
+      },
+      "required": [
+        "case_id",
+        "case_version",
+        "thesis_version",
+        "policy_version",
+        "evidence_hash"
+      ],
+      "title": "VersionRef",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "0.1",
+      "default": "0.1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "input_ref": {
+      "$ref": "#/$defs/VersionRef"
+    },
+    "assessment_ref": {
+      "title": "Assessment Ref",
+      "type": "string"
+    },
+    "assessment_prompt_version": {
+      "title": "Assessment Prompt Version",
+      "type": "string"
+    },
+    "overlay": {
+      "$ref": "#/$defs/PreOutreachOverlay"
+    },
+    "guidance_source_path": {
+      "title": "Guidance Source Path",
+      "type": "string"
+    },
+    "guidance_source_sha256": {
+      "title": "Guidance Source Sha256",
+      "type": "string"
+    },
+    "guidance_version": {
+      "title": "Guidance Version",
+      "type": "string"
+    },
+    "guidance_entry_id": {
+      "title": "Guidance Entry Id",
+      "type": "string"
+    },
+    "author": {
+      "title": "Author",
+      "type": "string"
+    },
+    "category": {
+      "enum": [
+        "outreach_candidate",
+        "research_first",
+        "monitor",
+        "outside_scope"
+      ],
+      "title": "Category",
+      "type": "string"
+    },
+    "suggested_category": {
+      "enum": [
+        "outreach_candidate",
+        "research_first",
+        "monitor",
+        "outside_scope"
+      ],
+      "title": "Suggested Category",
+      "type": "string"
+    },
+    "rationale": {
+      "$ref": "#/$defs/CalibrationClaim"
+    },
+    "minimum": {
+      "$ref": "#/$defs/IntroMinimum"
+    },
+    "contrary_facts": {
+      "items": {
+        "$ref": "#/$defs/IntroContraryFact"
+      },
+      "title": "Contrary Facts",
+      "type": "array"
+    },
+    "call_questions": {
+      "items": {
+        "$ref": "#/$defs/CalibrationClaim"
+      },
+      "title": "Call Questions",
+      "type": "array"
+    },
+    "pre_intro_blocker": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/IntroBlocker"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "future_merit_trigger": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/CalibrationClaim"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "relevant_person": {
+      "$ref": "#/$defs/RelevantPersonStatus"
+    },
+    "contact_route": {
+      "$ref": "#/$defs/ContactRouteStatus"
+    },
+    "next_step": {
+      "enum": [
+        "human_review_intro",
+        "resolve_person_or_route_for_human_review",
+        "resolve_pre_intro_fact",
+        "watch_stated_merit_trigger",
+        "retain_scope_reason"
+      ],
+      "title": "Next Step",
+      "type": "string"
+    },
+    "guard_notes": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Guard Notes",
+      "type": "array"
+    },
+    "provenance": {
+      "const": "human-authorized_stage_calibration_interpretation_using_existing_evidence",
+      "default": "human-authorized_stage_calibration_interpretation_using_existing_evidence",
+      "title": "Provenance",
+      "type": "string"
+    },
+    "newly_executed_model": {
+      "const": false,
+      "default": false,
+      "title": "Newly Executed Model",
+      "type": "boolean"
+    },
+    "changes_formal_readiness": {
+      "const": false,
+      "default": false,
+      "title": "Changes Formal Readiness",
+      "type": "boolean"
+    },
+    "changes_qualification": {
+      "const": false,
+      "default": false,
+      "title": "Changes Qualification",
+      "type": "boolean"
+    },
+    "sending_authorized": {
+      "const": false,
+      "default": false,
+      "title": "Sending Authorized",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "input_ref",
+    "assessment_ref",
+    "assessment_prompt_version",
+    "overlay",
+    "guidance_source_path",
+    "guidance_source_sha256",
+    "guidance_version",
+    "guidance_entry_id",
+    "author",
+    "category",
+    "suggested_category",
+    "rationale",
+    "minimum",
+    "contrary_facts",
+    "call_questions",
+    "pre_intro_blocker",
+    "future_merit_trigger",
+    "relevant_person",
+    "contact_route",
+    "next_step",
+    "guard_notes"
+  ],
+  "title": "PreOutreachReview",
+  "type": "object"
+}

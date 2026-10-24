@@ -1,0 +1,19 @@
+import {useEffect,useRef,useState} from 'react';
+import {Radio} from 'lucide-react';
+import AssessmentBasis from './AssessmentBasis';
+import ComparisonResults from './ComparisonResults';
+import type {CaseDetail,Mandate} from './types';
+
+const words=(s:string)=>s.replaceAll('_',' ').replace(/^./,c=>c.toUpperCase());
+const date=(s:string)=>new Date(s).toLocaleString('en-IN',{day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit'});
+export default function CaseSources({detail,focus,onReplay,onEvidence,referenceStatus}:{detail:CaseDetail;focus:{id:string;key:number}|null;onReplay:()=>void;onEvidence:(id:string)=>void;referenceStatus:Mandate['reference_status']|undefined}){
+ const [open,setOpen]=useState(false),ledger=useRef<HTMLDetailsElement>(null),current=detail.evaluations.at(-1);
+ useEffect(()=>{if(focus)setOpen(true)},[focus]);
+ useEffect(()=>{if(!open||!focus)return;const frame=requestAnimationFrame(()=>{const target=document.getElementById(`evidence-${focus.id}`);target?.scrollIntoView({behavior:'smooth',block:'center'});target?.focus({preventScroll:true});});return()=>cancelAnimationFrame(frame)},[open,focus]);
+ const urls=new Set(detail.evidence.map(e=>e.source_url).filter(Boolean));
+ return <section className="case-sources" aria-label="Saved sources and full analysis"><div className="sources-heading"><div><h3>Follow the evidence</h3><p>Sources support specific claims. Several records may come from the same interested source.</p></div><button className="text-button" onClick={onReplay}><Radio size={14}/>Replay a signal</button></div>
+ <details ref={ledger} className="evidence-disclosure" open={open} onToggle={event=>setOpen(event.currentTarget.open)}><summary>Evidence ledger <span>{detail.evidence.length} records · {urls.size} linked URLs</span></summary><div>{detail.evidence.length?detail.evidence.map((e,index)=><article key={e.id} id={`evidence-${e.id}`} tabIndex={-1} className={`evidence-card ${focus?.id===e.id?'highlighted-evidence':''}`}><div className="row between wrap"><span className="evidence-label">[{index+1}] <b>{words(e.claim_type)}</b></span><span className={`provenance ${e.data_mode}`}>{words(e.data_mode)}</span></div><p>{e.summary}</p><div className="evidence-source">{e.source_url&&/^https?:\/\//i.test(e.source_url)?<a href={e.source_url} target="_blank" rel="noreferrer">Open original source ↗</a>:<span>{e.source_key??'Source not linked'}</span>}<span>Retrieved {date(e.retrieved_at)}</span>{e.observed_at&&<span>Observed {date(e.observed_at)}</span>}</div></article>):<p className="source-empty">No evidence is saved. Missing sources have not been replaced with synthetic research.</p>}</div></details>
+ <details className="analysis-disclosure"><summary>Full research assessment & C1–C8 findings</summary><div><ComparisonResults assessments={detail.agent_assessments??[]} evidence={detail.evidence} onEvidence={onEvidence}/>{!detail.agent_assessments?.length&&<p className="source-empty">No rich research comparison is saved for this case. The operational assessment below and History remain available.</p>}</div></details>
+ {current&&<details className="analysis-disclosure"><summary>Saved operational assessment & provenance</summary><div className="legacy-analysis"><p>{current.reasoning_summary}</p><AssessmentBasis evaluation={current} evidence={detail.evidence} referenceStatus={referenceStatus}/><h4>Saved next action</h4><p>{current.next_action}</p>{current.missing_claims.length>0&&<><h4>Unresolved in this assessment</h4><ul>{current.missing_claims.map((s,i)=><li key={i}>{s}</li>)}</ul></>}{current.dimensions.map((dimension,index)=><article key={index}><div className="row between"><strong>{dimension.name}</strong><span className={`badge ${dimension.status}`}>{words(dimension.status)}</span></div><p>{dimension.rationale}</p></article>)}</div></details>}
+ </section>;
+}

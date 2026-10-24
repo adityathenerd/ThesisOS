@@ -1,0 +1,110 @@
+{
+  "document_type": "planning_public_source_evidence_not_runtime_packet",
+  "company_name": "NeoTargets AB",
+  "domain": "neotargets.com",
+  "batch_id": "batch_3b0c1b071c274f12a608aca3b0d90dd5",
+  "candidate_id": "pool_08ff93ccb6ac494888aa465b852fe7a1",
+  "discovery": "Actually returned T-pool identity explicitly assigned by control; research does not assert backend selection or qualification.",
+  "researcher": "Investment-thesis research chat",
+  "retrieved_on": "2026-10-24",
+  "research_completed_at": "2026-10-24T08:34:38Z",
+  "retrieval_mode": "Public company pages and original research opened/read through web tool, potentially cached. No experiment reproduction, private data access, provider enrichment or independent scientific validation.",
+  "track": "T",
+  "unique_public_source_urls": 6,
+  "suggested_research_priority": "Specific oncology programs and original experimental literature with attributable contributions warrant targeted scientific review. Asset ownership, program mapping and current financing remain unresolved.",
+  "source_groups": [
+    {"id": "neotargets-company", "origin": "Company-controlled website; four pages share claim origin."},
+    {"id": "dcps-collaborator-research", "origin": "Original papers by overlapping commercial/academic collaborators. Publisher hosting is not independent replication; company-associated authors and commercial interests limit independence."}
+  ],
+  "sources": [
+    {
+      "id": "nt-home",
+      "url": "https://neotargets.com/",
+      "publication_date": null,
+      "retrieved_on": "2026-10-24",
+      "source_group": "neotargets-company",
+      "evidence_mode": "first_party_program_and_platform_claims",
+      "claims": ["Company describes oncology target discovery followed by biological validation and partnering of preclinical programs."],
+      "limits": ["Target/package counts and safety/efficacy claims were not independently validated; avoid repeating industry-wide failure statistics as company evidence."]
+    },
+    {
+      "id": "nt-platform",
+      "url": "https://neotargets.com/platform/",
+      "publication_date": null,
+      "retrieved_on": "2026-10-24",
+      "source_group": "neotargets-company",
+      "evidence_mode": "first_party_technical_workflow_description",
+      "claims": ["Company describes integrating dependency/biomarker evidence, then testing in disease-relevant and patient-derived systems with normal comparators before packaging assets."],
+      "limits": ["Workflow description alone does not establish successful validation, a therapeutic window, or clinical translation."]
+    },
+    {
+      "id": "nt-pipeline",
+      "url": "https://neotargets.com/pipeline/",
+      "publication_date": null,
+      "retrieved_on": "2026-10-24",
+      "source_group": "neotargets-company",
+      "evidence_mode": "first_party_named_program_and_collaboration_description",
+      "claims": [
+        "Company describes small-molecule multiple-myeloma work with SARomics, AML target work with Sprint Bioscience, and AML/MM peptide exploration with AffinityAI.",
+        "Several additional indication entries describe targets awaiting further validation."
+      ],
+      "limits": ["Do not turn target candidates, planned validation or collaboration descriptions into nominated drugs or completed studies.", "The page does not establish ownership of the DCPS program studied in the papers below."]
+    },
+    {
+      "id": "nt-about",
+      "url": "https://neotargets.com/about/",
+      "publication_date": null,
+      "retrieved_on": "2026-10-24",
+      "source_group": "neotargets-company",
+      "evidence_mode": "first_party_founder_role_and_business_model_attribution",
+      "claims": ["Company names Julian Walfridsson and Mikael Altun as scientific founders; lists Walfridsson as CSO/founder, Thomas Binzer as CEO, and Andreas Hoglund as head of biology; describes preclinical partnering/licensing/sale."],
+      "exact_quote": "CSO & Founder",
+      "limits": ["Do not infer Binzer is a founder, equate institutional affiliation with asset rights, or infer current founding-team composition/tenure."]
+    },
+    {
+      "id": "nt-paper25",
+      "url": "https://www.nature.com/articles/s41375-025-02661-z",
+      "publication_date": "2025-06-26",
+      "retrieved_on": "2026-10-24",
+      "source_group": "dcps-collaborator-research",
+      "evidence_mode": "original_preclinical_research_article_main_text_inspected",
+      "claims": ["Original Leukemia paper reports investigating low-FHIT AML vulnerability to DCPS inhibition, including cell-line drug perturbation and FHIT manipulation; Walfridsson is listed with a NeoTargets affiliation."],
+      "limits": ["Main text inspected; supplementary experiments/data were not separately retrieved or reproduced.", "Experimental activity in these models is not proof of patient benefit or NeoTargets ownership of an asset.", "Paper and 2026 follow-up share research origin; do not count them as independent replications."]
+    },
+    {
+      "id": "nt-paper26",
+      "url": "https://link.springer.com/article/10.1007/s12672-026-04880-x",
+      "publication_date": "2026-03-27",
+      "version_of_record_date_reported": "2026-04-09",
+      "retrieved_on": "2026-10-24",
+      "source_group": "dcps-collaborator-research",
+      "evidence_mode": "original_research_methods_results_contributions_and_disclosures_inspected",
+      "claims": [
+        "Follow-up reports ex vivo primary-AML testing of RG3039 and biomarker analysis; hydroxyurea pretreatment confounds FHIT prediction, while IDH2 is explored as a proxy.",
+        "Contributions attribute supervision/funding acquisition to Walfridsson and Hoglund; Hoglund also has conceptualization, formal-analysis and data-access roles. Experimental validation is attributed to other named collaborators."
+      ],
+      "limits": [
+        "Patient-derived samples are not a prospective treatment trial. MDS functional validation is still needed; some primary data require permission/request.",
+        "Paper discloses NeoTargets/Sprint employment and shareholdings. Specific contributions do not establish sole invention or all company claims.",
+        "Underlying raw data and supplementary material were not reproduced; current drug rights, development status and efficacy remain unresolved."
+      ]
+    }
+  ],
+  "people": [
+    {"name": "Julian Walfridsson", "reported_role": "CSO and founder", "source_ids": ["nt-about", "nt-paper25", "nt-paper26"], "contribution_reference": "See nt-paper26 contribution statement; do not substitute founder status for experiment-level attribution."},
+    {"name": "Mikael Altun", "reported_role": "Scientific founder", "source_ids": ["nt-about"], "limits": "Current operational role and person-level program contribution not established in this pass."},
+    {"name": "Andreas Höglund", "reported_role": "Head of biology", "source_ids": ["nt-about", "nt-paper26"], "contribution_reference": "See nt-paper26; founder status not established."},
+    {"name": "Thomas Binzer", "reported_role": "CEO", "source_ids": ["nt-about"], "limits": "Founder status and technical contribution not established."}
+  ],
+  "possible_brief": {
+    "company_description": "NeoTargets develops oncology target/program packages for preclinical collaboration and licensing.",
+    "strongest_company_signal": "A named AML research trail supplies experiments and limitations to inspect rather than only platform marketing.",
+    "founder_signal": "Company founder attribution can be linked to the specific collaborative roles recorded in original research.",
+    "decisive_check": "Map the published findings to the exact company-owned/licensed program, rights, maturity and next decisive experiment; obtain specialist scientific judgment."
+  },
+  "gate_observation": "original_experimental_material_inspected_but_company_asset_mapping_rights_and_specialist_judgment_unresolved",
+  "open_questions": ["Which lead program/target does NeoTargets own or control, and how does it map to the research?", "What is the next decisive experiment and its resource/access requirement?", "What contradictory findings, safety/exposure risks and replication evidence apply at this stage?", "Current financing stage, YC backing and novelty remain unknown."],
+  "no_qualification_implied": true,
+  "provider_or_model_calls": 0,
+  "backend_packets_modified": false
+}
